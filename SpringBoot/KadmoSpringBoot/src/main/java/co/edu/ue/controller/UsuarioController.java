@@ -1,0 +1,50 @@
+package co.edu.ue.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import co.edu.ue.entity.Usuarios;
+import co.edu.ue.service.IUsuarioService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
+@RestController
+@CrossOrigin("*")
+@RequestMapping(value="usuario")
+public class UsuarioController{
+
+	@Autowired
+	IUsuarioService service;
+	
+	@GetMapping(value="usuarios", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Usuarios> getAllUsuarios() {
+		return this.service.listAllUsuarios();
+	}
+	
+	@GetMapping(value="usuario-id", produces = MediaType.APPLICATION_JSON_VALUE)
+	public Usuarios getByIdUsario(@RequestParam("idUsuario") int id) {
+		return this.service.findIdUsuario(id);
+	}
+	
+	@PostMapping(value="add-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public Usuarios postUsuario(@RequestBody Usuarios newUsuario) {
+		return this.service.addUsuario(newUsuario);
+	}
+	
+	@PutMapping(value="update-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public Usuarios putUsuario(@RequestBody Usuarios updateUsuario) {
+		return this.service.updUsuario(updateUsuario);
+	}
+	
+	
+	
+}

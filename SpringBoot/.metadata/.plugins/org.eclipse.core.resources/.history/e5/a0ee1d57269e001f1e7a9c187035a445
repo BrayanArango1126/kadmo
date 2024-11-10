@@ -1,0 +1,5 @@
+package co.edu.ue.repository.jpa;
+
+public interface IDisponibilidadLibroJPA {
+
+}

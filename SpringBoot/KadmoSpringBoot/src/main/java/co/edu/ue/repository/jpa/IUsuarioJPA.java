@@ -1,0 +1,9 @@
+package co.edu.ue.repository.jpa;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import co.edu.ue.entity.Usuarios;
+
+public interface IUsuarioJPA extends JpaRepository<Usuarios, Integer>{
+
+}

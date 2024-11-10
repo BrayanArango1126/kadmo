@@ -1,0 +1,36 @@
+package co.edu.ue.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import co.edu.ue.entity.EstadosLibros;
+import co.edu.ue.repository.dao.IEstadosLibrosRepository;
+
+@Service
+public class EstadosLibrosService implements IEstadosLibrosService{
+
+	@Autowired
+	IEstadosLibrosRepository dao;
+
+	@Override
+	public EstadosLibros addEstadosLibros(EstadosLibros newEstadosLibros) {
+		return this.dao.insertEstadosLibros(newEstadosLibros);
+	}
+
+	@Override
+	public EstadosLibros upEstadosLibros(EstadosLibros updateEstadosLibros) {
+		return this.dao.updateEstadosLibros(updateEstadosLibros);
+	}
+
+	@Override
+	public EstadosLibros findIdEstadosLibros(int id) {
+		return this.dao.findIdEstadosLibros(id);
+	}
+
+	@Override
+	public List<EstadosLibros> listAllEstadosLibros() {
+		return this.dao.listEstadosLibros();
+	}
+}
