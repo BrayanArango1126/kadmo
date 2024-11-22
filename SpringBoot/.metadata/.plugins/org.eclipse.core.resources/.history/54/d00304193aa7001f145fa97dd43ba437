@@ -1,0 +1,37 @@
+package co.edu.ue.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import co.edu.ue.dto.LibrosPublicadosDTO;
+import co.edu.ue.entity.LibrosPublicados;
+import co.edu.ue.repository.dao.ILibrosPublicadosRepository;
+
+@Service
+public class LibrosPublicadosService implements ILibrosPublicadosService{
+
+	@Autowired
+	ILibrosPublicadosRepository dao;
+
+	@Override
+	public LibrosPublicadosDTO addLibrosPublicados(LibrosPublicados newLibrosPublicados) {
+		return this.dao.insertLibrosPublicados(newLibrosPublicados);
+	}
+
+	@Override
+	public LibrosPublicadosDTO upLibrosPublicados(LibrosPublicados updateLibrosPublicados) {
+		return this.dao.updateLibrosPublicados(updateLibrosPublicados);
+	}
+
+	@Override
+	public LibrosPublicadosDTO findIdLibrosPublicados(int id) {
+		return this.dao.findIdLibrosPublicados(id);
+	}
+
+	@Override
+	public List<LibrosPublicadosDTO> listAllLibrosPublicados() {
+		return this.dao.listLibrosPublicados();
+	}
+}

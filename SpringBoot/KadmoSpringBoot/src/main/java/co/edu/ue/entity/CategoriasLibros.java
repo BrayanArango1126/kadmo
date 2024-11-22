@@ -2,6 +2,9 @@ package co.edu.ue.entity;
 
 import java.io.Serializable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -22,6 +25,8 @@ public class CategoriasLibros implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idCategoriaLibro;
 
+	@NotNull(message = "El campo de categoría no se envió")
+	@NotBlank(message = "El campo de categoría no puede estar vacio")
 	@Column(name="categoria")
 	private String categoria;
 

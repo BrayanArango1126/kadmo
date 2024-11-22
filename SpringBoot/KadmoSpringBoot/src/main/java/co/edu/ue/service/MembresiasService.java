@@ -1,10 +1,13 @@
 package co.edu.ue.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import co.edu.ue.dto.MembresiasDTO;
 import co.edu.ue.entity.Membresias;
 import co.edu.ue.repository.dao.IMembresiasRepository;
 
@@ -12,26 +15,36 @@ import co.edu.ue.repository.dao.IMembresiasRepository;
 public class MembresiasService implements IMembresiasService{
 
 	@Autowired
+	private ModelMapper modelMapper;
+	
+	@Autowired
 	IMembresiasRepository dao;
 
 	@Override
-	public Membresias addMembresias(Membresias newMembresias) {
-		return this.dao.insertMembresias(newMembresias);
+	public MembresiasDTO addMembresias(Membresias newMembresias) {
+		Membresias addMembresia = this.dao.insertMembresias(newMembresias);
+		MembresiasDTO membresiasDTO = this.modelMapper.map(addMembresia, MembresiasDTO.class);
+		return membresiasDTO;
 	}
 
 	@Override
-	public Membresias upMembresias(Membresias updateMembresias) {
-		return this.dao.updateMembresias(updateMembresias);
+	public MembresiasDTO upMembresias(Membresias updateMembresias) {
+		Membresias updMembresia = this.dao.updateMembresias(updateMembresias);
+		MembresiasDTO membresiasDTO = this.modelMapper.map(updMembresia, MembresiasDTO.class);
+		return membresiasDTO;
 	}
 
 	@Override
-	public Membresias findIdMembresias(int id) {
-		return this.dao.findIdMembresias(id);
+	public MembresiasDTO findIdMembresias(int id) {
+		Membresias idMembresia = this.dao.findIdMembresias(id);
+		MembresiasDTO membresiasDTO = this.modelMapper.map(idMembresia, MembresiasDTO.class);
+		return membresiasDTO;
 	}
 
 	@Override
-	public List<Membresias> listAllMembresias() {
-		return this.dao.listMembresias();
+	public List<MembresiasDTO> listAllMembresias() {
+		List<Membresias> listAllMembresias = this.dao.listMembresias();
+		return listAllMembresias.stream().map(membresia -> this.modelMapper.map(membresia, MembresiasDTO.class)).collect(Collectors.toList());
 	}
 	
 	

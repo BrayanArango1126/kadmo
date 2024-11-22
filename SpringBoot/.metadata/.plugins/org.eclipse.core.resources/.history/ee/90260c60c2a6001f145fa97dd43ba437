@@ -1,0 +1,68 @@
+package co.edu.ue.controller;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import co.edu.ue.dto.EditorialesDTO;
+import co.edu.ue.entity.Editoriales;
+import co.edu.ue.entity.Usuarios;
+import co.edu.ue.repository.dao.IUsuarioRepository;
+import co.edu.ue.service.IEditorialesService;
+
+@RestController
+@CrossOrigin("*")
+@RequestMapping(value="editorial")
+
+public class EditorialesController {
+	
+	@Autowired
+	private IUsuarioRepository daoUser;
+	
+	@Autowired
+	private ModelMapper modelMapper;
+
+	@Autowired
+	IEditorialesService service;
+	
+	@GetMapping(value="editoriales", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<EditorialesDTO>> getAllEditoriales() {
+		return new ResponseEntity<List<EditorialesDTO>> ( this.service.listAllEditoriales(), HttpStatus.ACCEPTED);
+	}
+	
+	@GetMapping(value="editorial-id", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<EditorialesDTO>  getByIdEditoriales(@RequestParam("idEditoriales") int id) {
+		return new ResponseEntity<EditorialesDTO> ( this.service.findIdEditoriales(id), HttpStatus.ACCEPTED);
+	}
+	
+	@PostMapping(value="add-editorial", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<EditorialesDTO>  postEditoriales(@RequestBody EditorialesDTO newEditoriales) {
+		Editoriales addEditorial = this.modelMapper.map(newEditoriales, Editoriales.class);
+		
+		Usuarios user = this.daoUser.findIdUsuario(newEditoriales.getUsuario().getIdUsuario());
+		
+		addEditorial.setUsuario(user);
+		
+		EditorialesDTO addedEditoriales = this.service.addEditoriales(addEditorial);
+		return new ResponseEntity<EditorialesDTO> ( addedEditoriales, HttpStatus.CREATED);
+	}
+	
+	@PutMapping(value="update-editorial", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<EditorialesDTO>  putEditoriales(@RequestBody EditorialesDTO updateEditoriales) {
+		Editoriales updEditorial = this.modelMapper.map(updateEditoriales, Editoriales.class);
+		EditorialesDTO updatedEditoriales = this.service.upEditoriales(updEditorial);
+		return new ResponseEntity<EditorialesDTO> ( updatedEditoriales, HttpStatus.OK);
+	}
+}

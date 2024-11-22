@@ -2,12 +2,13 @@ package co.edu.ue.service;
 
 import java.util.List;
 
+import co.edu.ue.dto.ImagenesLibrosDTO;
 import co.edu.ue.entity.ImagenesLibros;
 
 public interface IImagenesLibrosService {
 
-	ImagenesLibros addImagenesLibros(ImagenesLibros newImagenesLibros);
-	ImagenesLibros upImagenesLibros(ImagenesLibros updateImagenesLibros);
-	ImagenesLibros findIdImagenesLibros(int id);
-	List<ImagenesLibros> listAllImagenesLibros();
+	ImagenesLibrosDTO addImagenesLibros(ImagenesLibros newImagenesLibros);
+	ImagenesLibrosDTO upImagenesLibros(ImagenesLibros updateImagenesLibros);
+	ImagenesLibrosDTO findIdImagenesLibros(int id);
+	List<ImagenesLibrosDTO> listAllImagenesLibros();
 }

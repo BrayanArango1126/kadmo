@@ -1,10 +1,13 @@
 package co.edu.ue.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import co.edu.ue.dto.CategoriasLibrosDTO;
 import co.edu.ue.entity.CategoriasLibros;
 import co.edu.ue.repository.dao.ICategoriaLibrosRepository;
 
@@ -12,26 +15,36 @@ import co.edu.ue.repository.dao.ICategoriaLibrosRepository;
 public class CategoriasLibrosService implements ICategoriasLibrosService{
 
 	@Autowired
+	private ModelMapper modelMapper;
+	
+	@Autowired
 	ICategoriaLibrosRepository dao;
 	
 	@Override
-	public CategoriasLibros addCategoriasLibros(CategoriasLibros newCategoriasLibros) {
-		return this.dao.insertCategoriasLibros(newCategoriasLibros);
+	public CategoriasLibrosDTO addCategoriasLibros(CategoriasLibros newCategoriasLibros) {
+		CategoriasLibros addCategoria = this.dao.insertCategoriasLibros(newCategoriasLibros);
+		CategoriasLibrosDTO categoriaLibroDTO = this.modelMapper.map(addCategoria, CategoriasLibrosDTO.class);
+		return categoriaLibroDTO;
 	}
 
 	@Override
-	public CategoriasLibros upCategoriasLibros(CategoriasLibros updateCategoriasLibros) {
-		return this.dao.updateCategoriasLibros(updateCategoriasLibros);
+	public CategoriasLibrosDTO upCategoriasLibros(CategoriasLibros updateCategoriasLibros) {
+		CategoriasLibros upCategoria = this.dao.updateCategoriasLibros(updateCategoriasLibros);
+		CategoriasLibrosDTO categoriaLibroDTO = this.modelMapper.map(upCategoria, CategoriasLibrosDTO.class);
+		return categoriaLibroDTO;
 	}
 
 	@Override
-	public CategoriasLibros findIdCategoriasLibros(int id) {
-		return this.dao.findIdCategoriasLibros(id);
+	public CategoriasLibrosDTO findIdCategoriasLibros(int id) {
+		CategoriasLibros categoryId = this.dao.findIdCategoriasLibros(id);
+		CategoriasLibrosDTO  categoriaLibroDTO = this.modelMapper.map(categoryId, CategoriasLibrosDTO.class);
+		return categoriaLibroDTO ;
 	}
 
 	@Override
-	public List<CategoriasLibros> listAllCategoriasLibros() {
-		return this.dao.listCategoriasLibros();
+	public List<CategoriasLibrosDTO> listAllCategoriasLibros() {
+		List<CategoriasLibros> listCategoryId = this.dao.listCategoriasLibros();
+		return listCategoryId.stream().map(category-> modelMapper.map(category, CategoriasLibrosDTO.class)).collect(Collectors.toList());
 	}
 
 	

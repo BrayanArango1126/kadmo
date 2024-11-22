@@ -2,12 +2,13 @@ package co.edu.ue.service;
 
 import java.util.List;
 
+import co.edu.ue.dto.EstadosLibrosDTO;
 import co.edu.ue.entity.EstadosLibros;
 
 public interface IEstadosLibrosService {
 
-	EstadosLibros addEstadosLibros(EstadosLibros newEstadosLibros);
-	EstadosLibros upEstadosLibros(EstadosLibros updateEstadosLibros);
-	EstadosLibros findIdEstadosLibros(int id);
-	List<EstadosLibros> listAllEstadosLibros();
+	EstadosLibrosDTO addEstadosLibros(EstadosLibros newEstadosLibros);
+	EstadosLibrosDTO upEstadosLibros(EstadosLibros updateEstadosLibros);
+	EstadosLibrosDTO findIdEstadosLibros(int id);
+	List<EstadosLibrosDTO> listAllEstadosLibros();
 }

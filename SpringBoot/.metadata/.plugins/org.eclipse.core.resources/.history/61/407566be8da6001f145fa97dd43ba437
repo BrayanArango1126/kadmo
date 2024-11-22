@@ -1,0 +1,44 @@
+package co.edu.ue.service;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import co.edu.ue.dto.GenerosDTO;
+import co.edu.ue.entity.Generos;
+import co.edu.ue.repository.dao.IGenerosRepository;
+
+@Service
+public class GenerosService implements IGenerosService{
+	
+	@Autowired
+	private ModelMapper modelMapper;
+
+	@Autowired
+	IGenerosRepository dao;
+
+	@Override
+	public GenerosDTO addGeneros(Generos newGeneros) {
+		Generos addGenero = this.dao.insertGeneros(newGeneros);
+		GenerosDTO generoDTO = modelMapper.map(addGenero, GenerosDTO.class);
+		return generoDTO;
+	}
+
+	@Override
+	public GenerosDTO upGeneros(Generos updateGeneros) {
+		return this.dao.updateGeneros(updateGeneros);
+	}
+
+	@Override
+	public GenerosDTO findIdGeneros(int id) {
+		return this.dao.findIdGeneros(id);
+	}
+
+	@Override
+	public List<GenerosDTO> listAllGeneros() {
+		return this.dao.listGeneros();
+	}
+	
+}

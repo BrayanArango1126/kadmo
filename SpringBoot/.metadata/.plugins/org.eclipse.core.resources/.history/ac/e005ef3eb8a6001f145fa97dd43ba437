@@ -1,0 +1,22 @@
+package co.edu.ue.dto;
+
+public class EstadosLibrosDTO {
+
+	private int idEstadosLibros;
+	private String estado;
+	
+	public int getIdEstadoLibro() {
+		return idEstadosLibros;
+	}
+	public void setIdEstadoLibro(int idEstadoLibro) {
+		this.idEstadosLibros = idEstadoLibro;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	
+	
+}

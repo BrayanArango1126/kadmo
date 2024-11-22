@@ -2,6 +2,10 @@ package co.edu.ue.entity;
 
 import java.io.Serializable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+
 import java.util.Date;
 import java.util.List;
 
@@ -23,9 +27,15 @@ public class Usuarios implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idUsuario;
 
+	@NotNull(message = "El campo de contraseña no se envió")
+	@NotBlank(message = "El campo de contraseña no puede estar vacio")
+	@Pattern(regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,15}$", message="Hay un error en la contraseña, recuerda tener al menos una letra minúscula, mayúscula y numérica, y la longitud es de mínimo 8 y maximo 15 caracteres")
 	@Column(name="contraseña")
 	private String contraseña;
 
+	@NotNull(message = "El campo de correo no se envió")
+	@NotBlank(message = "El campo de correo no puede estar vacio")
+	@Pattern(regexp="^[^\\s@]+@+(hotmail|gmail|outlook)\\.(com|co|edu\\.co)$", message="Hay un error en la estructura de tu correo")
 	@Column(name="correo")
 	private String correo;
 

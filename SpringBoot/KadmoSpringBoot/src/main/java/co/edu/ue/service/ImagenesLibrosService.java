@@ -1,10 +1,13 @@
 package co.edu.ue.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import co.edu.ue.dto.ImagenesLibrosDTO;
 import co.edu.ue.entity.ImagenesLibros;
 import co.edu.ue.repository.dao.IImagenesLibrosRepository;
 
@@ -12,26 +15,36 @@ import co.edu.ue.repository.dao.IImagenesLibrosRepository;
 public class ImagenesLibrosService implements IImagenesLibrosService {
 
 	@Autowired
+	private ModelMapper modelMapper;
+	
+	@Autowired
 	IImagenesLibrosRepository dao;
 
 	@Override
-	public ImagenesLibros addImagenesLibros(ImagenesLibros newImagenesLibros) {
-		return this.dao.insertImagenesLibros(newImagenesLibros);
+	public ImagenesLibrosDTO addImagenesLibros(ImagenesLibros newImagenesLibros) {
+		ImagenesLibros addImagen = this.dao.insertImagenesLibros(newImagenesLibros);
+		ImagenesLibrosDTO imagenesDTO = this.modelMapper.map(addImagen, ImagenesLibrosDTO.class);
+		return imagenesDTO;
 	}
 
 	@Override
-	public ImagenesLibros upImagenesLibros(ImagenesLibros updateImagenesLibros) {
-		return this.dao.updateImagenesLibros(updateImagenesLibros);
+	public ImagenesLibrosDTO upImagenesLibros(ImagenesLibros updateImagenesLibros) {
+		ImagenesLibros upImagen = this.dao.updateImagenesLibros(updateImagenesLibros);
+		ImagenesLibrosDTO imagenesDTO = this.modelMapper.map(upImagen, ImagenesLibrosDTO.class);
+		return imagenesDTO;
 	}
 
 	@Override
-	public ImagenesLibros findIdImagenesLibros(int id) {
-		return this.dao.findIdImagenesLibros(id);
+	public ImagenesLibrosDTO findIdImagenesLibros(int id) {
+		ImagenesLibros imagenId = this.dao.findIdImagenesLibros(id);
+		ImagenesLibrosDTO imagenesDTO = this.modelMapper.map(imagenId, ImagenesLibrosDTO.class);
+		return imagenesDTO;
 	}
 
 	@Override
-	public List<ImagenesLibros> listAllImagenesLibros() {
-		return this.dao.listImagenesLibros();
+	public List<ImagenesLibrosDTO> listAllImagenesLibros() {
+		List<ImagenesLibros> listAllImagenes = this.dao.listImagenesLibros();
+		return listAllImagenes.stream().map(img -> this.modelMapper.map(img, ImagenesLibrosDTO.class)).collect(Collectors.toList());
 	}
 	
 }

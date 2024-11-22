@@ -2,6 +2,9 @@ package co.edu.ue.entity;
 
 import java.io.Serializable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -21,7 +24,10 @@ public class DisponibilidadLibros implements Serializable {
 	@Column(name="idDisponibilidadLibro")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idDisponibilidadLibro;
-
+	
+	
+	@NotNull(message = "El campo de disponibilidad no se envió")
+	@NotBlank(message = "El campo de disponibilidad no puede estar vacio")
 	@Column(name="disponibilidad")
 	private String disponibilidad;
 

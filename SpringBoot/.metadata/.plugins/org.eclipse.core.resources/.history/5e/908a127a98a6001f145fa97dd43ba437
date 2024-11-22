@@ -1,0 +1,61 @@
+package co.edu.ue.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import co.edu.ue.dto.UsuariosDTO;
+import co.edu.ue.entity.Usuarios;
+import co.edu.ue.service.IUsuarioService;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.hateoas.Link;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
+@RestController
+@CrossOrigin("*")
+@RequestMapping(value="usuario")
+public class UsuarioController{
+	
+	@Autowired
+    private ModelMapper modelMapper; 
+
+	@Autowired
+	IUsuarioService service;
+	
+	@GetMapping(value="usuarios", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Usuarios> getAllUsuarios() {
+		return this.service.listAllUsuarios();
+	}
+	
+	@GetMapping(value="usuario-id", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<UsuariosDTO>  getByIdUsario(@RequestParam("idUsuario") int id) {
+		UsuariosDTO usuario = this.service.findIdUsuario(id);
+		Link rolLink = linkTo(methodOn(RolController.class).getRol(usuario.getRol().getId())).withRel("rol");
+		
+		return new ResponseEntity<UsuariosDTO>( this.service.findIdUsuario(id), HttpStatus.ACCEPTED);
+	}
+	
+	@PostMapping(value="add-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public Usuarios postUsuario(@RequestBody Usuarios newUsuario) {
+		return this.service.addUsuario(newUsuario);
+	}
+	
+	@PutMapping(value="update-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public Usuarios putUsuario(@RequestBody Usuarios updateUsuario) {
+		return this.service.updUsuario(updateUsuario);
+	}
+	
+	
+	
+}

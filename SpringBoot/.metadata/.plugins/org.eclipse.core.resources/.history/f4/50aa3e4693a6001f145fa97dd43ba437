@@ -1,0 +1,42 @@
+package co.edu.ue.dto;
+
+import io.swagger.v3.oas.models.links.Link;
+
+public class UsuariosDTO {
+
+	private int idUsuario;
+	private String correo;
+	private String contraseña;
+	private RolDTO Rol;
+	
+	
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+	public String getCorreo() {
+		return correo;
+	}
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+	public String getContraseña() {
+		return contraseña;
+	}
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
+	}
+	public RolDTO getRol() {
+		return Rol;
+	}
+	public void setRol(RolDTO rol) {
+		Rol = rol;
+	}
+	
+
+	
+	
+	
+}

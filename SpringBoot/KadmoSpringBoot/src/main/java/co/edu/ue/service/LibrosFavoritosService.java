@@ -1,37 +1,50 @@
 package co.edu.ue.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import co.edu.ue.dto.LibrosFavoritosDTO;
 import co.edu.ue.entity.LibrosFavoritos;
 import co.edu.ue.repository.dao.ILibrosFavoritosRepository;
 
 @Service
 public class LibrosFavoritosService implements ILibrosFavoritosService{
 
+	@Autowired
+	private ModelMapper modelMapper;
+	
 	 @Autowired
 	 ILibrosFavoritosRepository dao;
 
 	@Override
-	public LibrosFavoritos addLibrosFavoritos(LibrosFavoritos newLibrosFavoritos) {
-		return this.dao.insertLibrosFavoritos(newLibrosFavoritos);
+	public LibrosFavoritosDTO addLibrosFavoritos(LibrosFavoritos newLibrosFavoritos) {
+		LibrosFavoritos addLibro = this.dao.insertLibrosFavoritos(newLibrosFavoritos);
+		LibrosFavoritosDTO librosFavoritosDTO = this.modelMapper.map(addLibro, LibrosFavoritosDTO.class);
+		return librosFavoritosDTO;
 	}
 
 	@Override
-	public LibrosFavoritos upLibrosFavoritos(LibrosFavoritos updateLibrosFavoritos) {
-		return this.dao.updateLibrosFavoritos(updateLibrosFavoritos);
+	public LibrosFavoritosDTO upLibrosFavoritos(LibrosFavoritos updateLibrosFavoritos) {
+		LibrosFavoritos upLibro = this.dao.updateLibrosFavoritos(updateLibrosFavoritos);
+		LibrosFavoritosDTO librosFavoritosDTO = this.modelMapper.map(upLibro, LibrosFavoritosDTO.class);
+		return librosFavoritosDTO;
 	}
 
 	@Override
-	public LibrosFavoritos findIdLibrosFavoritos(int id) {
-		return this.dao.findIdLibrosFavoritos(id);
+	public LibrosFavoritosDTO findIdLibrosFavoritos(int id) {
+		LibrosFavoritos idLibroFavorito = this.dao.findIdLibrosFavoritos(id);
+		LibrosFavoritosDTO librosFavoritosDTO = this.modelMapper.map(idLibroFavorito, LibrosFavoritosDTO.class);
+		return librosFavoritosDTO;
 	}
 
 	@Override
-	public List<LibrosFavoritos> listAllLibrosFavoritos() {
-		return this.dao.listLibrosFavoritos();
+	public List<LibrosFavoritosDTO> listAllLibrosFavoritos() {
+		List<LibrosFavoritos> listAllLibrosFavoritos = this.dao.listLibrosFavoritos();
+		return listAllLibrosFavoritos.stream().map(lib-> this.modelMapper.map(lib, LibrosFavoritosDTO.class)).collect(Collectors.toList());
 	}
 	 
 }

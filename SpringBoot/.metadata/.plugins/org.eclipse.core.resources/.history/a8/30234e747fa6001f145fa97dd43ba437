@@ -1,0 +1,13 @@
+package co.edu.ue.config;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.context.annotation.Bean;
+
+public class AppConfig {
+	@Bean
+	public ModelMapper modelMapper() {
+		ModelMapper modelMapper = new ModelMapper();
+		return modelMapper;
+	}
+
+}

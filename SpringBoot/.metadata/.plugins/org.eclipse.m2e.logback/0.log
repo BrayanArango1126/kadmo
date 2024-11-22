@@ -1051,3 +1051,972 @@
 2024-11-10 15:14:55,351 [Worker-190: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-11-10 15:14:55,356 [Worker-190: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-11-10 15:14:55,358 [Worker-190: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-13 09:37:51,939 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-11-14 07:50:40,683 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-11-19 08:23:40,818 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-11-19 08:43:07,318 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 08:43:07,338 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 08:43:07,344 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 08:43:20,161 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 08:43:20,169 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 08:43:20,175 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 08:43:40,291 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 08:43:40,296 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 08:43:40,300 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 08:50:15,138 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 08:50:15,143 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 08:50:15,147 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 08:51:57,100 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 08:51:57,105 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 08:51:57,108 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 08:55:35,244 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 08:55:35,249 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 08:55:35,252 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 08:56:58,039 [Worker-40: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: co.edu.ue:KadmoSpringBoot:0.1 @ C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\pom.xml.
+2024-11-19 08:56:58,629 [Worker-40: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/modelmapper/modelmapper/3.2.0/modelmapper-3.2.0.pom
+2024-11-19 08:56:58,652 [Worker-40: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/modelmapper/modelmapper/3.2.0/modelmapper-3.2.0.pom
+2024-11-19 08:56:58,668 [Worker-40: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/modelmapper/modelmapper-parent/3.2.0/modelmapper-parent-3.2.0.pom
+2024-11-19 08:56:58,689 [Worker-40: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/modelmapper/modelmapper-parent/3.2.0/modelmapper-parent-3.2.0.pom
+2024-11-19 08:56:58,804 [Worker-40: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/modelmapper/modelmapper/3.2.0/modelmapper-3.2.0.jar
+2024-11-19 08:56:58,955 [Worker-40: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/modelmapper/modelmapper/3.2.0/modelmapper-3.2.0.jar
+2024-11-19 08:56:59,176 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 08:56:59,177 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 08:56:59,181 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 08:57:00,145 [Worker-46: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/modelmapper/modelmapper/3.2.0/modelmapper-3.2.0-sources.jar
+2024-11-19 08:57:00,204 [Worker-46: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/modelmapper/modelmapper/3.2.0/modelmapper-3.2.0-sources.jar
+2024-11-19 08:57:00,208 [Worker-46: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.modelmapper:modelmapper:3.2.0
+2024-11-19 08:57:03,137 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 08:57:03,148 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 08:57:03,152 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 08:58:44,163 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 08:58:44,173 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 08:58:44,176 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 09:03:23,562 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 09:03:23,568 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 09:03:23,572 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 09:03:41,198 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 09:03:41,202 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 09:03:41,204 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 09:03:55,788 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 09:03:55,791 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 09:03:55,793 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 09:04:42,366 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 09:04:42,369 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 09:04:42,371 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 09:06:21,623 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 09:06:21,626 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 09:06:21,629 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 09:06:37,012 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 09:06:37,015 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 09:06:37,018 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 09:06:44,159 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 09:06:44,161 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 09:06:44,163 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 09:07:12,494 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 09:07:12,498 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 09:07:12,500 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 09:09:38,686 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 09:09:38,691 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 09:09:38,694 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:08:24,539 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:08:24,553 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:08:24,556 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:08:32,131 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:08:32,135 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:08:32,138 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:14:28,530 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:14:28,534 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:14:28,537 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:14:51,563 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:14:51,567 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:14:51,570 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:20:44,083 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:20:44,090 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:20:44,095 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:23:13,423 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:23:13,428 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:23:13,431 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:23:29,862 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:23:29,868 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:23:29,871 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:24:12,209 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:24:12,212 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:24:12,214 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:26:42,356 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:26:42,361 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:26:42,363 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:36:03,609 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:36:03,629 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:36:03,635 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:37:16,661 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:37:16,665 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:37:16,668 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:42:36,142 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:42:36,146 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:42:36,149 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:44:28,568 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:44:28,574 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:44:28,578 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:45:29,206 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:45:29,210 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:45:29,212 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:46:02,061 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:46:02,064 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:46:02,066 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:46:30,068 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:46:30,072 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:46:30,074 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:47:49,287 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:47:49,291 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:47:49,293 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:48:38,894 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:48:38,897 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:48:38,900 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:51:12,954 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:51:12,958 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:51:12,961 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:51:20,176 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:51:20,180 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:51:20,182 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:56:12,625 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:56:12,632 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:56:12,636 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:57:38,347 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:57:38,352 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:57:38,354 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 10:59:08,109 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 10:59:08,115 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 10:59:08,118 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:01:56,059 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:01:56,064 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:01:56,066 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:05:33,107 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:05:33,112 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:05:33,114 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:06:03,957 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:06:03,964 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:06:03,966 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:06:17,440 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:06:17,447 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:06:17,449 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:17:20,691 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:17:20,695 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:17:20,697 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:18:31,877 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:18:31,881 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:18:31,882 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:20:17,464 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:20:17,468 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:20:17,469 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:23:42,562 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:23:42,567 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:23:42,606 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:23:54,960 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:23:54,963 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:23:54,965 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:24:54,863 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:24:54,866 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:24:54,868 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:26:11,116 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:26:11,120 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:26:11,122 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:26:59,321 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:26:59,325 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:26:59,327 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:28:14,343 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:28:14,348 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:28:14,351 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:33:06,861 [Worker-108: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: co.edu.ue:KadmoSpringBoot:0.1 @ C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\pom.xml.
+2024-11-19 11:33:09,546 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-rest/3.3.5/spring-boot-starter-data-rest-3.3.5.pom
+2024-11-19 11:33:09,572 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-rest/3.3.5/spring-boot-starter-data-rest-3.3.5.pom
+2024-11-19 11:33:09,590 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-webmvc/4.3.5/spring-data-rest-webmvc-4.3.5.pom
+2024-11-19 11:33:09,614 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-webmvc/4.3.5/spring-data-rest-webmvc-4.3.5.pom
+2024-11-19 11:33:09,630 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-parent/4.3.5/spring-data-rest-parent-4.3.5.pom
+2024-11-19 11:33:09,651 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-parent/4.3.5/spring-data-rest-parent-4.3.5.pom
+2024-11-19 11:33:09,670 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-core/4.3.5/spring-data-rest-core-4.3.5.pom
+2024-11-19 11:33:09,692 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-core/4.3.5/spring-data-rest-core-4.3.5.pom
+2024-11-19 11:33:09,719 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/hateoas/spring-hateoas/2.3.3/spring-hateoas-2.3.3.pom
+2024-11-19 11:33:09,746 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/hateoas/spring-hateoas/2.3.3/spring-hateoas-2.3.3.pom
+2024-11-19 11:33:09,783 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-core/3.0.0/spring-plugin-core-3.0.0.pom
+2024-11-19 11:33:09,802 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-core/3.0.0/spring-plugin-core-3.0.0.pom
+2024-11-19 11:33:09,818 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/atteo/evo-inflector/1.3/evo-inflector-1.3.pom
+2024-11-19 11:33:09,839 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/atteo/evo-inflector/1.3/evo-inflector-1.3.pom
+2024-11-19 11:33:09,863 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/atteo/parent/1.19/parent-1.19.pom
+2024-11-19 11:33:09,887 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/atteo/parent/1.19/parent-1.19.pom
+2024-11-19 11:33:10,024 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-rest/3.3.5/spring-boot-starter-data-rest-3.3.5.jar
+2024-11-19 11:33:10,058 [Worker-108: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-rest/3.3.5/spring-boot-starter-data-rest-3.3.5.jar
+2024-11-19 11:33:10,072 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/atteo/evo-inflector/1.3/evo-inflector-1.3.jar
+2024-11-19 11:33:10,106 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-core/3.0.0/spring-plugin-core-3.0.0.jar
+2024-11-19 11:33:10,117 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-core/4.3.5/spring-data-rest-core-4.3.5.jar
+2024-11-19 11:33:10,117 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/hateoas/spring-hateoas/2.3.3/spring-hateoas-2.3.3.jar
+2024-11-19 11:33:10,117 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-webmvc/4.3.5/spring-data-rest-webmvc-4.3.5.jar
+2024-11-19 11:33:10,180 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-core/4.3.5/spring-data-rest-core-4.3.5.jar
+2024-11-19 11:33:10,194 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-webmvc/4.3.5/spring-data-rest-webmvc-4.3.5.jar
+2024-11-19 11:33:10,197 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/hateoas/spring-hateoas/2.3.3/spring-hateoas-2.3.3.jar
+2024-11-19 11:33:10,245 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/atteo/evo-inflector/1.3/evo-inflector-1.3.jar
+2024-11-19 11:33:10,493 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-core/3.0.0/spring-plugin-core-3.0.0.jar
+2024-11-19 11:33:11,279 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:33:11,279 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:33:11,284 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:33:11,867 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-rest/3.3.5/spring-boot-starter-data-rest-3.3.5-sources.jar
+2024-11-19 11:33:11,875 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-rest/3.3.5/spring-boot-starter-data-rest-3.3.5-sources.jar
+2024-11-19 11:33:11,881 [Worker-114: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-data-rest:3.3.5
+2024-11-19 11:33:11,936 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-webmvc/4.3.5/spring-data-rest-webmvc-4.3.5-sources.jar
+2024-11-19 11:33:12,008 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-webmvc/4.3.5/spring-data-rest-webmvc-4.3.5-sources.jar
+2024-11-19 11:33:12,015 [Worker-114: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.data:spring-data-rest-webmvc:4.3.5
+2024-11-19 11:33:12,143 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-core/4.3.5/spring-data-rest-core-4.3.5-sources.jar
+2024-11-19 11:33:12,214 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-rest-core/4.3.5/spring-data-rest-core-4.3.5-sources.jar
+2024-11-19 11:33:12,221 [Worker-114: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.data:spring-data-rest-core:4.3.5
+2024-11-19 11:33:12,281 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/hateoas/spring-hateoas/2.3.3/spring-hateoas-2.3.3-sources.jar
+2024-11-19 11:33:12,375 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/hateoas/spring-hateoas/2.3.3/spring-hateoas-2.3.3-sources.jar
+2024-11-19 11:33:12,383 [Worker-114: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.hateoas:spring-hateoas:2.3.3
+2024-11-19 11:33:12,439 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-core/3.0.0/spring-plugin-core-3.0.0-sources.jar
+2024-11-19 11:33:12,971 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/plugin/spring-plugin-core/3.0.0/spring-plugin-core-3.0.0-sources.jar
+2024-11-19 11:33:12,976 [Worker-114: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.plugin:spring-plugin-core:3.0.0
+2024-11-19 11:33:13,032 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/atteo/evo-inflector/1.3/evo-inflector-1.3-sources.jar
+2024-11-19 11:33:13,189 [Worker-114: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/atteo/evo-inflector/1.3/evo-inflector-1.3-sources.jar
+2024-11-19 11:33:13,192 [Worker-114: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.atteo:evo-inflector:1.3
+2024-11-19 11:33:15,223 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:33:15,238 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:33:15,241 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:33:56,296 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:33:56,301 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:33:56,304 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:38:52,306 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:38:52,312 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:38:52,314 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 11:39:43,964 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 11:39:43,968 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 11:39:43,970 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 12:05:28,649 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 12:05:28,653 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 12:05:28,655 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 12:06:04,756 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 12:06:04,761 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 12:06:04,763 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 12:06:08,251 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 12:06:08,255 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 12:06:08,257 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 12:10:30,546 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 12:10:30,551 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 12:10:30,552 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 12:19:08,714 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 12:19:08,723 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 12:19:08,726 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 12:31:32,808 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 12:31:32,817 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 12:31:32,820 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 12:33:07,689 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 12:33:07,695 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 12:33:07,717 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 12:35:15,976 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 12:35:15,980 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 12:35:15,982 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 12:36:53,632 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 12:36:53,637 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 12:36:53,640 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 12:38:57,475 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 12:38:57,480 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 12:38:57,482 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:36:34,315 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:36:34,319 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:36:34,321 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:36:41,448 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:36:41,458 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:36:41,460 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:38:48,080 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:38:48,085 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:38:48,087 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:39:21,959 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:39:21,963 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:39:21,965 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:41:21,033 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:41:21,037 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:41:21,039 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:41:53,197 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:41:53,199 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:41:53,201 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:42:59,262 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:42:59,267 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:42:59,270 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:43:10,303 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:43:10,306 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:43:10,308 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:52:32,398 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:52:32,403 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:52:32,405 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:55:17,640 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:55:17,644 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:55:17,646 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:57:59,275 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:57:59,278 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:57:59,281 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 13:59:25,956 [Worker-156: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 13:59:25,959 [Worker-156: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 13:59:25,961 [Worker-156: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:03:25,738 [Worker-156: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:03:25,743 [Worker-156: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:03:25,746 [Worker-156: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:03:50,097 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:03:50,102 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:03:50,104 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:05:34,542 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:05:34,545 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:05:34,546 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:06:13,978 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:06:13,982 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:06:13,984 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:06:47,888 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:06:47,892 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:06:47,895 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:06:51,821 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:06:51,825 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:06:51,827 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:09:15,632 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:09:15,636 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:09:15,639 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:09:24,165 [Worker-156: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:09:24,170 [Worker-156: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:09:24,172 [Worker-156: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:09:38,851 [Worker-161: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:09:38,854 [Worker-161: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:09:38,856 [Worker-161: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:11:25,790 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:11:25,794 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:11:25,796 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:11:35,325 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:11:35,328 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:11:35,330 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:13:37,213 [Worker-163: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:13:37,218 [Worker-163: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:13:37,220 [Worker-163: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:15:59,124 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:15:59,128 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:15:59,130 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:18:28,251 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:18:28,255 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:18:28,257 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:19:23,448 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:19:23,453 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:19:23,455 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:24:35,687 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:24:35,690 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:24:35,693 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:25:05,087 [Worker-167: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:25:05,090 [Worker-167: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:25:05,092 [Worker-167: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:28:09,570 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:28:09,574 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:28:09,575 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:31:44,002 [Worker-169: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:31:44,005 [Worker-169: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:31:44,008 [Worker-169: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:35:50,314 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:35:50,319 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:35:50,321 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 14:37:42,425 [Worker-174: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 14:37:42,428 [Worker-174: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 14:37:42,430 [Worker-174: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:03:11,613 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:03:11,627 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:03:11,630 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:03:40,315 [Worker-174: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:03:40,320 [Worker-174: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:03:40,323 [Worker-174: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:05:23,802 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:05:23,806 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:05:23,808 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:07:28,169 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:07:28,175 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:07:28,178 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:09:10,674 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:09:10,677 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:09:10,679 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:10:55,194 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:10:55,198 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:10:55,200 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:11:22,186 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:11:22,190 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:11:22,192 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:11:41,804 [Worker-183: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:11:41,808 [Worker-183: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:11:41,810 [Worker-183: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:12:43,725 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:12:43,730 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:12:43,732 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:14:30,841 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:14:30,844 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:14:30,846 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:15:26,871 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:15:26,874 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:15:26,876 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:16:15,573 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:16:15,576 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:16:15,578 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:17:21,033 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:17:21,036 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:17:21,037 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:20:33,332 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:20:33,337 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:20:33,339 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:21:01,430 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:21:01,434 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:21:01,436 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:21:45,678 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:21:45,681 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:21:45,683 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:21:56,060 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:21:56,063 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:21:56,064 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:22:33,953 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:22:33,958 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:22:33,962 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:22:39,185 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:22:39,188 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:22:39,190 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:22:52,250 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:22:52,252 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:22:52,254 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:22:54,357 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:22:54,360 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:22:54,362 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:24:36,270 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:24:36,274 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:24:36,276 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:27:05,087 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:27:05,092 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:27:05,094 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:28:20,201 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:28:20,205 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:28:20,207 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:28:32,361 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:28:32,364 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:28:32,366 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:30:33,439 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:30:33,444 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:30:33,446 [Worker-181: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:30:45,011 [Worker-185: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:30:45,014 [Worker-185: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:30:45,016 [Worker-185: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:30:48,175 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:30:48,182 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:30:48,184 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:31:30,846 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:31:30,850 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:31:30,852 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:31:43,948 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:31:43,950 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:31:43,952 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:31:56,249 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:31:56,253 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:31:56,255 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:42:28,795 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:42:28,801 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:42:28,803 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:43:03,972 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:43:03,975 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:43:03,977 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:43:25,373 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:43:25,377 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:43:25,379 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:46:34,338 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:46:34,342 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:46:34,343 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:48:56,000 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:48:56,005 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:48:56,007 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:49:35,855 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:49:35,859 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:49:35,861 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:51:41,303 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:51:41,307 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:51:41,309 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:52:53,707 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:52:53,711 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:52:53,713 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:53:07,664 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:53:07,669 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:53:07,670 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:54:53,166 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:54:53,169 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:54:53,172 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:55:44,496 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:55:44,499 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:55:44,500 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:56:11,436 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:56:11,439 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:56:11,442 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:57:43,239 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:57:43,244 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:57:43,246 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:58:24,817 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:58:24,819 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:58:24,821 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 15:58:46,745 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 15:58:46,749 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 15:58:46,751 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:00:25,795 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:00:25,798 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:00:25,800 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:01:02,639 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:01:02,646 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:01:02,648 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:03:25,190 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:03:25,196 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:03:25,198 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:04:05,848 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:04:05,853 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:04:05,855 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:05:48,829 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:05:48,834 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:05:48,836 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:15:00,538 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:15:00,543 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:15:00,545 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:15:46,411 [Worker-196: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:15:46,415 [Worker-196: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:15:46,416 [Worker-196: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:18:34,963 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:18:34,975 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:18:34,977 [Worker-191: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:20:24,465 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:20:24,469 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:20:24,471 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:21:01,089 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:21:01,092 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:21:01,094 [Worker-197: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:26:22,569 [Worker-204: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:26:22,574 [Worker-204: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:26:22,576 [Worker-204: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:27:15,168 [Worker-203: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:27:15,173 [Worker-203: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:27:15,175 [Worker-203: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:28:03,945 [Worker-203: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:28:03,948 [Worker-203: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:28:03,950 [Worker-203: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:28:35,332 [Worker-203: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:28:35,335 [Worker-203: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:28:35,337 [Worker-203: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:31:47,139 [Worker-205: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:31:47,145 [Worker-205: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:31:47,147 [Worker-205: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:34:12,140 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:34:12,145 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:34:12,147 [Worker-211: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:35:49,407 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:35:49,410 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:35:49,412 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:38:25,566 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:38:25,570 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:38:25,571 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:44:18,384 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:44:18,387 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:44:18,388 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:45:39,340 [Worker-218: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:45:39,354 [Worker-218: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:45:39,358 [Worker-218: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:45:49,487 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:45:49,491 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:45:49,493 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:48:13,354 [Worker-218: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:48:13,358 [Worker-218: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:48:13,360 [Worker-218: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:48:48,770 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:48:48,773 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:48:48,775 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:50:37,133 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:50:37,137 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:50:37,140 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:51:38,349 [Worker-217: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:51:38,353 [Worker-217: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:51:38,356 [Worker-217: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:55:32,887 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:55:32,890 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:55:32,892 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:56:49,293 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:56:49,298 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:56:49,300 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:57:06,228 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:57:06,232 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:57:06,234 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:58:05,772 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:58:05,776 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:58:05,777 [Worker-201: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 16:58:39,967 [Worker-220: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 16:58:39,970 [Worker-220: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 16:58:39,972 [Worker-220: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 17:04:49,626 [Worker-222: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 17:04:49,631 [Worker-222: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 17:04:49,633 [Worker-222: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 17:05:23,861 [Worker-220: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 17:05:23,865 [Worker-220: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 17:05:23,868 [Worker-220: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 17:43:12,334 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 17:43:12,346 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 17:43:12,348 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 17:47:19,807 [Worker-235: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 17:47:19,812 [Worker-235: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 17:47:19,814 [Worker-235: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 17:47:56,386 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 17:47:56,393 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 17:47:56,394 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 17:51:02,871 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 17:51:02,875 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 17:51:02,877 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 17:52:16,049 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 17:52:16,056 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 17:52:16,059 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 17:53:45,700 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 17:53:45,703 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 17:53:45,705 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 17:56:13,148 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 17:56:13,154 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 17:56:13,157 [Worker-232: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 17:58:58,683 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 17:58:58,688 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 17:58:58,690 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 18:53:28,013 [Worker-243: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 18:53:28,019 [Worker-243: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 18:53:28,021 [Worker-243: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 18:59:08,168 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 18:59:08,172 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 18:59:08,174 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:00:07,360 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:00:07,363 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:00:07,364 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:00:35,499 [Worker-257: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:00:35,503 [Worker-257: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:00:35,505 [Worker-257: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:03:44,749 [Worker-260: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:03:44,753 [Worker-260: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:03:44,754 [Worker-260: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:09:17,087 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:09:17,092 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:09:17,094 [Worker-258: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:18:17,485 [Worker-270: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:18:17,489 [Worker-270: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:18:17,491 [Worker-270: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:19:53,762 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:19:53,767 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:19:53,769 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:20:07,383 [Worker-272: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:20:07,388 [Worker-272: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:20:07,390 [Worker-272: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:20:58,915 [Worker-273: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:20:58,948 [Worker-273: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:20:58,953 [Worker-273: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:21:01,104 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:21:01,113 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:21:01,115 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:21:16,242 [Worker-272: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:21:16,248 [Worker-272: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:21:16,249 [Worker-272: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:21:35,726 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:21:35,729 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:21:35,730 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:22:21,344 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:22:21,348 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:22:21,350 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:22:32,815 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:22:32,817 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:22:32,819 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:23:31,005 [Worker-273: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:23:31,008 [Worker-273: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:23:31,009 [Worker-273: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:24:13,220 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:24:13,222 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:24:13,224 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:24:36,302 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:24:36,304 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:24:36,306 [Worker-265: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:26:02,311 [Worker-270: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:26:02,345 [Worker-270: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:26:02,350 [Worker-270: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:27:01,481 [Worker-270: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:27:01,485 [Worker-270: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:27:01,487 [Worker-270: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:27:30,027 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:27:30,030 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:27:30,032 [Worker-274: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:31:57,011 [Worker-275: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:31:57,015 [Worker-275: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:31:57,016 [Worker-275: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:39:17,334 [Worker-277: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:39:17,339 [Worker-277: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:39:17,341 [Worker-277: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:39:39,380 [Worker-280: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:39:39,419 [Worker-280: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:39:39,426 [Worker-280: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:40:10,638 [Worker-277: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:40:10,643 [Worker-277: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:40:10,644 [Worker-277: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:44:50,044 [Worker-284: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:44:50,050 [Worker-284: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:44:50,052 [Worker-284: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:46:24,024 [Worker-283: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:46:24,029 [Worker-283: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:46:24,030 [Worker-283: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:54:27,574 [Worker-284: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:54:27,578 [Worker-284: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:54:27,579 [Worker-284: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:55:45,841 [Worker-288: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:55:45,844 [Worker-288: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:55:45,845 [Worker-288: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:55:47,943 [Worker-284: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:55:47,946 [Worker-284: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:55:47,947 [Worker-284: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:56:12,856 [Worker-283: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:56:12,859 [Worker-283: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:56:12,861 [Worker-283: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 19:58:51,789 [Worker-283: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 19:58:51,793 [Worker-283: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 19:58:51,794 [Worker-283: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 20:00:56,877 [Worker-287: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 20:00:56,881 [Worker-287: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 20:00:56,883 [Worker-287: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-19 20:02:12,477 [Worker-288: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-19 20:02:12,481 [Worker-288: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-19 20:02:12,484 [Worker-288: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:16:18,343 [Worker-294: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:16:18,350 [Worker-294: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:16:18,353 [Worker-294: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:18:05,961 [Worker-289: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:18:05,969 [Worker-289: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:18:05,971 [Worker-289: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:18:36,534 [Worker-289: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:18:36,541 [Worker-289: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:18:36,544 [Worker-289: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:18:57,456 [Worker-296: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:18:57,461 [Worker-296: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:18:57,464 [Worker-296: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:22:24,325 [Worker-295: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:22:24,331 [Worker-295: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:22:24,334 [Worker-295: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:32:52,676 [Worker-299: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:32:52,684 [Worker-299: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:32:52,687 [Worker-299: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:34:40,250 [Worker-301: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:34:40,257 [Worker-301: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:34:40,260 [Worker-301: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:35:15,965 [Worker-300: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:35:15,972 [Worker-300: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:35:15,975 [Worker-300: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:37:14,055 [Worker-302: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:37:14,062 [Worker-302: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:37:14,065 [Worker-302: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:50:57,468 [Worker-305: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:50:57,492 [Worker-305: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:50:57,495 [Worker-305: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 07:57:21,035 [Worker-303: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 07:57:21,043 [Worker-303: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 07:57:21,045 [Worker-303: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:00:59,079 [Worker-310: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:00:59,085 [Worker-310: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:00:59,087 [Worker-310: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:01:53,182 [Worker-311: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:01:53,187 [Worker-311: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:01:53,190 [Worker-311: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:02:17,983 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:02:17,987 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:02:17,989 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:03:12,940 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:03:12,944 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:03:12,947 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:04:18,188 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:04:18,193 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:04:18,196 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:04:45,341 [Worker-310: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:04:45,345 [Worker-310: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:04:45,348 [Worker-310: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:06:22,528 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:06:22,533 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:06:22,535 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:07:02,760 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:07:02,764 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:07:02,768 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:09:14,214 [Worker-315: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:09:14,220 [Worker-315: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:09:14,222 [Worker-315: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:10:24,647 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:10:24,653 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:10:24,656 [Worker-307: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:11:34,301 [Worker-314: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:11:34,306 [Worker-314: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:11:34,310 [Worker-314: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:15:30,515 [Worker-316: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:15:30,522 [Worker-316: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:15:30,525 [Worker-316: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:17:17,304 [Worker-310: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:17:17,310 [Worker-310: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:17:17,312 [Worker-310: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:17:53,160 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:17:53,166 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:17:53,168 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:18:38,735 [Worker-319: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:18:38,740 [Worker-319: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:18:38,742 [Worker-319: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:20:05,214 [Worker-318: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:20:05,220 [Worker-318: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:20:05,223 [Worker-318: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:20:30,630 [Worker-316: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:20:30,633 [Worker-316: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:20:30,636 [Worker-316: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:21:57,499 [Worker-320: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:21:57,503 [Worker-320: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:21:57,506 [Worker-320: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:24:50,747 [Worker-320: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:24:50,751 [Worker-320: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:24:50,763 [Worker-320: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:26:25,759 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:26:25,766 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:26:25,769 [Worker-312: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:27:56,295 [Worker-318: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:27:56,300 [Worker-318: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:27:56,303 [Worker-318: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:33:25,592 [Worker-319: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:33:25,596 [Worker-319: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:33:25,598 [Worker-319: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:33:37,481 [Worker-320: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:33:37,484 [Worker-320: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:33:37,486 [Worker-320: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:36:25,828 [Worker-321: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:36:25,839 [Worker-321: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:36:25,842 [Worker-321: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:38:33,814 [Worker-322: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:38:33,820 [Worker-322: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:38:33,822 [Worker-322: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:39:53,768 [Worker-326: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:39:53,772 [Worker-326: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:39:53,775 [Worker-326: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:45:27,872 [Worker-329: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:45:27,879 [Worker-329: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:45:27,881 [Worker-329: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:49:49,027 [Worker-329: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:49:49,033 [Worker-329: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:49:49,035 [Worker-329: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:50:56,724 [Worker-327: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:50:56,730 [Worker-327: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:50:56,733 [Worker-327: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 08:52:38,309 [Worker-329: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 08:52:38,312 [Worker-329: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 08:52:38,314 [Worker-329: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 09:25:30,001 [Worker-333: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 09:25:30,024 [Worker-333: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 09:25:30,027 [Worker-333: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 09:26:57,649 [Worker-337: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 09:26:57,654 [Worker-337: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 09:26:57,656 [Worker-337: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 09:33:18,955 [Worker-340: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 09:33:18,959 [Worker-340: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 09:33:18,960 [Worker-340: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-20 11:35:53,203 [Worker-370: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-20 11:35:53,259 [Worker-370: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-20 11:35:53,262 [Worker-370: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 13:39:33,408 [Worker-526: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 13:39:33,457 [Worker-526: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 13:39:33,461 [Worker-526: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 13:40:42,918 [Worker-526: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 13:40:42,957 [Worker-526: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 13:40:42,962 [Worker-526: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:13:02,725 [Worker-536: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:13:02,739 [Worker-536: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:13:02,744 [Worker-536: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:16:41,150 [Worker-542: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:16:41,156 [Worker-542: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:16:41,159 [Worker-542: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:19:48,622 [Worker-541: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:19:48,669 [Worker-541: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:19:48,675 [Worker-541: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:20:00,049 [Worker-543: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:20:00,053 [Worker-543: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:20:00,057 [Worker-543: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:20:17,247 [Worker-535: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:20:17,252 [Worker-535: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:20:17,255 [Worker-535: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:30:03,767 [Worker-546: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:30:03,780 [Worker-546: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:30:03,784 [Worker-546: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:32:00,294 [Worker-547: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:32:00,300 [Worker-547: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:32:00,304 [Worker-547: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:32:17,672 [Worker-541: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:32:17,686 [Worker-541: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:32:17,689 [Worker-541: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:34:35,054 [Worker-544: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:34:35,059 [Worker-544: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:34:35,062 [Worker-544: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:37:01,280 [Worker-544: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:37:01,284 [Worker-544: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:37:01,287 [Worker-544: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:40:17,019 [Worker-540: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:40:17,026 [Worker-540: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:40:17,029 [Worker-540: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:43:13,489 [Worker-551: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:43:13,493 [Worker-551: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:43:13,497 [Worker-551: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:45:32,917 [Worker-550: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:45:32,921 [Worker-550: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:45:32,924 [Worker-550: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:52:36,730 [Worker-555: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:52:36,734 [Worker-555: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:52:36,736 [Worker-555: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 14:54:25,412 [Worker-549: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 14:54:25,416 [Worker-549: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 14:54:25,418 [Worker-549: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:10:29,656 [Worker-560: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:10:29,661 [Worker-560: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:10:29,663 [Worker-560: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:11:37,096 [Worker-557: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:11:37,099 [Worker-557: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:11:37,102 [Worker-557: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:13:19,845 [Worker-559: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:13:19,849 [Worker-559: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:13:19,851 [Worker-559: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:13:34,225 [Worker-559: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:13:34,230 [Worker-559: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:13:34,233 [Worker-559: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:13:48,674 [Worker-562: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:13:48,677 [Worker-562: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:13:48,679 [Worker-562: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:23:40,464 [Worker-562: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:23:40,467 [Worker-562: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:23:40,470 [Worker-562: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:31:13,890 [Worker-562: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:31:13,894 [Worker-562: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:31:13,896 [Worker-562: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:33:32,674 [Worker-570: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:33:32,681 [Worker-570: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:33:32,685 [Worker-570: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:33:38,786 [Worker-569: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:33:38,790 [Worker-569: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:33:38,792 [Worker-569: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:46:21,354 [Worker-575: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:46:21,362 [Worker-575: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:46:21,365 [Worker-575: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:52:09,902 [Worker-578: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:52:09,913 [Worker-578: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:52:09,916 [Worker-578: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:52:31,812 [Worker-564: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:52:31,821 [Worker-564: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:52:31,824 [Worker-564: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 15:54:23,830 [Worker-579: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 15:54:23,837 [Worker-579: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 15:54:23,840 [Worker-579: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 16:01:09,628 [Worker-579: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 16:01:09,632 [Worker-579: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 16:01:09,634 [Worker-579: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 16:02:35,770 [Worker-578: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 16:02:35,773 [Worker-578: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 16:02:35,776 [Worker-578: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 16:03:19,671 [Worker-580: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 16:03:19,675 [Worker-580: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 16:03:19,678 [Worker-580: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 16:04:50,446 [Worker-583: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 16:04:50,453 [Worker-583: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 16:04:50,457 [Worker-583: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 16:08:56,975 [Worker-586: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 16:08:56,978 [Worker-586: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 16:08:56,980 [Worker-586: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources
+2024-11-22 16:10:54,748 [Worker-586: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-22 16:10:54,751 [Worker-586: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-22 16:10:54,753 [Worker-586: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\ProyectosProgramacion\KadmoFinalProject\SpringBoot\KadmoSpringBoot\src\test\resources

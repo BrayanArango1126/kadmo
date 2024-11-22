@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 
 /**
@@ -21,21 +24,36 @@ public class DatosUsuarios implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idDatoUsuario;
 
+	@NotNull(message = "El campo de apellidos no se envió")
+	@NotBlank(message = "El campo de apellidos no puede estar vacio")
+	@Pattern(regexp="^([A-Z][a-z]{0,14}(\\s[A-Z][a-z]{0,14})?)$", message="Hay un error en los apellidos, la inicial de cada apellido debe ser en mayúscula")
 	@Column(name="apellidos")
 	private String apellidos;
 
+	@NotNull(message = "El campo de dirección no se envió")
+	@NotBlank(message = "El campo de dirección no puede estar vacio")
 	@Column(name="direccion")
 	private String direccion;
 
+	@NotNull(message = "El campo de documento no se envió")
+	@NotBlank(message = "El campo de documento no puede estar vacio")
+	@Pattern(regexp= "^1\\d{9}$", message = "El número de documento no es válido")
 	@Column(name="documento")
 	private String documento;
 
+	
 	@Column(name="edad")
 	private int edad;
 
+	@NotNull(message = "El campo de nombres no se envió")
+	@NotBlank(message = "El campo de nombres no puede estar vacio")
+	@Pattern(regexp="^([A-Z][a-z]{0,14}(\\s[A-Z][a-z]{0,14})?)$", message="Hay un error en los nombres, la inicial de cada nombre debe ser en mayúscula")
 	@Column(name="nombres")
 	private String nombres;
 
+	@NotNull(message = "El campo de teléfono no se envió")
+	@NotBlank(message = "El campo de teléfono no puede estar vacio")
+	@Pattern(regexp="^3(00|04|10|11|12|13|14|15|16|17|18|20|21|22|23|30)\\d{7}$", message="Hay un error en el número telefónico, verifícalo")
 	@Column(name="telefono")
 	private String telefono;
 

@@ -2,10 +2,12 @@ package co.edu.ue.controller;
 
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,35 +17,68 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import co.edu.co.utils.ApiResponse;
+import co.edu.ue.dto.EditorialesDTO;
 import co.edu.ue.entity.Editoriales;
+import co.edu.ue.entity.Roles;
+import co.edu.ue.entity.Usuarios;
+import co.edu.ue.repository.dao.IRolRepository;
+import co.edu.ue.repository.dao.IUsuarioRepository;
 import co.edu.ue.service.IEditorialesService;
+import jakarta.validation.Valid;
 
 @RestController
 @CrossOrigin("*")
 @RequestMapping(value="editorial")
-
 public class EditorialesController {
+	
+	@Autowired
+	private IUsuarioRepository daoUser;
+	
+	@Autowired
+	private IRolRepository daoRol;
+	
+	@Autowired
+	private ModelMapper modelMapper;
 
 	@Autowired
 	IEditorialesService service;
 	
 	@GetMapping(value="editoriales", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<Editoriales>> getAllEditoriales() {
-		return new ResponseEntity<List<Editoriales>> ( this.service.listAllEditoriales(), HttpStatus.OK);
+	public ResponseEntity<List<EditorialesDTO>> getAllEditoriales() {
+		return new ResponseEntity<List<EditorialesDTO>> ( this.service.listAllEditoriales(), HttpStatus.ACCEPTED);
 	}
 	
 	@GetMapping(value="editorial-id", produces = MediaType.APPLICATION_JSON_VALUE)
-	public Editoriales getByIdEditoriales(@RequestParam("idEditorial") int id) {
-		return this.service.findIdEditoriales(id);
+	public ResponseEntity<EditorialesDTO>  getByIdEditoriales(@RequestParam("idEditoriales") int id) {
+		return new ResponseEntity<EditorialesDTO> ( this.service.findIdEditoriales(id), HttpStatus.ACCEPTED);
 	}
 	
 	@PostMapping(value="add-editorial", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public Editoriales postEditoriales(@RequestBody Editoriales newEditoriales) {
-		return this.service.addEditoriales(newEditoriales);
+	public ResponseEntity<ApiResponse<EditorialesDTO>>  postEditoriales(@Valid @RequestBody EditorialesDTO newEditoriales,  BindingResult bindingResult) {
+		if(bindingResult.hasErrors()) {
+			return new ResponseEntity<>(new ApiResponse<>(bindingResult.getFieldError().getDefaultMessage(), null ) ,HttpStatus.CONFLICT);
+		}
+		Editoriales addEditorial = this.modelMapper.map(newEditoriales, Editoriales.class);
+		
+		Usuarios user = this.daoUser.findIdUsuario(newEditoriales.getUsuario().getIdUsuario());
+		Roles rol = this.daoRol.findIdRol(user.getRole().getIdRol());
+		
+		user.setRole(rol);
+		
+		addEditorial.setUsuario(user);
+		
+		EditorialesDTO addedEditoriales = this.service.addEditoriales(addEditorial);
+		return new ResponseEntity<> (new ApiResponse<>("Editorial agregado correctamente",addedEditoriales) , HttpStatus.CREATED);
 	}
 	
 	@PutMapping(value="update-editorial", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public Editoriales putEditoriales(@RequestBody Editoriales updateEditoriales) {
-		return this.service.upEditoriales(updateEditoriales);
+	public ResponseEntity<ApiResponse<EditorialesDTO>>  putEditoriales(@Valid @RequestBody EditorialesDTO updateEditoriales, BindingResult bindingResult) {
+		if(bindingResult.hasErrors()) {
+			return new ResponseEntity<>(new ApiResponse<>(bindingResult.getFieldError().getDefaultMessage(), null ) ,HttpStatus.CONFLICT);
+		}
+		Editoriales updEditorial = this.modelMapper.map(updateEditoriales, Editoriales.class);
+		EditorialesDTO updatedEditoriales = this.service.upEditoriales(updEditorial);
+		return new ResponseEntity<> (new ApiResponse<>("Editorial editada correctamente",updatedEditoriales) , HttpStatus.OK);
 	}
 }

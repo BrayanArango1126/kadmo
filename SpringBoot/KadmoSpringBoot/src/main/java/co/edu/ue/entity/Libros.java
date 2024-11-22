@@ -2,6 +2,9 @@ package co.edu.ue.entity;
 
 import java.io.Serializable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.Date;
 import java.util.List;
 
@@ -23,9 +26,13 @@ public class Libros implements Serializable {
 	@Column(name="idLibros")
 	private int idLibros;
 
+	@NotNull(message = "El campo de autor no se envió")
+	@NotBlank(message = "El campo de autor no puede estar vacio")
 	@Column(name="autor")
 	private String autor;
 
+	@NotNull(message = "El campo de descripción no se envió")
+	@NotBlank(message = "El campo de descripción no puede estar vacio")
 	@Column(name="descripcion")
 	private String descripcion;
 
@@ -33,9 +40,12 @@ public class Libros implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaModificacion;
 
+	@NotNull(message = "El campo de nombre no se envió")
+	@NotBlank(message = "El campo de nombre no puede estar vacio")
 	@Column(name="nombre")
 	private String nombre;
 
+	@NotNull(message = "El campo de precio no se envió")
 	@Column(name="precio")
 	private double precio;
 

@@ -1,0 +1,58 @@
+package co.edu.ue.controller;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import co.edu.ue.dto.LibrosPublicadosDTO;
+import co.edu.ue.entity.LibrosPublicados;
+import co.edu.ue.service.ILibrosPublicadosService;
+
+@RestController
+@CrossOrigin("*")
+@RequestMapping(value="libro-publicado")
+public class LibrosPublicadosController {
+	
+	@Autowired
+    private ModelMapper modelMapper; 
+
+	@Autowired
+	ILibrosPublicadosService service;
+	
+	@GetMapping(value="libros-publicados", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<LibrosPublicadosDTO>> getAllLibrosPublicados() {
+		return new ResponseEntity<List<LibrosPublicadosDTO>> ( this.service.listAllLibrosPublicados(), HttpStatus.ACCEPTED);
+	}
+	
+	@GetMapping(value="libro-publicado-id", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<LibrosPublicadosDTO> getByIdLibrosPublicados(@RequestParam("idLibroPublicado") int id) {
+		return new ResponseEntity<LibrosPublicadosDTO>( this.service.findIdLibrosPublicados(id), HttpStatus.ACCEPTED);
+	}
+	
+	@PostMapping(value="add-libro-publicado", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<LibrosPublicadosDTO> postLibrosPublicados(@RequestBody LibrosPublicadosDTO newLibrosPublicados) {
+		LibrosPublicados addLibrosPublicados = this.modelMapper.map(newLibrosPublicados, LibrosPublicados.class);
+		LibrosPublicadosDTO addedLibrosPublicados = this.service.addLibrosPublicados(addLibrosPublicados);
+		return new ResponseEntity<LibrosPublicadosDTO>( addedLibrosPublicados, HttpStatus.CREATED);
+	}
+	
+	@PutMapping(value="update-libro-publicado", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<LibrosPublicadosDTO> putLibrosPublicados(@RequestBody LibrosPublicadosDTO updateLibrosPublicados) {
+		LibrosPublicados updLibrosPublicados = this.modelMapper.map(updateLibrosPublicados, LibrosPublicados.class);
+		Libros
+		return this.service.upLibrosPublicados(updateLibrosPublicados);
+	}
+	
+}

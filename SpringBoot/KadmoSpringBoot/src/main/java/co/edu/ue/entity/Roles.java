@@ -2,6 +2,9 @@ package co.edu.ue.entity;
 
 import java.io.Serializable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.Date;
 import java.util.List;
 
@@ -21,11 +24,13 @@ public class Roles implements Serializable {
 	@Column(name="idRol")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idRol;
-
+	
 	@Column(name="fechaRegistro")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaRegistro;
 
+	@NotNull(message = "El campo de rol no se envió")
+	@NotBlank(message = "El campo de rol no puede estar vacio")
 	@Column(name="rol")
 	private String rol;
 

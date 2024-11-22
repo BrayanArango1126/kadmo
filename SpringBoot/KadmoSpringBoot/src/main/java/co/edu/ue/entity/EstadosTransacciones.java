@@ -2,6 +2,9 @@ package co.edu.ue.entity;
 
 import java.io.Serializable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.List;
 
 
@@ -20,6 +23,8 @@ public class EstadosTransacciones implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idEstadoTransaccion;
 
+	@NotNull(message = "El campo de estado de transaccion no se envió")
+	@NotBlank(message = "El campo de estado de transaccion no puede estar vacio")
 	@Column(name="estado")
 	private String estado;
 

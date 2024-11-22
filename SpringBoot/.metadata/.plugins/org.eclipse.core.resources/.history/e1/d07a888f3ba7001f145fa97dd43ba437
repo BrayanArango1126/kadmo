@@ -1,0 +1,49 @@
+package co.edu.ue.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import co.edu.ue.entity.LibrosPublicados;
+import co.edu.ue.service.ILibrosPublicadosService;
+
+@RestController
+@CrossOrigin("*")
+@RequestMapping(value="libro-publicado")
+public class LibrosPublicadosController {
+
+	@Autowired
+	ILibrosPublicadosService service;
+	
+	@GetMapping(value="libros-publicados", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<LibrosPublicados>> getAllLibrosPublicados() {
+		return new ResponseEntity<List<LibrosPublicados>> ( this.service.listAllLibrosPublicados(), HttpStatus.OK);
+	}
+	
+	@GetMapping(value="libro-publicado-id", produces = MediaType.APPLICATION_JSON_VALUE)
+	public LibrosPublicados getByIdLibrosPublicados(@RequestParam("idLibroPublicado") int id) {
+		return this.service.findIdLibrosPublicados(id);
+	}
+	
+	@PostMapping(value="add-libro-publicado", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public LibrosPublicados postLibrosPublicados(@RequestBody LibrosPublicados newLibrosPublicados) {
+		return this.service.addLibrosPublicados(newLibrosPublicados);
+	}
+	
+	@PutMapping(value="update-libro-publicado", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public LibrosPublicados putLibrosPublicados(@RequestBody LibrosPublicados updateLibrosPublicados) {
+		return this.service.upLibrosPublicados(updateLibrosPublicados);
+	}
+	
+}

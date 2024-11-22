@@ -2,6 +2,9 @@ package co.edu.ue.entity;
 
 import java.io.Serializable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.Date;
 
 
@@ -20,6 +23,8 @@ public class Calificaciones implements Serializable {
 	@Column(name="idCalificacion")
 	private int idCalificacion;
 
+	@NotNull(message = "El campo de comentario no se envió")
+	@NotBlank(message = "El campo de comentario no puede estar vacio")
 	@Column(name="comentario")
 	private String comentario;
 
@@ -27,6 +32,7 @@ public class Calificaciones implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaCalificacion;
 
+	@NotNull(message = "El campo puntuación es obligatorio")
 	@Column(name="puntuacion")
 	private double puntuacion;
 

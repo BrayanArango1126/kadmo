@@ -2,6 +2,9 @@ package co.edu.ue.entity;
 
 import java.io.Serializable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.Date;
 import java.util.List;
 
@@ -27,6 +30,8 @@ public class Generos implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaPublicacion;
 
+	@NotNull(message = "El campo de genero no se envió")
+	@NotBlank(message = "El campo de genero no puede estar vacio")
 	@Column(name="genero")
 	private String genero;
 
