@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.edu.co.utils.ApiResponse;
 import co.edu.ue.dto.RolDTO;
 import co.edu.ue.entity.Roles;
 import co.edu.ue.service.IRolService;
+import co.edu.ue.utils.ApiResponse;
 import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.GetMapping;

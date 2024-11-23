@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.edu.co.utils.ApiResponse;
 import co.edu.ue.dto.DatosUsuariosDTO;
 import co.edu.ue.entity.DatosUsuarios;
 import co.edu.ue.entity.Generos;
@@ -22,6 +21,7 @@ import co.edu.ue.repository.dao.IGenerosRepository;
 import co.edu.ue.repository.dao.IRolRepository;
 import co.edu.ue.repository.dao.IUsuarioRepository;
 import co.edu.ue.service.IDatoUsuarioService;
+import co.edu.ue.utils.ApiResponse;
 import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="/*EstadosLibros estado = this.dao.findIdEstadosLibros(newLibros.getEstadosLibro().getIdEstadosLibros());"/>
+		<list key="findhistory">
+			<item value="/*EstadosLibros estado = this.dao.findIdEstadosLibros(newLibros.getEstadosLibro().getIdEstadosLibros());"/>
+			<item value="@PostMapping(value=&quot;add-rol&quot;, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)"/>
+		</list>
+	</section>
+</section>

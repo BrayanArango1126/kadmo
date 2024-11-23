@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.edu.co.utils.ApiResponse;
 import co.edu.ue.dto.LibrosDTO;
 import co.edu.ue.entity.CategoriasLibros;
 import co.edu.ue.entity.DisponibilidadLibros;
@@ -27,6 +26,7 @@ import co.edu.ue.repository.dao.ICategoriaLibrosRepository;
 import co.edu.ue.repository.dao.IDisponibilidadLibrosRepository;
 import co.edu.ue.repository.dao.IEstadosLibrosRepository;
 import co.edu.ue.service.ILibrosService;
+import co.edu.ue.utils.ApiResponse;
 import jakarta.validation.Valid;
 
 @RestController

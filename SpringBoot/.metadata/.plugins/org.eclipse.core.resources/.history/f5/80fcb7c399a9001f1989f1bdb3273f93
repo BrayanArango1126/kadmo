@@ -1,0 +1,35 @@
+package co.edu.ue.security;
+
+import java.io.IOException;
+
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class AuthorizationFilterJWT extends BasicAuthenticationFilter{
+
+	public AuthorizationFilterJWT(AuthenticationManager authenticationManager) {
+		super(authenticationManager);
+	}
+	
+	@Override
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
+		//super.doFilterInternal(request, response, chain);
+		
+		String header = request.getHeader(Tools.ENCABEZADO);
+		if(header == null || !header.startsWith(Tools.PREFIJO_TOKEN)) {
+			chain.doFilter(request, response);
+			return;
+		}
+		//Obtenemos los datos del usuario a partir del token
+		UsernamePasswordAuthenticationToken authentication = getAuthentication(request);
+		chain.doFilter(request, response);
+	}
+	
+	
+}

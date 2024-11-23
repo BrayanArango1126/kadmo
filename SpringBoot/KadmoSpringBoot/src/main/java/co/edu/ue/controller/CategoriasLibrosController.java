@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.edu.co.utils.ApiResponse;
 import co.edu.ue.dto.CategoriasLibrosDTO;
 import co.edu.ue.entity.CategoriasLibros;
 import co.edu.ue.service.ICategoriasLibrosService;
+import co.edu.ue.utils.ApiResponse;
 import jakarta.validation.Valid;
 
 @RestController
