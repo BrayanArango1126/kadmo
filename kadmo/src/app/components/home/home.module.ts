@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
+import { DashboardHomeComponent } from './pages/dashboard-home/dashboard-home.component';
 import { AppRoutingModule } from '../../app-routing.module';
+import { MainSectionComponent } from './pages/main-section/main-section.component';
 
 
 
 @NgModule({
   declarations: [
-    DashboardHomeComponent
+    DashboardHomeComponent,
+    MainSectionComponent
   ],
   imports: [
     CommonModule,
