@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard-home',
-  templateUrl: './dashboard-home.component.html',
-  styleUrl: './dashboard-home.component.css'
+  selector: 'app-best-seller-section',
+  templateUrl: './best-seller-section.component.html',
+  styleUrl: './best-seller-section.component.css'
 })
-export class DashboardHomeComponent {
+export class BestSellerSectionComponent {
   books:any = [
     {
       title: 'Harry Potter y el Prisionero de Azkaban',

@@ -1,0 +1,46 @@
+.container-footer-custom{
+  background-color: #1d2128;
+  padding: 20px;
+  color: #fff;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-evenly;
+}
+.info-about-us{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+div > form input{
+  width: 80% !important;
+}
+.policies{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+}
+.container-imagen-kadmo-footer{
+  width: 200px;
+}
+.container-imagen-kadmo-footer img{
+  width: 100%;
+  border-radius: 8px;
+}
+.list-inline-custom{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  align-items: center;
+}
+.list-inline-item a{
+  color: #fff;
+  text-decoration: none;
+}
+.container-fast-nav{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px;
+}
