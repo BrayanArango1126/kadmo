@@ -6,7 +6,7 @@ import { MainBooksSectionComponent } from './pages/main-books-section/main-books
 @NgModule({
   declarations: [
     AsideBooksSectionComponent,
-    MainBooksSectionComponent
+    MainBooksSectionComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,18 @@
+section{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+app-book-description{
+    float: left;
+    width: 23%;
+}
+app-book-content{
+    float: right;
+    width: 76%;
+}
+
+app-book-notes{
+    width: 76%;
+
+}
