@@ -1,0 +1,71 @@
+<aside>
+    <nav>
+      <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseGeneral" aria-expanded="true" aria-controls="collapseGeneral">
+        <h2><i class="fa-solid fa-bars"></i> Filtrar</h2>
+      </a>
+  
+      <div class="collapse" id="collapseGeneral">
+        <div>
+          <ul class="mt-4">
+            <li>
+              <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseGeneros" aria-expanded="false" aria-controls="collapseGeneros">
+                <h3>Generos</h3>
+              </a>
+  
+              <div class="collapse" id="collapseGeneros">
+                <ul class="dropdown row">
+                  <li *ngFor="let category of categories" class="form-check col-6">
+                    <input class="form-check-input" type="checkbox" [value]="category.value" id="flexCheckDefault"/>
+                    <label class="form-check-label" for="flexCheckDefault">{{category.name}}</label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <hr>
+
+            <li>
+              <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseTiempo" aria-expanded="false" aria-controls="collapseTiempo">
+                <h3>Tiempo</h3>
+              </a>
+  
+              <div class="collapse" id="collapseTiempo">
+                <ul>
+                    <li>
+                        <label for="timeRange" class="form-label">30 minutos</label>
+                        <input type="range" class="form-range" min="0" max="150" step="1" id="timeRange"/>
+                    </li>
+                </ul>
+              </div>
+            </li>
+
+            <hr>
+
+            <li>
+              <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseCalif" aria-expanded="false" aria-controls="collapseCalif">
+                <h3>Calificación</h3>
+              </a>
+  
+              <div class="collapse" id="collapseCalif">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-star star-calf"></i>
+                    <i class="fa-regular fa-star star-calf"></i>
+                    <i class="fa-regular fa-star star-calf"></i>
+                    <i class="fa-regular fa-star star-calf"></i>
+                    <i class="fa-regular fa-star star-calf"></i>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <hr>
+            <li>
+                <button class="btn btn-outline-info button-apply">
+                    Aplicar
+                </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </aside>

@@ -8,6 +8,7 @@ import { ResenasSectionComponent } from './home/pages/resenas-section/resenas-se
 import { BooksComponent } from './books/books.component';
 import { HomeComponent } from './home/home.component';
 import { StoreRoutingModule } from './store-routing.module';
+import { BooksModule } from './books/books.module';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { StoreRoutingModule } from './store-routing.module';
   imports: [
     CommonModule,
     StoreRoutingModule,
+    BooksModule
   ]
 })
 export class StoreModule { }
