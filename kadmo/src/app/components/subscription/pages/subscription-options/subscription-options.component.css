@@ -15,7 +15,7 @@ section h2, section img, section p{
     margin: .4% auto;
 
 }
-.buttons{
+.buttons-options{
     display: flex;
     width: 100%;
 }
