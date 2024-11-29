@@ -1,18 +1,22 @@
+app-book-description, app-book-content, app-book-notes{
+    margin: 0 7%;
+}
 section{
     display: flex;
     justify-content: space-between;
-    margin: 0 10%;
 }
 app-book-description{
-    float: left;
-    width: 23%;
+    /* float: left; */
+    width: 35%;
 }
 app-book-content{
-    float: right;
-    width: 76%;
+    /* float: right; */
+    width: 63%;
 }
 
-app-book-notes{
-    width: 76%;
-
+app-book-notes, app-book-create{
+    display: inline-block;
+    /* width: 100%; */
 }
+
+

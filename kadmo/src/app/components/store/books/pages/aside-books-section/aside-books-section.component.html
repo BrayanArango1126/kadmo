@@ -1,18 +1,19 @@
-<aside>
-    <nav>
+<aside class="border shadow">
+    <nav >
       <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseGeneral" aria-expanded="true" aria-controls="collapseGeneral">
-        <h2><i class="fa-solid fa-bars"></i> Filtrar</h2>
+        <h2><i class="fa-solid fa-bars fs-4"></i> Filtrar</h2>
       </a>
   
-      <div class="collapse" id="collapseGeneral">
+      <div class="collapse show p-4" id="collapseGeneral">
         <div>
           <ul class="mt-4">
+            <hr>
             <li>
               <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseGeneros" aria-expanded="false" aria-controls="collapseGeneros">
                 <h3>Generos</h3>
               </a>
   
-              <div class="collapse" id="collapseGeneros">
+              <div class="collapse show" id="collapseGeneros">
                 <ul class="dropdown row">
                   <li *ngFor="let category of categories" class="form-check col-6">
                     <input class="form-check-input" type="checkbox" [value]="category.value" id="flexCheckDefault"/>
@@ -29,7 +30,7 @@
                 <h3>Tiempo</h3>
               </a>
   
-              <div class="collapse" id="collapseTiempo">
+              <div class="collapse show" id="collapseTiempo">
                 <ul>
                     <li>
                         <label for="timeRange" class="form-label">30 minutos</label>
@@ -46,9 +47,9 @@
                 <h3>Calificación</h3>
               </a>
   
-              <div class="collapse" id="collapseCalif">
+              <div class="collapse show" id="collapseCalif">
                 <ul>
-                  <li>
+                  <li class="text-center">
                     <i class="fa-solid fa-star star-calf"></i>
                     <i class="fa-regular fa-star star-calf"></i>
                     <i class="fa-regular fa-star star-calf"></i>
