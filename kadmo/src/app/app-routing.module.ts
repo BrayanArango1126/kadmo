@@ -7,7 +7,7 @@ import { BooksComponent } from './components/store/books/books.component';
 import { StoreComponent } from './components/store/store.component';
 
 const routes: Routes = [
-// {path:'admin', loadChildren: () => import('./components/admin/admin.module').then(m => m.AdminModule)},
+{path:'admin', loadChildren: () => import('./components/admin/admin.module').then(m => m.AdminModule)},
 {path:'login', component: LoginComponent}, 
 {path:'register', component: RegisterComponent}, 
 {path:'store', loadChildren: () => import('./components/store/store.module').then(m => m.StoreModule)},
