@@ -17,7 +17,7 @@ import { provideHttpClient } from '@angular/common/http';
     RegisterComponent,
     NotFoundComponent,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent,    
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+.chapters ul li{
+    list-style: none;
+}
+
+.chapters {
+    border: dashed 2px #00BDD6;
+}
+.chapters ul {
+    padding: 0;
+    margin: 0;
+}
+
+.seller-img{
+    /* width: 10%; */
+    height: auto;
+    border-radius: 100%;
+}
+
+.container-icon-save{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4069E5;
+    color: #fff;
+    margin: auto;
+    height: 40px;
+    border: 2px solid #4069E5;
+    border-radius: 50%;
+  }

@@ -1,0 +1,26 @@
+.note {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    height: 18vh;
+    position: relative; /* Agregar posición relativa */
+    z-index: 1; /* Fondo detrás del botón */
+}
+
+section {
+    position: relative; /* Para que el botón sea posicionado dentro de la sección */
+}
+
+.btn-enviar {
+    position: absolute; /* Para colocarlo encima del textarea */
+    background-color: #003087;
+    color: #fff;
+    bottom: 19.9%; /* Ajustar la posición vertical del botón */
+    right: 2%; /* Ajustar la posición horizontal del botón */
+    z-index: 2; /* Por encima del textarea */
+    width: 100px;
+}

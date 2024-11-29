@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { BookSearchRoutingModule } from './book-search-routing.module';
-import { BookContentComponent } from './book-content/book-content.component';
-import { BookDescriptionComponent } from './book-description/book-description.component';
-import { BookNotesComponent } from './book-notes/book-notes.component';
-
+import { BookContentComponent } from './pages/book-content/book-content.component';
+import { BookNotesComponent } from './pages/book-notes/book-notes.component';
+import { BookDescriptionComponent } from './pages/book-description/book-description.component';
 
 @NgModule({
   declarations: [

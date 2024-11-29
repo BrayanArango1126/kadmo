@@ -1,0 +1,25 @@
+<div class="books-container p-3">
+    <div class="text-center mt-5">
+      <h2>Vistos recientemente</h2>
+      <p>Que no se te escape ninguno de tu interés.</p>
+    </div>
+    <div class="row mt-5">
+      <div class="col-3" *ngFor="let item of books">
+        <div class="book">
+          <img [src]="item.img" class="text-center" alt="..." />
+          <div class="row book-info">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <h5 class="col-12">{{item.title}}</h5>
+              <div class="container-icon-save">
+                <i class="fa-regular fa-bookmark "></i>
+              </div>
+            </div>
+            
+            <p>{{item.pages}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,21 @@
+
+section{
+    margin-top: 40px;
+}
+.published-at{
+    margin-left: auto;
+    text-align: right;
+    color: #565E6C;
+    font-style: italic;
+}
+
+.autor-img-note{
+    width: 5%;
+    height: 7%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.actioner{
+    cursor: pointer;
+}
