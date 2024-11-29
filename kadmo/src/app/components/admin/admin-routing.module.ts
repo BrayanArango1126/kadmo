@@ -7,7 +7,6 @@ import { ReportesComponent } from './pages/reportes/reportes.component';
 import { LibrosComponent } from './pages/libros/libros.component';
 import { CalificacionesComponent } from './pages/calificaciones/calificaciones.component';
 import { CategoriasComponent } from './pages/categorias/categorias.component';
-import { UsuarioService } from '../../services/usuario.service';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { EditorialesComponent } from './pages/editoriales/editoriales.component';
 

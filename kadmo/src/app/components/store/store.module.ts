@@ -29,6 +29,7 @@ import { BookSearchModule } from './book-search/book-search.module';
     CommonModule,
     StoreRoutingModule,
     BooksModule,
+    BookSearchModule
   ]
 })
 export class StoreModule { }
