@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LibrosService } from '../../../../../services/libros.service';
+import Libros from '../../../../../interfaces/libros';
 
 @Component({
   selector: 'app-main-books-section',
@@ -6,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './main-books-section.component.css'
 })
 export class MainBooksSectionComponent {
+
+  booksList:Libros[] = [];
+
   books:any = [
     {
       title: 'Harry Potter y el Prisionero de Azkaban',
@@ -48,4 +53,22 @@ export class MainBooksSectionComponent {
       pages: 288,
     }
   ]
+
+  constructor(private _librosService:LibrosService) { }
+
+  ngOnInit(): void {
+    this.getBooks();
+  }
+
+  public getBooks(){
+    this._librosService.getLibros().subscribe({
+      next: (data) => {
+        this.booksList = data;
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+  }
+
 }

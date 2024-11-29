@@ -13,6 +13,7 @@ import { BookSearchComponent } from './book-search/book-search.component';
 import { BookDescriptionComponent } from './book-search/book-description/book-description.component';
 import { BookContentComponent } from './book-search/book-content/book-content.component';
 import { BookNotesComponent } from './book-search/book-notes/book-notes.component';
+import { BookSearchModule } from './book-search/book-search.module';
 
 
 @NgModule({
@@ -25,14 +26,12 @@ import { BookNotesComponent } from './book-search/book-notes/book-notes.componen
     ResenasSectionComponent,
     BooksComponent,
     BookSearchComponent,
-    BookDescriptionComponent,
-    BookContentComponent,
-    BookNotesComponent
   ],
   imports: [
     CommonModule,
     StoreRoutingModule,
-    BooksModule
+    BooksModule,
+    BookSearchModule
   ]
 })
 export class StoreModule { }

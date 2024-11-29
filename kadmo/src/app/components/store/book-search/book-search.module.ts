@@ -17,6 +17,11 @@ import { BookNotesComponent } from './book-notes/book-notes.component';
     CommonModule,
     BookSearchRoutingModule,
     
+  ],
+  exports: [
+    BookContentComponent,
+    BookDescriptionComponent,
+    BookNotesComponent
   ]
 })
 export class BookSearchModule { }

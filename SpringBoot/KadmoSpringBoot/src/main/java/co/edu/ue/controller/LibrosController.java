@@ -30,60 +30,66 @@ import co.edu.ue.utils.ApiResponse;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin("*")
-@RequestMapping(value="libro")
+@CrossOrigin(origins = "*")
+@RequestMapping(value = "libro")
 public class LibrosController {
-	
+
 	@Autowired
 	private IEstadosLibrosRepository dao;
-	
-	@Autowired	
+
+	@Autowired
 	private IDisponibilidadLibrosRepository daoDisponibilidad;
-	
+
 	@Autowired
 	private ICategoriaLibrosRepository daoCategory;
-	
+
 	@Autowired
 	private ModelMapper modelMapper;
 
 	@Autowired
 	ILibrosService service;
-	
-	@GetMapping(value="libros", produces = MediaType.APPLICATION_JSON_VALUE)
+
+	@GetMapping(value = "libros", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<LibrosDTO>> getAllLibros() {
-		return new ResponseEntity<List<LibrosDTO>> ( this.service.listAllLibros(), HttpStatus.ACCEPTED);
+		return new ResponseEntity<List<LibrosDTO>>(this.service.listAllLibros(), HttpStatus.ACCEPTED);
 	}
-	
-	@GetMapping(value="libro-id", produces = MediaType.APPLICATION_JSON_VALUE)
+
+	@GetMapping(value = "libro-id", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<LibrosDTO> getByIdLibros(@RequestParam("idLibros") int id) {
-		return new ResponseEntity<LibrosDTO>( this.service.findIdLibros(id), HttpStatus.ACCEPTED);
+		return new ResponseEntity<LibrosDTO>(this.service.findIdLibros(id), HttpStatus.ACCEPTED);
 	}
-	
-	@PostMapping(value="add-libro", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<ApiResponse<LibrosDTO>> postLibros(@Valid @RequestBody LibrosDTO newLibros, BindingResult bindingResult) {
-		if(bindingResult.hasErrors()) {
-			return new ResponseEntity<>(new ApiResponse<>(bindingResult.getFieldError().getDefaultMessage(), null ) ,HttpStatus.CONFLICT);
+
+	@PostMapping(value = "add-libro", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<ApiResponse<LibrosDTO>> postLibros(@Valid @RequestBody LibrosDTO newLibros,
+			BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			return new ResponseEntity<>(new ApiResponse<>(bindingResult.getFieldError().getDefaultMessage(), null),
+					HttpStatus.CONFLICT);
 		}
 		Libros addLibros = this.modelMapper.map(newLibros, Libros.class);
-		
+
 		EstadosLibros estado = this.dao.findIdEstadosLibros(newLibros.getEstadosLibro().getIdEstadosLibros());
-		CategoriasLibros categoria = this.daoCategory.findIdCategoriasLibros(newLibros.getCategoriasLibro().getIdCategoriaLibro());
-		DisponibilidadLibros disponibilidad = this.daoDisponibilidad.findIdDisponibilidadLibros(newLibros.getDisponibilidadLibro().getIdDisponibilidadLibro());
-		
+		CategoriasLibros categoria = this.daoCategory
+				.findIdCategoriasLibros(newLibros.getCategoriasLibro().getIdCategoriaLibro());
+		DisponibilidadLibros disponibilidad = this.daoDisponibilidad
+				.findIdDisponibilidadLibros(newLibros.getDisponibilidadLibro().getIdDisponibilidadLibro());
+
 		addLibros.setDisponibilidadlibro(disponibilidad);
 		addLibros.setCategoriaslibro(categoria);
-		addLibros.setEstadoslibro(estado); 
+		addLibros.setEstadoslibro(estado);
 		LibrosDTO addedLibros = this.service.addLibros(addLibros);
-		return new ResponseEntity<>(new ApiResponse<>("Libro agregado correctamente",addedLibros) , HttpStatus.CREATED);
+		return new ResponseEntity<>(new ApiResponse<>("Libro agregado correctamente", addedLibros), HttpStatus.CREATED);
 	}
-	
-	@PutMapping(value="update-libro", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<ApiResponse<LibrosDTO>> putLibros(@Valid @RequestBody LibrosDTO updateLibros, BindingResult bindingResult) {
-		if(bindingResult.hasErrors()) {
-			return new ResponseEntity<>(new ApiResponse<>(bindingResult.getFieldError().getDefaultMessage(), null ) ,HttpStatus.CONFLICT);
+
+	@PutMapping(value = "update-libro", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<ApiResponse<LibrosDTO>> putLibros(@Valid @RequestBody LibrosDTO updateLibros,
+			BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			return new ResponseEntity<>(new ApiResponse<>(bindingResult.getFieldError().getDefaultMessage(), null),
+					HttpStatus.CONFLICT);
 		}
 		Libros updLibros = this.modelMapper.map(updateLibros, Libros.class);
 		LibrosDTO updatedLibros = this.service.addLibros(updLibros);
-		return new ResponseEntity<>(new ApiResponse<>("Libro editado correctamente",updatedLibros) , HttpStatus.OK);
+		return new ResponseEntity<>(new ApiResponse<>("Libro editado correctamente", updatedLibros), HttpStatus.OK);
 	}
 }

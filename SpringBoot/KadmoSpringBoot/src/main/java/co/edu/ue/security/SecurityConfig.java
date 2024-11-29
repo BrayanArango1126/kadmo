@@ -14,59 +14,69 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 @Configuration
 public class SecurityConfig {
-	
+
 	AuthenticationManager auth;
+
 	@Bean
 	public AuthenticationManager authManager(AuthenticationConfiguration conf) {
 		try {
-			auth= conf.getAuthenticationManager();
+			auth = conf.getAuthenticationManager();
 		} catch (Exception e) {
-			System.out.println(""+e.getMessage());
+			System.out.println("" + e.getMessage());
 			e.printStackTrace();
 		}
 		return auth;
 	}
-	
+
 	@Bean
 	public JdbcUserDetailsManager usersDetailsJdbc() {
-		DriverManagerDataSource ds=new DriverManagerDataSource();
+		DriverManagerDataSource ds = new DriverManagerDataSource();
 		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		ds.setUrl("jdbc:mysql://localhost:3306/user_security_encr");
+		// ds.setUrl("jdbc:mysql://localhost:3306/user_security_encr");
+		ds.setUrl("jdbc:mysql://localhost:3306/kadmodb");
 		ds.setUsername("root");
 		ds.setPassword("");
-		
-		JdbcUserDetailsManager jdbcDetails=new JdbcUserDetailsManager(ds);
-		
-		jdbcDetails.setUsersByUsernameQuery("select use_user, use_pass, use_status"
-           	+ " from users where use_user=? and use_status=1");
-			
-		jdbcDetails.setAuthoritiesByUsernameQuery("SELECT use_user,rol FROM roles "
-				+ "WHERE use_user = ?");
- 
- 
-		//printUsers(ds);
+
+		JdbcUserDetailsManager jdbcDetails = new JdbcUserDetailsManager(ds);
+
+		/*
+		 * jdbcDetails.setUsersByUsernameQuery("select use_user, use_pass, use_status"
+		 * + " from users where use_user=? and use_status=1");
+		 * 
+		 * jdbcDetails.setAuthoritiesByUsernameQuery("SELECT use_user,rol FROM roles "
+		 * + "WHERE use_user = ?");
+		 */
+
+		// Consulta para obtener usuario y contraseña
+		jdbcDetails.setUsersByUsernameQuery(
+				"SELECT correo AS username, contraseña AS password, 1 AS enabled " +
+						"FROM usuarios WHERE correo = ?");
+
+		// Consulta para obtener roles asociados al usuario
+		jdbcDetails.setAuthoritiesByUsernameQuery(
+				"SELECT u.correo AS username, r.rol AS authority " +
+						"FROM usuarios u " +
+						"JOIN roles r ON u.idRol = r.idRol " +
+						"WHERE u.correo = ?");
+
+		// printUsers(ds);
 		return jdbcDetails;
 	}
-	
+
 	@Bean
-	public SecurityFilterChain filterChain (HttpSecurity http) throws Exception {
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		try {
-			http.csrf(cus->cus.disable())
-			.authorizeHttpRequests(aut->
-				aut.requestMatchers(HttpMethod.POST,"/rol/add-rol").hasAnyRole("ADMINS", "USERS")			//varios es con hasAnyRole UNO SOLO ES hasRole
-				.requestMatchers(HttpMethod.GET,"/rol/id-rol").hasAnyRole("ADMINS")
-				.requestMatchers(HttpMethod.GET,"/rol/roles").authenticated()			
-				.anyRequest().permitAll()
-				)
-			.addFilter(new AuthorizationFilterJWT(auth));
-		}catch (Exception e){
+			http.csrf(cus -> cus.disable())
+					.authorizeHttpRequests(
+							aut -> aut.requestMatchers(HttpMethod.POST, "/rol/add-rol").hasAnyRole("Administrador", "Cliente")
+									.requestMatchers(HttpMethod.GET, "/rol/id-rol").hasAnyRole("Administrador")
+									.requestMatchers(HttpMethod.GET, "/rol/roles").authenticated()
+									.anyRequest().permitAll())
+					.addFilter(new AuthorizationFilterJWT(auth));
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return http.build();
 	}
-	
-	
-	
-	
-	
+
 }

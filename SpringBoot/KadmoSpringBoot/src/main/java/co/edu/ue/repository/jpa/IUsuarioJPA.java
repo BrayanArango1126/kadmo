@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import co.edu.ue.entity.Usuarios;
 
-public interface IUsuarioJPA extends JpaRepository<Usuarios, Integer>{
+public interface IUsuarioJPA extends JpaRepository<Usuarios, Integer> {
 
+  Usuarios findByCorreo(String correo);
 }

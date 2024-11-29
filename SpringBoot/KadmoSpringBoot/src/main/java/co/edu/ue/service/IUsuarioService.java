@@ -8,7 +8,10 @@ import co.edu.ue.entity.Usuarios;
 public interface IUsuarioService {
 
 	UsuariosDTO addUsuario(Usuarios newUsuario);
+
 	UsuariosDTO updUsuario(Usuarios updateUsuario);
+
 	UsuariosDTO findIdUsuario(int id);
+
 	List<UsuariosDTO> listAllUsuarios();
 }

@@ -9,7 +9,7 @@ import co.edu.ue.entity.Usuarios;
 import co.edu.ue.repository.jpa.IUsuarioJPA;
 
 @Repository
-public class UsuarioRepository implements IUsuarioRepository{
+public class UsuarioRepository implements IUsuarioRepository {
 
 	@Autowired
 	IUsuarioJPA jpa;
@@ -32,5 +32,10 @@ public class UsuarioRepository implements IUsuarioRepository{
 	@Override
 	public List<Usuarios> listUsuarios() {
 		return this.jpa.findAll();
+	}
+
+	@Override
+	public Usuarios findByCorreo(String correo) {
+		return this.jpa.findByCorreo(correo);
 	}
 }

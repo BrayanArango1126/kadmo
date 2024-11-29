@@ -11,7 +11,22 @@
       </select>
     </div>
     <div class="row mt-5">
-        <div class="col-12 col-lg-6 col-xl-4" *ngFor="let item of books">
+        <div class="col-12 col-lg-6 col-xl-4" *ngFor="let item of booksList">
+          <div class="book">
+            <img src="/img/portada-1.jpg" class="text-center" alt="..." />
+            <div class="row book-info">
+              <div class="d-flex justify-content-between align-items-center w-100">
+                <h5 class="col-12">{{item.nombre}}</h5>
+                <div class="container-icon-save">
+                  <i class="fa-regular fa-bookmark "></i>
+                </div>
+              </div>
+              
+              <p>{{item.precio}}</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-12 col-lg-6 col-xl-4" *ngFor="let item of books">
           <div class="book">
             <img [src]="item.img" class="text-center" alt="..." />
             <div class="row book-info">
@@ -25,6 +40,6 @@
               <p>{{item.pages}}</p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
   </section>

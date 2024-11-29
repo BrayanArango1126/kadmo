@@ -11,81 +11,83 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-
 /**
  * The persistent class for the usuarios database table.
  * 
  */
 @Entity
-@Table(name="usuarios")
-@NamedQuery(name="Usuarios.findAll", query="SELECT u FROM Usuarios u")
+@Table(name = "usuarios")
+@NamedQuery(name = "Usuarios.findAll", query = "SELECT u FROM Usuarios u")
 public class Usuarios implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="idUsuario")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "idUsuario")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idUsuario;
 
 	@NotNull(message = "El campo de contraseña no se envió")
 	@NotBlank(message = "El campo de contraseña no puede estar vacio")
-	@Pattern(regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,15}$", message="Hay un error en la contraseña, recuerda tener al menos una letra minúscula, mayúscula y numérica, y la longitud es de mínimo 8 y maximo 15 caracteres")
-	@Column(name="contraseña")
+	// @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,15}$",
+	// message = "Hay un error en la contraseña, recuerda tener al menos una letra
+	// minúscula, mayúscula y numérica, y la longitud es de mínimo 8 y maximo 15
+	// caracteres")
+	@Column(name = "contraseña")
 	private String contraseña;
 
 	@NotNull(message = "El campo de correo no se envió")
 	@NotBlank(message = "El campo de correo no puede estar vacio")
-	@Pattern(regexp="^[^\\s@]+@+(hotmail|gmail|outlook)\\.(com|co|edu\\.co)$", message="Hay un error en la estructura de tu correo")
-	@Column(name="correo")
+	@Pattern(regexp = "^[^\\s@]+@+(hotmail|gmail|outlook)\\.(com|co|edu\\.co)$", message = "Hay un error en la estructura de tu correo")
+	@Column(name = "correo")
 	private String correo;
 
-	@Column(name="fechaRegistro")
+	@Column(name = "fechaRegistro")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaRegistro;
 
-	//bi-directional many-to-one association to Calificaciones
-	@OneToMany(mappedBy="usuario")
+	// bi-directional many-to-one association to Calificaciones
+	@OneToMany(mappedBy = "usuario")
 	@JsonBackReference("usuario-calificaciones")
 	private List<Calificaciones> calificaciones;
 
-	//bi-directional many-to-one association to DatosUsuarios
-	@OneToMany(mappedBy="usuario")
+	// bi-directional many-to-one association to DatosUsuarios
+	@OneToMany(mappedBy = "usuario")
 	@JsonBackReference("usuario-datosusuarios")
 	private List<DatosUsuarios> datosusuarios;
 
-	//bi-directional many-to-one association to Editoriales
-	@OneToMany(mappedBy="usuario")
+	// bi-directional many-to-one association to Editoriales
+	@OneToMany(mappedBy = "usuario")
 	@JsonBackReference("usuario-editoriales")
 	private List<Editoriales> editoriales;
 
-	//bi-directional many-to-one association to LibrosFavoritos
-	@OneToMany(mappedBy="usuario")
+	// bi-directional many-to-one association to LibrosFavoritos
+	@OneToMany(mappedBy = "usuario")
 	@JsonBackReference("usuario-librosfavoritos")
 	private List<LibrosFavoritos> librosfavoritos;
 
-	//bi-directional many-to-one association to LibrosPublicados
-	@OneToMany(mappedBy="usuario")
+	// bi-directional many-to-one association to LibrosPublicados
+	@OneToMany(mappedBy = "usuario")
 	@JsonBackReference("usuario-librospublicados")
 	private List<LibrosPublicados> librospublicados;
 
-	//bi-directional many-to-one association to Membresias
-	@OneToMany(mappedBy="usuario")
+	// bi-directional many-to-one association to Membresias
+	@OneToMany(mappedBy = "usuario")
 	@JsonBackReference("usuario-membresias")
 	private List<Membresias> membresias;
 
-	//bi-directional many-to-one association to PublicacionesAutores
-	@OneToMany(mappedBy="usuario")
+	// bi-directional many-to-one association to PublicacionesAutores
+	@OneToMany(mappedBy = "usuario")
 	@JsonBackReference("usuario-publicacionesautores")
 	private List<PublicacionesAutores> publicacionesautores;
 
-	//bi-directional many-to-one association to Transacciones
-	@OneToMany(mappedBy="usuario")
+	// bi-directional many-to-one association to Transacciones
+	@OneToMany(mappedBy = "usuario")
 	@JsonBackReference("usuario-transacciones")
 	private List<Transacciones> transacciones;
 
-	//bi-directional many-to-one association to Role
+	// bi-directional many-to-one association to Role
 	@ManyToOne
-	@JoinColumn(name="idRol")
+	@JoinColumn(name = "idRol")
 	private Roles role;
 
 	public Usuarios() {
