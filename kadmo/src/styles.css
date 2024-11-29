@@ -1,11 +1,35 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+/* 
+COLORES:
+Azul Oscuro -> #4069E5
+Azul Claro -> #00BDD6
+*/
 *{
 padding: 0;
 margin: 0;
 box-sizing: border-box;
+font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 .r-arrow{
     color: #ffffff;
     width: 30px;
     height: 30px;
+}
+.angle-180{
+    transform: rotate(180deg);
+}
+.active-page{
+    color: #00BDD6;
+}
+
+.margin-general{
+    margin: 0 7%;
+}
+.title-ref{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4069E5;
 }

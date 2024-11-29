@@ -16,11 +16,13 @@ import { FooterComponent } from './components/footer/footer.component';
     RegisterComponent,
     NotFoundComponent,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent,    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+],
+exports: [
 ],
   providers: [],
   bootstrap: [AppComponent]

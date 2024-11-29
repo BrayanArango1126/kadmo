@@ -1,7 +1,5 @@
-app-book-description, app-book-content, app-book-notes{
-    margin: 0 7%;
-}
 section{
+    margin-top: 100px;
     display: flex;
     justify-content: space-between;
 }

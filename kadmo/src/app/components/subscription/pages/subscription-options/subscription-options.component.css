@@ -1,0 +1,26 @@
+.logo-on-subscrition{
+    width: 7%;
+    height: auto;
+    margin-bottom: 20px;
+}
+section h2, section img, section p{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+.check-suscription{
+    width: 30%;
+    padding: 12px 45px;
+    margin: .4% auto;
+
+}
+.buttons{
+    display: flex;
+    width: 100%;
+}
+.btn-comprar{
+    width: 30%;
+    margin: 0 auto;
+    background-color: #003087;
+}
