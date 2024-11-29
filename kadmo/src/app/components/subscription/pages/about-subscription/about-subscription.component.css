@@ -1,0 +1,17 @@
+.img-libro{
+    width: 35%;
+    height: 70vh;
+    margin: 0 auto;
+    object-position: top;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn-comprar{
+    width: 100%;
+    background-color: #003087;
+    margin: 0 auto;
+}
+.suscripcion p i, .suscripcion .cancel{
+    color: #4069E5;
+}

@@ -9,7 +9,8 @@ ul{
 .star-calf{
     cursor: pointer;
     color: #edd132;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    margin-right: 10px;
 }
 .star-calf:hover{
     text-shadow: 0 0 10px #ddc432;
@@ -17,4 +18,8 @@ ul{
 .button-apply{
     width: 100%;
     /* margin: 0 auto; */
+}
+aside{
+    border-left: #7c838f 1px solid;
+    padding-left: 20px;
 }

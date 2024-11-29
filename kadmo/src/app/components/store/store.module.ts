@@ -10,9 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { StoreRoutingModule } from './store-routing.module';
 import { BooksModule } from './books/books.module';
 import { BookSearchComponent } from './book-search/book-search.component';
-import { BookDescriptionComponent } from './book-search/book-description/book-description.component';
-import { BookContentComponent } from './book-search/book-content/book-content.component';
-import { BookNotesComponent } from './book-search/book-notes/book-notes.component';
+import { BookDescriptionComponent } from './book-search/pages/book-description/book-description.component';
+import { BookContentComponent } from './book-search/pages/book-content/book-content.component';
+import { BookNotesComponent } from './book-search/pages/book-notes/book-notes.component';
+import { BookCreateNoteComponent } from './book-search/pages/book-create-note/book-create-note.component';
+import { LastViewsComponent } from './book-search/pages/last-views/last-views.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { BookNotesComponent } from './book-search/book-notes/book-notes.componen
     BookSearchComponent,
     BookDescriptionComponent,
     BookContentComponent,
-    BookNotesComponent
+    BookNotesComponent,
+    BookCreateNoteComponent,
+    LastViewsComponent
   ],
   imports: [
     CommonModule,
