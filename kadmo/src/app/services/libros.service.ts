@@ -24,4 +24,8 @@ export class LibrosService {
   public getLibros():Observable<Libros[]>{
     return this.http.get<Libros[]>(`${this.endPoint}/libros`, this.options);
   }
+
+  public getLibroById(id:number):Observable<Libros>{
+    return this.http.get<Libros>(`${this.endPoint}/libro-id?idLibros=${id}`);
+  }
 }

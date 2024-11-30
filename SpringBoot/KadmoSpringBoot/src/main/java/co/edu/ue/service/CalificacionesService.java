@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import co.edu.ue.dto.CalificacionesDTO;
 import co.edu.ue.entity.Calificaciones;
+import co.edu.ue.entity.Libros;
 import co.edu.ue.repository.dao.ICalificacionesRepository;
 
 @Service
@@ -45,6 +46,12 @@ public class CalificacionesService implements ICalificacionesService{
 	public List<CalificacionesDTO> listAllCalificaciones() {
 		List<Calificaciones> listAllCalificaciones = this.dao.listCalificaciones();
 		return listAllCalificaciones.stream().map(cal -> this.modelMapper.map(cal, CalificacionesDTO.class)).collect(Collectors.toList());
+	}
+
+	@Override
+	public List<CalificacionesDTO> findByIdLibro(Libros libro) {
+		List<Calificaciones> calificacionesLibro = this.dao.findByIdLibro(libro);
+		return calificacionesLibro.stream().map(cal -> this.modelMapper.map(cal, CalificacionesDTO.class)).collect(Collectors.toList());
 	}
 	
 	

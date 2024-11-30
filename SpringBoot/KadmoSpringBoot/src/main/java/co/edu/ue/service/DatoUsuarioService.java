@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import co.edu.ue.dto.DatosUsuariosDTO;
 import co.edu.ue.entity.DatosUsuarios;
+import co.edu.ue.entity.Usuarios;
 import co.edu.ue.repository.dao.IDatoUsuarioRepository;
 
 @Service
@@ -45,6 +46,13 @@ public class DatoUsuarioService implements IDatoUsuarioService{
 	public List<DatosUsuariosDTO> listAllDatosUsuarios() {
 		List<DatosUsuarios> datosUsuariosList = this.dao.listDatosUsuarios();
 		return datosUsuariosList.stream().map(dato -> modelMapper.map(dato, DatosUsuariosDTO.class)).collect(Collectors.toList());
+	}
+
+	@Override
+	public DatosUsuariosDTO findByIdUsuario(Usuarios idUsuario) {
+		DatosUsuarios datoUsuario = this.dao.findByUsuario(idUsuario);
+		DatosUsuariosDTO datoUsuarioDTO = this.modelMapper.map(datoUsuario, DatosUsuariosDTO.class);
+		return datoUsuarioDTO;
 	}
 	
 	

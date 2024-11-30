@@ -13,4 +13,5 @@ export default interface DatosUsuario {
   usuario: {
     idUsuario: number;
   }
+  
 }
