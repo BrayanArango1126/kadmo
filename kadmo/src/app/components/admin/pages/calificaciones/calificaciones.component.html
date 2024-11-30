@@ -1,1 +1,25 @@
-<p>calificaciones works!</p>
+<div class="container mt-4">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID Calificación</th>
+          <th>ID Libro</th>
+          <th>Nombre Libro</th>
+          <th>ID Usuario</th>
+          <th>Puntuación</th>
+          <th>Comentario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of mergedCalificaciones">
+          <td>{{ item.idCalificacion }}</td>
+          <td>{{ item.libro.idLibros }}</td>
+          <td>{{ item.libroNombre }}</td>
+          <td>{{ item.usuario.idUsuario }}</td>
+          <td>{{ item.puntuacion }}</td>
+          <td>{{ item.comentario }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
