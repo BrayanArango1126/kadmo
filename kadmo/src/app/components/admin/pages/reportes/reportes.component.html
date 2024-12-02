@@ -1,1 +1,38 @@
-<p>reportes works!</p>
+<div class="container mt-4">
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID Transacción</th>
+        <th>Libro</th>
+        <th>Autor</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+        <th>Estado del Libro</th>
+        <th>Disponibilidad</th>
+        <th>Categoría</th>
+        <th>Usuario</th>
+        <th>Correo</th>
+        <th>Rol</th>
+        <th>Total</th>
+        <th>Estado de la Transacción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of transaction">
+        <td>{{ item.idTransaccion }}</td>
+        <!-- <td>{{ item.libro.nombre }}</td>
+        <td>{{ item.libro.autor }}</td>
+        <td>{{ item.libro.precio }}</td>
+        <td>{{ item.libro.descripcion }}</td>
+        <td>{{ item.libro.estadosLibro.estado }}</td>
+        <td>{{ item.libro.disponibilidadLibro.disponibilidad }}</td>
+        <td>{{ item.libro.categoriasLibro.categoria }}</td> -->
+        <td>{{ item.usuario.idUsuario }}</td>
+        <!-- <td>{{ item.usuario.correo }}</td>
+        <td>{{ item.usuario.rol.rol }}</td> -->
+        <td>{{ item.total }}</td>
+        <!-- <td>{{ item.estadosTransaccione.estado }}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

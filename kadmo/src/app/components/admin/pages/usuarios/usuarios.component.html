@@ -1,1 +1,34 @@
-<p>usuarios works!</p>
+<div class="container mt-4">
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Dirección</th>
+        <th>Teléfono</th>
+        <th>Documento</th>
+        <th>Edad</th>
+        <th>Usuario Verificado</th>
+        <th>Género</th>
+        <th>Correo</th>
+        <th>Rol</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of users">
+        <td>{{ item.idDatoUsuario }}</td>
+        <td>{{ item.nombres }}</td>
+        <td>{{ item.apellidos }}</td>
+        <td>{{ item.direccion }}</td>
+        <td>{{ item.telefono }}</td>
+        <td>{{ item.documento }}</td>
+        <td>{{ item.edad }}</td>
+        <td>{{ item.usuarioVerificado }}</td>
+        <!-- <td>{{ item.genero.genero }}</td>
+        <td>{{ item.usuario.correo }}</td>
+        <td>{{ item.usuario.rol.rol }}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

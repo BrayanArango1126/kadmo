@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
 import calificacionesByLibroId from '../../../../../interfaces/calificacionesByLibroId';
+import Libros from '../../../../../interfaces/libros';
+import DatosUsuario from '../../../../../interfaces/datosUsuario';
+import CalificacionLibro from '../../../../../interfaces/calificacionLibro';
 
 @Component({
   selector: 'app-book-notes',
@@ -9,7 +12,45 @@ import calificacionesByLibroId from '../../../../../interfaces/calificacionesByL
 })
 export class BookNotesComponent {
   format= 'dd/MM/yyyy';
-  @Input() noteList:calificacionesByLibroId[] = [];
+
+  book:Libros = {
+    idLibros: 0,
+    nombre: "",
+    autor: "",
+    precio: 0,
+    descripcion: "",  
+    estadosLibro: {
+      idEstadosLibros: 0,
+      estado: "",
+    },
+    disponibilidadLibro: {
+      idDisponibilidadLibro: 0,
+      disponibilidad: "",
+    },
+    categoriasLibro: {
+      idCategoriaLibro: 0,
+      categoria: "",
+    }
+  }
+
+  datoUsuario:DatosUsuario = {
+    idDatoUsuario: 0,
+    nombres: "",
+    apellidos: "",
+    direccion: "",
+    documento: "",
+    telefono: "",
+    edad: 0,
+    usuarioVerificado: 0,
+    genero: {
+      idGenero: 0,
+    },
+    usuario: {
+      idUsuario: 0,
+    }
+  };
+
+  noteList:CalificacionLibro[] = [];
 
   notes:any = [
     {

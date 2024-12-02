@@ -25,9 +25,7 @@ export class CalificacionService {
     return this.http.post<CalificacionLibro[]>(`${this.endPoint}/calificaciones-libro`, requestBody, this.options);
   }
 
-  public getCalificacionesByLibro(idLibros:number):Observable<calificacionesByLibroId[]>{
-
-    return this.http.get<calificacionesByLibroId[]>(`${this.endPoint}/calificaciones-libro-id?idLibro=${idLibros}`, this.options);
+  public getAllCalificaciones():Observable<CalificacionLibro[]>{
+    return this.http.get<CalificacionLibro[]>(`${this.endPoint}/calificaciones`, this.options);
   }
-  
 }

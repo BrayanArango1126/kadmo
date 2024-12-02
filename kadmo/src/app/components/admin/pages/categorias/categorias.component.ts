@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import CategoriaLibro from '../../../../interfaces/categoriaLibro';
+import { CategoriasService } from '../../../../services/categorias.service';
 
 @Component({
   selector: 'app-categorias',
   templateUrl: './categorias.component.html',
-  styleUrl: './categorias.component.css'
+  styleUrls: ['./categorias.component.css']
 })
-export class CategoriasComponent {
+export class CategoriasComponent implements OnInit {
+  categories: CategoriaLibro[] = [];
+  
+  constructor(private categoryService: CategoriasService) {}
 
+  ngOnInit(): void {
+    this.categoryService.getCategories().subscribe(data => {
+      this.categories = data;
+    });
+  }
 }
