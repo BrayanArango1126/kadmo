@@ -20,14 +20,18 @@ export class BookNotesComponent {
     nombre: "",
     autor: "",
     precio: 0,
-    descripcion: "",  estadosLibro: {
+    descripcion: "",  
+    estadosLibro: {
       idEstadosLibros: 0,
+      estado: "",
     },
     disponibilidadLibro: {
       idDisponibilidadLibro: 0,
+      disponibilidad: "",
     },
     categoriasLibro: {
       idCategoriaLibro: 0,
+      categoria: "",
     }
   }
 
