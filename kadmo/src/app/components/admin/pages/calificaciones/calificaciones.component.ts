@@ -10,25 +10,6 @@ import { LibrosService } from '../../../../services/libros.service';
   styleUrl: './calificaciones.component.css'
 })
 export class CalificacionesComponent {
-  // ratesList:CalificacionLibro[] = [];
-
-
-  // constructor(private _calificacionService:CalificacionService) { }
-
-  // ngOnInit(): void {
-  //   this.getRatings();
-  // }
-
-  // public getRatings(){
-  //   this._calificacionService.getCalificaciones().subscribe({
-  //     next: (data) => {
-  //       this.ratesList = data;
-  //     },
-  //     error: (err) => {
-  //       console.log(err);
-  //     }
-  //   });
-  // }
   
   calificacionesList: CalificacionLibro[] = [];
   booksList: Libros[] = [];
@@ -49,7 +30,7 @@ export class CalificacionesComponent {
       next: (books) => {
         this.booksList = books;
 
-        this._calificacionService.getCalificaciones({ idLibros: 0 }).subscribe({
+        this._calificacionService.getAllCalificaciones().subscribe({
           next: (calificaciones) => {
             this.calificacionesList = calificaciones;
 

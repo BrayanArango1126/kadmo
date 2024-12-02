@@ -23,4 +23,8 @@ export class CalificacionService {
   public getCalificaciones(requestBody: { idLibros:number }):Observable<CalificacionLibro[]>{
     return this.http.post<CalificacionLibro[]>(`${this.endPoint}/calificaciones-libro`, requestBody, this.options);
   }
+
+  public getAllCalificaciones():Observable<CalificacionLibro[]>{
+    return this.http.get<CalificacionLibro[]>(`${this.endPoint}/calificaciones`, this.options);
+  }
 }

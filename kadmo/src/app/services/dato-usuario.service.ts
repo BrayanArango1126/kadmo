@@ -20,6 +20,10 @@ export class DatoUsuarioService {
     headers:this.header
   }
 
+  getAllDatoUsuarios(): Observable<DatosUsuario[]> {
+    return this.http.get<DatosUsuario[]>(`${this.endPoint}/datos-usuarios`, this.options);
+  }
+  
   getDatoUsuarioById(requestBody: { "idUsuario": number}):Observable<DatosUsuario> {
     return this.http.post<DatosUsuario>(`${this.endPoint}/dato-find-id-usuario`, requestBody, this.options);
   }

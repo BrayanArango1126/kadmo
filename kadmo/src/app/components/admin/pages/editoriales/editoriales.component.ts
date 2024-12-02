@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import Editorial from '../../../../interfaces/editoriales';
+import { EditorialesService } from '../../../../services/editoriales.service';
 
 @Component({
   selector: 'app-editoriales',
   templateUrl: './editoriales.component.html',
-  styleUrl: './editoriales.component.css'
+  styleUrls: ['./editoriales.component.css']
 })
-export class EditorialesComponent {
+export class EditorialesComponent implements OnInit {
+
+  editorial: Editorial[] = [];
+  
+  constructor(private editorialService: EditorialesService) { }
+
+  ngOnInit(): void {
+    this.editorialService.getAllEditoriales().subscribe(data => {
+      this.editorial = data;
+    })
+  }
 
 }

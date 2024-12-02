@@ -1,1 +1,28 @@
-<p>editoriales works!</p>
+<div class="container mt-4">
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID Editorial</th>
+        <th>Dirección</th>
+        <th>Nombre</th>
+        <th>Teléfono</th>
+        <th>ID Usuario</th>
+        <th>Correo</th>
+        <th>Contraseña</th>
+        <th>Rol</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of editorial">
+        <td>{{ item.idEditoriales }}</td>
+        <td>{{ item.direccion }}</td>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.telefono }}</td>
+        <td>{{ item.usuario.idUsuario }}</td>
+        <!-- <td>{{ item.usuario.correo }}</td>
+        <td>{{ item.usuario.contraseña }}</td>
+        <td>{{ item.usuario.rol.rol }}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
