@@ -1,63 +1,97 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LibrosService } from '../../../../../services/libros.service';
 import Libros from '../../../../../interfaces/libros';
+import { LibrosPublicadosService } from '../../../../../services/libros-publicados.service';
+import LibroPublicado from '../../../../../interfaces/libroPublicado';
+import { LibrosFavoritosService } from '../../../../../services/libros-favoritos.service';
+import LibroFavorito from '../../../../../interfaces/libroFavorito';
+import Usuario from '../../../../../interfaces/usuario';
+import { LibrosSharedFiltersService } from '../../../../../services/libros-shared-filters.service';
 
 @Component({
   selector: 'app-main-books-section',
   templateUrl: './main-books-section.component.html',
   styleUrl: './main-books-section.component.css'
 })
-export class MainBooksSectionComponent {
+export class MainBooksSectionComponent implements OnInit {
 
   booksList:Libros[] = [];
 
-  books:any = [
-    {
-      title: 'Harry Potter y el Prisionero de Azkaban',
-      img: 'img/portada-1.jpg',
-      pages: 384,
-    },
-    {
-      title: 'Cien años de soledad',
-      img: 'img/portada-2.jpg',
-      pages: 496,
-    },
-    {
-      title: 'La Vorágine',
-      img: 'img/portada-3.jpg',
-      pages: 180,
-    },
-    {
-      title: 'Inteligencia Artificial. Investigaciones, aplicaciones y avances',
-      img: 'img/portada-4.jpg',
-      pages: 288,
-    },
-    {
-      title: 'Harry Potter y el Prisionero de Azkaban',
-      img: 'img/portada-1.jpg',
-      pages: 384,
-    },
-    {
-      title: 'Cien años de soledad',
-      img: 'img/portada-2.jpg',
-      pages: 496,
-    },
-    {
-      title: 'La Vorágine',
-      img: 'img/portada-3.jpg',
-      pages: 180,
-    },
-    {
-      title: 'Inteligencia Artificial. Investigaciones, aplicaciones y avances',
-      img: 'img/portada-4.jpg',
-      pages: 288,
-    }
-  ]
+  booksListFiltered:Libros[] = [];
 
-  constructor(private _librosService:LibrosService) { }
+  bookListPublished:LibroPublicado[] = [];
+
+  favoritesBooks:LibroFavorito[] = [];
+
+  cantLibros:number = 0;
+
+  constructor(
+    private _librosService:LibrosService,
+    private _librosPublicadosService:LibrosPublicadosService,
+    private _librosFavoritosService:LibrosFavoritosService,
+    private _librosSharedFiltersService:LibrosSharedFiltersService,
+  ) { }
 
   ngOnInit(): void {
-    this.getBooks();
+    //this.getBooks();
+    this.getBooksPublicados();
+    this.getFavoritesBooks();
+    this.getBooksFiltered();
+  }
+
+  public getBooksFiltered(){
+    this._librosSharedFiltersService.libros$.subscribe((libros) => {
+      this.booksListFiltered = libros; // Escucha los cambios en la lista de libros
+    });
+  }
+
+
+
+  public compareBooks(idBook:number){
+    let idUser = localStorage.getItem('user') || '0';
+    if(idUser == '0'){
+      return;
+    }
+    let book = this.favoritesBooks.find((book) => book.libro.idLibros == idBook);
+    if(book){
+      return "custom-class-active-favorite";
+    }
+    return "custom-class-inactive-favorite";
+  }
+
+  public getFavoritesBooks(){
+    let idUser = localStorage.getItem('user') || '0';
+    if(idUser == '0'){
+      return;
+    }
+    const usuario:Usuario = {
+      idUsuario: parseInt(idUser),
+      correo: '',
+      contraseña: '',
+      role: {
+        idRol: 0
+      }
+    };
+    this._librosFavoritosService.getLibrosFavoritosByUser(usuario).subscribe({
+      next: (data) => {
+        this.favoritesBooks = data;
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+  }
+
+  public getBooksPublicados(){
+    this._librosPublicadosService.getLibrosPublicados().subscribe({
+      next: (data) => {
+        this.bookListPublished = data;
+        this.countCantLibros();
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
   }
 
   public getBooks(){
@@ -69,6 +103,35 @@ export class MainBooksSectionComponent {
         console.log(err);
       }
     });
+  }
+
+  public saveBook(book:Libros){
+    let idUser = localStorage.getItem('user');
+    if(idUser == '0' || idUser == null){
+      alert("No puedes guardar libros si no has iniciado sesión");
+      return;
+    }
+    const libroFav:LibroFavorito = {
+      idLibroFavorito: 0,
+      libro: {
+        idLibros: book.idLibros
+      },
+      usuario: {
+        idUsuario: parseInt(idUser)
+      }
+    }
+    this._librosFavoritosService.saveLibroFavorito(libroFav).subscribe({
+      next: (data) => {
+        alert(data.message);
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+  }
+
+  public countCantLibros(){
+    this.cantLibros = this.bookListPublished.length;
   }
 
 }

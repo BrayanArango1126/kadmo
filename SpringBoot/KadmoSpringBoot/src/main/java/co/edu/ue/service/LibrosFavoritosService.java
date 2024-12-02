@@ -9,16 +9,17 @@ import org.springframework.stereotype.Service;
 
 import co.edu.ue.dto.LibrosFavoritosDTO;
 import co.edu.ue.entity.LibrosFavoritos;
+import co.edu.ue.entity.Usuarios;
 import co.edu.ue.repository.dao.ILibrosFavoritosRepository;
 
 @Service
-public class LibrosFavoritosService implements ILibrosFavoritosService{
+public class LibrosFavoritosService implements ILibrosFavoritosService {
 
 	@Autowired
 	private ModelMapper modelMapper;
-	
-	 @Autowired
-	 ILibrosFavoritosRepository dao;
+
+	@Autowired
+	ILibrosFavoritosRepository dao;
 
 	@Override
 	public LibrosFavoritosDTO addLibrosFavoritos(LibrosFavoritos newLibrosFavoritos) {
@@ -44,7 +45,16 @@ public class LibrosFavoritosService implements ILibrosFavoritosService{
 	@Override
 	public List<LibrosFavoritosDTO> listAllLibrosFavoritos() {
 		List<LibrosFavoritos> listAllLibrosFavoritos = this.dao.listLibrosFavoritos();
-		return listAllLibrosFavoritos.stream().map(lib-> this.modelMapper.map(lib, LibrosFavoritosDTO.class)).collect(Collectors.toList());
+		return listAllLibrosFavoritos.stream().map(lib -> this.modelMapper.map(lib, LibrosFavoritosDTO.class))
+				.collect(Collectors.toList());
 	}
-	 
+
+	@Override
+	public List<LibrosFavoritosDTO> listLibrosFavoritosByUsuario(Usuarios usuario) {
+		List<LibrosFavoritos> listLibrosFavoritosByUsuario = this.dao.listLibrosFavoritosByUsuario(usuario);
+		List<LibrosFavoritosDTO> listLibrosFavoritosDTO = listLibrosFavoritosByUsuario.stream()
+				.map(lib -> this.modelMapper.map(lib, LibrosFavoritosDTO.class)).collect(Collectors.toList());
+		return listLibrosFavoritosDTO;
+	}
+
 }

@@ -1,7 +1,0 @@
-package co.edu.ue.dto;
-
-public class CategoriasLibrosDTO {
-
-	private int idCategoriaLibro;
-	private String categoria;
-}

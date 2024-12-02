@@ -6,11 +6,14 @@ export default interface Libros {
   descripcion: string
   estadosLibro: {
     idEstadosLibros: number;
+    estado: string;
   };
   disponibilidadLibro: {
     idDisponibilidadLibro: number;
+    disponibilidad:string;
   };
   categoriasLibro: {
     idCategoriaLibro: number;
+    categoria: string;
   };
 }

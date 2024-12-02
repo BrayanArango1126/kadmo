@@ -1,7 +1,6 @@
 package co.edu.ue.controller;
 
 import java.util.Date;
-import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,7 +62,8 @@ public class AuthController {
 	@PostMapping(value = "login", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<ApiResponse<LoginDTO>> login(@RequestBody LoginDTO login) {
 		try {
-			System.out.println("Controller Usuario autenticado: " + login.getCorreo() + " " + login.getContraseña());
+			// System.out.println("Controller Usuario autenticado: " + login.getCorreo() + "
+			// " + login.getContraseña());
 			LoginDTO logIn = this.service.login(login);
 			if (logIn.getIdUsuario() == 0) {
 				return new ResponseEntity<>(new ApiResponse<>("Usuario/contraseña inválidos", null), HttpStatus.UNAUTHORIZED);
@@ -88,9 +88,9 @@ public class AuthController {
 
 	private String getToken(Authentication authentication) {
 		// Asegúrate de que estás obteniendo las autoridades correctas
-		List<String> authorities = authentication.getAuthorities().stream()
-				.map(GrantedAuthority::getAuthority)
-				.collect(Collectors.toList());
+		// List<String> authorities = authentication.getAuthorities().stream()
+		// .map(GrantedAuthority::getAuthority)
+		// .collect(Collectors.toList());
 
 		// Imprimir las autoridades para depuración
 		// System.out.println("*****************COntroller***********************");

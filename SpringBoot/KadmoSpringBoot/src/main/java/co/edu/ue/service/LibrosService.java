@@ -5,20 +5,27 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import co.edu.ue.dto.LibrosDTO;
+import co.edu.ue.dto.LibrosFiltrosDTO;
+import co.edu.ue.entity.LibroSpecification;
 import co.edu.ue.entity.Libros;
 import co.edu.ue.repository.dao.ILibrosRepository;
+import co.edu.ue.repository.jpa.ILibrosJPA;
 
 @Service
-public class LibrosService implements ILibrosService{
+public class LibrosService implements ILibrosService {
 
 	@Autowired
 	private ModelMapper modelMapper;
-	
+
 	@Autowired
 	ILibrosRepository dao;
+
+	@Autowired
+	ILibrosJPA daoJPA;
 
 	@Override
 	public LibrosDTO addLibros(Libros newLibros) {
@@ -44,7 +51,19 @@ public class LibrosService implements ILibrosService{
 	@Override
 	public List<LibrosDTO> listAllLibros() {
 		List<Libros> listAllLibros = this.dao.listLibros();
-		return listAllLibros.stream().map(libro -> this.modelMapper.map(libro, LibrosDTO.class)).collect(Collectors.toList());
+		return listAllLibros.stream().map(libro -> this.modelMapper.map(libro, LibrosDTO.class))
+				.collect(Collectors.toList());
 	}
-	
+
+	public List<LibrosDTO> listAllLibrosByFilter(LibrosFiltrosDTO filtros) {
+		Specification<Libros> spec = LibroSpecification.conFiltros(filtros);
+
+		List<Libros> listAllLibros = this.daoJPA.findAll(spec);
+
+		List<LibrosDTO> listAllLibrosDTO = listAllLibros.stream().map(libro -> this.modelMapper.map(libro, LibrosDTO.class))
+				.collect(Collectors.toList());
+
+		return listAllLibrosDTO;
+	}
+
 }

@@ -1,54 +1,93 @@
 
 .main-title{
-    display: flex;
+  display: flex;
+}
+.main-title h2{
+  font-size: 1.8em;
+  font-weight: 600;
 }
 .main-title .select-filter{
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .select-filter{
-    width: 16%;
-    padding: 10px 7px;
-    border-radius: 10px;
+  width: 16%;
+  padding: 10px 7px;
+  border-radius: 10px;
 }
 
 .book{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
-  }
-  
-  .book img{
-    border-radius: 10px 10px 0 0;
-  
-    margin: 0 auto;
-    width: 300px;
-    height: 380px;
-  }
-  .book-info{
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    background-color: #ffffff;
-    border-radius: 0 0 10px 10px;
-  }
-  .book-info div h5{
-    width: 80%;
-  }
-  .container-icon-save{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #4069E5;
-    border-radius: 50%;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book img{
+  border-radius: 10px 10px 0 0;
+  object-fit: fill;
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+}
+.book-info{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 0 0 10px 10px;
+}
+.book-info div h5{
+  width: 80%;
+  height: 80px;
+  font-size: 1em;
+  overflow: hidden;
+}
+.container-icon-save{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #4069E5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.custom-class-active-favorite{
+  background-color: #4069E5;
+  color: #ffffff;
+}
+
+.custom-atribute{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  margin: 0 2px 10px 2px;
+  border-radius: 10px;
+}
+
+.atribute-color-1{
+  background-color: #effac9;
+}
+.atribute-color-2{
+  background-color: #f2cfff;
+}
+.atribute-color-3{
+  background-color: #c8ffe8;
+}
+.atribute-color-4{
+  background-color: #c8cdff;
+}
+.atribute-color-5{
+  background-color: #ffcffa;
+}

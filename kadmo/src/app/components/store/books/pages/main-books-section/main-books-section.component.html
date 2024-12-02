@@ -1,6 +1,6 @@
 <section>
     <div class="main-title">
-      <h2>Libros(32)</h2>
+      <h2>Libros({{cantLibros}})</h2>
       <select class="select-filter" name="filter" id="aToZ">
         <option value="0" selected>A-Z</option>
         <option value="1">A-E</option>
@@ -10,36 +10,52 @@
         <option value="5">W-Z</option>
       </select>
     </div>
-    <div class="row mt-5">
-        <div class="col-12 col-lg-6 col-xl-4" *ngFor="let item of booksList">
+    <div *ngIf="booksListFiltered.length == 0" class=" row mt-5 mx-0">
+        <div class="col-12 col-lg-6 col-xl-4" *ngFor="let item of bookListPublished; let index">
           <div class="book">
-            <img src="/img/portada-1.jpg" class="text-center" alt="..." />
+            <img src="/img/portada-{{index.idLibrosPublicados}}.jpg" class="text-center" alt="..." />
             <div class="row book-info">
-              <div class="d-flex justify-content-between align-items-center w-100">
-                <h5 class="col-12">{{item.nombre}}</h5>
-                <div class="container-icon-save">
+              <div class="d-flex justify-content-between align-items-start w-100">
+                <h5 class="col-12">{{item.libro.nombre}}</h5>
+                <div class="container-icon-save" [ngClass]="compareBooks(item.libro.idLibros)" (click)="saveBook(item.libro)">
                   <i class="fa-regular fa-bookmark "></i>
                 </div>
               </div>
-              
-              <p>{{item.precio}}</p>
+              <div class="w-100 d-flex justify-content-evenly align-items-center">
+                <p class="custom-atribute atribute-color-1">$ {{item.libro.precio | number:'1.0-0'}}</p>
+                <p class="custom-atribute atribute-color-2">{{item.libro.autor}}</p>
+              </div>
+              <div class="w-100 d-flex justify-content-evenly align-items-center">
+                <p class="custom-atribute atribute-color-3">{{item.libro.disponibilidadLibro.disponibilidad}}</p>
+                <p class="custom-atribute atribute-color-4">{{item.libro.estadosLibro.estado}}</p>
+                <p class="custom-atribute atribute-color-5">{{item.libro.categoriasLibro.categoria}}</p>
+              </div>
             </div>
           </div>
         </div>
-        <!-- <div class="col-12 col-lg-6 col-xl-4" *ngFor="let item of books">
+      </div>
+      <div *ngIf="booksListFiltered.length > 0" class=" row mt-5 mx-0">
+        <div class="col-12 col-lg-6 col-xl-4" *ngFor="let item of booksListFiltered; let index">
           <div class="book">
-            <img [src]="item.img" class="text-center" alt="..." />
+            <img src="/img/portada-{{index.idLibros}}.jpg" class="text-center" alt="..." />
             <div class="row book-info">
-              <div class="d-flex justify-content-between align-items-center w-100">
-                <h5 class="col-12">{{item.title}}</h5>
-                <div class="container-icon-save">
+              <div class="d-flex justify-content-between align-items-start w-100">
+                <h5 class="col-12">{{item.nombre}}</h5>
+                <div class="container-icon-save" [ngClass]="compareBooks(item.idLibros)" (click)="saveBook(item)">
                   <i class="fa-regular fa-bookmark "></i>
                 </div>
               </div>
-              
-              <p>{{item.pages}}</p>
+              <div class="w-100 d-flex justify-content-evenly align-items-center">
+                <p class="custom-atribute atribute-color-1">$ {{item.precio | number:'1.0-0'}}</p>
+                <p class="custom-atribute atribute-color-2">{{item.autor}}</p>
+              </div>
+              <div class="w-100 d-flex justify-content-evenly align-items-center">
+                <p class="custom-atribute atribute-color-3">{{item.disponibilidadLibro.disponibilidad}}</p>
+                <p class="custom-atribute atribute-color-4">{{item.estadosLibro.estado}}</p>
+                <p class="custom-atribute atribute-color-5">{{item.categoriasLibro.categoria}}</p>
+              </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
   </section>

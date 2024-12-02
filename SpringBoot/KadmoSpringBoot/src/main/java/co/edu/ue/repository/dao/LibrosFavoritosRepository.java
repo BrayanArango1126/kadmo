@@ -6,10 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import co.edu.ue.entity.LibrosFavoritos;
+import co.edu.ue.entity.Usuarios;
 import co.edu.ue.repository.jpa.ILibrosFavoritosJPA;
 
 @Repository
-public class LibrosFavoritosRepository implements ILibrosFavoritosRepository{
+public class LibrosFavoritosRepository implements ILibrosFavoritosRepository {
 
 	@Autowired
 	ILibrosFavoritosJPA jpa;
@@ -34,5 +35,9 @@ public class LibrosFavoritosRepository implements ILibrosFavoritosRepository{
 		return this.jpa.findAll();
 	}
 
-	
+	@Override
+	public List<LibrosFavoritos> listLibrosFavoritosByUsuario(Usuarios usuario) {
+		return this.jpa.findByUsuario(usuario);
+	}
+
 }

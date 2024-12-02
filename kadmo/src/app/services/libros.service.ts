@@ -4,6 +4,7 @@ import { environment } from '../../environments/environment';
 import { ResponseApi } from '../interfaces/response-api';
 import { Observable } from 'rxjs';
 import Libros from '../interfaces/libros';
+import FiltroLibros from '../interfaces/filtroLibrosDTO';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,17 @@ export class LibrosService {
 
   public getLibros():Observable<Libros[]>{
     return this.http.get<Libros[]>(`${this.endPoint}/libros`, this.options);
+  }
+
+  public getLibro(id:number):Observable<Libros>{
+    return this.http.get<Libros>(`${this.endPoint}/libro/${id}`, this.options);
+  }
+
+  public addLibro(libro:Libros):Observable<ResponseApi>{
+    return this.http.post<ResponseApi>(`${this.endPoint}/add-libro`, libro, this.options);
+  }
+
+  public filterLibros(filter:FiltroLibros):Observable<Libros[]>{
+    return this.http.post<Libros[]>(`${this.endPoint}/filtro-libros`, filter, this.options);
   }
 }

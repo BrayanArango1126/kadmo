@@ -21,5 +21,19 @@ ul{
 }
 aside{
     border-left: #7c838f 1px solid;
-    padding-left: 20px;
+    padding: 20px;
+}
+nav a h2{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #000;
+}
+
+.star-rating .fa-star {
+    font-size: 24px;
+    color: #ccc;
+}
+
+.star-rating .selected .fa-star {
+    color: gold !important;
 }

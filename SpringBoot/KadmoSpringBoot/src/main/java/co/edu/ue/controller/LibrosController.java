@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.ue.dto.LibrosDTO;
+import co.edu.ue.dto.LibrosFiltrosDTO;
 import co.edu.ue.entity.CategoriasLibros;
 import co.edu.ue.entity.DisponibilidadLibros;
 import co.edu.ue.entity.EstadosLibros;
@@ -30,7 +31,7 @@ import co.edu.ue.utils.ApiResponse;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(value = "libro")
 public class LibrosController {
 
@@ -91,5 +92,11 @@ public class LibrosController {
 		Libros updLibros = this.modelMapper.map(updateLibros, Libros.class);
 		LibrosDTO updatedLibros = this.service.addLibros(updLibros);
 		return new ResponseEntity<>(new ApiResponse<>("Libro editado correctamente", updatedLibros), HttpStatus.OK);
+	}
+
+	@PostMapping(value = "filtro-libros", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<LibrosDTO>> filtrarLibros(@RequestBody LibrosFiltrosDTO filtros) {
+		List<LibrosDTO> librosFiltrados = this.service.listAllLibrosByFilter(filtros);
+		return new ResponseEntity<List<LibrosDTO>>(librosFiltrados, HttpStatus.ACCEPTED);
 	}
 }
