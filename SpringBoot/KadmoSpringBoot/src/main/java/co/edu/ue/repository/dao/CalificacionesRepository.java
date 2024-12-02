@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import co.edu.ue.dto.CalificacionesLibroDTO;
 import co.edu.ue.entity.Calificaciones;
 import co.edu.ue.entity.Libros;
 import co.edu.ue.repository.jpa.ICalificacionesJPA;
@@ -34,10 +35,16 @@ public class CalificacionesRepository implements ICalificacionesRepository {
 	public List<Calificaciones> listCalificaciones() {
 		return this.jpa.findAll();
 	}
-	
+
 	@Override
-	public List<Calificaciones> findByIdLibro(Libros libro) {
-		return this.jpa.findByLibro(libro);
+	public List<CalificacionesLibroDTO> getCalificacionDetalles(int idLibro) {
+		
+		return this.jpa.findCalificacionDetalles(idLibro); 
+	}
+
+	@Override
+	public List<Calificaciones> findByIdLibro(Libros idLibro) {
+		return this.jpa.findByLibro(idLibro);
 	}
 	
 }

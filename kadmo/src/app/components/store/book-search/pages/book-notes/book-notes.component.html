@@ -12,14 +12,14 @@
       </ul>
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-            <div *ngFor="let item of notes" class="note row">
+            <div *ngFor="let item of noteList" class="note row">
                 <img class="autor-img-note col-1" src="img/user.jpg" alt="">
                 <div class="content-note col-11">
                     <div class="autor row">
-                        <strong class="col-10">{{ item.autor }}</strong>
-                        <p class="published-at col 2">{{ item.publishedAt }}</p>
+                        <strong class="col-10"> {{item.nombresUsuario}} {{ item.apellidosUsuario }}</strong>
+                        <p class="published-at col 2">{{ item.fechaCalificacion }}</p>
                     </div>
-                    <p>{{ item.note }}</p>
+                    <p>{{ item.comentario }}</p>
                     <div class="interact row text-center">
                         <div class="col-1">
                             <i class="fa-regular fa-thumbs-up col-1 actioner"></i>

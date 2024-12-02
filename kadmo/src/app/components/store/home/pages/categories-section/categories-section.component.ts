@@ -9,7 +9,7 @@ export class CategoriesSectionComponent {
   books:any = [
     {
       title: 'Suspenso',
-      img: 'img/portada-5.jpg',
+      img: 'img/portada-6.jpg',
       cantidad: 100,
     },
     {

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.ue.dto.CalificacionesDTO;
+import co.edu.ue.dto.CalificacionesLibroDTO;
 import co.edu.ue.entity.Calificaciones;
 import co.edu.ue.entity.Libros;
 import co.edu.ue.service.ICalificacionesService;
@@ -44,6 +45,12 @@ public class CalificacionesController {
 	public ResponseEntity<CalificacionesDTO> getByIdCalificaciones(@RequestParam("idCalificacion") int id) {
 		return new ResponseEntity<CalificacionesDTO>( this.service.findIdCalificaciones(id), HttpStatus.ACCEPTED);
 	}
+
+	@GetMapping(value="calificaciones-libro-id", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<CalificacionesLibroDTO>> getCalificacionDetalles(@RequestParam int idLibro) {
+        List<CalificacionesLibroDTO> detalles = this.service.getCalificacionDetalles(idLibro);
+        return new ResponseEntity<>(detalles, HttpStatus.CREATED);
+    }
 	
 	@PostMapping(value="calificaciones-libro", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<CalificacionesDTO>> getCalificacionByLibroId(@RequestBody Libros idLibro) {

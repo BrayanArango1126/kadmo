@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-last-views',
   templateUrl: './last-views.component.html',
-  styleUrl: './last-views.component.css'
+  styleUrl: './last-views.component.css',
+  standalone: false
 })
 export class LastViewsComponent {
 

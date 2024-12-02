@@ -3,6 +3,7 @@ package co.edu.ue.service;
 import java.util.List;
 
 import co.edu.ue.dto.CalificacionesDTO;
+import co.edu.ue.dto.CalificacionesLibroDTO;	
 import co.edu.ue.entity.Calificaciones;
 import co.edu.ue.entity.Libros;
 
@@ -13,4 +14,5 @@ public interface ICalificacionesService {
 	CalificacionesDTO findIdCalificaciones(int id);
 	List<CalificacionesDTO> listAllCalificaciones();
 	List<CalificacionesDTO> findByIdLibro(Libros Idlibro);
+	List<CalificacionesLibroDTO> getCalificacionDetalles(int idLibro);
 }

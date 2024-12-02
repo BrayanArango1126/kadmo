@@ -1,5 +1,6 @@
 package co.edu.ue.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.edu.ue.dto.CalificacionesDTO;
+import co.edu.ue.dto.CalificacionesLibroDTO;
 import co.edu.ue.entity.Calificaciones;
 import co.edu.ue.entity.Libros;
 import co.edu.ue.repository.dao.ICalificacionesRepository;
@@ -49,10 +51,17 @@ public class CalificacionesService implements ICalificacionesService{
 	}
 
 	@Override
-	public List<CalificacionesDTO> findByIdLibro(Libros libro) {
-		List<Calificaciones> calificacionesLibro = this.dao.findByIdLibro(libro);
-		return calificacionesLibro.stream().map(cal -> this.modelMapper.map(cal, CalificacionesDTO.class)).collect(Collectors.toList());
+	public List<CalificacionesLibroDTO> getCalificacionDetalles(int idLibro) {
+    	List<CalificacionesLibroDTO> resultados = this.dao.getCalificacionDetalles(idLibro);
+    	return resultados;
 	}
+
+	@Override
+	public List<CalificacionesDTO> findByIdLibro(Libros Idlibro) {
+		List<Calificaciones> listCalificacionesLibro = this.dao.findByIdLibro(Idlibro);
+		return listCalificacionesLibro.stream().map(cal -> this.modelMapper.map(cal, CalificacionesDTO.class)).collect(Collectors.toList());
+	}
+	
 	
 	
 }
