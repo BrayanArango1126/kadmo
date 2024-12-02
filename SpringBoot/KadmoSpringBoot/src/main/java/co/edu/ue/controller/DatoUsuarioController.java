@@ -61,6 +61,11 @@ public class DatoUsuarioController {
 	public ResponseEntity<DatosUsuariosDTO> getByIdDatoUsuario(@RequestParam("idDatoUsuario") int id) {
 		return new ResponseEntity<DatosUsuariosDTO>( this.service.findIdDatoUsuario(id), HttpStatus.ACCEPTED);
 	}
+
+	@PostMapping(value="dato-find-id-usuario", produces = MediaType.APPLICATION_JSON_VALUE)
+		public ResponseEntity<DatosUsuariosDTO> getDatoByIdUsuario(@RequestBody Usuarios idUsuario) {
+		return new ResponseEntity<DatosUsuariosDTO>( this.service.findByIdUsuario(idUsuario), HttpStatus.ACCEPTED);
+	}
 	
 	@PostMapping(value="add-dato-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<ApiResponse<DatosUsuariosDTO>> postDatoUsuario( @Valid @RequestBody DatosUsuariosDTO newDatoUsuario, BindingResult bindingResult) {

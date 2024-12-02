@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import co.edu.ue.entity.Calificaciones;
+import co.edu.ue.entity.Libros;
 import co.edu.ue.repository.jpa.ICalificacionesJPA;
 
 @Repository
@@ -34,5 +35,9 @@ public class CalificacionesRepository implements ICalificacionesRepository {
 		return this.jpa.findAll();
 	}
 	
+	@Override
+	public List<Calificaciones> findByIdLibro(Libros libro) {
+		return this.jpa.findByLibro(libro);
+	}
 	
 }

@@ -29,4 +29,5 @@ import { LastViewsComponent } from './pages/last-views/last-views.component';
     LastViewsComponent
   ]
 })
+
 export class BookSearchModule { }

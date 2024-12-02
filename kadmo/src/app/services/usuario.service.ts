@@ -7,19 +7,23 @@ import { environment } from '../../environments/environment';
 import Usuario from '../interfaces/usuario';
 import DatosUsuario from '../interfaces/datosUsuario';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class UsuarioService {
+@Injectable({
+  providedIn: 'root'
+})
+export class UsuarioService {
 
-//   private urlApi:string = environment.endpoint + "Usuario/";
+  private urlApi:string = environment.endpoint + "/usuario";
 
 
-//   constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { }
 
-//   Registrarse(request:Usuario):Observable<ResponseApi>{
-//     return this.http.post<ResponseApi>(`${this.urlApi}add-usuario`, request);
-//   }
+  Registrarse(request:Usuario):Observable<ResponseApi>{
+    return this.http.post<ResponseApi>(`${this.urlApi}/add-usuario`, request);
+  }
 
-// }
+  getUsuarioById(idUsuario:string):Observable<Usuario>{
+    return this.http.get<Usuario>(`${this.urlApi}/usuario_id?=${idUsuario}`);
+  }
+
+}
 

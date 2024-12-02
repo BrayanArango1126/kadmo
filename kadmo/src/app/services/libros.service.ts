@@ -37,4 +37,8 @@ export class LibrosService {
   public filterLibros(filter:FiltroLibros):Observable<Libros[]>{
     return this.http.post<Libros[]>(`${this.endPoint}/filtro-libros`, filter, this.options);
   }
+
+  public getLibroById(id:number):Observable<Libros>{
+    return this.http.get<Libros>(`${this.endPoint}/libro-id?idLibros=${id}`);
+  }
 }

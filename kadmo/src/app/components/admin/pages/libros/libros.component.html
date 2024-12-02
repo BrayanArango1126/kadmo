@@ -1,1 +1,30 @@
-<p>libros works!</p>
+<div class="container mt-4">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Autor</th>
+          <th>Categoría</th>
+          <th>Descripcion</th>
+          <th>Estado</th>
+          <th>Disponibilidad</th>
+          <th>Precio</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of booksList">
+          <td>{{ item.idLibros }}</td>
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.autor }}</td>
+          <td>{{ item.categoriasLibro.idCategoriaLibro }}</td>
+          <td>{{ item.descripcion }}</td>
+          <td>{{ item.estadosLibro.idEstadosLibros }}</td>
+          <td>{{ item.disponibilidadLibro.idDisponibilidadLibro }}</td>
+          <td>{{ item.precio }}</td>
+          <td><button>Ed</button><button>El</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

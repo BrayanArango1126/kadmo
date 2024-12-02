@@ -7,7 +7,7 @@ import { BookSearchComponent } from './book-search/book-search.component';
 const routes: Routes = [
   {path:'', component: StoreComponent},
   {path:'books', component: BooksComponent},
-  {path:'book/id', component: BookSearchComponent},
+  {path:'book/:id', component: BookSearchComponent},
 ];
 
 @NgModule({

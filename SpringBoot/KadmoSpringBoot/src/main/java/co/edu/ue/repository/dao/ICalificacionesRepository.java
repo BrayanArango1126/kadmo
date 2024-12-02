@@ -3,6 +3,7 @@ package co.edu.ue.repository.dao;
 import java.util.List;
 
 import co.edu.ue.entity.Calificaciones;
+import co.edu.ue.entity.Libros;
 
 public interface ICalificacionesRepository {
 
@@ -10,4 +11,5 @@ public interface ICalificacionesRepository {
 	Calificaciones updateCalificaciones(Calificaciones updateCalificaciones);
 	Calificaciones findIdCalificaciones(int id);
 	List<Calificaciones> listCalificaciones();
+	List<Calificaciones> findByIdLibro(Libros idLibro);
 }
