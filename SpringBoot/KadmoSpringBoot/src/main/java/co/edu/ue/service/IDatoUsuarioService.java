@@ -9,8 +9,12 @@ import co.edu.ue.entity.Usuarios;
 public interface IDatoUsuarioService {
 
 	DatosUsuariosDTO addDatoUsuario(DatosUsuarios newDatoUsuario);
+
 	DatosUsuariosDTO updDatoUsuario(DatosUsuarios updateDatoUsuario);
+
 	DatosUsuariosDTO findIdDatoUsuario(int id);
+
 	List<DatosUsuariosDTO> listAllDatosUsuarios();
-	DatosUsuariosDTO findByIdUsuario(Usuarios idUsuario);
+
+	DatosUsuariosDTO findByUsuario(Usuarios idUsuario);
 }

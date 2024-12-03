@@ -68,7 +68,7 @@ export class MainBooksSectionComponent implements OnInit {
       idUsuario: parseInt(idUser),
       correo: '',
       contraseña: '',
-      role: {
+      rol: {
         idRol: 0
       }
     };

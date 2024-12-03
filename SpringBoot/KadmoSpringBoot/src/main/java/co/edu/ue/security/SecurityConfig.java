@@ -70,7 +70,7 @@ public class SecurityConfig {
 					.authorizeHttpRequests(
 							aut -> aut.requestMatchers(HttpMethod.POST, "/rol/add-rol").hasAnyRole("Administrador", "Cliente")
 									.requestMatchers(HttpMethod.GET, "/rol/id-rol").hasAnyRole("Administrador")
-									.requestMatchers(HttpMethod.GET, "/rol/roles").authenticated()
+									// .requestMatchers(HttpMethod.GET, "/rol/roles").authenticated()
 									.anyRequest().permitAll())
 					.addFilter(new AuthorizationFilterJWT(auth));
 		} catch (Exception e) {

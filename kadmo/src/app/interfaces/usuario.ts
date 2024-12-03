@@ -2,7 +2,7 @@ export default interface Usuario {
   idUsuario: number;
   correo: string;
   contraseña: string;
-  role:{
+  rol:{
     idRol: number;
   }
 }

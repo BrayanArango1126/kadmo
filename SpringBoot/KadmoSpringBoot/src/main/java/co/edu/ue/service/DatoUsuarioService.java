@@ -13,8 +13,8 @@ import co.edu.ue.entity.Usuarios;
 import co.edu.ue.repository.dao.IDatoUsuarioRepository;
 
 @Service
-public class DatoUsuarioService implements IDatoUsuarioService{
-	
+public class DatoUsuarioService implements IDatoUsuarioService {
+
 	@Autowired
 	private ModelMapper modelMapper;
 
@@ -25,14 +25,14 @@ public class DatoUsuarioService implements IDatoUsuarioService{
 	public DatosUsuariosDTO addDatoUsuario(DatosUsuarios newDatoUsuario) {
 		DatosUsuarios newDatoUser = this.dao.insertDatoUsuario(newDatoUsuario);
 		DatosUsuariosDTO datosUsuariosDTO = modelMapper.map(newDatoUser, DatosUsuariosDTO.class);
-		return datosUsuariosDTO ;
+		return datosUsuariosDTO;
 	}
 
 	@Override
 	public DatosUsuariosDTO updDatoUsuario(DatosUsuarios updateDatoUsuario) {
 		DatosUsuarios updateDatoUser = this.dao.updateDatoUsuario(updateDatoUsuario);
 		DatosUsuariosDTO datosUsuariosDTO = modelMapper.map(updateDatoUser, DatosUsuariosDTO.class);
-		return datosUsuariosDTO ;
+		return datosUsuariosDTO;
 	}
 
 	@Override
@@ -45,15 +45,15 @@ public class DatoUsuarioService implements IDatoUsuarioService{
 	@Override
 	public List<DatosUsuariosDTO> listAllDatosUsuarios() {
 		List<DatosUsuarios> datosUsuariosList = this.dao.listDatosUsuarios();
-		return datosUsuariosList.stream().map(dato -> modelMapper.map(dato, DatosUsuariosDTO.class)).collect(Collectors.toList());
+		return datosUsuariosList.stream().map(dato -> modelMapper.map(dato, DatosUsuariosDTO.class))
+				.collect(Collectors.toList());
 	}
 
 	@Override
-	public DatosUsuariosDTO findByIdUsuario(Usuarios idUsuario) {
+	public DatosUsuariosDTO findByUsuario(Usuarios idUsuario) {
 		DatosUsuarios datoUsuario = this.dao.findByUsuario(idUsuario);
 		DatosUsuariosDTO datoUsuarioDTO = this.modelMapper.map(datoUsuario, DatosUsuariosDTO.class);
 		return datoUsuarioDTO;
 	}
-	
-	
+
 }

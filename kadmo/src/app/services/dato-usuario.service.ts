@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import DatosUsuario from '../interfaces/datosUsuario';
 import { Observable } from 'rxjs';
+import Usuario from '../interfaces/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class DatoUsuarioService {
     return this.http.get<DatosUsuario[]>(`${this.endPoint}/datos-usuarios`, this.options);
   }
   
-  getDatoUsuarioById(requestBody: { "idUsuario": number}):Observable<DatosUsuario> {
-    return this.http.post<DatosUsuario>(`${this.endPoint}/dato-find-id-usuario`, requestBody, this.options);
+  getDatoUsuarioById(usuario:Usuario):Observable<DatosUsuario> {
+    return this.http.post<DatosUsuario>(`${this.endPoint}/dato-find-id-usuario`, usuario, this.options);
   }
 }

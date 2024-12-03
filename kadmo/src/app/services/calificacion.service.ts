@@ -21,8 +21,12 @@ export class CalificacionService {
     headers:this.header
   }
 
-  public getCalificaciones(requestBody: { idLibros:number }):Observable<CalificacionLibro[]>{
-    return this.http.post<CalificacionLibro[]>(`${this.endPoint}/calificaciones-libro`, requestBody, this.options);
+  // public getCalificaciones(requestBody:number ):Observable<CalificacionLibro[]>{
+  //   return this.http.post<CalificacionLibro[]>(`${this.endPoint}/calificaciones-libro`, requestBody, this.options);
+  // }
+
+  public getCalificacionesById(requestBody:number ):Observable<calificacionesByLibroId[]>{
+    return this.http.post<calificacionesByLibroId[]>(`${this.endPoint}/calificaciones-libro`, requestBody, this.options);
   }
 
   public getAllCalificaciones():Observable<CalificacionLibro[]>{

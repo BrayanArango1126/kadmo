@@ -10,13 +10,13 @@ import co.edu.ue.entity.Usuarios;
 import co.edu.ue.repository.jpa.IDatoUsuarioJPA;
 
 @Repository
-public class DatoUsuarioRepository implements IDatoUsuarioRepository{
+public class DatoUsuarioRepository implements IDatoUsuarioRepository {
 
 	@Autowired
 	IDatoUsuarioJPA jpa;
 
 	@Override
-	public DatosUsuarios insertDatoUsuario(DatosUsuarios newDatoUsuario) {	
+	public DatosUsuarios insertDatoUsuario(DatosUsuarios newDatoUsuario) {
 		return this.jpa.save(newDatoUsuario);
 	}
 
@@ -36,8 +36,8 @@ public class DatoUsuarioRepository implements IDatoUsuarioRepository{
 	}
 
 	@Override
-	public DatosUsuarios findByUsuario(Usuarios idUsuario) {
-		return this.jpa.findByUsuario(idUsuario);
+	public DatosUsuarios findByUsuario(Usuarios usuario) {
+		return this.jpa.findByUsuario(usuario);
 	}
-	
+
 }

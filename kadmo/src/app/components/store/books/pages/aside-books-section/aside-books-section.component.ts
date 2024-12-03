@@ -137,6 +137,12 @@ export class AsideBooksSectionComponent {
   }
   
   
+  public validarSesion(){
+    if(this.idUser == null || this.idUser == '0'){
+      alert('Debes iniciar sesión para publicar un libro');
+      return;
+    }
+  }
 
   public getDisponibilidadLibros(){
     this._disponibilidadLibrosService.getDisponibilidadLibros().subscribe({
