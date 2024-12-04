@@ -71,9 +71,14 @@ tipo VARCHAR(20),
 estado BIT,
 fechaIncio DATETIME DEFAULT NOW(),
 fechaFin DATETIME DEFAULT NOW(),
+pago DECIMAL(10,2),
 idUsuario INT,
-FOREIGN KEY (idUsuario) REFERENCES Usuarios(idUsuario)
+idTarjetaCredito INT,
+FOREIGN KEY (idUsuario) REFERENCES Usuarios(idUsuario),
+FOREIGN KEY (idTarjetaCredito) REFERENCES TarjetaCredito(idTarjetaCredito)
 );
+
+DROP TABLE Membresias;
 
 CREATE TABLE EstadosLibros
 (
@@ -163,9 +168,25 @@ idUsuario INT,
 fechaTransaccion DATETIME DEFAULT NOW(),
 total DECIMAL (10,2),
 idEstadoTransaccion INT,
+idTarjetaCredito INT,
 FOREIGN KEY (idEstadoTransaccion) REFERENCES EstadosTransacciones(idEstadoTransaccion),
 FOREIGN KEY (idLibro) REFERENCES Libros(idLibros),
-FOREIGN KEY (idUsuario) REFERENCES Usuarios(idUsuario)
+FOREIGN KEY (idUsuario) REFERENCES Usuarios(idUsuario),
+FOREIGN KEY (idTarjetaCredito) REFERENCES TarjetaCredito(idTarjetaCredito)
 );
+
+CREATE TABLE TarjetaCredito
+(
+idTarjetaCredito INT PRIMARY KEY AUTO_INCREMENT,
+idUsuario INT,
+titular VARCHAR(150),
+numeroTarjeta VARCHAR(18),
+cvs VARCHAR(60),
+fechaExpiracion DATE,
+FOREIGN KEY (idUsuario) REFERENCES Usuarios(idUsuario)
+)
+
+DROP TABLE TarjetaCredito;
+DROP TABLE Transacciones;
 
 

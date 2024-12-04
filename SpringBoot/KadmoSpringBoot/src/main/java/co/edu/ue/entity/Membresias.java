@@ -4,40 +4,47 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 import java.util.Date;
 
-
 /**
  * The persistent class for the membresias database table.
  * 
  */
 @Entity
-@Table(name="membresias")
-@NamedQuery(name="Membresias.findAll", query="SELECT m FROM Membresias m")
+@Table(name = "membresias")
+@NamedQuery(name = "Membresias.findAll", query = "SELECT m FROM Membresias m")
 public class Membresias implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="idMembresia")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "idMembresia")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idMembresia;
 
-	@Column(name="estado")
+	@Column(name = "estado")
 	private byte estado;
 
-	@Column(name="fechaFin")
+	@Column(name = "fechaFin")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaFin;
 
-	@Column(name="fechaIncio")
+	@Column(name = "fechaIncio")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaIncio;
 
-	@Column(name="tipo")
+	@Column(name = "pago")
+	private double pago;
+
+	@Column(name = "tipo")
 	private String tipo;
 
-	//bi-directional many-to-one association to Usuarios
+	// bi-directional many-to-one association to Usuarios
 	@ManyToOne
-	@JoinColumn(name="idUsuario")
+	@JoinColumn(name = "idUsuario")
 	private Usuarios usuario;
+
+	// bi-directional many-to-one association to TarjetaCredito
+	@ManyToOne
+	@JoinColumn(name = "idTarjetaCredito")
+	private TarjetaCredito tarjetacredito;
 
 	public Membresias() {
 	}
@@ -88,6 +95,22 @@ public class Membresias implements Serializable {
 
 	public void setUsuario(Usuarios usuario) {
 		this.usuario = usuario;
+	}
+
+	public TarjetaCredito getTarjetacredito() {
+		return tarjetacredito;
+	}
+
+	public void setTarjetacredito(TarjetaCredito tarjetacredito) {
+		this.tarjetacredito = tarjetacredito;
+	}
+
+	public double getPago() {
+		return pago;
+	}
+
+	public void setPago(double pago) {
+		this.pago = pago;
 	}
 
 }

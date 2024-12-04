@@ -7,6 +7,7 @@ import { AboutSubscriptionComponent } from './pages/about-subscription/about-sub
 import { SharedModule } from '../shared/shared.module';
 import { BenefitsComponent } from './pages/benefits/benefits.component';
 import { SubscriptionOptionsComponent } from './pages/subscription-options/subscription-options.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { SubscriptionOptionsComponent } from './pages/subscription-options/subsc
   imports: [
     CommonModule,
     SubscriptionRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SubscriptionModule { }

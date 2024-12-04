@@ -45,7 +45,9 @@ export class MainBooksSectionComponent implements OnInit {
     });
   }
 
-
+  public goToBookDetails(idBook:number){
+    window.location.href = `/store/book/${idBook}`;
+  }
 
   public compareBooks(idBook:number){
     let idUser = localStorage.getItem('user') || '0';

@@ -27,8 +27,8 @@ INSERT INTO DatosUsuarios(nombres ,apellidos ,direccion ,documento ,telefono ,ed
 INSERT INTO PublicacionesAutores (titulo , descripcion, idUsuario ) VALUES
 ('La mancha', 'Cuenta la historia que una vez habia un lorem impusn pron asclr lasoa oitrdl slacvs cvmlsda asic weqoljnsivn qwnjdauscn enbfrngsnl fwngiowsn', 3);
 
-INSERT INTO Membresias(tipo ,estado ,fechaFin ,idUsuario ) VALUES
-('MENSUAL', 'ACTIVA', '2024-12-01 20:14:47', 4);
+INSERT INTO Membresias(tipo , estado, fechaFin, pago , idUsuario, idTarjetaCredito ) VALUES
+('MENSUAL', 'ACTIVA', '2024-12-01 20:14:47', 45000, 4, 1);
 
 INSERT INTO EstadosLibros(estado) VALUES
 ('NUEVO'),
@@ -63,13 +63,14 @@ INSERT INTO EstadosTransacciones (estado) VALUES
 ('RECHAZADO'),
 ('CANCELADO');
 
-INSERT INTO Transacciones (idLibro ,idUsuario ,total ,idEstadoTransaccion ) VALUES
-(1, 4, 55000, 1);
+INSERT INTO Transacciones (idLibro ,idUsuario ,total ,idEstadoTransaccion, idTarjetaCredito ) VALUES
+(1, 4, 55000, 1, 1);
 
 INSERT INTO Calificaciones (idLibro ,idUsuario ,fechaCalificacion ,comentario ,puntuacion ) VALUES 
 (1, 4, '2024-11-02', 'Libro en excelente estado', 4.5);
 
-
+INSERT INTO TarjetaCredito (idUsuario , titular , numeroTarjeta , cvs , fechaExpiracion) VALUES
+(4, 'SANTIAGO GALLO' , '556090344567', '767', '2024-09-23');
 
 Select * from Membresias;
 

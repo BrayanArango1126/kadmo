@@ -15,3 +15,9 @@
 .suscripcion p i, .suscripcion .cancel{
     color: #4069E5;
 }
+.check-suscription{
+    width: 80%;
+    padding: 12px 45px;
+    margin: .4% auto;
+
+}

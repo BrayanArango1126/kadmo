@@ -4,7 +4,11 @@ export default interface Membresia {
   estado: number;
   fechaIncio: string;
   fechaFin: string;
+  pago: number;
   usuario: {
-    "idUsuario": number;
+    idUsuario: number;
+  }
+  tarjetaCredito:{
+    idTarjetaCredito: number;
   }
 }

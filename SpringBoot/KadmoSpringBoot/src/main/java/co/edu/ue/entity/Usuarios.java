@@ -85,6 +85,10 @@ public class Usuarios implements Serializable {
 	@JsonBackReference("usuario-transacciones")
 	private List<Transacciones> transacciones;
 
+	// bi-directional many-to-one association to TarjetaCredito
+	@OneToMany(mappedBy = "usuario")
+	private List<TarjetaCredito> tarjetacredito;
+
 	// bi-directional many-to-one association to Role
 	@ManyToOne
 	@JoinColumn(name = "idRol")
@@ -307,6 +311,28 @@ public class Usuarios implements Serializable {
 
 	public void setRole(Roles role) {
 		this.role = role;
+	}
+
+	public List<TarjetaCredito> getTarjetacredito() {
+		return tarjetacredito;
+	}
+
+	public void setTarjetacredito(List<TarjetaCredito> tarjetacredito) {
+		this.tarjetacredito = tarjetacredito;
+	}
+
+	public TarjetaCredito addTarjetacredito(TarjetaCredito tarjetacredito) {
+		getTarjetacredito().add(tarjetacredito);
+		tarjetacredito.setUsuario(this);
+
+		return tarjetacredito;
+	}
+
+	public TarjetaCredito removeTarjetacredito(TarjetaCredito tarjetacredito) {
+		getTarjetacredito().remove(tarjetacredito);
+		tarjetacredito.setUsuario(null);
+
+		return tarjetacredito;
 	}
 
 }

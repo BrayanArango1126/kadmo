@@ -5,43 +5,47 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
-
 /**
  * The persistent class for the transacciones database table.
  * 
  */
 @Entity
-@Table(name="transacciones")
-@NamedQuery(name="Transacciones.findAll", query="SELECT t FROM Transacciones t")
+@Table(name = "transacciones")
+@NamedQuery(name = "Transacciones.findAll", query = "SELECT t FROM Transacciones t")
 public class Transacciones implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="idTransaccion")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "idTransaccion")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idTransaccion;
 
-	@Column(name="fechaTransaccion")
+	@Column(name = "fechaTransaccion")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaTransaccion;
 
-	@Column(name="total")
+	@Column(name = "total")
 	private BigDecimal total;
 
-	//bi-directional many-to-one association to EstadosTransacciones
+	// bi-directional many-to-one association to EstadosTransacciones
 	@ManyToOne
-	@JoinColumn(name="idEstadoTransaccion")
+	@JoinColumn(name = "idEstadoTransaccion")
 	private EstadosTransacciones estadostransaccione;
 
-	//bi-directional many-to-one association to Libros
+	// bi-directional many-to-one association to Libros
 	@ManyToOne
-	@JoinColumn(name="idLibro")
+	@JoinColumn(name = "idLibro")
 	private Libros libro;
 
-	//bi-directional many-to-one association to Usuarios
+	// bi-directional many-to-one association to Usuarios
 	@ManyToOne
-	@JoinColumn(name="idUsuario")
+	@JoinColumn(name = "idUsuario")
 	private Usuarios usuario;
+
+	// bi-directional many-to-one association to TarjetaCredito
+	@ManyToOne
+	@JoinColumn(name = "idTarjetaCredito")
+	private TarjetaCredito tarjetacredito;
 
 	public Transacciones() {
 	}
@@ -92,6 +96,14 @@ public class Transacciones implements Serializable {
 
 	public void setUsuario(Usuarios usuario) {
 		this.usuario = usuario;
+	}
+
+	public TarjetaCredito getTarjetacredito() {
+		return tarjetacredito;
+	}
+
+	public void setTarjetacredito(TarjetaCredito tarjetacredito) {
+		this.tarjetacredito = tarjetacredito;
 	}
 
 }
