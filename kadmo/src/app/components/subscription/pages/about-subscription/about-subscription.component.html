@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-100" *ngIf="listCreditCards.length > 0">
+                        <div class="w-100" *ngIf="listCreditCards.length == 0">
                             <p class=" my-2 w-100 d-inline-block text-center">No tienes tarjetas de crédito registradas</p>
                             <button type="button" class="btn btn-primary mt-3 btn-comprar" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><i class="fa-solid fa-wallet me-2"></i>Agregar tarjeta de crédito</button>
                         </div>
