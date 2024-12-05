@@ -1,6 +1,6 @@
 <section class="margin-general">
     <app-book-description [infoLibro]="selectedCalification" [book]="selectedBook" class="margin-general" [libroProp]="libro"></app-book-description>
-    <app-book-content class="margin-general"></app-book-content>
+    <app-book-content class="margin-general" [book]="selectedBook"></app-book-content>
 </section>
 <app-book-notes [reviewsList]="selectedCalification"></app-book-notes>
 <app-book-create-note></app-book-create-note>

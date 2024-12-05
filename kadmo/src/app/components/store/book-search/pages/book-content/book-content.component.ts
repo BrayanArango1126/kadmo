@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import Libros from '../../../../../interfaces/libros';
 
 @Component({
   selector: 'app-book-content',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   standalone: false
 })
 export class BookContentComponent {
+
+  @Input() book!: Libros;
 
 }

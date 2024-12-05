@@ -1,6 +1,6 @@
 <section class="margin-general">
-    <h2>{{libroProp[0].nombre}}</h2>
-    <p>{{libroProp[0].descripcion}}</p>
+    <h2>{{book.nombre}}</h2>
+    <p>{{book.descripcion}}</p>
 
     <div class="autor-container shadow rounded p-5">
         
@@ -8,7 +8,7 @@
             <img class="col-3 seller-img" src="/img/user.jpg" alt="">
             <div class="seller-info col-7">
                 <h3>Autor</h3>
-                <p>{{libroProp[0].autor}}</p>
+                <p>{{book.autor}}</p>
             </div>
             <div class="container-icon-save col-2">
                 <i class="fa-regular fa-bookmark "></i>
@@ -19,7 +19,7 @@
         <div class="book-info row text-center mt-3">
             <div class="col-xxl-3 col-12">
                 <h4>Categoria:</h4>
-                <p>{{libroProp[0].categoriasLibro.categoria }}</p>
+                <p>{{book.categoriasLibro.categoria }}</p>
             </div>
             <div class="col-xxl-5 col-12">
                 <h4>Notas:</h4>

@@ -6,7 +6,6 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { LibrosService } from '../../services/libros.service';
 import Libros from '../../interfaces/libros';
 import { debounceTime, map, Observable, startWith } from 'rxjs';
-import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
 @Component({
   selector: 'app-header',
@@ -39,7 +38,6 @@ export class HeaderComponent {
   public getAllBooks(){
     this._libroService.getLibros().subscribe({
       next: (result) => {
-        console.log(result);
         this.listAllBooks = result;
       },
       error: (err) => {
