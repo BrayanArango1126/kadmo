@@ -1,61 +1,55 @@
-<section>
-    <div class="main-title">
-      <h2>Libros({{cantLibros}})</h2>
-      <select class="select-filter" name="filter" id="aToZ" >
-        <option value="0" selected>A-Z</option>
-        <option value="1">A-E</option>
-        <option value="2">F-J</option>
-        <option value="3">K-O</option>
-        <option value="4">P-T</option>
-        <option value="5">W-Z</option>
-      </select>
+<section class="main-books-section">
+  <div class="main-title">
+    <h2>Libros ({{cantLibros}})</h2>
+    <select class="select-filter" name="filter" id="aToZ">
+      <option value="0" selected>A-Z</option>
+      <option value="1">A-E</option>
+      <option value="2">F-J</option>
+      <option value="3">K-O</option>
+      <option value="4">P-T</option>
+      <option value="5">W-Z</option>
+    </select>
+  </div>
+
+  <div *ngIf="booksListFiltered.length == 0" class="books-grid">
+    <div class="book-card" *ngFor="let item of bookListPublished; let index">
+      <img [src]="'/img/portada-' + (item.libro.idLibros || index.idLibrosPublicados) + '.jpg'" alt="Book Cover" (click)="goToBookDetails(item.libro.idLibros)" />
+      <div class="book-info">
+        <h5 (click)="goToBookDetails(item.libro.idLibros)">{{item.libro.nombre}}</h5>
+        <div class="book-meta">
+          <p>${{item.libro.precio | number:'1.0-0'}}</p>
+          <p>{{item.libro.autor}}</p>
+        </div>
+        <div class="book-tags">
+          <span class="item1">{{item.libro.disponibilidadLibro.disponibilidad}}</span>
+          <span class="item2">{{item.libro.categoriasLibro.categoria}}</span>
+          <span class="item3">{{item.libro.estadosLibro.estado}}</span>
+        </div>
+        <div class="container-icon-save" [ngClass]="compareBooks(item.libro.idLibros)" (click)="saveBook(item.libro)">
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
     </div>
-    <div *ngIf="booksListFiltered.length == 0" class=" row mt-5 mx-0">
-        <div class="col-12 col-lg-6 col-xl-4" *ngFor="let item of bookListPublished; let index" >
-          <div class="book">
-            <img src="/img/portada-{{index.idLibrosPublicados}}.jpg" (click)="goToBookDetails(item.libro.idLibros)" class="text-center" alt="..." />
-            <div class="row book-info">
-              <div class="d-flex justify-content-between align-items-start w-100">
-                <h5 class="col-12" (click)="goToBookDetails(item.libro.idLibros)">{{item.libro.nombre}}</h5>
-                <div class="container-icon-save" [ngClass]="compareBooks(item.libro.idLibros)" (click)="saveBook(item.libro)">
-                  <i class="fa-regular fa-bookmark "></i>
-                </div>
-              </div>
-              <div class="w-100 d-flex justify-content-evenly align-items-center" (click)="goToBookDetails(item.libro.idLibros)">
-                <p class="custom-atribute atribute-color-1">$ {{item.libro.precio | number:'1.0-0'}}</p>
-                <p class="custom-atribute atribute-color-2">{{item.libro.autor}}</p>
-              </div>
-              <div class="w-100 d-flex justify-content-evenly align-items-center" (click)="goToBookDetails(item.libro.idLibros)">
-                <p class="custom-atribute atribute-color-3">{{item.libro.disponibilidadLibro.disponibilidad}}</p>
-                <p class="custom-atribute atribute-color-4">{{item.libro.estadosLibro.estado}}</p>
-                <p class="custom-atribute atribute-color-5">{{item.libro.categoriasLibro.categoria}}</p>
-              </div>
-            </div>
-          </div>
+  </div>
+
+  <div *ngIf="booksListFiltered.length > 0" class="books-grid">
+    <div class="book-card" *ngFor="let item of booksListFiltered; let index">
+      <img [src]="'/img/portada-' + item.idLibros + '.jpg'" alt="Book Cover" />
+      <div class="book-info">
+        <h5>{{item.nombre}}</h5>
+        <div class="book-meta">
+          <p>${{item.precio | number:'1.0-0'}}</p>
+          <p>{{item.autor}}</p>
+        </div>
+        <div class="book-tags">
+          <span class="item1">{{item.disponibilidadLibro.disponibilidad}}</span>
+          <span class="item2">{{item.categoriasLibro.categoria}}</span>
+          <span class="item3">{{item.estadosLibro.estado}}</span>
+        </div>
+        <div class="container-icon-save" [ngClass]="compareBooks(item.idLibros)" (click)="saveBook(item)">
+          <i class="fa-regular fa-bookmark"></i>
         </div>
       </div>
-      <div *ngIf="booksListFiltered.length > 0" class=" row mt-5 mx-0">
-        <div class="col-12 col-lg-6 col-xl-4" *ngFor="let item of booksListFiltered; let index">
-          <div class="book">
-            <img src="/img/portada-{{index.idLibros}}.jpg" class="text-center" alt="..." />
-            <div class="row book-info">
-              <div class="d-flex justify-content-between align-items-start w-100">
-                <h5 class="col-12">{{item.nombre}}</h5>
-                <div class="container-icon-save" [ngClass]="compareBooks(item.idLibros)" (click)="saveBook(item)">
-                  <i class="fa-regular fa-bookmark "></i>
-                </div>
-              </div>
-              <div class="w-100 d-flex justify-content-evenly align-items-center">
-                <p class="custom-atribute atribute-color-1">$ {{item.precio | number:'1.0-0'}}</p>
-                <p class="custom-atribute atribute-color-2">{{item.autor}}</p>
-              </div>
-              <div class="w-100 d-flex justify-content-evenly align-items-center">
-                <p class="custom-atribute atribute-color-3">{{item.disponibilidadLibro.disponibilidad}}</p>
-                <p class="custom-atribute atribute-color-4">{{item.estadosLibro.estado}}</p>
-                <p class="custom-atribute atribute-color-5">{{item.categoriasLibro.categoria}}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
+    </div>
+  </div>
+</section>

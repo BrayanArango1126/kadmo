@@ -1,50 +1,73 @@
-.books-container{
+/* General container adjustments */
+.books-container {
   background-color: #ffffff;
   margin: 0 auto;
-  width: 80vw;
+  max-width: 1200px;
+  width: 90%;
   height: auto;
 }
-.books-container h2{
+.books-container h2 {
   color: #4069E5;
   font-weight: 700;
+  margin-bottom: 10px;
 }
-.books-container p{
-  font-size: 1.5rem;
+.books-container p {
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
-.book{
+/* Book card adjustments */
+.book {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.book:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.inside-cards{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Image adjustments */
+.book img {
+  display: block;
   margin: 0 auto;
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
 }
 
-.book img{
-  border-radius: 10px 10px 0 0;
-
-  margin: 0 auto;
-  width: 300px;
-  height: 380px;
-}
-.book-info{
-  margin-top: 5%;
+/* Book information adjustments */
+.book-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: auto;
+  padding: 15px;
   background-color: #ffffff;
   border-radius: 0 0 10px 10px;
 }
-.book-info div h5{
-  width: 80%;
+.book-info h5 {
+  font-size: 1rem;
+  color: #4069E5;
+  font-weight: 600;
+  margin: 0;
 }
-.container-icon-save{
+.book-info p {
+  font-size: 0.9rem;
+  color: #333333;
+  margin: 5px 0 0;
+}
+
+/* Save icon container */
+.container-icon-save {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,4 +75,33 @@
   height: 40px;
   border: 2px solid #4069E5;
   border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container-icon-save:hover {
+  background-color: #4069E5;
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .books-container {
+    width: 95%;
+  }
+}
+@media (max-width: 768px) {
+  .books-container p {
+    font-size: 1rem;
+  }
+  .book img {
+    height: auto;
+  }
+}
+@media (max-width: 576px) {
+  .book-info h5 {
+    font-size: 0.9rem;
+  }
+  .book-info p {
+    font-size: 0.8rem;
+  }
 }

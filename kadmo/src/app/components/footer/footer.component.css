@@ -1,46 +1,68 @@
-.container-footer-custom{
+.container-footer-custom {
   background-color: #1d2128;
-  padding: 20px;
+  padding: 40px 20px;
   color: #fff;
   border-top: 1px solid #e9ecef;
+}
+
+.info-about-us h3,
+.container-fast-nav h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.policies ul {
   display: flex;
-  justify-content: space-evenly;
-}
-.info-about-us{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 20px;
-}
-div > form input{
-  width: 80% !important;
-}
-.policies{
-  width: 100%;
-  padding: 20px;
-  display: flex;
-}
-.container-imagen-kadmo-footer{
-  width: 200px;
-}
-.container-imagen-kadmo-footer img{
-  width: 100%;
-  border-radius: 8px;
-}
-.list-inline-custom{
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 20px;
-  align-items: center;
-}
-.list-inline-item a{
-  color: #fff;
-  text-decoration: none;
-}
-.container-fast-nav{
-  display: flex;
-  justify-content: space-evenly;
+  gap: 15px;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 20px;
+}
+
+.container-imagen-kadmo-footer img {
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.list-inline-item a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.list-inline-item a:hover {
+  color: #007bff;
+}
+
+.list-inline {
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .info-about-us,
+  .container-fast-nav {
+    text-align: center;
+  }
+
+  .info-about-us form {
+    flex-direction: column;
+  }
+
+  .info-about-us form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .info-about-us form button {
+    width: 100%;
+  }
+
+  .list-inline {
+    justify-content: center;
+  }
 }

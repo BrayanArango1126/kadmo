@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-11-2024 a las 21:20:16
+-- Tiempo de generación: 04-12-2024 a las 17:34:09
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -20,8 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `kadmodb`
 --
-CREATE DATABASE kadmo;
-USE kadmo;
+
 -- --------------------------------------------------------
 
 --
@@ -69,7 +68,9 @@ INSERT INTO `categoriaslibros` (`idCategoriaLibro`, `categoria`) VALUES
 (7, 'Artículo Científico'),
 (8, 'Biología'),
 (9, 'Aventura'),
-(10, 'Policiaco');
+(10, 'Policiaco'),
+(11, 'Ciencias políticas'),
+(12, 'sa');
 
 -- --------------------------------------------------------
 
@@ -102,7 +103,13 @@ INSERT INTO `datosusuarios` (`idDatoUsuario`, `nombres`, `apellidos`, `direccion
 (8, 'Alison ', 'Arango', 'Calle 65 sur # 12-32', '1000352632', '3232319603', 21, b'0', 1, 5),
 (9, 'asca', 'ascas', 'asc', 'ascasc', 'ascsca', 20, b'0', 2, 19),
 (10, 'asca', 'ascas', 'asc', 'ascasc', 'ascsca', 20, b'0', 2, 20),
-(11, 'Juan Toloso', 'Alvarez Francesa', 'Calle 16 sur # 132-32', '1205320108', '3156363464', 19, b'0', 1, 20);
+(11, 'Juan Toloso', 'Alvarez Francesa', 'Calle 16 sur # 132-32', '1205320108', '3156363464', 19, b'0', 1, 20),
+(12, 'Brayitan', 'Acero', 'calle1', '124124', '1001213', 22, b'0', 2, 22),
+(13, 'Alisiton', 'Acero', 'calle1', '124124', '1001213', 21, b'0', 1, 23),
+(14, 'Lucas', 'Alberto', 'calle1', '124124', '1001213', 41, b'0', 2, 20),
+(15, 'avasdv', 'sdvsdv', 'sdvsdv', '1000126615', 'sdv', 20, b'0', 2, 25),
+(16, 'Brayan', 'Arango', 'Calle 16 sur # 12 42', '1000126615', '3108193800', 20, b'0', 2, 25),
+(17, 'Santi', 'Ovalle', 'Calle 32-43', '1000126638', '3149876349', 20, b'0', 2, 4);
 
 -- --------------------------------------------------------
 
@@ -122,7 +129,8 @@ CREATE TABLE `disponibilidadlibros` (
 INSERT INTO `disponibilidadlibros` (`idDisponibilidadLibro`, `disponibilidad`) VALUES
 (1, 'Disponible'),
 (2, 'Vendido'),
-(3, 'Eliminado');
+(3, 'Retirado'),
+(4, 'En consulta');
 
 -- --------------------------------------------------------
 
@@ -143,7 +151,12 @@ CREATE TABLE `editoriales` (
 --
 
 INSERT INTO `editoriales` (`idEditoriales`, `nombre`, `telefono`, `direccion`, `idUsuario`) VALUES
-(1, 'La casa de la moneda', '3232319714', 'Calle 80 # 23 -54', 2);
+(1, 'La casa de la moneda', '3232319714', 'Calle 80 # 23 -54', 2),
+(2, 'ascascasc', 'ascasc', 'aaaaaaaaaaaaaa', 15),
+(3, 'ascascasc', 'ascasc', 'aaaaaaaaaaaaaa', 10),
+(4, 'ascascasc', 'ascasc', 'ascascacs', 16),
+(5, 'eeeeeeeee', 'eeeee', 'eeeeeeeeeeeeeeeeee', 17),
+(6, 'string', '3108193800', 'string', 24);
 
 -- --------------------------------------------------------
 
@@ -162,7 +175,9 @@ CREATE TABLE `estadoslibros` (
 
 INSERT INTO `estadoslibros` (`idEstadosLibros`, `estado`) VALUES
 (1, 'NUEVO'),
-(2, 'USADO');
+(2, 'USADO'),
+(3, 'Otro Estado'),
+(4, 'activo');
 
 -- --------------------------------------------------------
 
@@ -183,7 +198,14 @@ INSERT INTO `estadostransacciones` (`idEstadoTransaccion`, `estado`) VALUES
 (1, 'ACEPTADO'),
 (2, 'PENDIENTE'),
 (3, 'RECHAZADO'),
-(4, 'CANCELADO');
+(4, 'CANCELADO'),
+(5, NULL),
+(6, NULL),
+(7, NULL),
+(8, NULL),
+(9, 'NUEVO'),
+(10, 'NUEVO'),
+(11, 'ascasc');
 
 -- --------------------------------------------------------
 
@@ -203,7 +225,9 @@ CREATE TABLE `generos` (
 
 INSERT INTO `generos` (`idGenero`, `genero`, `fechaPublicacion`) VALUES
 (1, 'Femenino', '2024-11-01 20:19:46'),
-(2, 'Maculino', '2024-11-01 20:19:46');
+(2, 'Maculino', '2024-11-01 20:19:46'),
+(3, 'Prefiero no Responder', NULL),
+(4, 'TRANSOFRMER', NULL);
 
 -- --------------------------------------------------------
 
@@ -217,6 +241,13 @@ CREATE TABLE `imageneslibros` (
   `idLibro` int(11) DEFAULT NULL,
   `fechaRegistro` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `imageneslibros`
+--
+
+INSERT INTO `imageneslibros` (`idImagenLibro`, `url`, `idLibro`, `fechaRegistro`) VALUES
+(1, 'hascascasvwevsdv', 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -241,7 +272,12 @@ CREATE TABLE `libros` (
 --
 
 INSERT INTO `libros` (`idLibros`, `nombre`, `autor`, `precio`, `descripcion`, `idEstadosLibros`, `idDisponibilidadLibro`, `idCategoriaLibro`, `fechaModificacion`) VALUES
-(1, 'Harry Potter: La piedra filosofal', 'J. K. Rolling', 45000.00, 'Harry Potter y la piedra filosofal. Es la historia sobre un niño llamado Harry Potter que vive en el armario debajo de las escaleras de una casa propiedad del señor y la señora Dursley, y que descubre que es mago, escrita por J.K Rowling.', 2, 1, 9, NULL);
+(1, 'Harry Potter: La piedra filosofal', 'J. K. Rolling', 45000.00, 'Harry Potter y la piedra filosofal. Es la historia sobre un niño llamado Harry Potter que vive en el armario debajo de las escaleras de una casa propiedad del señor y la señora Dursley, y que descubre que es mago, escrita por J.K Rowling.', 2, 1, 9, NULL),
+(2, 'El principito', 'Rafael Pombo', 40000.00, 'string', 2, 1, 1, NULL),
+(3, 'example', 'nose', 222220.00, 'hola', 2, 2, 2, NULL),
+(4, 'string', 'string', 0.00, 'string', 1, 2, 2, NULL),
+(5, 'El ultimo deseo', 'Robert William', 50000.00, 'Es un libro detallando la caballería rusa', 2, 1, 9, NULL),
+(6, 'El ultimo deseo', 'Robert William', 70000.00, 'Es un libro detallando la caballería rusa', 1, 1, 4, NULL);
 
 -- --------------------------------------------------------
 
@@ -254,6 +290,21 @@ CREATE TABLE `librosfavoritos` (
   `idLibro` int(11) DEFAULT NULL,
   `idUsuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `librosfavoritos`
+--
+
+INSERT INTO `librosfavoritos` (`idLibroFavorito`, `idLibro`, `idUsuario`) VALUES
+(1, 1, 2),
+(2, 1, 30),
+(3, 2, 30),
+(4, 3, 30),
+(5, 4, 30),
+(6, 1, 31),
+(7, 2, 31),
+(8, 3, 31),
+(9, 4, 31);
 
 -- --------------------------------------------------------
 
@@ -273,7 +324,12 @@ CREATE TABLE `librospublicados` (
 --
 
 INSERT INTO `librospublicados` (`idLibrosPublicados`, `idLibro`, `idUsuario`, `fechaPublicacion`) VALUES
-(1, 1, 4, '2024-11-01 20:51:33');
+(1, 1, 4, '2024-11-01 20:51:33'),
+(2, 2, 24, NULL),
+(3, 3, 5, NULL),
+(4, 4, 20, NULL),
+(5, 5, 30, NULL),
+(6, 6, 30, NULL);
 
 -- --------------------------------------------------------
 
@@ -287,15 +343,19 @@ CREATE TABLE `membresias` (
   `estado` bit(1) DEFAULT NULL,
   `fechaIncio` datetime DEFAULT current_timestamp(),
   `fechaFin` datetime DEFAULT current_timestamp(),
-  `idUsuario` int(11) DEFAULT NULL
+  `pago` decimal(10,2) DEFAULT NULL,
+  `idUsuario` int(11) DEFAULT NULL,
+  `idTarjetaCredito` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `membresias`
 --
 
-INSERT INTO `membresias` (`idMembresia`, `tipo`, `estado`, `fechaIncio`, `fechaFin`, `idUsuario`) VALUES
-(1, 'MENSUAL', b'1', '2024-11-01 20:32:03', '2024-12-01 20:14:47', 4);
+INSERT INTO `membresias` (`idMembresia`, `tipo`, `estado`, `fechaIncio`, `fechaFin`, `pago`, `idUsuario`, `idTarjetaCredito`) VALUES
+(1, 'MENSUAL', b'1', '2024-12-03 17:22:39', '2024-12-01 20:14:47', 45000.00, 4, 1),
+(2, 'MENSUAL', b'1', '2024-12-04 03:46:16', '2025-01-04 03:46:16', 45000.00, 30, 2),
+(3, 'ANUAL', b'1', '2024-12-04 12:30:37', '2025-12-04 12:30:37', 500000.00, 31, 4);
 
 -- --------------------------------------------------------
 
@@ -339,7 +399,37 @@ INSERT INTO `roles` (`idRol`, `rol`, `fechaRegistro`) VALUES
 (2, 'Editorial', '2024-11-01 20:13:10'),
 (3, 'Autor', '2024-11-01 20:13:10'),
 (4, 'Cliente', '2024-11-01 20:13:10'),
-(5, 'AutorIndependiente', '2024-11-01 20:13:10');
+(5, 'AutorIndependiente', '2024-11-01 20:13:10'),
+(6, 'NuevoRol', NULL),
+(7, 'Otro Rol', NULL),
+(8, 'NUEVO', NULL),
+(9, 'as', NULL),
+(10, 'AHORA NINGUNO', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tarjetacredito`
+--
+
+CREATE TABLE `tarjetacredito` (
+  `idTarjetaCredito` int(11) NOT NULL,
+  `idUsuario` int(11) DEFAULT NULL,
+  `titular` varchar(150) DEFAULT NULL,
+  `numeroTarjeta` varchar(18) DEFAULT NULL,
+  `cvs` varchar(60) DEFAULT NULL,
+  `fechaExpiracion` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tarjetacredito`
+--
+
+INSERT INTO `tarjetacredito` (`idTarjetaCredito`, `idUsuario`, `titular`, `numeroTarjeta`, `cvs`, `fechaExpiracion`) VALUES
+(1, 4, 'SANTIAGO GALLO', '556090344567', '767', '2024-09-23'),
+(2, 30, 'BRAYAN ARANGO', '559034083409', '879', '2026-09-02'),
+(3, 30, 'HECTOR ARANGO', '569089093405', '243', '2027-10-25'),
+(4, 31, 'HECTOR ARANGO', '609045682039', '456', '2024-12-19');
 
 -- --------------------------------------------------------
 
@@ -353,15 +443,16 @@ CREATE TABLE `transacciones` (
   `idUsuario` int(11) DEFAULT NULL,
   `fechaTransaccion` datetime DEFAULT current_timestamp(),
   `total` decimal(10,2) DEFAULT NULL,
-  `idEstadoTransaccion` int(11) DEFAULT NULL
+  `idEstadoTransaccion` int(11) DEFAULT NULL,
+  `idTarjetaCredito` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `transacciones`
 --
 
-INSERT INTO `transacciones` (`idTransaccion`, `idLibro`, `idUsuario`, `fechaTransaccion`, `total`, `idEstadoTransaccion`) VALUES
-(1, 1, 4, '2024-11-02 08:13:56', 55000.00, 1);
+INSERT INTO `transacciones` (`idTransaccion`, `idLibro`, `idUsuario`, `fechaTransaccion`, `total`, `idEstadoTransaccion`, `idTarjetaCredito`) VALUES
+(2, 1, 4, '2024-12-03 16:02:07', 55000.00, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -401,7 +492,21 @@ INSERT INTO `usuarios` (`idUsuario`, `correo`, `contraseña`, `idRol`, `fechaReg
 (17, 'asc', 'ascascasc', 4, NULL),
 (18, 'asc', 'ascascas', 3, NULL),
 (19, 'asc', 'ascascasc', 3, NULL),
-(20, 'asc', 'wevsadsdv', 3, NULL);
+(20, 'asc', 'wevsadsdv', 3, NULL),
+(21, 'brayanarango2606@gmail.com', 'cakjbjkvsddvsdv', NULL, NULL),
+(22, 'brayanarango2606@gmail.com', 'cakjbjkvsddvsdv', NULL, NULL),
+(23, 'brayanarango2606@gmail.com', 'cakjbjkvsddvsdv', NULL, NULL),
+(24, 'Brayansacasc@ascascascascascascascacsa.com', 'ascasvvbfbr', 2, NULL),
+(25, 'yonuncanunca@gmail.com', 'ascascasvasv', 1, NULL),
+(26, 'barango@gmail.com', 'String12102', 2, NULL),
+(27, 'ng@gmail.com', '$2a$10$S.iOIQhdLvMlJtzVqf0lo.3hKKbD1Gks69OLZI/5wuftDLA/DfRXu', 2, NULL),
+(28, 'ngserve@gmail.com', '$2a$10$VfxSyehnXifW8FBZX.RIY.qU7MSq/4beL0X4RkkpzeUOIgONRdWHO', 2, NULL),
+(29, 'ngservescs@gmail.com', '$2a$10$yMHiU02EHOIANbyV2BMDMu/./wZqGIPsgtLdWntjgptpZG0IVqzCm', 2, NULL),
+(30, 'nuevo@gmail.com', '$2a$10$seTegjWk.XaS8w28i1sR2.MJMhIG1XHD4dpp1uQBqGSBph1N82TPW', 2, NULL),
+(31, 'nuevo2@gmail.com', '$2a$10$Ia3VafHY0OA2Bs/S.ADsL.XIOTAhmNqsosAvltRWsGriiJ6k2zXP2', 3, NULL),
+(32, 'nuevo3@gmail.com', '$2a$10$gY3.n2yLygMXNcpN/kZjj.SWwoHfbLFJDndYDacADnRbKK5WFCWM2', 2, NULL),
+(33, 'nuevo4@gmail.com', '$2a$10$7paTfo14yDujuR.Z.cgXf.kCIWsRtJq9acQqSpuyRpT/EF5krA6UC', 2, NULL),
+(34, 'nuevo5@gmail.com', '$2a$10$alYhAnDc0RB8QEA28QJI3ug4AG6m/9ssXwyVtrxce1SwwAA5SKiCK', 2, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -497,7 +602,8 @@ ALTER TABLE `librospublicados`
 --
 ALTER TABLE `membresias`
   ADD PRIMARY KEY (`idMembresia`),
-  ADD KEY `idUsuario` (`idUsuario`);
+  ADD KEY `idUsuario` (`idUsuario`),
+  ADD KEY `idTarjetaCredito` (`idTarjetaCredito`);
 
 --
 -- Indices de la tabla `publicacionesautores`
@@ -513,13 +619,21 @@ ALTER TABLE `roles`
   ADD PRIMARY KEY (`idRol`);
 
 --
+-- Indices de la tabla `tarjetacredito`
+--
+ALTER TABLE `tarjetacredito`
+  ADD PRIMARY KEY (`idTarjetaCredito`),
+  ADD KEY `idUsuario` (`idUsuario`);
+
+--
 -- Indices de la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
   ADD PRIMARY KEY (`idTransaccion`),
   ADD KEY `idEstadoTransaccion` (`idEstadoTransaccion`),
   ADD KEY `idLibro` (`idLibro`),
-  ADD KEY `idUsuario` (`idUsuario`);
+  ADD KEY `idUsuario` (`idUsuario`),
+  ADD KEY `idTarjetaCredito` (`idTarjetaCredito`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -542,73 +656,73 @@ ALTER TABLE `calificaciones`
 -- AUTO_INCREMENT de la tabla `categoriaslibros`
 --
 ALTER TABLE `categoriaslibros`
-  MODIFY `idCategoriaLibro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idCategoriaLibro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `datosusuarios`
 --
 ALTER TABLE `datosusuarios`
-  MODIFY `idDatoUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idDatoUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `disponibilidadlibros`
 --
 ALTER TABLE `disponibilidadlibros`
-  MODIFY `idDisponibilidadLibro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idDisponibilidadLibro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `editoriales`
 --
 ALTER TABLE `editoriales`
-  MODIFY `idEditoriales` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idEditoriales` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `estadoslibros`
 --
 ALTER TABLE `estadoslibros`
-  MODIFY `idEstadosLibros` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idEstadosLibros` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `estadostransacciones`
 --
 ALTER TABLE `estadostransacciones`
-  MODIFY `idEstadoTransaccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idEstadoTransaccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `generos`
 --
 ALTER TABLE `generos`
-  MODIFY `idGenero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idGenero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `imageneslibros`
 --
 ALTER TABLE `imageneslibros`
-  MODIFY `idImagenLibro` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idImagenLibro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
-  MODIFY `idLibros` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idLibros` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `librosfavoritos`
 --
 ALTER TABLE `librosfavoritos`
-  MODIFY `idLibroFavorito` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idLibroFavorito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `librospublicados`
 --
 ALTER TABLE `librospublicados`
-  MODIFY `idLibrosPublicados` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idLibrosPublicados` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `membresias`
 --
 ALTER TABLE `membresias`
-  MODIFY `idMembresia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idMembresia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `publicacionesautores`
@@ -620,19 +734,25 @@ ALTER TABLE `publicacionesautores`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `idRol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idRol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `tarjetacredito`
+--
+ALTER TABLE `tarjetacredito`
+  MODIFY `idTarjetaCredito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
-  MODIFY `idTransaccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idTransaccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- Restricciones para tablas volcadas
@@ -690,7 +810,8 @@ ALTER TABLE `librospublicados`
 -- Filtros para la tabla `membresias`
 --
 ALTER TABLE `membresias`
-  ADD CONSTRAINT `membresias_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`);
+  ADD CONSTRAINT `membresias_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`),
+  ADD CONSTRAINT `membresias_ibfk_2` FOREIGN KEY (`idTarjetaCredito`) REFERENCES `tarjetacredito` (`idTarjetaCredito`);
 
 --
 -- Filtros para la tabla `publicacionesautores`
@@ -699,12 +820,19 @@ ALTER TABLE `publicacionesautores`
   ADD CONSTRAINT `publicacionesautores_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`);
 
 --
+-- Filtros para la tabla `tarjetacredito`
+--
+ALTER TABLE `tarjetacredito`
+  ADD CONSTRAINT `tarjetacredito_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`);
+
+--
 -- Filtros para la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
   ADD CONSTRAINT `transacciones_ibfk_1` FOREIGN KEY (`idEstadoTransaccion`) REFERENCES `estadostransacciones` (`idEstadoTransaccion`),
   ADD CONSTRAINT `transacciones_ibfk_2` FOREIGN KEY (`idLibro`) REFERENCES `libros` (`idLibros`),
-  ADD CONSTRAINT `transacciones_ibfk_3` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`);
+  ADD CONSTRAINT `transacciones_ibfk_3` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`),
+  ADD CONSTRAINT `transacciones_ibfk_4` FOREIGN KEY (`idTarjetaCredito`) REFERENCES `tarjetacredito` (`idTarjetaCredito`);
 
 --
 -- Filtros para la tabla `usuarios`

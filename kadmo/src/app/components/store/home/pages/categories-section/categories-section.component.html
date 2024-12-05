@@ -4,20 +4,19 @@
     <p>Contamos con distintas categorías para todos los gustos.</p>
   </div>
   <div class="row mt-5">
-    <div class="col-3" *ngFor="let item of books">
-      <div class="dash-book">
-        <img [src]="item.img" class="text-center" alt="..." />
-        <div class="row dash-book-info">
-          <div class="d-flex justify-content-between align-items-center w-100">
-            <h5 class="col-12">{{item.title}}</h5>
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let item of books">
+      <div class="dash-book shadow-sm">
+        <img [src]="item.img" class="img-fluid" alt="Portada de categoría" />
+        <div class="dash-book-info text-center p-3">
+          <div class="d-flex justify-content-between align-items-center inside-cards">
+            <h5 class="text-truncate">{{item.title}}</h5>
             <div class="container-icon-save">
-              <i class="fa-regular fa-bookmark "></i>
+              <i class="fa-regular fa-bookmark"></i>
             </div>
           </div>
-          <p>{{item.cantidad}}</p>
+          <p class="mt-2">{{item.cantidad}} libros</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-

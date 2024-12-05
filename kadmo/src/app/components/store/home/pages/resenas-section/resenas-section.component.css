@@ -1,131 +1,126 @@
-.dashboard-container{
+/* General container adjustments */
+.dashboard-container {
   background-color: #ffffff;
   margin: 0 auto;
-  width: 80vw;
-  height: auto;
+  max-width: 1200px;
+  width: 90%;
 }
-.dashboard-container h2{
+.dashboard-container h2 {
   color: #4069E5;
   font-weight: 700;
 }
-.dashboard-container p{
-  /* color: #4069E5; */
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.container-reviews{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-}
-.review{
-  display: flex;
-  justify-content: space-between;
-  width: 48%;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border: 1px solid #4069E5;
-  border-radius: 10px;
-}
-.custom-img-review{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.w-40{
-  width: 40%;
-}
-.review-info{
-  width: 60%;
-  padding-left: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.container-info-book{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.review-info-book{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.review-info-book h3{
-  color: #4069E5;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-.review-info-book p{
+.dashboard-container p {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.review-info-book span{
-  font-size: 1rem;
-  font-weight: 500;
-}
-.custom-rating{
-  width: 100%;
+
+/* Reviews container */
+.container-reviews {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.custom-rating span{
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.custom-rating i{
-  font-size: 1.5rem;
-  color: #4069E5;
-}
-.review-info-user{
-  margin-top: 5%;
-  display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
+  gap: 2rem;
 }
-.container-info-user{
+
+/* Individual review card */
+.review {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #4069E5;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.review:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Review image */
+.custom-img-review {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Book information */
+.container-info-book {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container-image-user{
-  width: 25%;
-  border-radius: 50%;
+.review-info-book h3 {
+  font-size: 1.5rem;
+  color: #4069E5;
+  font-weight: 700;
 }
-.container-info-user img{
+.review-info-book p {
+  font-size: 1.2rem;
+}
+.review-info-book span {
+  font-size: 1rem;
+  color: #333;
+}
+.custom-rating {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #4069E5;
+}
+.custom-rating span {
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* User information */
+.container-info-user {
+  display: flex;
+  align-items: center;
+}
+.container-image-user img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  object-fit: cover;
 }
-.user-info{
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-}
-.container-info-user .user-info h4{
+.user-info h4 {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
 }
-.container-info-user .user-info p{
-  font-size: 1rem;
-  font-weight: 500;
-}
-.container-commentary-user{
-  width: 100%;
-  max-height: 50px;
-  overflow: hidden;
-}
-.container-commentary-user p{
-  font-size: 1rem;
-  font-weight: 500;
+.user-info p {
+  font-size: 0.9rem;
+  color: #666;
 }
 
+/* Commentary section */
+.container-commentary-user p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #333;
+}
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .review {
+    flex-direction: column;
+  }
+  .custom-img-review {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .review-info {
+    width: 100%;
+  }
+  .custom-rating span {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 576px) {
+  .review-info-book h3 {
+    font-size: 1.2rem;
+  }
+  .review-info-book p {
+    font-size: 1rem;
+  }
+  .container-commentary-user p {
+    font-size: 0.8rem;
+  }
+}
