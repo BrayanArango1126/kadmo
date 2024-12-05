@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import Libros from '../../../../../interfaces/libros';
 
 @Component({
   selector: 'app-book-description',
@@ -9,31 +10,6 @@ import { Component } from '@angular/core';
 })
 export class BookDescriptionComponent {
 
-  chapters:any = [
-    {
-      title: 'Introducción a React',
-    },
-    {
-      title: 'Configuración',
-    },
-    {
-      title: 'Chapter 3',
-    },
-    {
-      title: 'Configuración enrutamiento',
-    },
-    {
-      title: 'Estilización React',
-    },
-    {
-      title: 'Manejo Formularios',
-    },
-    {
-      title: 'Optimización y rendimiento',
-    },
-    {
-      title: 'Pruebas en React',
-    }
+  @Input() libroProp:Libros[] = [];
 
-  ]
 }

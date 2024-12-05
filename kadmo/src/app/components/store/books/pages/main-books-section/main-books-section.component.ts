@@ -7,6 +7,9 @@ import { LibrosFavoritosService } from '../../../../../services/libros-favoritos
 import LibroFavorito from '../../../../../interfaces/libroFavorito';
 import Usuario from '../../../../../interfaces/usuario';
 import { LibrosSharedFiltersService } from '../../../../../services/libros-shared-filters.service';
+import { environment } from '../../../../../../environments/environment';
+import * as CryptoJS from 'crypto-js';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-books-section',
@@ -14,6 +17,8 @@ import { LibrosSharedFiltersService } from '../../../../../services/libros-share
   styleUrl: './main-books-section.component.css'
 })
 export class MainBooksSectionComponent implements OnInit {
+
+  idLibro:string = '';
 
   booksList:Libros[] = [];
 
@@ -30,6 +35,7 @@ export class MainBooksSectionComponent implements OnInit {
     private _librosPublicadosService:LibrosPublicadosService,
     private _librosFavoritosService:LibrosFavoritosService,
     private _librosSharedFiltersService:LibrosSharedFiltersService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -46,7 +52,9 @@ export class MainBooksSectionComponent implements OnInit {
   }
 
   public goToBookDetails(idBook:number){
-    window.location.href = `/store/book/${idBook}`;
+    this.idLibro = idBook.toString();
+    this.idLibro = this.encrypt(this.idLibro);
+    window.location.href = `/store/book/${this.idLibro}`;
   }
 
   public compareBooks(idBook:number){
@@ -134,6 +142,11 @@ export class MainBooksSectionComponent implements OnInit {
 
   public countCantLibros(){
     this.cantLibros = this.bookListPublished.length;
+  }
+
+  public encrypt(idLibro: string): string { 
+    const safeId = encodeURIComponent(CryptoJS.AES.encrypt(idLibro, environment.cryptPassword).toString());
+    return safeId;
   }
 
 }

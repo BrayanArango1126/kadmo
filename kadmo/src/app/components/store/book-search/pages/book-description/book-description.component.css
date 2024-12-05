@@ -1,13 +1,9 @@
-.chapters ul li{
-    list-style: none;
+.autor-container{
+    width: 100%;
 }
 
 .chapters {
     border: dashed 2px #00BDD6;
-}
-.chapters ul {
-    padding: 0;
-    margin: 0;
 }
 
 .seller-img{
