@@ -22,37 +22,10 @@ export class BookDescriptionComponent {
 
   @Input() infoLibro:CalificacionLibro[] = [];
   @Input() book!:Libros;
+  @Input() libroProp: Libros[] = [];
   idUsuario = localStorage.getItem('user') || '0';
   listAllCreditCards:TarjetaCredito[] = [];
   selectedCreditCard!:TarjetaCredito;
-
-
-  chapters:any = [
-    {
-      title: 'Introducción a React',
-    },
-    {
-      title: 'Configuración',
-    },
-    {
-      title: 'Chapter 3',
-    },
-    {
-      title: 'Configuración enrutamiento',
-    },
-    {
-      title: 'Estilización React',
-    },
-    {
-      title: 'Manejo Formularios',
-    },
-    {
-      title: 'Optimización y rendimiento',
-    },
-    {
-      title: 'Pruebas en React',
-    }
-  ]
 
   formCompraLibros!:FormGroup;
   creditCardForm!:FormGroup;

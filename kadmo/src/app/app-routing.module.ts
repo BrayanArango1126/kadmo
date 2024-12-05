@@ -15,9 +15,9 @@ const routes: Routes = [
   {path:'suscripcion', loadChildren: () => import('./components/subscription/subscription.module').then(m => m.SubscriptionModule)},
 
   // RUTAS DE ESTE MODULO
-  {path:'404', component: NotFoundComponent}, 
-  {path:'', redirectTo: '/store', pathMatch: 'full'},
-  {path:'**', redirectTo: '/404'}, 
+  // {path:'404', component: NotFoundComponent}, 
+  // {path:'', redirectTo: '/store', pathMatch: 'full'},
+  // {path:'**', redirectTo: '/404'}, 
 ];
 
 @NgModule({

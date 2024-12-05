@@ -1,14 +1,27 @@
-section{
+.section-container {
     display: flex;
     justify-content: space-between;
-    margin: 0 10%;
-}
-app-aside-books-section{
-    float: left;
-    width: 22%;
-}
-app-main-books-section{
-    float: right;
-    width: 76%;
-}
-
+    gap: 2rem;
+    margin: 0 5%;
+  }
+  
+  app-aside-books-section {
+    width: 25%;
+  }
+  
+  app-main-books-section {
+    width: 72%;
+  }
+  
+  @media (max-width: 1200px) {
+    .section-container {
+      flex-direction: column;
+      margin: 0 3%;
+    }
+  
+    app-aside-books-section,
+    app-main-books-section {
+      width: 100%;
+    }
+  }
+  

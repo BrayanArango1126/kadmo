@@ -24,12 +24,12 @@
           <hr>
           <li>
             <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseGeneros" aria-expanded="false" aria-controls="collapseGeneros">
-              <h3>Categorías</h3>
+              <h3 class="item-c">Categorías</h3>
             </a>
 
             <div class="collapse show" id="collapseGeneros">
               <ul class="dropdown row p-2">
-                <li *ngFor="let category of categories; let i = index" class="form-check col-6">
+                <li *ngFor="let category of categories; let i = index" class="form-check col-6 item-color">
                   <input class="form-check-input" (change)="onCheckboxChange($event, category)" formControlName="categoriasLibro" type="checkbox" [value]="category.idCategoriaLibro" id="flexCheckDefault{{category.idCategoriaLibro}}"/>
                   <label class="form-check-label" for="flexCheckDefault{{category.idCategoriaLibro}}">{{category.categoria}}</label>
                 </li>
@@ -122,7 +122,7 @@
           </li>
           <hr>
           <li>
-              <button type="submit" class="btn btn-outline-info button-apply">
+              <button type="submit" class="btn btn-outline-primary button-apply">
                   Aplicar
               </button>
           </li>

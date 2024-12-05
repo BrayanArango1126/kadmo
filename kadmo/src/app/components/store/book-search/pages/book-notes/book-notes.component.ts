@@ -1,10 +1,7 @@
 import { Component, Input } from '@angular/core';
-import calificacionesByLibroId from '../../../../../interfaces/calificacionesByLibroId';
-import Libros from '../../../../../interfaces/libros';
 import DatosUsuario from '../../../../../interfaces/datosUsuario';
 import CalificacionLibro from '../../../../../interfaces/calificacionLibro';
 import { DatoUsuarioService } from '../../../../../services/dato-usuario.service';
-import Usuario from '../../../../../interfaces/usuario';
 
 @Component({
   selector: 'app-book-notes',

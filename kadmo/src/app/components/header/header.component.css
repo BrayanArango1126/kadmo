@@ -48,6 +48,7 @@
 .custom-logo-nombre-img{
   width: 40%;
   margin: 0 20px;
+  max-height: 60px;
 }
 .custom-logo-nombre-img-admin{
   width: 20%;
@@ -78,4 +79,28 @@
 .custom-span-name{
   color: #003087;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .custom-logo-nombre-img, .custom-logo-nombre-img-admin {
+    display: none;
+  }
+  .custom-logo-img {
+    width: 50px;
+    height: 50px;
+  }
+  .btn-register, .btn-login {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+  .custom-span-name {
+    font-size: 0.9em;
+  }
+  .custom-input-search {
+    height: 40px;
+  }
+  .custom-lupe-img {
+    width: 20px;
+    height: 20px;
+  }
 }

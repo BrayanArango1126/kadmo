@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import CalificacionLibro from '../../../interfaces/calificacionLibro';
 import { LibrosService } from '../../../services/libros.service';
 import Libros from '../../../interfaces/libros';
+import { environment } from '../../../../environments/environment';
+import * as CryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-book-search',
@@ -13,9 +15,9 @@ import Libros from '../../../interfaces/libros';
 })
 export class BookSearchComponent {
 
-
   noteList:calificacionesByLibroId[] = [];
-  idLibro:number = 0;
+  idRoute:string = '';
+  idLibro:number=0;
 
   calificacionesList:CalificacionLibro[] = [];
 
@@ -23,6 +25,7 @@ export class BookSearchComponent {
   selectedCalification:CalificacionLibro[] = [];
 
   librosList:Libros[] = [];
+  libro:Libros[] = [];
 
   selectedBook:Libros = {
     idLibros: 0,
@@ -46,19 +49,29 @@ export class BookSearchComponent {
 
 
   constructor(private _calificacionService:CalificacionService, private _activatedRoute: ActivatedRoute, private _librosService:LibrosService) {
-    this.idLibro = this._activatedRoute.snapshot.params['id'];
+    this.idRoute = this._activatedRoute.snapshot.params['id'];
+    this.decriptRoute(this.idRoute);
   } 
-  
+
   ngOnInit():void {
     this.getAllCalificaciones();
     this.getAllBooks();
   }
 
+  private decriptRoute(id:string){
+    const encId = decodeURIComponent(id);
+    this.idLibro = parseInt(CryptoJS.AES.decrypt(encId, environment.cryptPassword).toString(CryptoJS.enc.Utf8));
+    console.log(this.idLibro);
+  }
+  
+
   public getAllCalificaciones(){
     this._calificacionService.getAllCalificaciones().subscribe({
       next: (data) => {
         this.calificacionesList = data;
+        console.log(this.libro)
         this.selectCalificacionByIdLibro(this.idLibro);
+        this.libro.push(data[0].libro);
       },
       error: (err) => {
         console.log(err);
@@ -77,6 +90,18 @@ export class BookSearchComponent {
       }
     });
   }
+
+  // public getAllBooks(){
+  //   this._librosService.getLibros().subscribe({
+  //     next: (data) => {
+  //       this.librosList = data;
+  //       this.selectBookById(this.idLibro);
+  //     },
+  //     error: (err) => {
+  //       console.log(err);
+  //     }
+  //   });
+  // }
 
   public selectCalificacionByIdLibro(idLibro:number){
     this.selectedCalification = this.calificacionesList.filter(calificacion => calificacion.libro.idLibros == idLibro);

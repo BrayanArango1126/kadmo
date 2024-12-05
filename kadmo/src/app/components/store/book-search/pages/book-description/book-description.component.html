@@ -1,33 +1,33 @@
 <section class="margin-general">
-    <h2>Aprende React</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque saepe amet sint sapiente officiis, commodi distinctio explicabo, molestiae impedit unde similique doloribus dicta dignissimos expedita nisi labore animi error? Numquam.
-    Eaque dolorum quae qui neque a dolore. Exercitationem molestiae sint veritatis commodi libero rerum quos praesentium, nulla facere totam ullam fugit sed voluptates sit architecto quidem et dicta nobis ratione.</p>
+    <h2>{{libroProp[0].nombre}}</h2>
+    <p>{{libroProp[0].descripcion}}</p>
 
-    <div class="container shadow rounded p-5">
+    <div class="autor-container shadow rounded p-5">
         
         <div class="seller row mb-5">
-            <img class="col-2 seller-img" src="/img/user.jpg" alt="">
-            <div class="seller-info col-9">
-                <h3>Vendedor</h3>
-                <p>Emma Gonzalez</p>
+            <img class="col-3 seller-img" src="/img/user.jpg" alt="">
+            <div class="seller-info col-7">
+                <h3>Autor</h3>
+                <p>{{libroProp[0].autor}}</p>
             </div>
-            <div class="container-icon-save col-1">
+            <div class="container-icon-save col-2">
                 <i class="fa-regular fa-bookmark "></i>
                 <!-- <i class="fa-solid fa-bookmark"></i> -->
               </div>
         </div>
 
         <div class="book-info row text-center mt-3">
-            <div class="col-sm-2 col-12">
-                <h4>Páginas:</h4>
-                <p>180</p>
+            <div class="col-xxl-3 col-12">
+                <h4>Categoria:</h4>
+                <p>{{libroProp[0].categoriasLibro.categoria }}</p>
             </div>
-            <div class="col-sm-6 col-12">
+            <div class="col-xxl-5 col-12">
                 <h4>Notas:</h4>
                 <p>352 Notas de la comunidad</p>
             </div>
-            <div class="col-sm-4 col-12">
+            <div class="col-xxl-4 col-12">
                 <h4>Rating:</h4>
+                
                 <i class="fa-solid fa-star star-calf"></i>
                 <i class="fa-solid fa-star star-calf"></i>
                 <i class="fa-solid fa-star star-calf"></i>
@@ -38,12 +38,7 @@
 
     </div>
 
-    <div class="chapters mt-5 p-4 rounded">
-        <ul>
-            <li class="my-3" *ngFor="let item of chapters; let i = index">
-                {{i + 1}}. {{item.title}}
-            </li>
-        </ul>
+    <div class="chapters my-5 p-4 rounded">
         <button *ngIf="book.disponibilidadLibro.idDisponibilidadLibro == 1" class="btn btn-outline-info col-12" (click)="verifyUserLogin()"><i class="fa-solid fa-plus"></i> Añadir al carrito</button>
         <button *ngIf="book.disponibilidadLibro.idDisponibilidadLibro == 2" class="btn btn-outline-dark col-12" disabled ><i class="fa-solid fa-square-xmark"></i> No Disponible</button>
     </div>

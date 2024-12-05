@@ -1,7 +1,7 @@
-<section>
-    <app-book-description [infoLibro]="selectedCalification" [book]="selectedBook"></app-book-description>
-    <app-book-content></app-book-content>
+<section class="margin-general">
+    <app-book-description [infoLibro]="selectedCalification" [book]="selectedBook" class="margin-general" [libroProp]="libro"></app-book-description>
+    <app-book-content class="margin-general"></app-book-content>
 </section>
-<app-book-create-note></app-book-create-note>
 <app-book-notes [reviewsList]="selectedCalification"></app-book-notes>
+<app-book-create-note></app-book-create-note>
 <app-last-views></app-last-views>

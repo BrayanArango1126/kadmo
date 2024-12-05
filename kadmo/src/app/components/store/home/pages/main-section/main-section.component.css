@@ -1,3 +1,4 @@
+/* Background adjustments for responsiveness */
 .bg-principal {
   background-image: url('/img/banner_1.jpg');
   background-size: cover;
@@ -7,8 +8,10 @@
   width: 100%;
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
 }
-.bg-principal::before{
+.bg-principal::before {
   content: '';
   position: absolute;
   top: 0;
@@ -20,44 +23,116 @@
   z-index: -1;
 }
 
-.btn-comprar{
+/* Button styles */
+.btn-comprar {
   background-color: #003087;
   color: #ffffff;
   border-radius: 5px;
-  padding: 4px 20px;
+  padding: 10px 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
-.btn-comprar:hover{
+.btn-comprar:hover {
   background-color: #4069E5;
 }
 
-
-.container-card-info{
+/* Card container adjustments */
+.container-card-info {
   background-color: #ffffff;
   margin: auto;
-  width: 40%;
-  height: auto;
+  max-width: 500px;
+  width: 90%;
+  padding: 20px;
   position: relative;
+  text-align: center;
+  border-radius: 8px;
 }
-.container-title{
-  width: 50%;
+
+/* Title adjustments */
+.container-title {
+  width: 70%;
   background-color: #4069E5;
   color: #ffffff;
   position: absolute;
-  top: -8%;
+  top: -40px;
   left: 0;
   right: 0;
   margin: auto;
+  padding: 10px;
+  font-size: 1.5rem;
 }
-.container-card-info h2{
+
+/* Typography adjustments */
+.container-card-info h2 {
   color: #4069E5;
   font-weight: 700;
-  margin-top: 5%;
+  margin-top: 60px;
+  font-size: 1.75rem;
 }
-.container-card-info p{
-  /* color: #4069E5; */
-  font-size: 1.5rem;
+
+.container-card-info p {
+  font-size: 1.25rem;
   font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .bg-principal {
+    height: 60vh;
+    padding: 20px;
+  }
+
+  .container-card-info {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .container-title {
+    width: 80%;
+    font-size: 1.25rem;
+  }
+
+  .container-card-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .container-card-info p {
+    font-size: 1rem;
+  }
+
+  .btn-comprar {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-principal {
+    height: auto;
+    padding: 15px;
+  }
+
+  .container-card-info {
+    width: 100%;
+  }
+
+  .container-title {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .container-card-info h2 {
+    font-size: 1.25rem;
+  }
+
+  .container-card-info p {
+    font-size: 0.9rem;
+  }
+
+  .btn-comprar {
+    font-size: 0.9rem;
+    padding: 6px 15px;
+  }
 }

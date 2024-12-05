@@ -1,89 +1,89 @@
 <header>
-  <nav *ngIf="rol == '1'" class="navbar navbar-expand-lg d-flex justify-content-between navbar-light bg-light p-4">
-    <div class="w-50">   
-      <a class="navbar-brand" href="">
+  <nav *ngIf="rol == '1'" class="navbar navbar-expand-lg navbar-light bg-light p-3">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="">
         <img class="custom-logo-img" src="/img/logo K transparente.png" alt="Logo de Kadmo">
-        <img class="custom-logo-nombre-img-admin" src="/img/nombre transparente.png" alt="Logo de Kadmo">
+        <img class="custom-logo-nombre-img-admin d-none d-md-block" src="/img/nombre transparente.png" alt="Nombre Kadmo">
       </a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="w-50 collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ml-auto w-100 d-flex justify-content-end align-items-center">
-        <li class="nav-item mx-3">
-          <span class="custom-span-name">{{usuario.correo}} || {{usuario.rol.rol}}</span>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-primary btn-register" (click)="logOut()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Salir</a>
-        </li>
-      </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin"
+        aria-controls="navbarAdmin" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarAdmin">
+        <ul class="navbar-nav ms-auto d-flex align-items-center">
+          <li class="nav-item mx-2">
+            <span class="custom-span-name">{{usuario.correo}} || {{usuario.rol.rol}}</span>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary btn-register" (click)="logOut()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Salir</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <nav *ngIf="rol != '1'" class="navbar navbar-expand-lg navbar-light bg-light p-4">
-    <div class="w-20">   
-      <a class="navbar-brand" href="">
+  <nav *ngIf="rol != '1'" class="navbar navbar-expand-lg navbar-light bg-light p-3">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="">
         <img class="custom-logo-img" src="/img/logo K transparente.png" alt="Logo de Kadmo">
-        <img class="custom-logo-nombre-img" src="/img/nombre transparente.png" alt="Logo de Kadmo">
+        <img class="custom-logo-nombre-img d-none d-md-block" src="/img/nombre transparente.png" alt="Nombre Kadmo">
       </a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="w-40">
-      <form class="d-flex">
-        <div class="position-relative w-100">
-          <input class="custom-input-search me-2" type="search" placeholder="¿Qué desea buscar hoy?" aria-label="Search">
-          <button class="btn custom-button-absolute" type="submit"><img class="custom-lupe-img" src="/icons/loupe.png" alt="Imágen de una lupa"></button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarUser"
+        aria-controls="navbarUser" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarUser">
+        <div class="w-40 mx-auto my-3 my-lg-0">
+          <form class="d-flex justify-content-center">
+            <div class="position-relative w-100">
+              <input class="custom-input-search" type="search" placeholder="¿Qué desea buscar hoy?" aria-label="Search">
+              <button class="btn custom-button-absolute" type="submit">
+                <img class="custom-lupe-img" src="/icons/loupe.png" alt="Buscar">
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
-    <div *ngIf="user == '0'" class="w-40 collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ml-auto w-100 d-flex justify-content-evenly">
-        <li class="nav-item">
-          <a class="nav-link link-navbar" href="">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link-navbar" href="store/books">Libros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link-navbar" href="suscripcion">Membresía</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link-navbar" href="#">Contáctanos</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-info btn-login" href="login">Iniciar Sesión</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-primary btn-register" href="register">Registrarse</a>
-        </li>
-      </ul>
-    </div>
-    <div *ngIf="user != '0'" class="w-40 collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ml-auto w-100 d-flex justify-content-evenly align-items-center">
-        <li class="nav-item">
-          <a class="nav-link link-navbar" href="">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link-navbar" href="store/books">Libros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link-navbar" href="suscripcion">Membresía</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link-navbar" href="#">Contáctanos</a>
-        </li>
-        <li class="nav-item mx-3">
-          <span class="custom-span-name">Brayan</span>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-primary btn-register" (click)="logOut()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Salir</a>
-        </li>
-      </ul>
+        <ul *ngIf="user == '0'" class="navbar-nav ms-auto text-center">
+          <li class="nav-item">
+            <a class="nav-link link-navbar" href="">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-navbar" href="store/books">Libros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-navbar" href="suscripcion">Membresía</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link link-navbar" href="#">Contáctanos</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="btn btn-info btn-login me-2" href="login">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary btn-register" href="register">Registrarse</a>
+          </li>
+        </ul>
+        <ul *ngIf="user != '0'" class="navbar-nav ms-auto d-flex align-items-center text-center">
+          <li class="nav-item">
+            <a class="nav-link link-navbar" href="">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-navbar" href="store/books">Libros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-navbar" href="suscripcion">Membresía</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-navbar" href="#">Contáctanos</a>
+          </li>
+          <li class="nav-item mx-3">
+            <span class="custom-span-name">Brayan</span>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary btn-register" (click)="logOut()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Salir</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
