@@ -11,81 +11,81 @@
             <p>$ 350.000 Cop. por comprar la suscripcion Anual</p>
             <button class="btn btn-primary mt-3 btn-comprar" (click)="verifyUserLogin()" ><i class="fa-solid fa-wallet me-2"></i>Suscribete ahora</button>
             <p class="mt-3 text-center cancel">Cancela o pausa en cualquier momento.</p>
-        </div>
-        
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Subscripción a Membresía</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form [formGroup]="membershipForm">
-                        <div class="mb-3">
-                            <label for="tipo" class="form-label">Tipo de Subscripción</label>
-                            <select class="form-select" name="tipo" id="tipo" formControlName="tipo">
-                                <option [selected]="true" value="MENSUAL">Mensual</option>
-                                <option value="ANUAL">Anual</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="pago" class="form-label">Pago</label>
-                            <input type="text" class="form-control" id="pago" formControlName="pago" [disabled]="true">
-                        </div>
-                        <div class="w-100" *ngIf="listCreditCards.length > 0">
-                            <div class="w-100" *ngFor="let card of listCreditCards; let i = index">
-                                <div class="form-check check-suscription mb-2 border rounded shadow">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" (change)="onChangeCreditCard(card)" [value]="card.idTarjetaCredito" id="flexRadioDefault{{i}}" >
-                                    <label class="form-check-label ps-3" for="flexRadioDefault{{i}}">{{card.numeroTarjeta}}</label>
-                                    <label class="form-check-label ps-3" for="flexRadioDefault{{i}}">{{card.titular}}</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-100" *ngIf="listCreditCards.length == 0">
-                            <p class=" my-2 w-100 d-inline-block text-center">No tienes tarjetas de crédito registradas</p>
-                            <button type="button" class="btn btn-primary mt-3 btn-comprar" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><i class="fa-solid fa-wallet me-2"></i>Agregar tarjeta de crédito</button>
-                        </div>
-                        <button type="button" class="btn btn-info mt-3 w-100" (click)="registerMembership()">Subscribirse</button>
-                    </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Registrar Tarjeta de Crédito</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form [formGroup]="creditCardForm">
-                    <div class="mb-3">
-                        <label for="titular" class="form-label">Titular de la Tarjeta</label>
-                        <input type="text" class="form-control" id="titular" formControlName="titular">
-                    </div>
-                    <div class="mb-3">
-                        <label for="numeroTarjeta" class="form-label">Número de la Tarjeta</label>
-                        <input type="text" class="form-control" id="numeroTarjeta" formControlName="numeroTarjeta">
-                    </div>
-                    <div class="mb-3">
-                        <label for="fechaExpiracion" class="form-label">Número de la Tarjeta</label>
-                        <input type="date" class="form-date" id="fechaExpiracion" formControlName="fechaExpiracion">
-                    </div>
-                    <div class="mb-3">
-                        <label for="cvs" class="form-label">CVV</label>
-                        <input type="text" class="form-control" id="cvs" formControlName="cvs">
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" (click)="addCreditCard()" data-bs-toggle="modal">Añadir Tarjeta</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>      
         <img class="col-7 img-libro" src="/img/portada-4.jpg" alt="">
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Subscripción a Membresía</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="membershipForm">
+              <div class="mb-3">
+                <label for="tipo" class="form-label">Tipo de Subscripción</label>
+                <select class="form-select" name="tipo" id="tipo" formControlName="tipo">
+                    <option [selected]="true" value="MENSUAL">Mensual</option>
+                    <option value="ANUAL">Anual</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                  <label for="pago" class="form-label">Pago</label>
+                  <input type="text" class="form-control" id="pago" formControlName="pago" [disabled]="true">
+              </div>
+              <div class="w-100" *ngIf="listCreditCards.length > 0">
+                <div class="w-100" *ngFor="let card of listCreditCards; let i = index">
+                  <div class="form-check check-suscription mb-2 border rounded shadow">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" (change)="onChangeCreditCard(card)" [value]="card.idTarjetaCredito" id="flexRadioDefault{{i}}" >
+                    <label class="form-check-label ps-3" for="flexRadioDefault{{i}}">{{card.numeroTarjeta}}</label>
+                    <label class="form-check-label ps-3" for="flexRadioDefault{{i}}">{{card.titular}}</label>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100" *ngIf="listCreditCards.length == 0">
+                <p class=" my-2 w-100 d-inline-block text-center">No tienes tarjetas de crédito registradas</p>
+                <button type="button" class="btn btn-primary mt-3 btn-comprar" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><i class="fa-solid fa-wallet me-2"></i>Agregar tarjeta de crédito</button>
+              </div>
+              <button type="button" class="btn btn-info mt-3 w-100" (click)="registerMembership()">Subscribirse</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Registrar Tarjeta de Crédito</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="creditCardForm">
+              <div class="mb-3">
+                  <label for="titular" class="form-label">Titular de la Tarjeta</label>
+                  <input type="text" class="form-control" id="titular" formControlName="titular">
+              </div>
+              <div class="mb-3">
+                  <label for="numeroTarjeta" class="form-label">Número de la Tarjeta</label>
+                  <input type="text" class="form-control" id="numeroTarjeta" formControlName="numeroTarjeta">
+              </div>
+              <div class="mb-3">
+                  <label for="fechaExpiracion" class="form-label">Número de la Tarjeta</label>
+                  <input type="date" class="form-date" id="fechaExpiracion" formControlName="fechaExpiracion">
+              </div>
+              <div class="mb-3">
+                  <label for="cvs" class="form-label">CVV</label>
+                  <input type="text" class="form-control" id="cvs" formControlName="cvs">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" (click)="addCreditCard()" data-bs-toggle="modal">Añadir Tarjeta</button>
+          </div>
+        </div>
+      </div>
     </div>
 </section>

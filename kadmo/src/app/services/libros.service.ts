@@ -41,4 +41,8 @@ export class LibrosService {
   public getLibroById(id:number):Observable<Libros>{
     return this.http.get<Libros>(`${this.endPoint}/libro-id?idLibros=${id}`);
   }
+
+  public updateLibro(libro:Libros):Observable<ResponseApi>{
+    return this.http.put<ResponseApi>(`${this.endPoint}/update-libro`, libro, this.options);
+  }
 }

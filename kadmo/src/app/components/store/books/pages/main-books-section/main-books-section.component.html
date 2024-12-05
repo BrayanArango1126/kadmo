@@ -37,19 +37,19 @@
       <div *ngIf="booksListFiltered.length > 0" class=" row mt-5 mx-0">
         <div class="col-12 col-lg-6 col-xl-4" *ngFor="let item of booksListFiltered; let index">
           <div class="book">
-            <img src="/img/portada-{{index.idLibros}}.jpg" class="text-center" alt="..." />
+            <img src="/img/portada-{{index.idLibros}}.jpg" class="text-center" (click)="goToBookDetails(item.idLibros)" alt="..." />
             <div class="row book-info">
               <div class="d-flex justify-content-between align-items-start w-100">
-                <h5 class="col-12">{{item.nombre}}</h5>
+                <h5 class="col-12" (click)="goToBookDetails(item.idLibros)">{{item.nombre}}</h5>
                 <div class="container-icon-save" [ngClass]="compareBooks(item.idLibros)" (click)="saveBook(item)">
                   <i class="fa-regular fa-bookmark "></i>
                 </div>
               </div>
-              <div class="w-100 d-flex justify-content-evenly align-items-center">
+              <div class="w-100 d-flex justify-content-evenly align-items-center" (click)="goToBookDetails(item.idLibros)">
                 <p class="custom-atribute atribute-color-1">$ {{item.precio | number:'1.0-0'}}</p>
                 <p class="custom-atribute atribute-color-2">{{item.autor}}</p>
               </div>
-              <div class="w-100 d-flex justify-content-evenly align-items-center">
+              <div class="w-100 d-flex justify-content-evenly align-items-center" (click)="goToBookDetails(item.idLibros)">
                 <p class="custom-atribute atribute-color-3">{{item.disponibilidadLibro.disponibilidad}}</p>
                 <p class="custom-atribute atribute-color-4">{{item.estadosLibro.estado}}</p>
                 <p class="custom-atribute atribute-color-5">{{item.categoriasLibro.categoria}}</p>

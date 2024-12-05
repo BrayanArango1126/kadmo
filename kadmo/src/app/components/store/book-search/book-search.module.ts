@@ -7,6 +7,7 @@ import { BookNotesComponent } from './pages/book-notes/book-notes.component';
 import { BookDescriptionComponent } from './pages/book-description/book-description.component';
 import { BookCreateNoteComponent } from './pages/book-create-note/book-create-note.component';
 import { LastViewsComponent } from './pages/last-views/last-views.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { LastViewsComponent } from './pages/last-views/last-views.component';
   imports: [
     CommonModule,
     BookSearchRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   exports: [

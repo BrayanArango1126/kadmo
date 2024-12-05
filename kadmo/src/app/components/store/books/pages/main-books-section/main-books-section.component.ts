@@ -125,6 +125,8 @@ export class MainBooksSectionComponent implements OnInit {
     this._librosFavoritosService.saveLibroFavorito(libroFav).subscribe({
       next: (data) => {
         alert(data.message);
+        this.getFavoritesBooks();
+        this.getBooksPublicados();
       },
       error: (err) => {
         console.log(err);

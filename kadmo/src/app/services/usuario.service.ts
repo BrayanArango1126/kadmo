@@ -21,8 +21,8 @@ export class UsuarioService {
     return this.http.post<ResponseApi>(`${this.urlApi}/add-usuario`, request);
   }
 
-  getUsuarioById(idUsuario:string):Observable<Usuario>{
-    return this.http.get<Usuario>(`${this.urlApi}/usuario_id?=${idUsuario}`);
+  getUsuarioById(idUsuario:number):Observable<Usuario>{
+    return this.http.get<Usuario>(`${this.urlApi}/usuario-id?idUsuario=${idUsuario}`);
   }
 
 }

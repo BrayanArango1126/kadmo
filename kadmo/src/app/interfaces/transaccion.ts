@@ -10,4 +10,8 @@ export default interface Transaccion {
     estadosTransaccione: {
       idEstadoTransaccion: number;
     };
+    tarjetaCredito:{
+      idTarjetaCredito: number;
+    },
+    fechaTransaccion: string;
 }

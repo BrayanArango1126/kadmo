@@ -18,7 +18,6 @@ export class AboutSubscriptionComponent {
    fechaFin:Date = new Date();
    listCreditCards:TarjetaCredito[] = [];
    selectedCreditCard!:TarjetaCredito;
-   modalPropery:boolean = false;
 
   idUser:string = localStorage.getItem('user') || '0';
   membershipForm!: FormGroup;

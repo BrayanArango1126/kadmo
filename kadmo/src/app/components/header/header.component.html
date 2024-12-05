@@ -1,5 +1,5 @@
 <header>
-  <nav *ngIf="rol == 1" class="navbar navbar-expand-lg d-flex justify-content-between navbar-light bg-light p-4">
+  <nav *ngIf="rol == '1'" class="navbar navbar-expand-lg d-flex justify-content-between navbar-light bg-light p-4">
     <div class="w-50">   
       <a class="navbar-brand" href="">
         <img class="custom-logo-img" src="/img/logo K transparente.png" alt="Logo de Kadmo">
@@ -13,7 +13,7 @@
     <div class="w-50 collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
       <ul class="navbar-nav ml-auto w-100 d-flex justify-content-end align-items-center">
         <li class="nav-item mx-3">
-          <span class="custom-span-name">Brayan Arango || Administrador</span>
+          <span class="custom-span-name">{{usuario.correo}} || {{usuario.rol.rol}}</span>
         </li>
         <li class="nav-item">
           <a class="btn btn-primary btn-register" (click)="logOut()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Salir</a>
@@ -22,7 +22,7 @@
     </div>
   </nav>
 
-  <nav *ngIf="rol != 1" class="navbar navbar-expand-lg navbar-light bg-light p-4">
+  <nav *ngIf="rol != '1'" class="navbar navbar-expand-lg navbar-light bg-light p-4">
     <div class="w-20">   
       <a class="navbar-brand" href="">
         <img class="custom-logo-img" src="/img/logo K transparente.png" alt="Logo de Kadmo">
@@ -41,7 +41,7 @@
         </div>
       </form>
     </div>
-    <div *ngIf="user == 0" class="w-40 collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+    <div *ngIf="user == '0'" class="w-40 collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
       <ul class="navbar-nav ml-auto w-100 d-flex justify-content-evenly">
         <li class="nav-item">
           <a class="nav-link link-navbar" href="">Inicio</a>
@@ -63,7 +63,7 @@
         </li>
       </ul>
     </div>
-    <div *ngIf="user != 0" class="w-40 collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+    <div *ngIf="user != '0'" class="w-40 collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
       <ul class="navbar-nav ml-auto w-100 d-flex justify-content-evenly align-items-center">
         <li class="nav-item">
           <a class="nav-link link-navbar" href="">Inicio</a>
@@ -78,7 +78,7 @@
           <a class="nav-link link-navbar" href="#">Contáctanos</a>
         </li>
         <li class="nav-item mx-3">
-          <span class="custom-span-name">Brayan Arango</span>
+          <span class="custom-span-name">Brayan</span>
         </li>
         <li class="nav-item">
           <a class="btn btn-primary btn-register" (click)="logOut()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Salir</a>

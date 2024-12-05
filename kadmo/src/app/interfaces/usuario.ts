@@ -4,5 +4,6 @@ export default interface Usuario {
   contraseña: string;
   rol:{
     idRol: number;
+    rol?: string;
   }
 }
