@@ -25,6 +25,7 @@ export class HeaderComponent {
   datosUsuario!:DatosUsuario;
 
   filteredBooks: Libros[] = [];
+  userDataNotFound:boolean = true;
 
   constructor(private _usuarioService: UsuarioService, private _libroService: LibrosService, private _datoUsuarioService:DatoUsuarioService) {
   }
@@ -54,12 +55,17 @@ export class HeaderComponent {
     if(this.user == '0'){
       return;
     }
+    // Desencriptamos el id del usuario
     this.user = cryptoJS.AES.decrypt(this.user, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
+    this.rol =cryptoJS.AES.decrypt(this.rol.toString(), environment.cryptPassword).toString(cryptoJS.enc.Utf8);
+    // Le pasamos al servicio el id del usuario PARSEADO A tipo INT
     this._usuarioService.getUsuarioById(parseInt(this.user)).subscribe({
       next: (result) => {
-        this.getDatoUsuario(result);
+        // Guardamos el objeto usuario en la variable usuario
         this.usuario = result;
-        console.log(this.usuario)
+        // Teniendo el objeto usuario, se lo pasamos a la función que obtiene los datos del usuario
+        this.getDatoUsuario(result);
+        console.log(this.usuario);
       },
       error: (err) => {
         console.log(err);
@@ -75,10 +81,16 @@ export class HeaderComponent {
         console.log(this.datosUsuario)
       },
       error: (err) => {
-        console.log(err);
+        this.userDataNotFound = err.ok;
+        console.log(this.userDataNotFound);
       }
     });
   }
+
+  public userProfile(){
+    window.location.href = '/profile';
+  }
+
   public logOut(){
     localStorage.clear();
     Cookies.remove('authToken');

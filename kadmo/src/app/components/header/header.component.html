@@ -1,7 +1,7 @@
 <header>
   <nav *ngIf="rol == '1'" class="navbar navbar-expand-lg navbar-light bg-light p-3">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="">
+      <a class="navbar-brand d-flex align-items-center" href="/admin">
         <img class="custom-logo-img" src="/img/logo K transparente.png" alt="Logo de Kadmo">
         <img class="custom-logo-nombre-img-admin d-none d-md-block" src="/img/nombre transparente.png" alt="Nombre Kadmo">
       </a>
@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse" id="navbarAdmin">
         <ul class="navbar-nav ms-auto d-flex align-items-center">
           <li class="nav-item mx-2">
-            <span class="custom-span-name">{{usuario.correo}} || {{usuario.rol.rol}}</span>
+            <span class="custom-span-name" (click)="userProfile()">{{ !userDataNotFound?usuario.correo:datosUsuario.nombres }} {{ !userDataNotFound?'':datosUsuario.apellidos }} | {{usuario.rol.rol}}</span>
           </li>
           <li class="nav-item">
             <a class="btn btn-primary btn-register" (click)="logOut()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Salir</a>
@@ -73,11 +73,11 @@
           <li class="nav-item">
             <a class="nav-link link-navbar" href="suscripcion">Membresía</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link link-navbar" href="#">Contáctanos</a>
-          </li>
+          </li> -->
           <li class="nav-item mx-3">
-            <span class="custom-span-name">{{datosUsuario.nombres}} {{datosUsuario.apellidos}}</span>
+            <span class="custom-span-name" (click)="userProfile()">{{ !userDataNotFound?usuario.correo:datosUsuario.nombres }} {{ !userDataNotFound?'':datosUsuario.apellidos }} | {{usuario.rol.rol}}</span>
           </li>
           <li class="nav-item">
             <a class="btn btn-primary btn-register" (click)="logOut()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Salir</a>

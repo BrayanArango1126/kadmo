@@ -42,8 +42,11 @@ export class LoginComponent {
             sameSite: 'Strict',
             httpOnlt: false
           });
-
-          window.location.href = '/store';
+          if(data.datos.rol == 1){
+            window.location.href = '/admin';
+          }else{
+            window.location.href = '/store';
+          }
         }
       },
       error: (error) => {
