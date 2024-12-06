@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { infoAlert } from '../../../../../assets/alerts';
 
 @Component({
   selector: 'app-user-info',
@@ -20,11 +21,9 @@ export class UserInfoComponent {
   ngOnInit(): void {}
 
   editProfile(): void {
-    alert('Función para editar perfil (implementa lógica aquí)');
+  
   }
 
   logout(): void {
-    alert('Función para cerrar sesión (implementa lógica aquí)');
-    // Aquí podrías redirigir al usuario a la página de login
   }
 }

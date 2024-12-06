@@ -13,7 +13,7 @@ import { TransaccionesService } from '../../../../../services/transacciones.serv
 import { LibrosService } from '../../../../../services/libros.service';
 import { environment } from '../../../../../../environments/environment';
 
-import { redirectAlert, redirectActivedAlert } from '../../../../../../assets/alerts'
+import { redirectAlert, redirectActivedAlert, infoAlert } from '../../../../../../assets/alerts'
 import * as bootstrap from 'bootstrap';
 import * as cryptoJS from 'crypto-js';
 
@@ -45,7 +45,6 @@ export class BookDescriptionComponent {
   ) 
   {
     this.idUsuario = (this.idUsuario != '0' ) ? cryptoJS.AES.decrypt(this.idUsuario, environment.cryptPassword).toString(cryptoJS.enc.Utf8) : '0';
-    console.log(this.idUsuario);
     this.formCompraLibros = this.fbBuyBook.group({
 
     });
@@ -77,7 +76,7 @@ export class BookDescriptionComponent {
       return;
     }
     if(!this.selectedCreditCard){
-      redirectAlert("info", "No ha seleccionado medio de pago", "Por favor seleccione una tarjeta de crédito");
+      infoAlert("info", "No ha seleccionado medio de pago", "Por favor seleccione una tarjeta de crédito");
       return;
     }
 
@@ -133,7 +132,7 @@ export class BookDescriptionComponent {
 
   public verifyUserLogin() {
     if (this.idUsuario === '0' || this.idUsuario === null) {
-      redirectActivedAlert("info", "Sesión no encontrada", "login", this._route.snapshot.params['id']);
+      redirectActivedAlert("info", "Sesión no encontrada", "login", "/store/book/"+encodeURIComponent(this._route.snapshot.params['id']));
     }
 
     const modalElement = document.getElementById('buyBookModal');

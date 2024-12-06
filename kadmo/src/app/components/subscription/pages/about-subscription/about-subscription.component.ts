@@ -1,11 +1,17 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import * as bootstrap from 'bootstrap';
 import { FormBuilder, FormGroup,Validators } from '@angular/forms';
+
 import { MembresiasService } from '../../../../services/membresias.service';
-import Membresia from '../../../../interfaces/membresia';
 import { TarjetasCreditoService } from '../../../../services/tarjetas-credito.service';
+
+import Membresia from '../../../../interfaces/membresia';
 import TarjetaCredito from '../../../../interfaces/tarjetaCredito';
 import Usuario from '../../../../interfaces/usuario';
+
+import { infoAlert, redirectActivedAlert } from '../../../../../assets/alerts';
+import { environment } from '../../../../../environments/environment';
+import * as cryptoJS from 'crypto-js';
+import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-about-subscription',
@@ -28,6 +34,7 @@ export class AboutSubscriptionComponent {
     private _tarjetaCreditoService:TarjetasCreditoService,
     private fbCreditCard:FormBuilder
   ) {
+    this.idUser = (this.idUser != '0' ) ? cryptoJS.AES.decrypt(this.idUser, environment.cryptPassword).toString(cryptoJS.enc.Utf8) : '0';
     this.membershipForm = this.fb.group(
       {
         tipo: ['MENSUAL', Validators.required],
@@ -66,8 +73,7 @@ export class AboutSubscriptionComponent {
 
   public verifyUserLogin() {
     if (this.idUser === '0' || this.idUser === null) {
-      alert('Debes Iniciar Sesión o registrarte para poder continuar');
-      window.location.href = '/login';
+      redirectActivedAlert("info", "Sesión no encontrada", "login", "suscripcion");
     }
 
     const modalElement = document.getElementById('exampleModalToggle');
@@ -99,7 +105,9 @@ export class AboutSubscriptionComponent {
   }
 
   public registerMembership() {
-    // console.log(this.selectedCreditCard);
+    if(!this.selectedCreditCard) {
+      return infoAlert("error", "Error", "Seleccione una tarjeta de crédito");
+    }
     if(this.membershipForm.value.tipo === 'MENSUAL') {
       this.fechaFin.setMonth(this.fechaInicio.getMonth() + 1);
     }else{
@@ -122,11 +130,11 @@ export class AboutSubscriptionComponent {
     // console.log(request);
     this._membresiaService.createMembresia(request).subscribe({
       next: (data) => {
-        alert("Membresia registrada con éxito");
+        infoAlert("success", "Operación exitosa", "Membresia registrada con éxito");
         // window.location.href = '/store';
       },
       error: (error) => {
-        alert('Error al registrar la membresia');
+        infoAlert("error","Operación fallida", 'Error al registrar la membresia');
       }
     });
   }
@@ -146,11 +154,11 @@ export class AboutSubscriptionComponent {
     // console.log(request);
     this._tarjetaCreditoService.createTarjetaCredito(request).subscribe({
       next: (data) => {
-        alert(data.message);
+        infoAlert("success","operación exitosa",data.message);
         this.getAllCreditCards();
       },
       error: (error) => {
-        alert('Error al registrar la tarjeta de crédito');
+        infoAlert("error","Operación fallida",'Error al registrar la tarjeta de crédito');
       }
     });
   }

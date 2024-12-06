@@ -17,11 +17,11 @@ export const infoAlert = (icon: SweetAlertIcon, title: string, text:string) => {
   })
 };
 
-export const redirectActivedAlert = (icon: SweetAlertIcon, title: string, route: string, param:string) => {
+export const redirectActivedAlert = (icon: SweetAlertIcon, title: string, route: string, redirect:string) => {
   Swal.fire({
     icon: icon,
     title: title,
   }).then(() => {
-    window.location.href = `/${route}?redirectUrl=${encodeURIComponent('/store/book/'+encodeURIComponent(param))}`;
+    window.location.href = `/${route}?redirectUrl=${encodeURIComponent(redirect)}`;
   });
 };
