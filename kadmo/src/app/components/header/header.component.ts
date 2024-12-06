@@ -51,10 +51,10 @@ export class HeaderComponent {
   }
 
   public getUsuer(){
-    this.user = cryptoJS.AES.decrypt(this.user, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
     if(this.user == '0'){
       return;
     }
+    this.user = cryptoJS.AES.decrypt(this.user, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
     this._usuarioService.getUsuarioById(parseInt(this.user)).subscribe({
       next: (result) => {
         this.getDatoUsuario(result);
