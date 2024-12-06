@@ -2,14 +2,13 @@ import { Component } from '@angular/core';
 import Cookies from 'js-cookie';
 import { UsuarioService } from '../../services/usuario.service';
 import Usuario from '../../interfaces/usuario';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { LibrosService } from '../../services/libros.service';
 import Libros from '../../interfaces/libros';
-import { debounceTime, map, Observable, startWith } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import cryptoJS from 'crypto-js';
 import { DatoUsuarioService } from '../../services/dato-usuario.service';
 import DatosUsuario from '../../interfaces/datosUsuario';
+import * as cryptoJS from 'crypto-js';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -65,7 +64,6 @@ export class HeaderComponent {
         this.usuario = result;
         // Teniendo el objeto usuario, se lo pasamos a la función que obtiene los datos del usuario
         this.getDatoUsuario(result);
-        console.log(this.usuario);
       },
       error: (err) => {
         console.log(err);
@@ -82,13 +80,8 @@ export class HeaderComponent {
       },
       error: (err) => {
         this.userDataNotFound = err.ok;
-        console.log(this.userDataNotFound);
       }
     });
-  }
-
-  public userProfile(){
-    window.location.href = '/profile';
   }
 
   public logOut(){

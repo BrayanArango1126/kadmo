@@ -61,7 +61,7 @@ export class BookSearchComponent {
   private decriptRoute(id:string){
     const encId = decodeURIComponent(id);
     this.idLibro = parseInt(CryptoJS.AES.decrypt(encId, environment.cryptPassword).toString(CryptoJS.enc.Utf8));
-    console.log(this.idLibro);
+    // console.log(this.idLibro);
   }
   
 

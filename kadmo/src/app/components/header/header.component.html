@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse" id="navbarAdmin">
         <ul class="navbar-nav ms-auto d-flex align-items-center">
           <li class="nav-item mx-2">
-            <span class="custom-span-name" (click)="userProfile()">{{ !userDataNotFound?usuario.correo:datosUsuario.nombres }} {{ !userDataNotFound?'':datosUsuario.apellidos }} | {{usuario.rol.rol}}</span>
+            <span class="custom-span-name" routerLink="/profile">{{ !userDataNotFound?usuario.correo:datosUsuario.nombres }} {{ !userDataNotFound?'':datosUsuario.apellidos }} | {{usuario.rol.rol}}</span>
           </li>
           <li class="nav-item">
             <a class="btn btn-primary btn-register" (click)="logOut()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Salir</a>
@@ -77,7 +77,7 @@
             <a class="nav-link link-navbar" href="#">Contáctanos</a>
           </li> -->
           <li class="nav-item mx-3">
-            <span class="custom-span-name" (click)="userProfile()">{{ !userDataNotFound?usuario.correo:datosUsuario.nombres }} {{ !userDataNotFound?'':datosUsuario.apellidos }} | {{usuario.rol.rol}}</span>
+            <span class="custom-span-name" routerlink="/profile">{{ !userDataNotFound?usuario.correo:datosUsuario.nombres }} {{ !userDataNotFound?'':datosUsuario.apellidos }} | {{usuario.rol.rol}}</span>
           </li>
           <li class="nav-item">
             <a class="btn btn-primary btn-register" (click)="logOut()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Salir</a>

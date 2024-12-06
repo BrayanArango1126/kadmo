@@ -1,15 +1,21 @@
 import { Component, Input } from '@angular/core';
-import { TransaccionesService } from '../../../../../services/transacciones.service';
+import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import Transaccion from '../../../../../interfaces/transaccion';
-import { Alert } from 'bootstrap';
+// import { Alert } from 'bootstrap';
 import CalificacionLibro from '../../../../../interfaces/calificacionLibro';
-import Usuario from '../../../../../interfaces/usuario';
-import { TarjetasCreditoService } from '../../../../../services/tarjetas-credito.service';
 import TarjetaCredito from '../../../../../interfaces/tarjetaCredito';
-import * as bootstrap from 'bootstrap';
-import { LibrosService } from '../../../../../services/libros.service';
+import Transaccion from '../../../../../interfaces/transaccion';
+import Usuario from '../../../../../interfaces/usuario';
 import Libros from '../../../../../interfaces/libros';
+
+import { TarjetasCreditoService } from '../../../../../services/tarjetas-credito.service';
+import { TransaccionesService } from '../../../../../services/transacciones.service';
+import { LibrosService } from '../../../../../services/libros.service';
+import { environment } from '../../../../../../environments/environment';
+
+import { redirectAlert, redirectActivedAlert } from '../../../../../../assets/alerts'
+import * as bootstrap from 'bootstrap';
+import * as cryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-book-description',
@@ -34,9 +40,12 @@ export class BookDescriptionComponent {
     private _tarjetaCreditoService:TarjetasCreditoService,
     private fbCreditCard:FormBuilder,
     private fbBuyBook:FormBuilder,
-    private _librosService:LibrosService
+    private _librosService:LibrosService,
+    private _route:ActivatedRoute
   ) 
   {
+    this.idUsuario = (this.idUsuario != '0' ) ? cryptoJS.AES.decrypt(this.idUsuario, environment.cryptPassword).toString(cryptoJS.enc.Utf8) : '0';
+    console.log(this.idUsuario);
     this.formCompraLibros = this.fbBuyBook.group({
 
     });
@@ -64,11 +73,11 @@ export class BookDescriptionComponent {
   }
   public comprarLibro(){
     if(!this.formCompraLibros.valid){
-      alert('Por favor llene todos los campos');
+      redirectAlert("info", "Inicie sesión primero", "login");
       return;
     }
     if(!this.selectedCreditCard){
-      alert('Por favor seleccione una tarjeta de crédito');
+      redirectAlert("info", "No ha seleccionado medio de pago", "Por favor seleccione una tarjeta de crédito");
       return;
     }
 
@@ -124,8 +133,7 @@ export class BookDescriptionComponent {
 
   public verifyUserLogin() {
     if (this.idUsuario === '0' || this.idUsuario === null) {
-      alert('Debes Iniciar Sesión o registrarte para poder continuar');
-      window.location.href = '/login';
+      redirectActivedAlert("info", "Sesión no encontrada", "login", this._route.snapshot.params['id']);
     }
 
     const modalElement = document.getElementById('buyBookModal');

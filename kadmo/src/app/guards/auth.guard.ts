@@ -1,6 +1,7 @@
 import { CanActivateFn } from '@angular/router';
 import { environment } from '../../environments/environment';
 import * as cryptoJS from 'crypto-js';
+import { redirectAlert } from '../../assets/alerts';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const rol = localStorage.getItem('rol') || '';
@@ -8,12 +9,10 @@ export const authGuard: CanActivateFn = (route, state) => {
   const allowedRoles = route.data['ValidateRol'] || [];
   
   if (allowedRoles == 1 && decrptRol != '1') {
-    alert('Inicia sesión como administrador para continuar.');
-    window.location.href = '/login';
+    redirectAlert("info", "Inicie sesión como administrador", "login");
     return false;
   }else if(allowedRoles == 2 && !decrptRol){
-    alert('Inicia sesión para continuar.');
-    window.location.href = '/login';
+    redirectAlert("info", "Inicie sesión primero", "login");
     return false;
   }
   else{
@@ -21,7 +20,3 @@ export const authGuard: CanActivateFn = (route, state) => {
   }
   
 };
-
-function getRolUser(rol:number){
-
-}

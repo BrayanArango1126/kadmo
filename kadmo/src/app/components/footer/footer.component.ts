@@ -20,6 +20,5 @@ export class FooterComponent {
   private getRol(){
     // Desencriptamos el rol del usuario
     this.rol = cryptoJS.AES.decrypt(this.rol.toString(), environment.cryptPassword).toString(cryptoJS.enc.Utf8);
-    console.log(this.rol);
   }
 }
