@@ -17,4 +17,6 @@ public interface ILibrosFavoritosService {
 	List<LibrosFavoritosDTO> listAllLibrosFavoritos();
 
 	List<LibrosFavoritosDTO> listLibrosFavoritosByUsuario(Usuarios usuario);
+
+	String deleteLibrosFavoritos(LibrosFavoritos deleteLibrosFavoritos);
 }

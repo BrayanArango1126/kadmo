@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kadmo';
+
+  rolUser = localStorage.getItem('rol') || '0';
+  constructor() { }
 }

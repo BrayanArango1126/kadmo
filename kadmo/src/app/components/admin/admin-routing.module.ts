@@ -9,6 +9,7 @@ import { CalificacionesComponent } from './pages/calificaciones/calificaciones.c
 import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { EditorialesComponent } from './pages/editoriales/editoriales.component';
+import { DatosUsuariosComponent } from './pages/datos-usuarios/datos-usuarios.component';
 
 // const routes: Routes = [
 //   {path:'', component: AdminComponent},
@@ -29,8 +30,10 @@ const routes: Routes = [
       { path: 'calificaciones', component: CalificacionesComponent },
       { path: 'categorias', component: CategoriasComponent },
       { path: 'usuarios', component: UsuariosComponent },
+      { path: 'datos-usuarios', component: DatosUsuariosComponent },
       { path: 'editoriales', component: EditorialesComponent },
       // Add other routes here
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   }
 ];

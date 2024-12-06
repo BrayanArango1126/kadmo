@@ -19,4 +19,8 @@ export class TransaccionesService {
   public addTransaccion(transaccion:Transaccion):Observable<Transaccion>{
     return this.http.post<Transaccion>(`${this.endPoint}/add-transaccion`, transaccion);
   }
+
+  public getTransaccionExcel(fechaInicio:string, fechaFin:string):Observable<Blob>{
+    return this.http.get(`${this.endPoint}/reporte?fechaInicio=${fechaInicio}&fechaFin=${fechaFin}`, {responseType: 'blob'});
+  }
 }

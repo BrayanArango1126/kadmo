@@ -16,4 +16,6 @@ public interface ILibrosFavoritosRepository {
 	List<LibrosFavoritos> listLibrosFavoritos();
 
 	List<LibrosFavoritos> listLibrosFavoritosByUsuario(Usuarios usuario);
+
+	String deleteLibrosFavoritos(LibrosFavoritos deleteLibrosFavoritos);
 }

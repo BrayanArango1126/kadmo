@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -113,5 +114,13 @@ public class LibrosFavoritosController {
 		LibrosFavoritos updLibrosFavoritos = this.modelMapper.map(updateLibrosFavoritos, LibrosFavoritos.class);
 		LibrosFavoritosDTO updatedLibrosFavoritos = this.service.upLibrosFavoritos(updLibrosFavoritos);
 		return new ResponseEntity<LibrosFavoritosDTO>(updatedLibrosFavoritos, HttpStatus.OK);
+	}
+
+	@DeleteMapping(value = "delete-libro-favorito", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<String> deleteLibrosFavoritos(@RequestParam("idLibroFavorito") int id) {
+		LibrosFavoritos deleteLibro = new LibrosFavoritos();
+		deleteLibro.setIdLibroFavorito(id);
+		this.service.deleteLibrosFavoritos(deleteLibro);
+		return new ResponseEntity<String>("{\"message\": \"Libro eliminado\"}", HttpStatus.OK);
 	}
 }

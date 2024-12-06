@@ -16,7 +16,7 @@
 
             <div class="collapse show" id="collapseAutor">
               <ul class="dropdown row p-2">
-                  <input class="form-control" formControlName="autor" type="text" id="autor"/>
+                  <input class="form-control" formControlName="autor" placeholder="Nombre Autor" type="text" id="autor"/>
               </ul>
             </div>
           </li>
@@ -46,6 +46,7 @@
             <div class="collapse show" id="collapseDispo">
               <ul>
                 <li>
+                  <label for="disponibilidad">Seleccionar</label>
                   <select formControlName="disponibilidad" name="disponibilidad" id="disponibilidad" class="form-select">
                     <option *ngFor="let dis of disponibilidadLibros" value="{{dis.idDisponibilidadLibro}}">{{dis.disponibilidad}}</option>
                   </select>
@@ -62,6 +63,7 @@
             <div class="collapse show" id="collapseEstado">
               <ul>
                 <li>
+                  <label for="estadosLibro">Seleccionar</label>
                   <select formControlName="estadosLibro" name="estadosLibro" id="estadosLibro" class="form-select">
                     <option *ngFor="let est of estadosLibros" value="{{est.idEstadosLibros}}">{{est.estado}}</option>
                   </select>
@@ -130,7 +132,7 @@
       </form>
     </div>
   </nav>
-  <button type="button" (click)="validarSesion()" class="btn btn-dark w-50 mx-auto text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">Publicar Libro</button>
+  <button type="button" (click)="validarSesion()" class="btn btn-dark w-50 mx-auto text-center" data-bs-toggle="modal" >Publicar Libro</button>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">

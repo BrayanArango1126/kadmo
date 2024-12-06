@@ -25,5 +25,13 @@ export class UsuarioService {
     return this.http.get<Usuario>(`${this.urlApi}/usuario-id?idUsuario=${idUsuario}`);
   }
 
+  getAllUsuarios():Observable<Usuario[]>{
+    return this.http.get<Usuario[]>(`${this.urlApi}/usuarios`);
+  }
+
+  updateUsuario(usuario:Usuario):Observable<ResponseApi>{
+    return this.http.put<ResponseApi>(`${this.urlApi}/update-usuario`, usuario);
+  }
+
 }
 

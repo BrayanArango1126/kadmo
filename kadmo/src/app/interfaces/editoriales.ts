@@ -5,5 +5,10 @@ export default interface Editorial {
   telefono: string;
   usuario: {
     idUsuario: number;
+    correo: string;
+    contraseña: string;
+    rol: {
+      idRol: number;
+    };
   };
 }

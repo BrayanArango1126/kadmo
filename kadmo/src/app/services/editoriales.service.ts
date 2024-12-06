@@ -27,4 +27,12 @@ export class EditorialesService {
   getEditorialById(requestBody: { "idEditoriales": number}):Observable<Editorial> {
     return this.http.post<Editorial>(`${this.endPoint}/editorial-id`, requestBody, this.options);
   }
+
+  addEditorial(request:Editorial):Observable<Editorial>{
+    return this.http.post<Editorial>(`${this.endPoint}/add-editorial`, request, this.options);
+  }
+
+  updateEditorial(request:Editorial):Observable<Editorial>{
+    return this.http.put<Editorial>(`${this.endPoint}/update-editorial`, request, this.options);
+  }
 }

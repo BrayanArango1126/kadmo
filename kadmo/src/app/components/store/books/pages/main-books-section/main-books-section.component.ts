@@ -121,18 +121,50 @@ export class MainBooksSectionComponent implements OnInit {
       alert("No puedes guardar libros si no has iniciado sesión");
       return;
     }
-    const libroFav:LibroFavorito = {
-      idLibroFavorito: 0,
-      libro: {
-        idLibros: book.idLibros
-      },
-      usuario: {
-        idUsuario: parseInt(idUser)
-      }
+
+    let libroFav = this.favoritesBooks.find((libro) => libro.libro.idLibros == book.idLibros);
+    if(libroFav != undefined){
+      console.log("aqui toy 2");
+      const libroFavorito: LibroFavorito = {
+        idLibroFavorito: libroFav.idLibroFavorito,
+        libro: {
+          idLibros: 0
+        },
+        usuario: {
+          idUsuario: 0
+        }
+      };
+      this.deleteBookFavorite(libroFavorito);
+      return;
+    }else{
+      console.log("aqui toy ");
+      const libroFavorito: LibroFavorito = {
+        idLibroFavorito: 0,
+        libro: {
+          idLibros: book.idLibros
+        },
+        usuario: {
+          idUsuario: parseInt(idUser)
+        }
+      };
+      this._librosFavoritosService.saveLibroFavorito(libroFavorito).subscribe({
+        next: (data) => {
+          alert(data.message);
+          this.getFavoritesBooks();
+          this.getBooksPublicados();
+        },
+        error: (err) => {
+          console.log(err);
+        }
+      });
     }
-    this._librosFavoritosService.saveLibroFavorito(libroFav).subscribe({
+  }
+
+  public deleteBookFavorite(libroFav:LibroFavorito){
+    this._librosFavoritosService.deleteLibroFavorito(libroFav.idLibroFavorito).subscribe({
       next: (data) => {
-        alert(data.message);
+        console.log("Legue aqui");	
+        alert("Libro eliminado de favoritos");
         this.getFavoritesBooks();
         this.getBooksPublicados();
       },

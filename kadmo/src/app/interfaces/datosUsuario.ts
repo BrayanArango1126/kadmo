@@ -9,9 +9,15 @@ export default interface DatosUsuario {
   usuarioVerificado: number;
   genero: {
     idGenero: number;
+    genero: string;
   };
   usuario: {
     idUsuario: number;
+    correo: string;
+    rol: {
+      idRol: number;
+      rol: string;
+    };
   }
   
 }

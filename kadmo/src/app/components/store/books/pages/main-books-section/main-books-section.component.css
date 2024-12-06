@@ -118,6 +118,10 @@
 .container-icon-save i {
   font-size: 1.2rem;
 }
+.custom-class-active-favorite{
+  background-color: #4069E5;
+  color: #ffffff;
+}
 
 @media (max-width: 768px) {
   .main-title h2 {

@@ -3,6 +3,7 @@ package co.edu.ue.entity;
 import java.io.Serializable;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -21,8 +22,10 @@ public class Transacciones implements Serializable {
 	private int idTransaccion;
 
 	@Column(name = "fechaTransaccion")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date fechaTransaccion;
+	private LocalDate fechaTransaccion;
+	// @Column(name = "fechaTransaccion")
+	// @Temporal(TemporalType.TIMESTAMP)
+	// private Date fechaTransaccion;
 
 	@Column(name = "total")
 	private BigDecimal total;
@@ -58,11 +61,11 @@ public class Transacciones implements Serializable {
 		this.idTransaccion = idTransaccion;
 	}
 
-	public Date getFechaTransaccion() {
+	public LocalDate getFechaTransaccion() {
 		return this.fechaTransaccion;
 	}
 
-	public void setFechaTransaccion(Date fechaTransaccion) {
+	public void setFechaTransaccion(LocalDate fechaTransaccion) {
 		this.fechaTransaccion = fechaTransaccion;
 	}
 

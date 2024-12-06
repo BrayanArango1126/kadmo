@@ -40,4 +40,10 @@ public class LibrosFavoritosRepository implements ILibrosFavoritosRepository {
 		return this.jpa.findByUsuario(usuario);
 	}
 
+	@Override
+	public String deleteLibrosFavoritos(LibrosFavoritos eliminarLibro) {
+		this.jpa.delete(eliminarLibro);
+		return "Libro eliminado";
+	}
+
 }

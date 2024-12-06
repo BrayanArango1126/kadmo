@@ -1,0 +1,12 @@
+td{
+  text-align: center;
+}
+.custom-style-title{
+  font-size: 3em;
+  font-weight: bold;
+}
+.custom-container-title{
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 20px;
+}

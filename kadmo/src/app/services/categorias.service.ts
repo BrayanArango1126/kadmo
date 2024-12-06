@@ -26,6 +26,14 @@ export class CategoriasService {
   public getCategoriesById(idCategoriaLibro: number):Observable<CategoriaLibro[]>{
     return this.http.get<CategoriaLibro[]>(`${this.endPoint}/categoria-libro-id`, this.options);
   }
+
+  public saveCategory(category: CategoriaLibro):Observable<CategoriaLibro>{
+    return this.http.post<CategoriaLibro>(`${this.endPoint}/add-categoria-libro`, category, this.options);
+  }
+
+  public updateCategory(category: CategoriaLibro):Observable<CategoriaLibro>{
+    return this.http.put<CategoriaLibro>(`${this.endPoint}/update-categoria-libro`, category, this.options);
+  }
 }
 
 

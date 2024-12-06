@@ -43,6 +43,16 @@
   flex-wrap: wrap;
 }
 
+footer a{
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+}
+footer a:hover{
+  color: #007bff;
+}
+
 @media (max-width: 768px) {
   .info-about-us,
   .container-fast-nav {
@@ -66,3 +76,5 @@
     justify-content: center;
   }
 }
+
+

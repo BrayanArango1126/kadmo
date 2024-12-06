@@ -12,6 +12,7 @@ import DisponibilidadLibro from '../../../../../interfaces/disponibilidadLibro';
 import { DisponibilidadLibrosService } from '../../../../../services/disponibilidad-libros.service';
 import FiltroLibros from '../../../../../interfaces/filtroLibrosDTO';
 import { LibrosSharedFiltersService } from '../../../../../services/libros-shared-filters.service';
+import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-aside-books-section',
@@ -141,6 +142,14 @@ export class AsideBooksSectionComponent {
     if(this.idUser == null || this.idUser == '0'){
       alert('Debes iniciar sesión para publicar un libro');
       return;
+    }
+
+    const modalElement = document.getElementById('exampleModal');
+    if (modalElement) {
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
+    } else {
+      console.error('Modal element not found');
     }
   }
 

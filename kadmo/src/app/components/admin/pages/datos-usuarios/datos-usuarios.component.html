@@ -1,0 +1,46 @@
+<div class="container custom-container-title mt-5">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="custom-style-title">Datos Usuarios</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-primary" (click)="cleandForm()" data-bs-target="#categoryModal" data-bs-toggle="modal">Agregar Datos Usuarios</button>
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark text-center">
+      <tr>
+        <th>ID</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Dirección</th>
+        <th>Teléfono</th>
+        <th>Documento</th>
+        <th>Edad</th>
+        <th>Verificado</th>
+        <th>Género</th>
+        <th>Correo</th>
+        <th>Rol</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of usersDatos">
+        <td>{{ item.idDatoUsuario }}</td>
+        <td>{{ item.nombres }}</td>
+        <td>{{ item.apellidos }}</td>
+        <td>{{ item.direccion }}</td>
+        <td>{{ item.telefono }}</td>
+        <td>{{ item.documento }}</td>
+        <td>{{ item.edad }}</td>
+        <td>{{ item.usuarioVerificado == 0 ? 'No verificado' : 'Verificado' }}</td>
+        <td>{{ item.genero.genero }}</td>
+        <td>{{ item.usuario.correo }}</td>
+        <td>{{ item.usuario.rol.rol }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

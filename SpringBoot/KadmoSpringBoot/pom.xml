@@ -103,6 +103,18 @@
 		    <version>0.11.1</version>
 		    <scope>runtime</scope>
 		</dependency>
+		<!-- Apache POI core -->
+		<dependency>
+    		<groupId>org.apache.poi</groupId>
+    		<artifactId>poi-ooxml</artifactId>
+    		<version>5.2.3</version>
+		</dependency>
+    <!-- Dependencia para resolver problemas de imágenes y otros formatos -->
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>5.2.3</version>
+    </dependency>
 	</dependencies>
 
 	<build>

@@ -29,4 +29,8 @@ export class LibrosFavoritosService {
   public saveLibroFavorito(libroFavorito:LibroFavorito):Observable<ResponseApi>{
     return this.http.post<ResponseApi>(`${this.endPoint}/add-libro-favorito`, libroFavorito);
   }
+
+  public deleteLibroFavorito(id:number){
+    return this.http.delete(`${this.endPoint}/delete-libro-favorito?idLibroFavorito=${id}`);
+  }
 }

@@ -57,4 +57,10 @@ public class LibrosFavoritosService implements ILibrosFavoritosService {
 		return listLibrosFavoritosDTO;
 	}
 
+	@Override
+	public String deleteLibrosFavoritos(LibrosFavoritos deleteLibrosFavoritos) {
+		this.dao.deleteLibrosFavoritos(deleteLibrosFavoritos);
+		return "Libro eliminado";
+	}
+
 }

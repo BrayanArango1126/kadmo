@@ -12,7 +12,8 @@ import { CalificacionesComponent } from './pages/calificaciones/calificaciones.c
 import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { EditorialesComponent } from './pages/editoriales/editoriales.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatosUsuariosComponent } from './pages/datos-usuarios/datos-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,14 @@ import { EditorialesComponent } from './pages/editoriales/editoriales.component'
     CalificacionesComponent,
     CategoriasComponent,
     UsuariosComponent,
-    EditorialesComponent
+    EditorialesComponent,
+    DatosUsuariosComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-  ]
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
 export class AdminModule { }

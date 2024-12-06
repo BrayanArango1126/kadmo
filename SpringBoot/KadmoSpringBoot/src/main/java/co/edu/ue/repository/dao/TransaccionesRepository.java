@@ -1,5 +1,6 @@
 package co.edu.ue.repository.dao;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import co.edu.ue.entity.Transacciones;
 import co.edu.ue.repository.jpa.ITransaccionesJPA;
 
 @Repository
-public class TransaccionesRepository  implements ITransaccionesRepository{
+public class TransaccionesRepository implements ITransaccionesRepository {
 
 	@Autowired
 	ITransaccionesJPA jpa;
@@ -33,7 +34,10 @@ public class TransaccionesRepository  implements ITransaccionesRepository{
 	public List<Transacciones> listTransacciones() {
 		return this.jpa.findAll();
 	}
-	
-	
-	
+
+	@Override
+	public List<Transacciones> obtenerTransaccionesPorFecha(LocalDate fechaInicio, LocalDate fechaFin) {
+		return jpa.findByFechaBetween(fechaInicio, fechaFin);
+	}
+
 }
