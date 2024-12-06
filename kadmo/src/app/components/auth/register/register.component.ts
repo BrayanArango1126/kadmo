@@ -4,6 +4,7 @@ import { RolesService } from '../../../services/roles.service';
 import Rol from '../../../interfaces/rol';
 import { UsuarioService } from '../../../services/usuario.service';
 import Usuario from '../../../interfaces/usuario';
+import { infoAlert, redirectAlert } from '../../../../assets/alerts';
 
 @Component({
   selector: 'app-register',
@@ -57,10 +58,10 @@ export class RegisterComponent {
     console.log(newUser);
     this._usuarioService.Registrarse(newUser).subscribe({
       next: res => {
-        alert(res.message);
-        window.location.href = '/login';
+        redirectAlert("success", "Registro exitoso", "login");
       },
       error: err => {
+        infoAlert("error", "Error", "Los datos ingresados no son válidos.");
         console.log(err);
       }
     });

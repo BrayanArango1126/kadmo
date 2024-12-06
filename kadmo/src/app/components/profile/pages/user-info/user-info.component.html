@@ -1,0 +1,36 @@
+<div class="container my-5">
+    <div class="card mx-auto" style="max-width: 800px;">
+      <div class="card-body">
+        <!-- Header con avatar y nombre -->
+        <div class="d-flex align-items-center">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Avatar"
+            class="rounded-circle me-3"
+            style="width: 100px; height: 100px;"
+          />
+          <div>
+            <h4>{{ user.name }}</h4>
+            <p class="text-muted mb-0">{{ user.email }}</p>
+            <small class="text-muted">{{ user.role }}</small>
+          </div>
+        </div>
+        <hr />
+        <!-- Información adicional -->
+        <div>
+          <h5>Información personal</h5>
+          <ul class="list-unstyled">
+            <li><strong>Teléfono:</strong> {{ user.phone }}</li>
+            <li><strong>Dirección:</strong> {{ user.address }}</li>
+            <li><strong>Miembro desde:</strong> {{ user.memberSince | date }}</li>
+          </ul>
+        </div>
+        <hr />
+        <!-- Opciones del perfil -->
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-primary me-2" (click)="editProfile()">Editar Perfil</button>
+          <button class="btn btn-danger" (click)="logout()">Cerrar Sesión</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -22,14 +22,15 @@
                       <div data-mdb-input-init class="form-outline">
                       <label class="form-label" for="contrasena">Contraseña:</label>
                       <input type="password" id="contrasena" class="form-control" formControlName="password"/>
-                      </div>
                     </div>
+                </div>
+                <a class="text-center pt-5 terms-font" [routerLink]="['/login']">¿Ya tiene una cuenta? inicie sesión.</a>
                 </div>          
                 <button type="submit" class="btn btn-login col-12 mb-2" [disabled]="registerForm.invalid">Registrarse</button>
-                <p class="text-center">By continuing, you agree to the updated <b> Terms of Sale</b>, <b> Terms of Service</b>, and <b>Privacy Policy</b>.</p>
+                <p class="text-center terms-font">Al continuar aceptas los <b> términos, condiciones</b> y <b>politicas de privacidad</b>.</p>
                 <hr>
                 <p class="text-center mb-0">OR</p>
-                <button type="button" class="btn btn-google "><i class="fa-brands fa-google me-3"></i>Continuar con google</button>
+                <button type="button" class="btn btn-google btn-outline-danger "><i class="fa-brands fa-google me-3"></i>Continuar con google</button>
             </form>
         </div>
 
