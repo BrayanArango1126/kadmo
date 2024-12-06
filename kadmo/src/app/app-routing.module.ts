@@ -3,13 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { NotFoundComponent } from './components/error/not-found/not-found.component';
+import { authGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   // AUTENTIFICACION
   {path:'login', component: LoginComponent}, 
   {path:'register', component: RegisterComponent}, 
   // COMUNICACION CON OTROS MÓDULOS
-  {path:'admin', loadChildren: () => import('./components/admin/admin.module').then(m => m.AdminModule)},
+  {path:'admin', loadChildren: () => import('./components/admin/admin.module').then(m => m.AdminModule), canActivate: [authGuard]},
   {path:'store', loadChildren: () => import('./components/store/store.module').then(m => m.StoreModule)},
   {path:'listas', loadChildren: () => import('./components/lists/lists.module').then(m => m.ListsModule)},
   {path:'suscripcion', loadChildren: () => import('./components/subscription/subscription.module').then(m => m.SubscriptionModule)},

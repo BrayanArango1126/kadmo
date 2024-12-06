@@ -67,7 +67,6 @@ public class AuthorizationFilterJWT extends BasicAuthenticationFilter{
 			
 			List<String> authorities=(List<String>) claims.get("authorities");
 			//System.out.println("**************" + user);
-			//System.out.println("Autoridades: " + authorities);
 			
 			if (user != null) {
 				//creamos el objeto con la información del usuario (usuario y roles)

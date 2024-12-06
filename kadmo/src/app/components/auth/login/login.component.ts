@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { LogInService } from '../../../services/log-in.service';
 import Cookies from 'js-cookie';
 import Login from '../../../interfaces/login';
-
+import { environment } from '../../../../environments/environment';
+import * as CryptoJS from 'crypto-js';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -32,9 +33,9 @@ export class LoginComponent {
     this._logInService.logIn(this.sesion).subscribe({
       next: (data) => {
         if(data.datos.idUsuario != 0){
-          //console.log("Sesión iniciada" + data.datos.idUsuario);
-          localStorage.setItem('user', data.datos.idUsuario);
-          localStorage.setItem('rol', data.datos.rol);
+          console.log("Sesión iniciada " + data.datos.idUsuario);
+          localStorage.setItem('user', CryptoJS.AES.encrypt( data.datos.idUsuario.toString(), environment.cryptPassword).toString());
+          localStorage.setItem('rol', CryptoJS.AES.encrypt( data.datos.rol.toString(), environment.cryptPassword).toString());
           Cookies.set('authToken', data.datos.token, {
             expires: 1,
             secure: false,
