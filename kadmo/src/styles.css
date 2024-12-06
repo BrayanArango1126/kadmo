@@ -33,3 +33,31 @@ font-family: "Epilogue", sans-serif;
     font-weight: 700;
     color: #4069E5;
 }
+
+.terms-font{
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.btn-google{
+    border-radius: 10px;
+    width: 100%;
+    padding: 4px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+.btn-login{
+    background-color: #003087;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
