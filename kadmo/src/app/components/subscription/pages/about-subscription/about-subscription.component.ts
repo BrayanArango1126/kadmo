@@ -24,6 +24,9 @@ export class AboutSubscriptionComponent {
    fechaFin:Date = new Date();
    listCreditCards:TarjetaCredito[] = [];
    selectedCreditCard!:TarjetaCredito;
+   memebershipIsActived:boolean = false;
+
+   membresia:Membresia[] = [];
 
   idUser:string = localStorage.getItem('user') || '0';
   membershipForm!: FormGroup;
@@ -56,6 +59,7 @@ export class AboutSubscriptionComponent {
 
   ngOnInit(): void {
     this.getAllCreditCards();
+    this.getAllMembership();
     this.membershipForm.get('tipo')?.valueChanges.subscribe(value => {
       // Lógica para actualizar relatedValue en función de value
       if (value === 'MENSUAL') {
@@ -71,17 +75,39 @@ export class AboutSubscriptionComponent {
     // console.log(card);
   }
 
+  public getAllMembership() {
+    if(this.idUser == '0') return;
+    this._membresiaService.getAllMembresias().subscribe({
+      next: (data) => {
+        this.membresia = data;
+        this.verifyUserSubscription();
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    });
+  }
+
   public verifyUserLogin() {
     if (this.idUser === '0' || this.idUser === null) {
       redirectActivedAlert("info", "Sesión no encontrada", "login", "suscripcion");
     }
-
     const modalElement = document.getElementById('exampleModalToggle');
     if (modalElement) {
       const modal = new bootstrap.Modal(modalElement);
       modal.show();
     } else {
       console.error('Modal element not found');
+    }
+  }
+
+  public verifyUserSubscription() {
+    let isSubscribed = this.membresia.find((membresia) => membresia.usuario.idUsuario == parseInt(this.idUser) && membresia.estado === 1);
+    if (isSubscribed) {
+      this.memebershipIsActived = true;
+      infoAlert("info", "Ya tienes una suscripción activa", "No puedes tener más de una suscripción activa");
+    }else{
+      this.memebershipIsActived = false;
     }
   }
 

@@ -20,8 +20,37 @@ export class HeaderComponent {
   rol = localStorage.getItem('rol') || 0;
 
   listAllBooks:Libros[] = [];
-  usuario!:Usuario;
-  datosUsuario!:DatosUsuario;
+  usuario:Usuario={
+    idUsuario: 0,
+    correo: '',
+    contraseña: '',
+    rol: {
+      idRol: 0,
+      rol: ''
+    }
+  };
+  datosUsuario:DatosUsuario ={
+    idDatoUsuario: 0,
+    nombres: '',
+    apellidos: '',
+    direccion: '',
+    telefono: '',
+    documento: '',
+    edad: 0,
+    genero:{
+      idGenero: 0,
+      genero: ''
+    },
+    usuarioVerificado: 0,
+    usuario: {
+      idUsuario: 0,
+      correo: '',
+      rol: {
+        idRol: 0,
+        rol: ''
+      }
+    }
+  };
 
   filteredBooks: Libros[] = [];
   userDataNotFound:boolean = true;

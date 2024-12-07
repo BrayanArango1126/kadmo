@@ -1,14 +1,19 @@
 <div class="container-login">
-    <div class="container-login-form row shadow rounded">
+    <div class="container-login-form row shadow rounded h-auto mb-auto">
        
         <!-- FORMULARIO -->
-        <div class="container-login-form-input col-8 p-4">
+        <div class="container-login-form-input col-8 p-4 h-auto">
             <h1 class="mb-4 text-center">Registro</h1>
             <form [formGroup]="registerForm" (ngSubmit)="register()">
                 <div data-mdb-input-init class="form-outline mb-3">
                     <label class="form-label" for="correo">Correo</label>
                     <input type="email" id="correo" placeholder="example@gmail.com" class="form-control" formControlName="email" />
                 </div>
+                <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched">
+                    <small *ngIf="registerForm.get('email')?.hasError('pattern')" class="text-danger">{{"El correo solo permite @gmail | @outlook | @hotmail "}}</small>    
+                    <small *ngIf="registerForm.get('email')?.hasError('email')" class="text-danger">Ingrese un correo válido</small>    
+                    <small *ngIf="registerForm.get('email')?.hasError('required')" class="text-danger">El correo es requerido</small>    
+                  </div>
                 <div class="row mb-2">
                     <div class="col">
                         <div data-mdb-input-init class="form-outline">
@@ -24,6 +29,12 @@
                       <input type="password" id="contrasena" class="form-control" formControlName="password"/>
                     </div>
                 </div>
+                <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched">
+                    <small *ngIf="registerForm.get('password')?.hasError('pattern')" class="text-danger">{{"Hay un error en la contraseña, recuerda tener al menos una letra
+	                    minúscula, mayúscula y numérica, y la longitud es de mínimo 8 y máximo 15 caracteres"}}
+                    </small>      
+                    <small *ngIf="registerForm.get('password')?.hasError('required')" class="text-danger">La contraseña es requerida</small>    
+                  </div>
                 <a class="text-center pt-5 terms-font" [routerLink]="['/login']">¿Ya tiene una cuenta? inicie sesión.</a>
                 </div>          
                 <button type="submit" class="btn btn-login col-12 mb-2" [disabled]="registerForm.invalid">Registrarse</button>

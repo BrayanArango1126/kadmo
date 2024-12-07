@@ -9,7 +9,8 @@
             <p><i class="fa-regular fa-circle-check me-2"></i>Gana acceso exclusivo para ver los borradores</p>
             <h3 class="mt-5">$ 45.000 Cop. / Mensual</h3>
             <p>$ 350.000 Cop. por comprar la suscripcion Anual</p>
-            <button class="btn btn-primary mt-3 btn-comprar" (click)="verifyUserLogin()" ><i class="fa-solid fa-wallet me-2"></i>Suscribete ahora</button>
+            <button class="btn btn-primary mt-3 btn-comprar" *ngIf="memebershipIsActived == false" (click)="verifyUserLogin()" ><i class="fa-solid fa-wallet me-2"></i>Suscribete ahora</button>
+            <button class="btn btn-primary mt-3 btn-comprar" *ngIf="memebershipIsActived == true" (click)="verifyUserLogin()" [disabled]="true"><i class="fa-solid fa-wallet me-2"></i>Ya Subscrito</button>
             <p class="mt-3 text-center cancel">Cancela o pausa en cualquier momento.</p>
         </div>      
         <img class="col-7 img-libro" src="/img/portada-4.jpg" alt="">
@@ -73,8 +74,8 @@
                   <input type="text" class="form-control" id="numeroTarjeta" formControlName="numeroTarjeta">
               </div>
               <div class="mb-3">
-                  <label for="fechaExpiracion" class="form-label">Número de la Tarjeta</label>
-                  <input type="date" class="form-date" id="fechaExpiracion" formControlName="fechaExpiracion">
+                  <label for="fechaExpiracion" class="form-label">Fecha de Expiración</label>
+                  <input type="date" class="form-control" id="fechaExpiracion" formControlName="fechaExpiracion">
               </div>
               <div class="mb-3">
                   <label for="cvs" class="form-label">CVV</label>

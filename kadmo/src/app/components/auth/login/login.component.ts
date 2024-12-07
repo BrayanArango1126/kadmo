@@ -7,6 +7,7 @@ import * as CryptoJS from 'crypto-js';
 import { ActivatedRoute } from '@angular/router';
 
 import { infoAlert } from '../../../../assets/alerts'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -24,24 +25,38 @@ export class LoginComponent {
     token: "",
     rol: 0
   }
-  constructor(private _logInService:LogInService, private _route:ActivatedRoute) { }
+
+  formLogin!: FormGroup;
+  constructor(private _logInService:LogInService, private _route:ActivatedRoute, private fb:FormBuilder) {
+    this.buildForm();
+   }
 
   ngOnInit(): void {
   }
 
-  private getInformation(mail:string, password:string){
-    this.sesion.correo = mail;
-    this.sesion.contraseña = password;
+  private buildForm(){
+    const mailRgx = /^[^\s@]+@+(hotmail|gmail|outlook)\.(com|co|edu\.co)$/;
+    const pswRgx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,15}/;
+
+    this.formLogin = this.fb.group({
+      email: ['', [Validators.required, Validators.pattern(mailRgx), Validators.minLength(10), Validators.maxLength(50)]],
+      password: ['', [Validators.required, Validators.pattern(pswRgx), Validators.minLength(8), Validators.maxLength(15)]]
+    });
   }
 
-  public logIn(mail:string, password:string){
+  private getInformation(){
+    this.sesion.correo = this.formLogin.get('email')?.value;
+    this.sesion.contraseña = this.formLogin.get('password')?.value;
+  }
+
+  public logIn(){
 
     this._route.queryParamMap.subscribe((params) => {
       const redirectUrl = params.get('redirectUrl') || '';
       this.url = redirectUrl;
     });  
       
-      this.getInformation(mail, password);
+      this.getInformation();
       this._logInService.logIn(this.sesion).subscribe({
         next: (data) => {
           if(data.datos.idUsuario != 0){
