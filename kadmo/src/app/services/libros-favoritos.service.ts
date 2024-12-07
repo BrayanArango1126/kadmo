@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import LibroFavorito from '../interfaces/libroFavorito';
 import { ResponseApi } from '../interfaces/response-api';
 import Usuario from '../interfaces/usuario';
+import { AuthTokenService } from './auth-token.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,16 @@ import Usuario from '../interfaces/usuario';
 export class LibrosFavoritosService {
 
   private endPoint:string = environment.endpoint + '/libro-favorito';
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private _authService:AuthTokenService) { }
 
   public getLibrosFavoritosByUser(usuario:Usuario):Observable<LibroFavorito[]>{
-    return this.http.post<LibroFavorito[]>(`${this.endPoint}/libros-favoritos-id-usuario`, usuario);
+    return this.http.post<LibroFavorito[]>(`${this.endPoint}/libros-favoritos-id-usuario`, usuario
+    //   , {
+    //   headers: {
+    //     Authorization: `Bearer ${this._authService.getToken()}`
+    //   }
+    // });
+    );
   }
 
   public getLibrosFavoritos():Observable<LibroFavorito[]>{

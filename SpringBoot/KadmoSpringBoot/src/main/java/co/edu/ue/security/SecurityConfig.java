@@ -68,9 +68,14 @@ public class SecurityConfig {
 		try {
 			http.csrf(cus -> cus.disable())
 					.authorizeHttpRequests(
-							aut -> aut.requestMatchers(HttpMethod.POST, "/rol/add-rol").hasAnyRole("Administrador", "Cliente")
-									.requestMatchers(HttpMethod.GET, "/rol/id-rol").hasAnyRole("Administrador")
-									// .requestMatchers(HttpMethod.GET, "/rol/roles").authenticated()
+							aut -> aut.requestMatchers(HttpMethod.POST, "/rol/add-rol").hasAnyRole("Administrador")
+									.requestMatchers(HttpMethod.GET, "/rol/id-rol").hasAnyRole("Administrador", "Cliente")
+									.requestMatchers(HttpMethod.GET, "/rol/roles").permitAll()
+									.requestMatchers(HttpMethod.POST, "/libro/add-libro").authenticated()
+									.requestMatchers(HttpMethod.POST, "/membresia/add-membresia").authenticated()
+									.requestMatchers(HttpMethod.POST, "/dato-usuario/add-dato-usuario").authenticated()
+									.requestMatchers(HttpMethod.POST, "/transaccion/add-transaccion").authenticated()
+									.requestMatchers(HttpMethod.POST, "/categoria-libro/add-categoria-libro").authenticated()
 									.anyRequest().permitAll())
 					.addFilter(new AuthorizationFilterJWT(auth));
 		} catch (Exception e) {

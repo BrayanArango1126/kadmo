@@ -11,6 +11,12 @@ import { TransaccionesService } from '../../../../services/transacciones.service
   styleUrls: ['./reportes.component.css']
 })
 export class ReportesComponent implements OnInit {
+
+  //Paginación
+  items: any[] = []; // Lista completa de elementos
+  currentPage: number = 1; // Página actual
+  itemsPerPage: number = 5; // Elementos por página
+  totalItems: number = 0; // Total de elementos
   
   transaction: Transaccion[] = [];
   formularioFiltro: FormGroup;
@@ -25,10 +31,14 @@ export class ReportesComponent implements OnInit {
     this.getAllTransacciones();
   }
 
+  onPageChange(page: number): void {
+    this.currentPage = page; // Cambia la página actual
+  }
   public getAllTransacciones(){
     this._reportesService.getAllTransacciones().subscribe({
       next: (data) => {
         this.transaction = data;
+        this.totalItems = this.transaction.length;
       },
       error: (error) => {
         console.log(error);

@@ -18,6 +18,11 @@ import DisponibilidadLibro from '../../../../interfaces/disponibilidadLibro';
 })
 export class LibrosComponent {
 
+  //Paginación
+  items: any[] = []; // Lista completa de elementos
+  currentPage: number = 1; // Página actual
+  itemsPerPage: number = 5; // Elementos por página
+  totalItems: number = 0; // Total de elementos
 
   idUser = localStorage.getItem('user') || '0';
   formLibro!:FormGroup;
@@ -56,11 +61,15 @@ export class LibrosComponent {
     this.getCategories();
     this.getEstadosLibros();
   }
+  onPageChange(page: number): void {
+    this.currentPage = page; // Cambia la página actual
+  }
 
   public getBooks(){
     this._librosService.getLibros().subscribe({
       next: (data) => {
         this.booksList = data;
+        this.totalItems = this.booksList.length;
       },
       error: (err) => {
         console.log(err);
@@ -95,7 +104,7 @@ export class LibrosComponent {
   }
   public sendBookModal(idLibro:number){
     const libro = this.booksList.find(libro => libro.idLibros === idLibro);
-    console.log(libro);
+
     this.formLibro.setValue({
       idLibros: libro?.idLibros,
       nombre: libro?.nombre,

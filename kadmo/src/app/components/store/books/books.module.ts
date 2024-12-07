@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AsideBooksSectionComponent } from './pages/aside-books-section/aside-books-section.component';
 import { MainBooksSectionComponent } from './pages/main-books-section/main-books-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   exports:[
     AsideBooksSectionComponent,

@@ -14,6 +14,12 @@ import Rol from '../../../../interfaces/rol';
 })
 export class UsuariosComponent implements OnInit {
 
+  //Paginación
+  items: any[] = []; // Lista completa de elementos
+  currentPage: number = 1; // Página actual
+  itemsPerPage: number = 7; // Elementos por página
+  totalItems: number = 0; // Total de elementos
+
   users: Usuario[] = [];
   listAllRoles:Rol[] = [];
 
@@ -30,6 +36,9 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
     this.getUsers();
     this.getRoles();
+  }
+  onPageChange(page: number): void {
+    this.currentPage = page; // Cambia la página actual
   }
 
   public cleandForm(){

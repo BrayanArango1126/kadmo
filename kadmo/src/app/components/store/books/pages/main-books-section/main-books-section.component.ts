@@ -19,6 +19,12 @@ import * as cryptoJS from 'crypto-js';
 })
 export class MainBooksSectionComponent implements OnInit {
 
+  //Paginación
+  items: any[] = []; // Lista completa de elementos
+  currentPage: number = 1; // Página actual
+  itemsPerPage: number = 12; // Elementos por página
+  totalItems: number = 0; // Total de elementos
+
   idLibro:string = '';
 
   booksList:Libros[] = [];
@@ -95,10 +101,15 @@ export class MainBooksSectionComponent implements OnInit {
     });
   }
 
+  onPageChange(page: number): void {
+    this.currentPage = page; // Cambia la página actual
+  }
+
   public getBooksPublicados(){
     this._librosPublicadosService.getLibrosPublicados().subscribe({
       next: (data) => {
         this.bookListPublished = data;
+        this.totalItems = this.bookListPublished.length;
         this.countCantLibros();
       },
       error: (err) => {
@@ -125,7 +136,7 @@ export class MainBooksSectionComponent implements OnInit {
       return;
     }
     idUser = cryptoJS.AES.decrypt(idUser, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
-    console.log(idUser);
+    // console.log(idUser);
 
     let libroFav = this.favoritesBooks.find((libro) => libro.libro.idLibros == book.idLibros);
     if(libroFav != undefined){

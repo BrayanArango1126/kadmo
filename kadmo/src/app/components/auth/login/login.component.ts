@@ -63,11 +63,11 @@ export class LoginComponent {
             // console.log("Sesión iniciada " + data.datos.idUsuario);
             localStorage.setItem('user', CryptoJS.AES.encrypt( data.datos.idUsuario.toString(), environment.cryptPassword).toString());
             localStorage.setItem('rol', CryptoJS.AES.encrypt( data.datos.rol.toString(), environment.cryptPassword).toString());
-            Cookies.set('authToken', data.datos.token, {
+            Cookies.set('authToken', CryptoJS.AES.encrypt( data.datos.token.toString(), environment.cryptPassword).toString(), {
               expires: 1,
               secure: false,
               sameSite: 'Strict',
-              httpOnlt: false
+              httpOnly: false
             });
 
             if(this.url === ''){

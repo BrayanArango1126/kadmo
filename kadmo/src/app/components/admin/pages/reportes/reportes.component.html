@@ -41,7 +41,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of transaction">
+      <tr *ngFor="let item of transaction | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage, totalItems: totalItems }">
         <td>{{ item.idTransaccion }}</td>
         <td>{{ item.libro.nombre }}</td>
         <td>{{ item.libro.autor }}</td>
@@ -56,4 +56,5 @@
       </tr>
     </tbody>
   </table>
+  <pagination-controls class="text-center" cssClass="custom-pagination" (pageChange)="onPageChange($event)" [autoHide]="true"></pagination-controls>
 </div>

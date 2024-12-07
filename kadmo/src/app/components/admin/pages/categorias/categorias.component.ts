@@ -9,6 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./categorias.component.css']
 })
 export class CategoriasComponent implements OnInit {
+
+  //Paginación
+  items: any[] = []; // Lista completa de elementos
+  currentPage: number = 1; // Página actual
+  itemsPerPage: number = 7; // Elementos por página
+  totalItems: number = 0; // Total de elementos
+
   categories: CategoriaLibro[] = [];
   
   formCategory!:FormGroup;
@@ -23,6 +30,10 @@ export class CategoriasComponent implements OnInit {
     this.getCategories();
   }
 
+  onPageChange(page: number): void {
+    this.currentPage = page; // Cambia la página actual
+  }
+
   public cleandForm(){
     this.formCategory.reset();
   }
@@ -31,6 +42,7 @@ export class CategoriasComponent implements OnInit {
     this._categoryService.getCategories().subscribe({
       next: (result) => {
         this.categories = result;
+        this.totalItems = this.categories.length;
       },
       error: (error) => {
         console.error(error);

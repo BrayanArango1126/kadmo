@@ -12,8 +12,8 @@
     </select>
   </div>
 
-  <div *ngIf="booksListFiltered.length == 0" class="books-grid">
-    <div class="book-card" *ngFor="let item of bookListPublished; let index">
+  <div *ngIf="booksListFiltered.length == 0" class="books-grid mb-5">
+    <div class="book-card" *ngFor="let item of bookListPublished | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage, totalItems: totalItems }; let index ">
       <img [src]="'/img/portada-' + (item.libro.idLibros || index.idLibrosPublicados) + '.jpg'" alt="Book Cover" (click)="goToBookDetails(item.libro.idLibros)" />
       <div class="book-info">
         <h5 (click)="goToBookDetails(item.libro.idLibros)">{{item.libro.nombre}}</h5>
@@ -31,7 +31,9 @@
         </div>
       </div>
     </div>
+
   </div>
+  <pagination-controls class="text-center" cssClass="custom-pagination" (pageChange)="onPageChange($event)" [autoHide]="true"></pagination-controls>
 
   <div *ngIf="booksListFiltered.length > 0" class="books-grid">
     <div class="book-card" *ngFor="let item of booksListFiltered; let index">
