@@ -51,11 +51,13 @@ export class HeaderComponent {
   }
 
   public getUsuer(){
+    // Desencriptamos el id del usuario
     if(this.user == '0'){
       return;
     }
-    // Desencriptamos el id del usuario
     this.user = cryptoJS.AES.decrypt(this.user, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
+    // Desencriptamos el id del usuario
+    // this.user = cryptoJS.AES.decrypt(this.user, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
     this.rol =cryptoJS.AES.decrypt(this.rol.toString(), environment.cryptPassword).toString(cryptoJS.enc.Utf8);
     // Le pasamos al servicio el id del usuario PARSEADO A tipo INT
     this._usuarioService.getUsuarioById(parseInt(this.user)).subscribe({
@@ -63,7 +65,7 @@ export class HeaderComponent {
         // Guardamos el objeto usuario en la variable usuario
         this.usuario = result;
         // Teniendo el objeto usuario, se lo pasamos a la función que obtiene los datos del usuario
-        this.getDatoUsuario(result);
+        this.getDatoUsuario(this.usuario);
       },
       error: (err) => {
         console.log(err);

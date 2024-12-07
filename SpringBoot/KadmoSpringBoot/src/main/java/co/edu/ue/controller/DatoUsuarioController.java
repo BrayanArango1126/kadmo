@@ -61,7 +61,7 @@ public class DatoUsuarioController {
 		return new ResponseEntity<DatosUsuariosDTO>(this.service.findIdDatoUsuario(id), HttpStatus.ACCEPTED);
 	}
 
-	@PostMapping(value = "dato-find-id-usuario", produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "dato-find-id-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<DatosUsuariosDTO> getDatoByIdUsuario(@RequestBody UsuariosDTO usuario) {
 		Usuarios usuarioGot = this.modelMapper.map(usuario, Usuarios.class);
 		DatosUsuariosDTO datoUsuario = this.service.findByUsuario(usuarioGot);

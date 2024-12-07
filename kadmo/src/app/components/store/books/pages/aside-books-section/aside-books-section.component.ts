@@ -13,6 +13,8 @@ import { DisponibilidadLibrosService } from '../../../../../services/disponibili
 import FiltroLibros from '../../../../../interfaces/filtroLibrosDTO';
 import { LibrosSharedFiltersService } from '../../../../../services/libros-shared-filters.service';
 import * as bootstrap from 'bootstrap';
+import * as cryptoJS from 'crypto-js';
+import { environment } from '../../../../../../environments/environment';
 
 @Component({
   selector: 'app-aside-books-section',
@@ -61,6 +63,8 @@ export class AsideBooksSectionComponent {
       estadosLibro: [''],
       precioLibro: ['']
     });
+
+    this.idUser = (this.idUser != '0' ) ? cryptoJS.AES.decrypt(this.idUser, environment.cryptPassword).toString(cryptoJS.enc.Utf8) : '0';
   }
 
   ngOnInit(): void {
@@ -229,7 +233,6 @@ export class AsideBooksSectionComponent {
 
     this._librosService.addLibro(libro).subscribe({
       next: (res) => {
-        console.log(res.datos);
         this.postLibroPublicado(res.datos.idLibros);
       },
       error: (err) => {
@@ -274,7 +277,7 @@ export class AsideBooksSectionComponent {
     this._librosPublicadosService.addLibroPublicado(libroPublicado).subscribe({
       next: (res) => {
         // console.log(res);
-        alert(res.message);
+        alert("Libro publicado correctamente");
       },
       error: (err) => {
         console.log(err);

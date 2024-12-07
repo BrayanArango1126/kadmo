@@ -10,6 +10,7 @@ import { LibrosSharedFiltersService } from '../../../../../services/libros-share
 import { environment } from '../../../../../../environments/environment';
 import * as CryptoJS from 'crypto-js';
 import { Router } from '@angular/router';
+import * as cryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-main-books-section',
@@ -59,6 +60,7 @@ export class MainBooksSectionComponent implements OnInit {
 
   public compareBooks(idBook:number){
     let idUser = localStorage.getItem('user') || '0';
+    idUser = cryptoJS.AES.decrypt(idUser, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
     if(idUser == '0'){
       return;
     }
@@ -74,6 +76,7 @@ export class MainBooksSectionComponent implements OnInit {
     if(idUser == '0'){
       return;
     }
+    idUser = cryptoJS.AES.decrypt(idUser, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
     const usuario:Usuario = {
       idUsuario: parseInt(idUser),
       correo: '',
@@ -116,15 +119,16 @@ export class MainBooksSectionComponent implements OnInit {
   }
 
   public saveBook(book:Libros){
-    let idUser = localStorage.getItem('user');
-    if(idUser == '0' || idUser == null){
+    let idUser = localStorage.getItem('user') || '0';
+    if(idUser == '0'){
       alert("No puedes guardar libros si no has iniciado sesión");
       return;
     }
+    idUser = cryptoJS.AES.decrypt(idUser, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
+    console.log(idUser);
 
     let libroFav = this.favoritesBooks.find((libro) => libro.libro.idLibros == book.idLibros);
     if(libroFav != undefined){
-      console.log("aqui toy 2");
       const libroFavorito: LibroFavorito = {
         idLibroFavorito: libroFav.idLibroFavorito,
         libro: {
@@ -137,7 +141,6 @@ export class MainBooksSectionComponent implements OnInit {
       this.deleteBookFavorite(libroFavorito);
       return;
     }else{
-      console.log("aqui toy ");
       const libroFavorito: LibroFavorito = {
         idLibroFavorito: 0,
         libro: {
@@ -163,7 +166,6 @@ export class MainBooksSectionComponent implements OnInit {
   public deleteBookFavorite(libroFav:LibroFavorito){
     this._librosFavoritosService.deleteLibroFavorito(libroFav.idLibroFavorito).subscribe({
       next: (data) => {
-        console.log("Legue aqui");	
         alert("Libro eliminado de favoritos");
         this.getFavoritesBooks();
         this.getBooksPublicados();

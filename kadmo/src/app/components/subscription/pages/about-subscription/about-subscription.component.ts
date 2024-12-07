@@ -86,6 +86,7 @@ export class AboutSubscriptionComponent {
   }
 
   public getAllCreditCards() {
+    if(this.idUser == '0') return;
     const request:Usuario = {
       idUsuario: parseInt(this.idUser) || 0,
       correo: '',
@@ -140,6 +141,7 @@ export class AboutSubscriptionComponent {
   }
 
   public addCreditCard() {
+
     if(this.creditCardForm.invalid) return;
     const request:TarjetaCredito = {
       idTarjetaCredito: 0,
