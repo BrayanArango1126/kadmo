@@ -23,28 +23,29 @@ export class ResenasSectionComponent {
   }
 
   public getCalificaciones(){
-    this._calificacionesService.getAllCalificaciones().subscribe(
-      res => {
+    this._calificacionesService.getAllCalificaciones().subscribe({
+      next: (res) => {
         this.calificaciones = res;
+        this.getDatosUsuariosById();
         console.log(res);
       },
-      err => {
+      error: err => {
         console.log(err);
       }
-    );
+    });
   }
 
   public getDatosUsuariosById(){  
-    this.calificaciones.forEach((review) => {
-      this._datosUsuariosService.getDatoUsuarioById(review.usuario).subscribe({
-        next: (data) => {
-          console.log(data);
-          this.datoUsuario.push(data);
-        },
-        error: (err) => {
-          console.log(err);
-        }
+    this.calificaciones.forEach(review => {
+        this._datosUsuariosService.getDatoUsuarioById(review.usuario).subscribe({
+          next: (data) => {
+            console.log(data);
+            this.datoUsuario.push(data);
+          },
+          error: (err) => {
+            console.log(err);
+          }
       });
-    });
+      });
   }
 }

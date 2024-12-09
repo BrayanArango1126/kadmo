@@ -1,4 +1,4 @@
-import { CanActivateFn, Router } from '@angular/router';
+import { ActivatedRoute, CanActivateFn, Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import * as cryptoJS from 'crypto-js';
 import { redirectAlert } from '../../assets/alerts';

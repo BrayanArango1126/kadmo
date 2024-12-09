@@ -27,22 +27,17 @@
               <div class="container-image-user">
                 <img src="/img/user.jpg" alt="user" class="img-fluid">
               </div>
-              <div class="user-info">
-                <h4>{{review.usuario}}</h4>
-                <p>Fecha de la reseña</p>
+              <div *ngFor="let item of datoUsuario" class="user-info">
+                <h4 *ngIf="review.usuario.idUsuario == item.usuario.idUsuario"> {{item.nombres}} {{item.apellidos}}</h4>
+                <p>{{review.fechaCalificacion}}</p>
               </div>
             </div>
             <div class="container-commentary-user">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                ac nunc nec odio ultricies tincidunt.
-              </p>
+              <p>{{review.comentario}}</p>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Santix, agrega las que sigan acá, o hacele un bucle del *ngFor que vos conocés -->
     </div>
   </div>
 </div>

@@ -78,7 +78,7 @@ export class LoginComponent {
 
             if(this.url === ''){
               
-              (data.datos.rol == 1)?window.location.href = '/admin': window.location.href = '/store';
+              (data.datos.rol == 1)?window.location.href = '/admin/reportes': window.location.href = '/store';
 
             }else{
               window.location.href = this.url;
