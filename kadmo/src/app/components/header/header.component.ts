@@ -113,7 +113,6 @@ export class HeaderComponent {
     this._datoUsuarioService.getDatoUsuarioById(user).subscribe({
       next: (result) => {
         this.datosUsuario = result;
-        console.log(this.datosUsuario)
       },
       error: (err) => {
         this.userDataNotFound = err.ok;
@@ -124,6 +123,6 @@ export class HeaderComponent {
   public logOut(){
     localStorage.clear();
     Cookies.remove('authToken');
-    this._router.navigateByUrl('/login');
+    window.location.href = '/store';
   }
 }
