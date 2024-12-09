@@ -51,7 +51,12 @@ export class RegisterComponent {
   public getAllRoles(){
     this._rolService.getRoles().subscribe({
       next: roles => {
-        this.listAllRoles = roles;
+        roles.filter(rol => {
+          if(rol.idRol !== 1){
+            this.listAllRoles.push(rol);
+          }
+        });
+        console.log(roles);
       },
       error: err => {
         console.log(err);

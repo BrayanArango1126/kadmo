@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'suscripcion', loadChildren: () => import('./components/subscription/subscription.module').then(m => m.SubscriptionModule)},
   
   // RUTAS DE ESTE MODULO
-  {path:'profile', component: ProfileComponent, canActivate: [authGuard()], data: {ValidateRol: 2}},
+  {path:'profile', component: ProfileComponent, canActivate: [authGuard()]},
   {path:'404', component: NotFoundComponent}, 
   {path:'', component: LoginComponent, canActivate:[redirectGuard()]},
   {path:'**', redirectTo: '/404'}, 

@@ -19,7 +19,9 @@
                         <div data-mdb-input-init class="form-outline">
                             <label class="form-label" for="rol">Tipo de usuario</label>
                             <select name="rol" id="rol" class="form-control" formControlName="rol">
-                                <option [value]="i.idRol" *ngFor="let i of listAllRoles">{{i.rol}}</option>
+                                <option [value]="i.idRol" *ngFor="let i of listAllRoles">
+                                    {{(i.idRol == 1)? '': i.rol}}
+                                </option>
                             </select>
                         </div>
                     </div>
