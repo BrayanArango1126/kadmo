@@ -20,11 +20,9 @@ import { DatosUsuariosComponent } from './pages/datos-usuarios/datos-usuarios.co
 
 const routes: Routes = [
   {
-    path: '',
-    component: AdminComponent,
-    children: [
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'ventas', component: VentasComponent },
+    path: '', component: AdminComponent, children: [
+      // { path: 'dashboard', component: DashboardComponent },
+      // { path: 'ventas', component: VentasComponent },
       { path: 'reportes', component: ReportesComponent },
       { path: 'libros', component: LibrosComponent },
       { path: 'calificaciones', component: CalificacionesComponent },
