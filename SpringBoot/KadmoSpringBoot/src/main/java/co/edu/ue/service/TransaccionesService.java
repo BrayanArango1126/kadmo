@@ -7,11 +7,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.FillPatternType;
-import org.apache.poi.ss.usermodel.IndexedColors;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 
@@ -60,6 +55,52 @@ public class TransaccionesService implements ITransaccionesService {
 				.collect(Collectors.toList());
 	}
 
+	// @Override
+	// public ByteArrayInputStream generarReporteExcel(LocalDate fechaInicio,
+	// LocalDate fechaFin) throws IOException {
+	// List<Transacciones> transacciones =
+	// this.dao.obtenerTransaccionesPorFecha(fechaInicio, fechaFin);
+
+	// try (Workbook workbook = new XSSFWorkbook(); ByteArrayOutputStream out = new
+	// ByteArrayOutputStream()) {
+	// Sheet sheet = workbook.createSheet("Transacciones");
+
+	// // Crear encabezados
+	// Row headerRow = sheet.createRow(0);
+	// String[] columnas = { "ID Transacción", "Libro", "Autor", "Precio", "Estado
+	// del Libro", "Categoría", "ID Usuario",
+	// "Correo", "Total", "Estado de Transacción", "Fecha Transacción" };
+	// for (int i = 0; i < columnas.length; i++) {
+	// Cell cell = headerRow.createCell(i);
+	// cell.setCellValue(columnas[i]);
+	// CellStyle headerStyle = workbook.createCellStyle();
+	// headerStyle.setFillForegroundColor(IndexedColors.LIGHT_BLUE.getIndex());
+	// headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+	// cell.setCellStyle(headerStyle);
+	// }
+
+	// // Llenar datos
+	// int rowIdx = 1;
+	// for (Transacciones transaccion : transacciones) {
+	// Row row = sheet.createRow(rowIdx++);
+	// row.createCell(0).setCellValue(transaccion.getIdTransaccion());
+	// row.createCell(1).setCellValue(transaccion.getLibro().getNombre());
+	// row.createCell(2).setCellValue(transaccion.getLibro().getAutor());
+	// row.createCell(3).setCellValue(transaccion.getLibro().getPrecio());
+	// row.createCell(4).setCellValue(transaccion.getLibro().getEstadoslibro().getEstado());
+	// row.createCell(5).setCellValue(transaccion.getLibro().getCategoriaslibro().getCategoria());
+	// row.createCell(6).setCellValue(transaccion.getUsuario().getIdUsuario());
+	// row.createCell(7).setCellValue(transaccion.getUsuario().getCorreo());
+	// row.createCell(8).setCellValue(transaccion.getTotal().toString());
+	// row.createCell(9).setCellValue(transaccion.getEstadostransaccione().getEstado());
+	// row.createCell(10).setCellValue(transaccion.getFechaTransaccion().toString());
+	// }
+
+	// workbook.write(out);
+	// return new ByteArrayInputStream(out.toByteArray());
+	// }
+	// }
+
 	@Override
 	public ByteArrayInputStream generarReporteExcel(LocalDate fechaInicio, LocalDate fechaFin) throws IOException {
 		List<Transacciones> transacciones = this.dao.obtenerTransaccionesPorFecha(fechaInicio, fechaFin);
@@ -67,16 +108,37 @@ public class TransaccionesService implements ITransaccionesService {
 		try (Workbook workbook = new XSSFWorkbook(); ByteArrayOutputStream out = new ByteArrayOutputStream()) {
 			Sheet sheet = workbook.createSheet("Transacciones");
 
+			// Crear estilos
+			CellStyle headerStyle = workbook.createCellStyle();
+			headerStyle.setFillForegroundColor(IndexedColors.LIGHT_BLUE.getIndex());
+			headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+			headerStyle.setBorderBottom(BorderStyle.THIN);
+			headerStyle.setBorderTop(BorderStyle.THIN);
+			headerStyle.setBorderLeft(BorderStyle.THIN);
+			headerStyle.setBorderRight(BorderStyle.THIN);
+			headerStyle.setAlignment(HorizontalAlignment.CENTER);
+
+			Font headerFont = workbook.createFont();
+			headerFont.setBold(true);
+			headerFont.setColor(IndexedColors.WHITE.getIndex());
+			headerStyle.setFont(headerFont);
+
+			CellStyle dataStyle = workbook.createCellStyle();
+			dataStyle.setBorderBottom(BorderStyle.THIN);
+			dataStyle.setBorderTop(BorderStyle.THIN);
+			dataStyle.setBorderLeft(BorderStyle.THIN);
+			dataStyle.setBorderRight(BorderStyle.THIN);
+			dataStyle.setAlignment(HorizontalAlignment.LEFT);
+
 			// Crear encabezados
 			Row headerRow = sheet.createRow(0);
-			String[] columnas = { "ID Transacción", "Libro", "Autor", "Precio", "Estado del Libro", "Categoría", "ID Usuario",
-					"Correo", "Total", "Estado de Transacción", "Fecha Transacción" };
+			String[] columnas = {
+					"ID Transacción", "Libro", "Autor", "Precio", "Estado del Libro",
+					"Categoría", "ID Usuario", "Correo", "Total", "Estado de Transacción", "Fecha Transacción"
+			};
 			for (int i = 0; i < columnas.length; i++) {
 				Cell cell = headerRow.createCell(i);
 				cell.setCellValue(columnas[i]);
-				CellStyle headerStyle = workbook.createCellStyle();
-				headerStyle.setFillForegroundColor(IndexedColors.LIGHT_BLUE.getIndex());
-				headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 				cell.setCellStyle(headerStyle);
 			}
 
@@ -84,6 +146,7 @@ public class TransaccionesService implements ITransaccionesService {
 			int rowIdx = 1;
 			for (Transacciones transaccion : transacciones) {
 				Row row = sheet.createRow(rowIdx++);
+
 				row.createCell(0).setCellValue(transaccion.getIdTransaccion());
 				row.createCell(1).setCellValue(transaccion.getLibro().getNombre());
 				row.createCell(2).setCellValue(transaccion.getLibro().getAutor());
@@ -95,6 +158,16 @@ public class TransaccionesService implements ITransaccionesService {
 				row.createCell(8).setCellValue(transaccion.getTotal().toString());
 				row.createCell(9).setCellValue(transaccion.getEstadostransaccione().getEstado());
 				row.createCell(10).setCellValue(transaccion.getFechaTransaccion().toString());
+
+				// Aplicar estilo a cada celda
+				for (int i = 0; i < columnas.length; i++) {
+					row.getCell(i).setCellStyle(dataStyle);
+				}
+			}
+
+			// Ajustar el tamaño de las columnas automáticamente
+			for (int i = 0; i < columnas.length; i++) {
+				sheet.autoSizeColumn(i);
 			}
 
 			workbook.write(out);
