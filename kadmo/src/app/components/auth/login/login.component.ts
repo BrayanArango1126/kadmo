@@ -6,8 +6,9 @@ import { environment } from '../../../../environments/environment';
 import * as CryptoJS from 'crypto-js';
 import { ActivatedRoute } from '@angular/router';
 
-import { infoAlert } from '../../../../assets/alerts'
+import { infoAlert, redirectAlert } from '../../../../assets/alerts'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthGoogleService } from '../../../services/auth-google.service';
 
 
 @Component({
@@ -27,7 +28,12 @@ export class LoginComponent {
   }
 
   formLogin!: FormGroup;
-  constructor(private _logInService:LogInService, private _route:ActivatedRoute, private fb:FormBuilder) {
+  constructor(
+    private _logInService:LogInService, 
+    private _route:ActivatedRoute, 
+    private fb:FormBuilder,
+    private _authGoogleService: AuthGoogleService
+  ) {
     this.buildForm();
    }
 
@@ -84,8 +90,46 @@ export class LoginComponent {
           console.log(error);
         }
       });
+  }
 
+  public async authGoogle(){
+    try {
       
+      const register = await this._authGoogleService.loginGoogle();
+
+      if(register){
+        this._authGoogleService.authState$().subscribe({
+          next: (data) => {
+            if (data) {
+              const sesion:Login = {
+                idUsuario: 0,
+                correo: data.email,
+                contraseña: "",
+                token: "",
+                rol: 0
+              }
+              this._logInService.logIn(sesion).subscribe({
+                next: (res) => {
+                  console.log(res);
+                  localStorage.setItem('rol', CryptoJS.AES.encrypt(res.datos.rol.idRol, environment.cryptPassword).toString());
+                  localStorage.setItem('user', CryptoJS.AES.encrypt(res.datos.idUsuario.toString(), environment.cryptPassword).toString());
+                  redirectAlert("success", "Logueo exitoso", "store");
+                },
+                error: (err) => {
+                  console.log('Usuario no encontrado:', err);
+
+                }
+              })          
+            }
+          },
+          error: (err) => {
+            console.log('Error en la autenticación:', err);
+          }
+        }); 
+      }
+    }catch (error) {
+      console.log(error);
+    }
   }
 
 }

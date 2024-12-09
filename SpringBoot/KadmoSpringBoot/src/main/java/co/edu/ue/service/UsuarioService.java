@@ -26,8 +26,10 @@ public class UsuarioService implements IUsuarioService {
 
 	@Override
 	public UsuariosDTO addUsuario(Usuarios newUsuario) {
-		String hashPassword = passwordEncoder.encode(newUsuario.getContraseña());
-		newUsuario.setContraseña(hashPassword);
+		if(newUsuario.getContraseña() != null || newUsuario.getContraseña() != "") {
+			String hashPassword = passwordEncoder.encode(newUsuario.getContraseña());
+			newUsuario.setContraseña(hashPassword);
+		}
 		Usuarios newUser = this.dao.insertUsuario(newUsuario);
 		UsuariosDTO usuarioDTO = modelMapper.map(newUser, UsuariosDTO.class);
 		return usuarioDTO;

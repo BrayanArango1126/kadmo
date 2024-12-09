@@ -4,10 +4,14 @@ import Cookies from 'js-cookie';
 import { infoAlert } from '../../assets/alerts';
 import * as cryptoJS from 'crypto-js';
 import { environment } from '../../environments/environment';
+import { Auth, authState, GoogleAuthProvider, signInWithPopup } from '@angular/fire/auth';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
+
+// Autentificación con JWT
 export class AuthTokenService {
 
   constructor(private router: Router) { }

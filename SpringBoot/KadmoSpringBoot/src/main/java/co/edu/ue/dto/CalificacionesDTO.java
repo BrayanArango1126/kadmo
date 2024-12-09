@@ -1,12 +1,16 @@
 package co.edu.ue.dto;
 
+import java.sql.Date;
+
 public class CalificacionesDTO {
 
 	private int idCalificacion;
 	private LibrosDTO libro;
 	private UsuariosDTO usuario;
 	private String comentario;
+	private Date fechaCalificacion;
 	private Double puntuacion;
+	
 	
 	
 	public int getIdCalificacion() {
@@ -33,6 +37,13 @@ public class CalificacionesDTO {
 	public void setComentario(String comentario) {
 		this.comentario = comentario;
 	}
+	public Date getFechaCalificacion() {
+		return fechaCalificacion;
+	}
+	public void setFechaCalificacion(Date fechaCalificacion) {
+		this.fechaCalificacion = fechaCalificacion;
+	}
+	
 	public Double getPuntuacion() {
 		return puntuacion;
 	}

@@ -52,9 +52,12 @@ public class UsuarioController{
 	
 	@PostMapping(value="add-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<ApiResponse<UsuariosDTO>> postUsuario(@Valid @RequestBody UsuariosDTO newUsuario, BindingResult bindingResult) {
+		System.out.println("Usuario: "+newUsuario);
 		if(bindingResult.hasErrors()) {
+			System.out.println("Usuario: "+newUsuario);
 			return new ResponseEntity<>(new ApiResponse<>(bindingResult.getFieldError().getDefaultMessage(), null ) ,HttpStatus.CONFLICT);
 		}
+		System.out.println("Usuario: "+newUsuario);
 		Usuarios addUser = modelMapper.map(newUsuario, Usuarios.class);
 		Roles rol = this.dao.findIdRol(newUsuario.getRol().getIdRol());
 		addUser.setRole(rol);

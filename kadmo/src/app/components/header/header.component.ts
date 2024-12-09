@@ -8,6 +8,7 @@ import { environment } from '../../../environments/environment';
 import { DatoUsuarioService } from '../../services/dato-usuario.service';
 import DatosUsuario from '../../interfaces/datosUsuario';
 import * as cryptoJS from 'crypto-js';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -55,7 +56,12 @@ export class HeaderComponent {
   filteredBooks: Libros[] = [];
   userDataNotFound:boolean = true;
 
-  constructor(private _usuarioService: UsuarioService, private _libroService: LibrosService, private _datoUsuarioService:DatoUsuarioService) {
+  constructor(
+    private _usuarioService: UsuarioService, 
+    private _libroService: LibrosService, 
+    private _datoUsuarioService:DatoUsuarioService,
+    private _router: Router
+  ) {
   }
 
   ngOnInit(): void {
@@ -81,7 +87,7 @@ export class HeaderComponent {
 
   public getUsuer(){
     // Desencriptamos el id del usuario
-    if(this.user == '0'){
+    if(this.user == '0' || this.user == ''){
       return;
     }
     this.user = cryptoJS.AES.decrypt(this.user, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
@@ -118,6 +124,6 @@ export class HeaderComponent {
   public logOut(){
     localStorage.clear();
     Cookies.remove('authToken');
-    window.location.href = '/store';
+    this._router.navigateByUrl('/login');
   }
 }

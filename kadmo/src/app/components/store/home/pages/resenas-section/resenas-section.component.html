@@ -5,19 +5,20 @@
   </div>
   <div class="row mt-5">
     <div class="container-reviews">
-      <div class="review row">
+      <div *ngFor="let review of calificaciones; let i = index;" 
+      class="review row">
         <div class="col-md-4 mb-3">
-          <img src="img/portada-4.jpg" alt="" class="custom-img-review img-fluid">
+          <img src="img/portada-{{i+1}}.jpg" alt="" class="custom-img-review img-fluid">
         </div>
         <div class="col-md-8 review-info">
           <div class="container-info-book mb-3">
             <div class="review-info-book">
-              <h3>Nombre del libro</h3>
-              <p>Nombre del autor</p>
-              <span>100 Pg.</span>
+              <h3>{{review.libro.nombre}}</h3>
+              <p>{{review.libro.autor}}</p>
+              <span>{{review.libro.categoriasLibro.categoria}}</span>
             </div>
             <div class="custom-rating">
-              <span>4.5</span>
+              <span>{{(review.puntuacion*10)/2}}</span>
               <i class="fa-solid fa-star"></i>
             </div>
           </div>
@@ -27,42 +28,7 @@
                 <img src="/img/user.jpg" alt="user" class="img-fluid">
               </div>
               <div class="user-info">
-                <h4>Nombre del usuario</h4>
-                <p>Fecha de la reseña</p>
-              </div>
-            </div>
-            <div class="container-commentary-user">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                ac nunc nec odio ultricies tincidunt.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="review row">
-        <div class="col-md-4 mb-3">
-          <img src="img/portada-4.jpg" alt="" class="custom-img-review img-fluid">
-        </div>
-        <div class="col-md-8 review-info">
-          <div class="container-info-book mb-3">
-            <div class="review-info-book">
-              <h3>Nombre del libro</h3>
-              <p>Nombre del autor</p>
-              <span>100 Pg.</span>
-            </div>
-            <div class="custom-rating">
-              <span>4.5</span>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-          <div class="review-info-user">
-            <div class="container-info-user mb-3">
-              <div class="container-image-user">
-                <img src="/img/user.jpg" alt="user" class="img-fluid">
-              </div>
-              <div class="user-info">
-                <h4>Nombre del usuario</h4>
+                <h4>{{review.usuario}}</h4>
                 <p>Fecha de la reseña</p>
               </div>
             </div>
