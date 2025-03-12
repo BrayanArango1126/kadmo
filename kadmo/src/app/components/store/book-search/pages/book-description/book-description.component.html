@@ -1,117 +1,283 @@
 <section class="margin-general">
-    <h2>{{book.nombre}}</h2>
-    <p>{{book.descripcion}}</p>
+  <h2>{{ book.nombre }}</h2>
+  <p>{{ book.descripcion }}</p>
 
-    <div class="autor-container shadow rounded p-5">
-        
-        <div class="seller row mb-5">
-            <img class="col-3 seller-img" src="/img/user.jpg" alt="">
-            <div class="seller-info col-7">
-                <h3>Autor</h3>
-                <p>{{book.autor}}</p>
+  <div class="autor-container shadow rounded p-5">
+    <div class="seller row mb-5">
+      <img class="col-3 seller-img" src="/img/user.jpg" alt="" />
+      <div class="seller-info col-7">
+        <h3>Autor</h3>
+        <p>{{ book.autor }}</p>
+      </div>
+      <div class="container-icon-save col-2">
+        <i class="fa-regular fa-bookmark"></i>
+        <!-- <i class="fa-solid fa-bookmark"></i> -->
+      </div>
+    </div>
+
+    <div class="book-info row text-center mt-3">
+      <div class="col-xxl-3 col-12">
+        <h4>Categoria:</h4>
+        <p>{{ book.categoriasLibro.categoria }}</p>
+      </div>
+      <div class="col-xxl-5 col-12">
+        <h4>Notas:</h4>
+        <p>352 Notas de la comunidad</p>
+      </div>
+      <div class="col-xxl-4 col-12">
+        <h4>Rating:</h4>
+
+        <i class="fa-solid fa-star star-calf"></i>
+        <i class="fa-solid fa-star star-calf"></i>
+        <i class="fa-solid fa-star star-calf"></i>
+        <i class="fa-solid fa-star star-calf"></i>
+        <i class="fa-regular fa-star star-calf"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="chapters my-5 p-4 rounded">
+    <button
+      *ngIf="book.disponibilidadLibro.idDisponibilidadLibro == 1"
+      class="btn btn-outline-info col-12"
+      (click)="verifyUserLogin()"
+    >
+      <i class="fa-solid fa-plus"></i> Añadir al carrito
+    </button>
+    <button
+      *ngIf="book.disponibilidadLibro.idDisponibilidadLibro == 2"
+      class="btn btn-outline-dark col-12"
+      disabled
+    >
+      <i class="fa-solid fa-square-xmark"></i> No Disponible
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="buyBookModal"
+    aria-hidden="true"
+    aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+            Comprar Libro
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formCompraLibros">
+            <div class="mb-3">
+              <label for="libro" class="form-label">Libro</label>
+              <input
+                type="text"
+                class="form-control"
+                id="libro"
+                [value]="this.book.nombre"
+                [disabled]="true"
+              />
             </div>
-            <div class="container-icon-save col-2">
-                <i class="fa-regular fa-bookmark "></i>
-                <!-- <i class="fa-solid fa-bookmark"></i> -->
+            <div class="mb-3">
+              <label for="pago" class="form-label">Pago</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pago"
+                [value]="this.book.precio"
+                [disabled]="true"
+              />
+            </div>
+            <div class="w-100" *ngIf="listAllCreditCards.length > 0">
+              <div
+                class="w-100"
+                *ngFor="let card of listAllCreditCards; let i = index"
+              >
+                <div
+                  class="form-check check-suscription mb-2 border rounded shadow"
+                >
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    (change)="onChangeCreditCard(card)"
+                    [value]="card.idTarjetaCredito"
+                    id="flexRadioDefault{{ i }}"
+                  />
+                  <label
+                    class="form-check-label ps-3"
+                    for="flexRadioDefault{{ i }}"
+                    >{{ card.numeroTarjeta }}</label
+                  >
+                  <label
+                    class="form-check-label ps-3"
+                    for="flexRadioDefault{{ i }}"
+                    >{{ card.titular }}</label
+                  >
+                </div>
               </div>
-        </div>
+            </div>
+            <div
+              class="w-100 text-center"
+              *ngIf="listAllCreditCards.length == 0"
+            >
+              <p class="my-2 w-100 d-inline-block text-center">
+                No tienes tarjetas de crédito registradas
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary mt-3 btn-comprar text-center"
+                data-bs-target="#addNewCardModal"
+                data-bs-toggle="modal"
+              >
+                <i class="fa-solid fa-wallet me-2"></i>Agregar tarjeta de
+                crédito
+              </button>
+            </div>
+            <div class="w-100 mt-4">
+              <h2>Enviar pago con Ethereum</h2>
 
-        <div class="book-info row text-center mt-3">
-            <div class="col-xxl-3 col-12">
-                <h4>Categoria:</h4>
-                <p>{{book.categoriasLibro.categoria }}</p>
-            </div>
-            <div class="col-xxl-5 col-12">
-                <h4>Notas:</h4>
-                <p>352 Notas de la comunidad</p>
-            </div>
-            <div class="col-xxl-4 col-12">
-                <h4>Rating:</h4>
-                
-                <i class="fa-solid fa-star star-calf"></i>
-                <i class="fa-solid fa-star star-calf"></i>
-                <i class="fa-solid fa-star star-calf"></i>
-                <i class="fa-solid fa-star star-calf"></i>
-                <i class="fa-regular fa-star star-calf"></i>
-            </div>
-        </div>
+              <label class="form-check-label w-100"
+                >Dirección del destinatario:</label
+              >
+              <input
+                type="text"
+                [(ngModel)]="toAddress"
+                placeholder="0x..."
+                name="toAddress"
+                #toAddressInput
+                (ngModelChange)="toAddress = $event"
+                class="form-control w-100"
+              />
 
-    </div>
+              <label class="form-check-label">Monto en ETH:</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="amount"
+                #amountInput
+                (ngModelChange)="amount = $event"
+                name="amount"
+                min="0.001"
+                step="0.001"
+              />
 
-    <div class="chapters my-5 p-4 rounded">
-        <button *ngIf="book.disponibilidadLibro.idDisponibilidadLibro == 1" class="btn btn-outline-info col-12" (click)="verifyUserLogin()"><i class="fa-solid fa-plus"></i> Añadir al carrito</button>
-        <button *ngIf="book.disponibilidadLibro.idDisponibilidadLibro == 2" class="btn btn-outline-dark col-12" disabled ><i class="fa-solid fa-square-xmark"></i> No Disponible</button>
-    </div>
+              <button
+                (click)="sendTransaction()"
+                class="btn btn-warning mt-3 w-100"
+                type="button"
+              >
+                Pagar con MetaMask
+              </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="buyBookModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Comprar Libro</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div *ngIf="transactionHash">
+                <p class="custom-parrafo">
+                  Transacción enviada con éxito: <b>{{ transactionHash }}</b>
+                </p>
+                <p>
+                  Puedes verificar los detalles en Ganache bajo la pestaña
+                  **"Transactions"**.
+                </p>
+              </div>
             </div>
-            <div class="modal-body">
-              <form [formGroup]="formCompraLibros">
-                <div class="mb-3">
-                  <label for="libro" class="form-label">Libro</label>
-                    <input type="text" class="form-control" id="libro" [value]="this.book.nombre" [disabled]="true">
-                </div>
-                <div class="mb-3">
-                    <label for="pago" class="form-label">Pago</label>
-                    <input type="text" class="form-control" id="pago" [value]="this.book.precio" [disabled]="true">
-                </div>
-                <div class="w-100" *ngIf="listAllCreditCards.length > 0">
-                  <div class="w-100" *ngFor="let card of listAllCreditCards; let i = index">
-                    <div class="form-check check-suscription mb-2 border rounded shadow">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" (change)="onChangeCreditCard(card)" [value]="card.idTarjetaCredito" id="flexRadioDefault{{i}}" >
-                      <label class="form-check-label ps-3" for="flexRadioDefault{{i}}">{{card.numeroTarjeta}}</label>
-                      <label class="form-check-label ps-3" for="flexRadioDefault{{i}}">{{card.titular}}</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-100 text-center" *ngIf="listAllCreditCards.length == 0">
-                  <p class=" my-2 w-100 d-inline-block text-center">No tienes tarjetas de crédito registradas</p>
-                  <button type="button" class="btn btn-primary mt-3 btn-comprar text-center" data-bs-target="#addNewCardModal" data-bs-toggle="modal"><i class="fa-solid fa-wallet me-2"></i>Agregar tarjeta de crédito</button>
-                </div>
-                <button type="button" class="btn btn-info mt-3 w-100" (click)="comprarLibro()">Comprar</button>     
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="addNewCardModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Registrar Tarjeta de Crédito</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form [formGroup]="creditCardForm">
-                <div class="mb-3">
-                    <label for="titular" class="form-label">Titular de la Tarjeta</label>
-                    <input type="text" class="form-control" id="titular" formControlName="titular">
-                </div>
-                <div class="mb-3">
-                    <label for="numeroTarjeta" class="form-label">Número de la Tarjeta</label>
-                    <input type="text" class="form-control" id="numeroTarjeta" formControlName="numeroTarjeta">
-                </div>
-                <div class="mb-3">
-                    <label for="fechaExpiracion" class="form-label">Fecha de Expiración</label>
-                    <input type="date" class="form-control" id="fechaExpiracion" formControlName="fechaExpiracion">
-                </div>
-                <div class="mb-3">
-                    <label for="cvs" class="form-label">CVV</label>
-                    <input type="text" class="form-control" id="cvs" formControlName="cvs">
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-primary" data-bs-target="#buyBookModal" (click)="addCreditCard()" data-bs-toggle="modal">Añadir Tarjeta</button>
-            </div>
-          </div>
+
+            <button
+              type="button"
+              class="btn btn-info mt-3 w-100"
+              (click)="comprarLibro()"
+            >
+              Comprar
+            </button>
+          </form>
         </div>
       </div>
-
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="addNewCardModal"
+    aria-hidden="true"
+    aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+            Registrar Tarjeta de Crédito
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="creditCardForm">
+            <div class="mb-3">
+              <label for="titular" class="form-label"
+                >Titular de la Tarjeta</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="titular"
+                formControlName="titular"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="numeroTarjeta" class="form-label"
+                >Número de la Tarjeta</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="numeroTarjeta"
+                formControlName="numeroTarjeta"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="fechaExpiracion" class="form-label"
+                >Fecha de Expiración</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                id="fechaExpiracion"
+                formControlName="fechaExpiracion"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="cvs" class="form-label">CVV</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cvs"
+                formControlName="cvs"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="btn btn-primary"
+            data-bs-target="#buyBookModal"
+            (click)="addCreditCard()"
+            data-bs-toggle="modal"
+          >
+            Añadir Tarjeta
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

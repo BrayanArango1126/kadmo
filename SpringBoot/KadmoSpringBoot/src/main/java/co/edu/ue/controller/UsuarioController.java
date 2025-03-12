@@ -28,55 +28,53 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping(value="usuario")
-public class UsuarioController{
-	
+@RequestMapping(value = "usuario")
+public class UsuarioController {
+
 	@Autowired
 	private IRolRepository dao;
-	
+
 	@Autowired
-    private ModelMapper modelMapper; 
+	private ModelMapper modelMapper;
 
 	@Autowired
 	IUsuarioService service;
-	
-	@GetMapping(value="usuarios", produces = MediaType.APPLICATION_JSON_VALUE)
+
+	@GetMapping(value = "usuarios", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<UsuariosDTO>> getAllUsuarios() {
-		return new ResponseEntity<List<UsuariosDTO>> (this.service.listAllUsuarios(), HttpStatus.ACCEPTED);
+		return new ResponseEntity<List<UsuariosDTO>>(this.service.listAllUsuarios(), HttpStatus.ACCEPTED);
 	}
-	
-	@GetMapping(value="usuario-id", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<UsuariosDTO>  getByIdUsario(@RequestParam("idUsuario") int id) {
-		return new ResponseEntity<UsuariosDTO>( this.service.findIdUsuario(id), HttpStatus.ACCEPTED);
+
+	@GetMapping(value = "usuario-id", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<UsuariosDTO> getByIdUsario(@RequestParam("idUsuario") int id) {
+		return new ResponseEntity<UsuariosDTO>(this.service.findIdUsuario(id), HttpStatus.ACCEPTED);
 	}
-	
-	@PostMapping(value="add-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<ApiResponse<UsuariosDTO>> postUsuario(@Valid @RequestBody UsuariosDTO newUsuario, BindingResult bindingResult) {
-		System.out.println("Usuario: "+newUsuario);
-		if(bindingResult.hasErrors()) {
-			System.out.println("Usuario: "+newUsuario);
-			return new ResponseEntity<>(new ApiResponse<>(bindingResult.getFieldError().getDefaultMessage(), null ) ,HttpStatus.CONFLICT);
+
+	@PostMapping(value = "add-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<ApiResponse<UsuariosDTO>> postUsuario(@Valid @RequestBody UsuariosDTO newUsuario,
+			BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			return new ResponseEntity<>(new ApiResponse<>(bindingResult.getFieldError().getDefaultMessage(), null),
+					HttpStatus.CONFLICT);
 		}
-		System.out.println("Usuario: "+newUsuario);
 		Usuarios addUser = modelMapper.map(newUsuario, Usuarios.class);
 		Roles rol = this.dao.findIdRol(newUsuario.getRol().getIdRol());
 		addUser.setRole(rol);
-		
+
 		UsuariosDTO addedUser = this.service.addUsuario(addUser);
-		return new ResponseEntity<>(new ApiResponse<>("Usuario agregado correctamente",addedUser), HttpStatus.CREATED);
+		return new ResponseEntity<>(new ApiResponse<>("Usuario agregado correctamente", addedUser), HttpStatus.CREATED);
 	}
-	
-	@PutMapping(value="update-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<ApiResponse<UsuariosDTO>> putUsuario(@Valid @RequestBody UsuariosDTO updateUsuario, BindingResult bindingResult) {
+
+	@PutMapping(value = "update-usuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<ApiResponse<UsuariosDTO>> putUsuario(@Valid @RequestBody UsuariosDTO updateUsuario,
+			BindingResult bindingResult) {
 		Usuarios updateUser = modelMapper.map(updateUsuario, Usuarios.class);
-		
+
 		Roles rol = this.dao.findIdRol(updateUsuario.getRol().getIdRol());
 		updateUser.setRole(rol);
-		
+
 		UsuariosDTO updatedUser = this.service.addUsuario(updateUser);
-		return new ResponseEntity<>(new ApiResponse<>("Usuario editado correctamente",updatedUser), HttpStatus.OK);
+		return new ResponseEntity<>(new ApiResponse<>("Usuario editado correctamente", updatedUser), HttpStatus.OK);
 	}
-	
-	
-	
+
 }
