@@ -1,6 +1,6 @@
 <section class="main-books-section">
   <div class="main-title">
-    <h2>Libros ({{cantLibros}})</h2>
+    <h2>Libros ({{ cantLibros }})</h2>
     <label for="filterAlf">Filtrar</label>
     <select class="select-filter" name="filterAlf" id="filterAlf">
       <option value="0" selected>A-Z</option>
@@ -13,44 +13,131 @@
   </div>
 
   <div *ngIf="booksListFiltered.length == 0" class="books-grid mb-5">
-    <div class="book-card" *ngFor="let item of bookListPublished | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage, totalItems: totalItems }; let index ">
-      <img [src]="'/img/portada-' + (item.libro.idLibros || index.idLibrosPublicados) + '.jpg'" alt="Book Cover" (click)="goToBookDetails(item.libro.idLibros)" />
+    <div
+      class="book-card"
+      *ngFor="
+        let item of bookListPublished
+          | paginate
+            : {
+                itemsPerPage: itemsPerPage,
+                currentPage: currentPage,
+                totalItems: totalItems
+              };
+        let index
+      "
+    >
+      <img
+        [src]="
+          '/img/portada-' +
+          (item.libro.idLibros || index.idLibrosPublicados) +
+          '.jpg'
+        "
+        alt="Book Cover"
+        (click)="goToBookDetails(item.libro.idLibros)"
+      />
       <div class="book-info">
-        <h5 (click)="goToBookDetails(item.libro.idLibros)">{{item.libro.nombre}}</h5>
+        <h5 (click)="goToBookDetails(item.libro.idLibros)">
+          {{ item.libro.nombre }}
+        </h5>
         <div class="book-meta">
-          <p>${{item.libro.precio | number:'1.0-0'}}</p>
-          <p>{{item.libro.autor}}</p>
+          <p>${{ item.libro.precio | number : "1.0-0" }}</p>
+          <p>{{ item.libro.autor }}</p>
         </div>
         <div class="book-tags">
-          <span class="item1">{{item.libro.disponibilidadLibro.disponibilidad}}</span>
-          <span class="item2">{{item.libro.categoriasLibro.categoria}}</span>
-          <span class="item3">{{item.libro.estadosLibro.estado}}</span>
+          <span class="item1">{{
+            item.libro.disponibilidadLibro.disponibilidad
+          }}</span>
+          <span class="item2">{{ item.libro.categoriasLibro.categoria }}</span>
+          <span class="item3">{{ item.libro.estadosLibro.estado }}</span>
         </div>
-        <div class="container-icon-save" [ngClass]="compareBooks(item.libro.idLibros)" (click)="saveBook(item.libro)">
+        <div
+          class="container-icon-save"
+          [ngClass]="compareBooks(item.libro.idLibros)"
+          (click)="saveBook(item.libro)"
+        >
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+        <div
+          class="btn btn-primary"
+          [ngClass]="compareBooks(item.libro.idLibros)"
+          (click)="openModalAI(item.libro)"
+        >
+          <i class="fa-regular fa-bookmark"></i> Preguntar a la IA
+        </div>
+      </div>
+    </div>
+  </div>
+  <pagination-controls
+    class="text-center"
+    cssClass="custom-pagination"
+    (pageChange)="onPageChange($event)"
+    [autoHide]="true"
+  ></pagination-controls>
+
+  <div *ngIf="booksListFiltered.length > 0" class="books-grid">
+    <div class="book-card" *ngFor="let item of booksListFiltered; let index">
+      <img
+        [src]="'/img/portada-' + item.idLibros + '.jpg'"
+        alt="Book Cover"
+        (click)="goToBookDetails(item.idLibros)"
+      />
+      <div class="book-info">
+        <h5 (click)="goToBookDetails(item.idLibros)">{{ item.nombre }}</h5>
+        <div class="book-meta">
+          <p>${{ item.precio | number : "1.0-0" }}</p>
+          <p>{{ item.autor }}</p>
+        </div>
+        <div class="book-tags" (click)="goToBookDetails(item.idLibros)">
+          <span class="item1">{{
+            item.disponibilidadLibro.disponibilidad
+          }}</span>
+          <span class="item2">{{ item.categoriasLibro.categoria }}</span>
+          <span class="item3">{{ item.estadosLibro.estado }}</span>
+        </div>
+        <div
+          class="container-icon-save"
+          [ngClass]="compareBooks(item.idLibros)"
+          (click)="saveBook(item)"
+        >
           <i class="fa-regular fa-bookmark"></i>
         </div>
       </div>
     </div>
-
   </div>
-  <pagination-controls class="text-center" cssClass="custom-pagination" (pageChange)="onPageChange($event)" [autoHide]="true"></pagination-controls>
 
-  <div *ngIf="booksListFiltered.length > 0" class="books-grid">
-    <div class="book-card" *ngFor="let item of booksListFiltered; let index">
-      <img [src]="'/img/portada-' + item.idLibros + '.jpg'" alt="Book Cover" (click)="goToBookDetails(item.idLibros)"/>
-      <div class="book-info">
-        <h5 (click)="goToBookDetails(item.idLibros)">{{item.nombre}}</h5>
-        <div class="book-meta">
-          <p>${{item.precio | number:'1.0-0'}}</p>
-          <p>{{item.autor}}</p>
+  <div
+    class="modal fade"
+    id="openCardModal"
+    aria-hidden="true"
+    aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+            Preguntar acerca del libro
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
-        <div class="book-tags" (click)="goToBookDetails(item.idLibros)">
-          <span class="item1">{{item.disponibilidadLibro.disponibilidad}}</span>
-          <span class="item2">{{item.categoriasLibro.categoria}}</span>
-          <span class="item3">{{item.estadosLibro.estado}}</span>
-        </div>
-        <div class="container-icon-save" [ngClass]="compareBooks(item.idLibros)" (click)="saveBook(item)" >
-          <i class="fa-regular fa-bookmark"></i>
+        <div class="modal-body">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="questionAI"
+            placeholder="Escribe tu pregunta"
+          />
+          <button (click)="askToAI()" class="btn btn-primary mt-3">
+            Enviar
+          </button>
+          <div *ngIf="responseAI">
+            <p>{{ responseAI }}</p>
+          </div>
         </div>
       </div>
     </div>

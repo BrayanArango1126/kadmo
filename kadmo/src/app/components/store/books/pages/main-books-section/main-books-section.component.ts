@@ -11,39 +11,45 @@ import { environment } from '../../../../../../environments/environment';
 import * as CryptoJS from 'crypto-js';
 import { Router } from '@angular/router';
 import * as cryptoJS from 'crypto-js';
+import { ChatboxService } from '../../../../../services/chatbox.service';
+import Chatbox from '../../../../../interfaces/chatbox';
+import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-main-books-section',
   templateUrl: './main-books-section.component.html',
-  styleUrl: './main-books-section.component.css'
+  styleUrl: './main-books-section.component.css',
 })
 export class MainBooksSectionComponent implements OnInit {
-
   //Paginación
   items: any[] = []; // Lista completa de elementos
   currentPage: number = 1; // Página actual
   itemsPerPage: number = 12; // Elementos por página
   totalItems: number = 0; // Total de elementos
+  chatbot!: Chatbox;
+  questionAI: string = '';
+  responseAI = '';
 
-  idLibro:string = '';
+  idLibro: string = '';
 
-  booksList:Libros[] = [];
+  booksList: Libros[] = [];
 
-  booksListFiltered:Libros[] = [];
+  booksListFiltered: Libros[] = [];
 
-  bookListPublished:LibroPublicado[] = [];
+  bookListPublished: LibroPublicado[] = [];
 
-  favoritesBooks:LibroFavorito[] = [];
+  favoritesBooks: LibroFavorito[] = [];
 
-  cantLibros:number = 0;
+  cantLibros: number = 0;
 
   constructor(
-    private _librosService:LibrosService,
-    private _librosPublicadosService:LibrosPublicadosService,
-    private _librosFavoritosService:LibrosFavoritosService,
-    private _librosSharedFiltersService:LibrosSharedFiltersService,
-    private router: Router
-  ) { }
+    private _librosService: LibrosService,
+    private _librosPublicadosService: LibrosPublicadosService,
+    private _librosFavoritosService: LibrosFavoritosService,
+    private _librosSharedFiltersService: LibrosSharedFiltersService,
+    private router: Router,
+    private _chatboxService: ChatboxService
+  ) {}
 
   ngOnInit(): void {
     //this.getBooks();
@@ -52,44 +58,85 @@ export class MainBooksSectionComponent implements OnInit {
     this.getBooksFiltered();
   }
 
-  public getBooksFiltered(){
+  public getBooksFiltered() {
     this._librosSharedFiltersService.libros$.subscribe((libros) => {
       this.booksListFiltered = libros; // Escucha los cambios en la lista de libros
     });
   }
 
-  public goToBookDetails(idBook:number){
+  public goToBookDetails(idBook: number) {
     this.idLibro = idBook.toString();
     this.idLibro = this.encrypt(this.idLibro);
     window.location.href = `/store/book/${this.idLibro}`;
   }
 
-  public compareBooks(idBook:number){
-    let idUser = localStorage.getItem('user') || '0';
-    idUser = cryptoJS.AES.decrypt(idUser, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
-    if(idUser == '0'){
-      return;
+  public openModalAI(idBook: Libros) {
+    // console.log(idBook);
+    // this.chatbot.id = idBook.idLibros;
+    console.log(idBook.idLibros);
+    if (idBook.idLibros) {
+      this.chatbot = {
+        id: idBook.idLibros,
+        question: '',
+      };
+      console.log(this.chatbot);
     }
-    let book = this.favoritesBooks.find((book) => book.libro.idLibros == idBook);
-    if(book){
-      return "custom-class-active-favorite";
+    const modalElement = document.getElementById('openCardModal');
+    if (modalElement) {
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
+    } else {
+      console.error('Modal element not found');
     }
-    return "custom-class-inactive-favorite";
   }
 
-  public getFavoritesBooks(){
+  public askToAI() {
+    this.chatbot = {
+      id: this.chatbot.id,
+      question: this.questionAI,
+    };
+    this._chatboxService.getChatBoxAnswer(this.chatbot).subscribe({
+      next: (data) => {
+        this.responseAI = data.message;
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
+
+  public compareBooks(idBook: number) {
     let idUser = localStorage.getItem('user') || '0';
-    if(idUser == '0'){
+    idUser = cryptoJS.AES.decrypt(idUser, environment.cryptPassword).toString(
+      cryptoJS.enc.Utf8
+    );
+    if (idUser == '0') {
       return;
     }
-    idUser = cryptoJS.AES.decrypt(idUser, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
-    const usuario:Usuario = {
+    let book = this.favoritesBooks.find(
+      (book) => book.libro.idLibros == idBook
+    );
+    if (book) {
+      return 'custom-class-active-favorite';
+    }
+    return 'custom-class-inactive-favorite';
+  }
+
+  public getFavoritesBooks() {
+    let idUser = localStorage.getItem('user') || '0';
+    if (idUser == '0') {
+      return;
+    }
+    idUser = cryptoJS.AES.decrypt(idUser, environment.cryptPassword).toString(
+      cryptoJS.enc.Utf8
+    );
+    const usuario: Usuario = {
       idUsuario: parseInt(idUser),
       correo: '',
       contraseña: '',
       rol: {
-        idRol: 0
-      }
+        idRol: 0,
+      },
     };
     this._librosFavoritosService.getLibrosFavoritosByUser(usuario).subscribe({
       next: (data) => {
@@ -97,7 +144,7 @@ export class MainBooksSectionComponent implements OnInit {
       },
       error: (err) => {
         console.log(err);
-      }
+      },
     });
   }
 
@@ -105,7 +152,7 @@ export class MainBooksSectionComponent implements OnInit {
     this.currentPage = page; // Cambia la página actual
   }
 
-  public getBooksPublicados(){
+  public getBooksPublicados() {
     this._librosPublicadosService.getLibrosPublicados().subscribe({
       next: (data) => {
         this.bookListPublished = data;
@@ -114,52 +161,56 @@ export class MainBooksSectionComponent implements OnInit {
       },
       error: (err) => {
         console.log(err);
-      }
+      },
     });
   }
 
-  public getBooks(){
+  public getBooks() {
     this._librosService.getLibros().subscribe({
       next: (data) => {
         this.booksList = data;
       },
       error: (err) => {
         console.log(err);
-      }
+      },
     });
   }
 
-  public saveBook(book:Libros){
+  public saveBook(book: Libros) {
     let idUser = localStorage.getItem('user') || '0';
-    if(idUser == '0'){
-      alert("No puedes guardar libros si no has iniciado sesión");
+    if (idUser == '0') {
+      alert('No puedes guardar libros si no has iniciado sesión');
       return;
     }
-    idUser = cryptoJS.AES.decrypt(idUser, environment.cryptPassword).toString(cryptoJS.enc.Utf8);
+    idUser = cryptoJS.AES.decrypt(idUser, environment.cryptPassword).toString(
+      cryptoJS.enc.Utf8
+    );
     // console.log(idUser);
 
-    let libroFav = this.favoritesBooks.find((libro) => libro.libro.idLibros == book.idLibros);
-    if(libroFav != undefined){
+    let libroFav = this.favoritesBooks.find(
+      (libro) => libro.libro.idLibros == book.idLibros
+    );
+    if (libroFav != undefined) {
       const libroFavorito: LibroFavorito = {
         idLibroFavorito: libroFav.idLibroFavorito,
         libro: {
-          idLibros: 0
+          idLibros: 0,
         },
         usuario: {
-          idUsuario: 0
-        }
+          idUsuario: 0,
+        },
       };
       this.deleteBookFavorite(libroFavorito);
       return;
-    }else{
+    } else {
       const libroFavorito: LibroFavorito = {
         idLibroFavorito: 0,
         libro: {
-          idLibros: book.idLibros
+          idLibros: book.idLibros,
         },
         usuario: {
-          idUsuario: parseInt(idUser)
-        }
+          idUsuario: parseInt(idUser),
+        },
       };
       this._librosFavoritosService.saveLibroFavorito(libroFavorito).subscribe({
         next: (data) => {
@@ -169,31 +220,34 @@ export class MainBooksSectionComponent implements OnInit {
         },
         error: (err) => {
           console.log(err);
-        }
+        },
       });
     }
   }
 
-  public deleteBookFavorite(libroFav:LibroFavorito){
-    this._librosFavoritosService.deleteLibroFavorito(libroFav.idLibroFavorito).subscribe({
-      next: (data) => {
-        alert("Libro eliminado de favoritos");
-        this.getFavoritesBooks();
-        this.getBooksPublicados();
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    });
+  public deleteBookFavorite(libroFav: LibroFavorito) {
+    this._librosFavoritosService
+      .deleteLibroFavorito(libroFav.idLibroFavorito)
+      .subscribe({
+        next: (data) => {
+          alert('Libro eliminado de favoritos');
+          this.getFavoritesBooks();
+          this.getBooksPublicados();
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
   }
 
-  public countCantLibros(){
+  public countCantLibros() {
     this.cantLibros = this.bookListPublished.length;
   }
 
-  public encrypt(idLibro: string): string { 
-    const safeId = encodeURIComponent(CryptoJS.AES.encrypt(idLibro, environment.cryptPassword).toString());
+  public encrypt(idLibro: string): string {
+    const safeId = encodeURIComponent(
+      CryptoJS.AES.encrypt(idLibro, environment.cryptPassword).toString()
+    );
     return safeId;
   }
-
 }
