@@ -18,7 +18,11 @@ body {
 }
 .aside-btn{
     margin: auto;
-    width: 80%;
+    width: 50%;
+    max-width: 40px;
+    max-height: 40px;
+    font-size: x-large;
+    padding: 0;
 }
 
 .aside-3-div {
