@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import co.edu.ue.dto.ImagenesLibrosDTO;
 import co.edu.ue.entity.ImagenesLibros;
+import co.edu.ue.entity.Libros;
 import co.edu.ue.repository.dao.IImagenesLibrosRepository;
 
 @Service
@@ -16,7 +17,7 @@ public class ImagenesLibrosService implements IImagenesLibrosService {
 
 	@Autowired
 	private ModelMapper modelMapper;
-	
+
 	@Autowired
 	IImagenesLibrosRepository dao;
 
@@ -44,7 +45,15 @@ public class ImagenesLibrosService implements IImagenesLibrosService {
 	@Override
 	public List<ImagenesLibrosDTO> listAllImagenesLibros() {
 		List<ImagenesLibros> listAllImagenes = this.dao.listImagenesLibros();
-		return listAllImagenes.stream().map(img -> this.modelMapper.map(img, ImagenesLibrosDTO.class)).collect(Collectors.toList());
+		return listAllImagenes.stream().map(img -> this.modelMapper.map(img, ImagenesLibrosDTO.class))
+				.collect(Collectors.toList());
 	}
-	
+
+	@Override
+	public ImagenesLibrosDTO findByLibro(Libros libro) {
+		ImagenesLibros imagenByIdLibro = this.dao.findByLibro(libro);
+		ImagenesLibrosDTO imagenesDTO = this.modelMapper.map(imagenByIdLibro, ImagenesLibrosDTO.class);
+		return imagenesDTO;
+	}
+
 }

@@ -12,7 +12,7 @@ app = Flask(__name__)
 #qa_pipeline = pipeline("question-answering", model="mrm8488/electra-small-spanish-squad2")
 
 
-qa_pipeline = pipeline("question-answering", model="distilbert-base-cased-distilled-squad",max_answer_length=50)
+qa_pipeline = pipeline("question-answering", model="distilbert-base-cased-distilled-squad",max_answer_length=90)
 
 
 print("✅ Modelo de QA cargado.")

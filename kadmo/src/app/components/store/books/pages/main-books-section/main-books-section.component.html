@@ -27,11 +27,7 @@
       "
     >
       <img
-        [src]="
-          '/img/portada-' +
-          (item.libro.idLibros || index.idLibrosPublicados) +
-          '.jpg'
-        "
+        [src]="getImageByIdLibro(item.libro.idLibros)"
         alt="Book Cover"
         (click)="goToBookDetails(item.libro.idLibros)"
       />

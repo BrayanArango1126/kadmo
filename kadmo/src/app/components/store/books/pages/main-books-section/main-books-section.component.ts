@@ -14,6 +14,8 @@ import * as cryptoJS from 'crypto-js';
 import { ChatboxService } from '../../../../../services/chatbox.service';
 import Chatbox from '../../../../../interfaces/chatbox';
 import * as bootstrap from 'bootstrap';
+import { ImagenesLibrosService } from '../../../../../services/imagenes-libros.service';
+import ImagenesLibros from '../../../../../interfaces/imagenesLibros';
 
 @Component({
   selector: 'app-main-books-section',
@@ -32,6 +34,9 @@ export class MainBooksSectionComponent implements OnInit {
 
   idLibro: string = '';
 
+  imagenLibro!: ImagenesLibros;
+  listAllImages: ImagenesLibros[] = [];
+
   booksList: Libros[] = [];
 
   booksListFiltered: Libros[] = [];
@@ -48,6 +53,7 @@ export class MainBooksSectionComponent implements OnInit {
     private _librosFavoritosService: LibrosFavoritosService,
     private _librosSharedFiltersService: LibrosSharedFiltersService,
     private router: Router,
+    private _imagenesLibrosService: ImagenesLibrosService,
     private _chatboxService: ChatboxService
   ) {}
 
@@ -56,6 +62,7 @@ export class MainBooksSectionComponent implements OnInit {
     this.getBooksPublicados();
     this.getFavoritesBooks();
     this.getBooksFiltered();
+    this.getAllImages();
   }
 
   public getBooksFiltered() {
@@ -71,15 +78,11 @@ export class MainBooksSectionComponent implements OnInit {
   }
 
   public openModalAI(idBook: Libros) {
-    // console.log(idBook);
-    // this.chatbot.id = idBook.idLibros;
-    console.log(idBook.idLibros);
     if (idBook.idLibros) {
       this.chatbot = {
         idLibro: idBook.idLibros,
         pregunta: '',
       };
-      console.log(this.chatbot);
     }
     const modalElement = document.getElementById('openCardModal');
     if (modalElement) {
@@ -100,7 +103,7 @@ export class MainBooksSectionComponent implements OnInit {
         this.responseAI = data.message;
       },
       error: (err) => {
-        console.log(err);
+        this.responseAI = 'No se pudo obtener respuesta';
       },
     });
   }
@@ -238,6 +241,27 @@ export class MainBooksSectionComponent implements OnInit {
           console.log(err);
         },
       });
+  }
+
+  public getAllImages() {
+    this._imagenesLibrosService.getImagenesLibros().subscribe({
+      next: (data) => {
+        this.listAllImages = data;
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
+
+  public getImageByIdLibro(idLibro: number) {
+    let url = this.listAllImages.find(
+      (imagen) => imagen.libro.idLibros == idLibro
+    );
+    if (url) {
+      return 'http://localhost:8080' + url.url;
+    }
+    return 'assets/images/book-placeholder.png';
   }
 
   public countCantLibros() {

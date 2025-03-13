@@ -1,96 +1,189 @@
 <aside class="border shadow pt-3 rounded d-flex flex-column">
-  <nav >
-    <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseGeneral2" aria-expanded="true" aria-controls="collapseGeneral2">
+  <nav>
+    <a
+      data-bs-toggle="collapse"
+      role="button"
+      data-bs-target="#collapseGeneral2"
+      aria-expanded="true"
+      aria-controls="collapseGeneral2"
+    >
       <h2><i class="fa-solid fa-bars fs-4"></i> Filtrar</h2>
     </a>
 
     <div class="collapse show p-2" id="collapseGeneral2">
       <form [formGroup]="formFilter" (submit)="filtrarLibros()">
         <ul class="mt-4">
-
-          <hr>
+          <hr />
           <li>
-            <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseAutor" aria-expanded="false" aria-controls="collapseAutor">
+            <a
+              data-bs-toggle="collapse"
+              role="button"
+              data-bs-target="#collapseAutor"
+              aria-expanded="false"
+              aria-controls="collapseAutor"
+            >
               <h3>Autor</h3>
             </a>
 
             <div class="collapse show" id="collapseAutor">
               <ul class="dropdown row p-2">
-                  <input class="form-control" formControlName="autor" placeholder="Nombre Autor" type="text" id="autor"/>
+                <input
+                  class="form-control"
+                  formControlName="autor"
+                  placeholder="Nombre Autor"
+                  type="text"
+                  id="autor"
+                />
               </ul>
             </div>
           </li>
 
-          <hr>
+          <hr />
           <li>
-            <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseGeneros" aria-expanded="false" aria-controls="collapseGeneros">
+            <a
+              data-bs-toggle="collapse"
+              role="button"
+              data-bs-target="#collapseGeneros"
+              aria-expanded="false"
+              aria-controls="collapseGeneros"
+            >
               <h3 class="item-c">Categorías</h3>
             </a>
 
             <div class="collapse show" id="collapseGeneros">
               <ul class="dropdown row p-2">
-                <li *ngFor="let category of categories; let i = index" class="form-check col-6 item-color">
-                  <input class="form-check-input" (change)="onCheckboxChange($event, category)" formControlName="categoriasLibro" type="checkbox" [value]="category.idCategoriaLibro" id="flexCheckDefault{{category.idCategoriaLibro}}"/>
-                  <label class="form-check-label" for="flexCheckDefault{{category.idCategoriaLibro}}">{{category.categoria}}</label>
+                <li
+                  *ngFor="let category of categories; let i = index"
+                  class="form-check col-6 item-color"
+                >
+                  <input
+                    class="form-check-input"
+                    (change)="onCheckboxChange($event, category)"
+                    formControlName="categoriasLibro"
+                    type="checkbox"
+                    [value]="category.idCategoriaLibro"
+                    id="flexCheckDefault{{ category.idCategoriaLibro }}"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckDefault{{ category.idCategoriaLibro }}"
+                    >{{ category.categoria }}</label
+                  >
                 </li>
               </ul>
             </div>
           </li>
 
-          <hr>
+          <hr />
 
           <li>
-            <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseDispo" aria-expanded="false" aria-controls="collapseDispo">
+            <a
+              data-bs-toggle="collapse"
+              role="button"
+              data-bs-target="#collapseDispo"
+              aria-expanded="false"
+              aria-controls="collapseDispo"
+            >
               <h3>Disponibilidad</h3>
             </a>
             <div class="collapse show" id="collapseDispo">
               <ul>
                 <li>
                   <label for="disponibilidad">Seleccionar</label>
-                  <select formControlName="disponibilidad" name="disponibilidad" id="disponibilidad" class="form-select">
-                    <option *ngFor="let dis of disponibilidadLibros" value="{{dis.idDisponibilidadLibro}}">{{dis.disponibilidad}}</option>
+                  <select
+                    formControlName="disponibilidad"
+                    name="disponibilidad"
+                    id="disponibilidad"
+                    class="form-select"
+                  >
+                    <option
+                      *ngFor="let dis of disponibilidadLibros"
+                      value="{{ dis.idDisponibilidadLibro }}"
+                    >
+                      {{ dis.disponibilidad }}
+                    </option>
                   </select>
                 </li>
               </ul>
             </div>
           </li>
-          <hr>
+          <hr />
 
           <li>
-            <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseEstado" aria-expanded="false" aria-controls="collapseEstado">
+            <a
+              data-bs-toggle="collapse"
+              role="button"
+              data-bs-target="#collapseEstado"
+              aria-expanded="false"
+              aria-controls="collapseEstado"
+            >
               <h3>Estado del Libro</h3>
             </a>
             <div class="collapse show" id="collapseEstado">
               <ul>
                 <li>
                   <label for="estadosLibro">Seleccionar</label>
-                  <select formControlName="estadosLibro" name="estadosLibro" id="estadosLibro" class="form-select">
-                    <option *ngFor="let est of estadosLibros" value="{{est.idEstadosLibros}}">{{est.estado}}</option>
+                  <select
+                    formControlName="estadosLibro"
+                    name="estadosLibro"
+                    id="estadosLibro"
+                    class="form-select"
+                  >
+                    <option
+                      *ngFor="let est of estadosLibros"
+                      value="{{ est.idEstadosLibros }}"
+                    >
+                      {{ est.estado }}
+                    </option>
                   </select>
                 </li>
               </ul>
             </div>
           </li>
-          <hr>
+          <hr />
 
           <li>
-            <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseTiempo" aria-expanded="false" aria-controls="collapseTiempo">
+            <a
+              data-bs-toggle="collapse"
+              role="button"
+              data-bs-target="#collapseTiempo"
+              aria-expanded="false"
+              aria-controls="collapseTiempo"
+            >
               <h3>Precio</h3>
             </a>
             <div class="collapse show" id="collapseTiempo">
               <ul>
                 <li>
-                    <label for="timeRange"  class="form-label">$ {{rangeValue | number:'1.0-0' }}</label>
-                    <input type="range" formControlName="precioLibro" [(ngModel)]="rangeValue" name="rango" class="form-range" min="0" max="300000"  step="1" id="timeRange"/>
+                  <label for="timeRange" class="form-label"
+                    >$ {{ rangeValue | number : "1.0-0" }}</label
+                  >
+                  <input
+                    type="range"
+                    formControlName="precioLibro"
+                    [(ngModel)]="rangeValue"
+                    name="rango"
+                    class="form-range"
+                    min="0"
+                    max="300000"
+                    step="1"
+                    id="timeRange"
+                  />
                 </li>
               </ul>
             </div>
           </li>
 
-          <hr>
+          <hr />
 
           <li>
-            <a data-bs-toggle="collapse" role="button" data-bs-target="#collapseCalif" aria-expanded="false" aria-controls="collapseCalif">
+            <a
+              data-bs-toggle="collapse"
+              role="button"
+              data-bs-target="#collapseCalif"
+              aria-expanded="false"
+              aria-controls="collapseCalif"
+            >
               <h3>Calificación</h3>
             </a>
 
@@ -102,10 +195,15 @@
               </span>
             </div> -->
 
-            <div class="collapse show star-rating text-center" id="collapseCalif">
-              <span *ngFor="let star of getRange(maxStars); let i = index"
-                    (click)="onStarClick(i + 1)"
-                    [class.selected]="i < selectedStars">
+            <div
+              class="collapse show star-rating text-center"
+              id="collapseCalif"
+            >
+              <span
+                *ngFor="let star of getRange(maxStars); let i = index"
+                (click)="onStarClick(i + 1)"
+                [class.selected]="i < selectedStars"
+              >
                 <i class="fa-regular fa-star star-calf"></i>
               </span>
             </div>
@@ -122,58 +220,143 @@
               </ul>
             </div> -->
           </li>
-          <hr>
+          <hr />
           <li>
-              <button type="submit" class="btn btn-outline-primary button-apply">
-                  Aplicar
-              </button>
+            <button type="submit" class="btn btn-outline-primary button-apply">
+              Aplicar
+            </button>
           </li>
         </ul>
       </form>
     </div>
   </nav>
-  <button type="button" (click)="validarSesion()" class="btn btn-dark w-50 mx-auto text-center" data-bs-toggle="modal" >Publicar Libro</button>
+  <button
+    type="button"
+    (click)="validarSesion()"
+    class="btn btn-dark w-50 mx-auto text-center"
+    data-bs-toggle="modal"
+  >
+    Publicar Libro
+  </button>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Publicar Libro</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Publicar Libro
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
         <div class="modal-body">
           <form [formGroup]="formLibro" (ngSubmit)="publicarLibro()">
             <div data-mdb-input-init class="form-outline mb-2">
               <label class="form-label" for="nombre">Nombre</label>
-              <input type="text" class="form-control" formControlName="nombre" name="nombre" id="nombre">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="nombre"
+                name="nombre"
+                id="nombre"
+              />
             </div>
             <div data-mdb-input-init class="form-outline mb-2">
               <label class="form-label" for="autor">Autor</label>
-              <input type="text" class="form-control" formControlName="autor" id="autor">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="autor"
+                id="autor"
+              />
             </div>
             <div data-mdb-input-init class="form-outline mb-2">
               <label class="form-label" for="precio">Precio</label>
-              <input type="text" class="form-control" formControlName="precio" id="precio">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="precio"
+                id="precio"
+              />
             </div>
             <div data-mdb-input-init class="form-outline mb-2">
               <label class="form-label" for="descripcion">Descripción</label>
-              <input type="text" class="form-control" formControlName="descripcion" id="descripcion">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="descripcion"
+                id="descripcion"
+              />
             </div>
             <div data-mdb-input-init class="form-outline mb-2">
-              <label class="form-label" for="estadosLibro">Estado del Libro</label>
-              <select type="text" class="form-select" formControlName="estadosLibro" id="estadosLibro">
-                <option *ngFor="let est of estadosLibros" value="{{est.idEstadosLibros}}">{{est.estado}}</option>
+              <label class="form-label" for="estadosLibro"
+                >Estado del Libro</label
+              >
+              <select
+                type="text"
+                class="form-select"
+                formControlName="estadosLibro"
+                id="estadosLibro"
+              >
+                <option
+                  *ngFor="let est of estadosLibros"
+                  value="{{ est.idEstadosLibros }}"
+                >
+                  {{ est.estado }}
+                </option>
               </select>
             </div>
             <div data-mdb-input-init class="form-outline mb-2">
               <label class="form-label" for="categoriasLibro">Categoría</label>
-              <select type="text" class="form-select" formControlName="categoriasLibro" id="categoriasLibro">
-                <option *ngFor="let cat of categories" value="{{cat.idCategoriaLibro}}">{{cat.categoria}}</option>
+              <select
+                type="text"
+                class="form-select"
+                formControlName="categoriasLibro"
+                id="categoriasLibro"
+              >
+                <option
+                  *ngFor="let cat of categories"
+                  value="{{ cat.idCategoriaLibro }}"
+                >
+                  {{ cat.categoria }}
+                </option>
               </select>
             </div>
+            <div data-mdb-input-init class="form-outline mb-2">
+              <label class="form-label" for="idImagenLibro">Imágen</label>
+              <input
+                type="file"
+                class="form-control"
+                id="idImagenLibro"
+                accept="image/png, image/jpeg"
+                (change)="onFileSelected($event)"
+              />
+            </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-info" [disabled]="formLibro.invalid">Publicar</button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="submit"
+                class="btn btn-info"
+                [disabled]="formLibro.invalid"
+              >
+                Publicar
+              </button>
             </div>
           </form>
         </div>
