@@ -1,37 +1,37 @@
 from flask import Flask, request, jsonify
-from producto_dao import ProductoDAO
+from producto_dao import LibrosDAO
 import base64
 
 app = Flask(__name__)
 
-@app.route("/productos", methods=["GET"])
-def obtener_productos():
-    """Devuelve la lista de productos desde la base de datos."""
+@app.route("/libros", methods=["GET"])
+def obtener_libros():
+    """Devuelve la lista de libros desde la base de datos."""
     try:
-        productos = ProductoDAO.obtener_productos()
-        if productos:
-            # Convertir imágenes BLOB a Base64
-            for producto in productos:
-                if isinstance(producto["image"], bytes):
-                    producto["image"] = base64.b64encode(producto["image"]).decode("utf-8")
-            return jsonify({"productos": productos}), 200
-        return jsonify({"mensaje": "No hay productos disponibles"}), 404
+        libros = LibrosDAO.obtener_libros()
+        if libros:
+            # # Convertir imágenes BLOB a Base64
+            # for libro in libros:
+                # if isinstance(libro["image"], bytes):
+                    # libro["image"] = base64.b64encode(libro["image"]).decode("utf-8")
+            return jsonify({"libros": libros}), 200
+        return jsonify({"mensaje": "No hay libros disponibles"}), 404
     except Exception as e:
-        print(f"⚠️ Error en obtener_productos: {e}")
+        print(f"⚠️ Error en obtener_libros: {e}")
         return jsonify({"error": "Error interno del servidor"}), 500
 
-@app.route("/productos/<int:producto_id>", methods=["GET"])
-def obtener_producto(producto_id):
-    """Obtiene un producto específico por ID."""
+@app.route("/libros/<int:idLibro>", methods=["GET"])
+def obtener_libro(idLibro):
+    """Obtiene un libro específico por ID."""
     try:
-        producto = ProductoDAO.obtener_producto_por_id(producto_id)
-        if producto:
-            if isinstance(producto["image"], bytes):
-                producto["image"] = base64.b64encode(producto["image"]).decode("utf-8")
-            return jsonify({"producto": producto}), 200
-        return jsonify({"mensaje": "Producto no encontrado"}), 404
+        libro = LibrosDAO.obtener_libro_por_id(idLibro)
+        if libro:
+            # if isinstance(libro["image"], bytes):
+            #     libro["image"] = base64.b64encode(libro["image"]).decode("utf-8")
+            return jsonify({"libro": libro}), 200
+        return jsonify({"mensaje": "Libro no encontrado"}), 404
     except Exception as e:
-        print(f"⚠️ Error en obtener_producto: {e}")
+        print(f"⚠️ Error en obtener_libro: {e}")
         return jsonify({"error": "Error interno del servidor"}), 500
 
 @app.route("/productos", methods=["POST"])
@@ -58,7 +58,7 @@ def agregar_producto():
             return jsonify({"error": "El campo 'image' es obligatorio y debe ser una cadena Base64"}), 400
 
         imagen_bytes = base64.b64decode(imagen_base64)  # Convertir Base64 a BLOB
-        ProductoDAO.agregar_producto(nombre, precio, descripcion, imagen_bytes)
+        LibrosDAO.agregar_producto(nombre, precio, descripcion, imagen_bytes)
         return jsonify({"mensaje": "Producto agregado exitosamente"}), 201
     except Exception as e:
         print(f"⚠️ Error en agregar_producto: {e}")

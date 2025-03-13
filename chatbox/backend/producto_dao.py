@@ -1,33 +1,33 @@
 import mysql.connector
 from database import DatabaseConnection
 
-class ProductoDAO:
-    """Clase de acceso a datos para productos."""
+class LibrosDAO:
+    """Clase de acceso a datos para libros."""
 
     @staticmethod
-    def obtener_productos():
-        """Consulta todos los productos."""
+    def obtener_libros():
+        """Consulta todos los libros."""
         try:
             conexion = DatabaseConnection().get_connection()
             cursor = conexion.cursor(dictionary=True)
-            cursor.execute("SELECT * FROM products;")
-            productos = cursor.fetchall()
-            return productos
+            cursor.execute("SELECT * FROM libros;")
+            libros = cursor.fetchall()
+            return libros
         except Exception as e:
-            print(f"❌ Error al obtener productos: {e}")
+            print(f"❌ Error al obtener libros: {e}")
             return []
 
     @staticmethod
-    def obtener_producto_por_id(product_id):
-        """Obtiene un producto específico por su ID."""
+    def obtener_libro_por_id(idLibro):
+        """Obtiene un libro específico por su ID."""
         try:
             conexion = DatabaseConnection().get_connection()
             cursor = conexion.cursor(dictionary=True)
-            cursor.execute("SELECT * FROM products WHERE id = %s;", (product_id,))
-            producto = cursor.fetchone()
-            return producto
+            cursor.execute("SELECT * FROM libros WHERE idLibros = %s;", (idLibro,))
+            libro = cursor.fetchone()
+            return libro
         except Exception as e:
-            print(f"❌ Error al obtener producto por ID: {e}")
+            print(f"❌ Error al obtener libro por ID: {e}")
             return None
 
     @staticmethod

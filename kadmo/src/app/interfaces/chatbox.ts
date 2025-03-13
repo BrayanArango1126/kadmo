@@ -1,4 +1,4 @@
 export default interface Chatbox {
-  id: number;
-  question: string;
+  idLibro: number;
+  pregunta: string;
 }

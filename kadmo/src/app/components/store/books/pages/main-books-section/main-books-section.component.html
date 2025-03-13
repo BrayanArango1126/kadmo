@@ -132,11 +132,15 @@
             [(ngModel)]="questionAI"
             placeholder="Escribe tu pregunta"
           />
-          <button (click)="askToAI()" class="btn btn-primary mt-3">
+          <button
+            type="button"
+            (click)="askToAI()"
+            class="btn btn-primary mt-3"
+          >
             Enviar
           </button>
           <div *ngIf="responseAI">
-            <p>{{ responseAI }}</p>
+            <p class="my-4">Respuesta: {{ responseAI }}</p>
           </div>
         </div>
       </div>

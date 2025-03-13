@@ -76,8 +76,8 @@ export class MainBooksSectionComponent implements OnInit {
     console.log(idBook.idLibros);
     if (idBook.idLibros) {
       this.chatbot = {
-        id: idBook.idLibros,
-        question: '',
+        idLibro: idBook.idLibros,
+        pregunta: '',
       };
       console.log(this.chatbot);
     }
@@ -92,8 +92,8 @@ export class MainBooksSectionComponent implements OnInit {
 
   public askToAI() {
     this.chatbot = {
-      id: this.chatbot.id,
-      question: this.questionAI,
+      idLibro: this.chatbot.idLibro,
+      pregunta: this.questionAI,
     };
     this._chatboxService.getChatBoxAnswer(this.chatbot).subscribe({
       next: (data) => {

@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from transformers import pipeline
-from producto_dao import ProductoDAO
+from producto_dao import LibrosDAO
 
 app = Flask(__name__)
 
@@ -17,29 +17,29 @@ qa_pipeline = pipeline("question-answering", model="distilbert-base-cased-distil
 
 print("✅ Modelo de QA cargado.")
 
-def obtener_contexto(product_id):
-    """Obtiene la descripción del producto desde la base de datos."""
-    producto = ProductoDAO.obtener_producto_por_id(product_id)
-    return producto['description'] if producto else "Descripción no encontrada."
+def obtener_contexto(idLibro):
+    """Obtiene la descripción del libro desde la base de datos."""
+    libro = LibrosDAO.obtener_libro_por_id(idLibro)
+    return libro['descripcion'] if libro else "Descripción no encontrada."
 
 @app.route("/chat", methods=["POST"])
 def chat():
     """Procesa la pregunta del usuario con el contexto del producto."""
     datos = request.get_json()
     pregunta = datos.get("pregunta", "")
-    product_id = datos.get("product_id", None)
+    idLibro = datos.get("idLibro", None)
     print(datos)
     
-    if not product_id:
-        return jsonify({"error": "Falta el ID del producto."}), 400
+    if not idLibro:
+        return jsonify({"error": "Falta el ID del libro."}), 400
     
-    contexto = obtener_contexto(product_id)
+    contexto = obtener_contexto(idLibro)
     
     if contexto == "Descripción no encontrada.":
-        return jsonify({"error": "No se encontró información sobre este producto."}), 404
+        return jsonify({"error": "No se encontró información sobre este libro."}), 404
     
     respuesta = qa_pipeline({"question": pregunta, "context": contexto})
-    return jsonify({"respuesta": respuesta["answer"]})
+    return jsonify({"status":200, "message": respuesta["answer"]})
 
 if __name__ == "__main__":
     print("🚀 Chatbot Service iniciado en http://localhost:5001")
