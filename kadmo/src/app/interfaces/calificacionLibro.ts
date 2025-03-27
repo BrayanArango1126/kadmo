@@ -5,14 +5,14 @@ export default interface CalificacionLibro {
     nombre: string;
     autor: string;
     precio: number;
-    descripcion: string
+    descripcion: string;
     estadosLibro: {
       idEstadosLibros: number;
       estado: string;
     };
     disponibilidadLibro: {
       idDisponibilidadLibro: number;
-      disponibilidad:string;
+      disponibilidad: string;
     };
     categoriasLibro: {
       idCategoriaLibro: number;
@@ -24,11 +24,11 @@ export default interface CalificacionLibro {
     idUsuario: number;
     correo: string;
     contraseña: string;
-    rol:{
+    rol: {
       idRol: number;
       rol: string;
-    }
+    };
   };
   comentario: string;
-  puntuacion: number;
+  puntuacion: string;
 }

@@ -45,3 +45,20 @@ class LibrosDAO:
             print("✅ Producto agregado correctamente.")
         except Exception as e:
             print(f"❌ Error al agregar producto: {e}")
+            
+    #calificar libros        
+    @staticmethod
+    def calificar_libro(idLibro, idUsuario, fechaCalificacion, comentario, puntuacion):
+        """Inserta una nueva calificación en la base de datos."""
+        try:
+            conexion = DatabaseConnection().get_connection()
+            cursor = conexion.cursor()
+            consulta = """
+                INSERT INTO calificaciones (idLibro, idUsuario, fechaCalificacion, comentario, puntuacion)
+                VALUES (%s, %s, %s, %s, %s);
+            """
+            cursor.execute(consulta, (idLibro, idUsuario, fechaCalificacion, comentario, puntuacion))
+            conexion.commit()
+            print("✅ Calificación agregada correctamente.")
+        except Exception as e:
+            print(f"❌ Error al agregar calificación: {e}")

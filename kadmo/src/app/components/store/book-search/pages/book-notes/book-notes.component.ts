@@ -7,26 +7,24 @@ import { DatoUsuarioService } from '../../../../../services/dato-usuario.service
   selector: 'app-book-notes',
   templateUrl: './book-notes.component.html',
   styleUrl: './book-notes.component.css',
-  standalone: false
+  standalone: false,
 })
 export class BookNotesComponent {
-  @Input() reviewsList:CalificacionLibro[] = [];
+  @Input() reviewsList: CalificacionLibro[] = [];
 
-  format= 'dd/MM/yyyy';
+  format = 'dd/MM/yyyy';
 
-  datoUsuario:DatosUsuario[] = [];
+  datoUsuario: DatosUsuario[] = [];
 
-  constructor(private _datosUsuariosService:DatoUsuarioService) { }
+  constructor(private _datosUsuariosService: DatoUsuarioService) {}
 
-  ngOnInit():void {
-   
-  }
+  ngOnInit(): void {}
 
-  ngOnChanges():void {
+  ngOnChanges(): void {
     this.getDatosUsuariosById();
   }
 
-  public getDatosUsuariosById(){  
+  public getDatosUsuariosById() {
     this.reviewsList.forEach((review) => {
       this._datosUsuariosService.getDatoUsuarioById(review.usuario).subscribe({
         next: (data) => {
@@ -34,7 +32,7 @@ export class BookNotesComponent {
         },
         error: (err) => {
           console.log(err);
-        }
+        },
       });
     });
   }

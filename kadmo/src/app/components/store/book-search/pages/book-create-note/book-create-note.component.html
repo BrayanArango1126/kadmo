@@ -1,6 +1,81 @@
 <section class="margin-general">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <h2>Nota del libro</h2>
     <p>Comparte tu opinión acerca del libro</p>
-    <textarea class="note" id=""></textarea>
-    <button class="btn btn-enviar">Enviar</button>
+    <textarea
+      class="note"
+      id="comentario"
+      formControlName="comentario"
+      name="text"
+      placeholder="opinión"
+    ></textarea>
+    <button type="submit" [disabled]="form.invalid" class="btn mt-4 btn-enviar">
+      Enviar
+    </button>
+  </form>
+  <!-- <div *ngIf="respuestaClasificacion" class="response">
+    <span>
+      {{ respuestaClasificacion }}
+    </span>
+  </div>
+  <div *ngIf="form.invalid && form.touched" class="alert">
+    <span> Todos los campos son requeridos </span>
+  </div> -->
+</section>
+<!-- <section class="w-100" *ngIf="listCalificaciones">
+  <h2 class="text-center">Calificaciones</h2>
+  <div class="w-100 d-flex justify-content-center align-items-center flex-wrap">
+    <div *ngFor="let calificacion of listCalificaciones" class="mx-4">
+      <div class="calificacion__header">
+        <div class="calificacion__header__user">
+          <img
+            src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+            alt=""
+          />
+          <span>{{ calificacion.usuario.correo }}</span>
+        </div>
+        <div class="calificacion__header__date">
+          <span>{{ calificacion.fechaCalificacion }}</span>
+        </div>
+      </div>
+      <div class="calificacion__body">
+        <p>{{ calificacion.comentario }}</p>
+      </div>
+      <div>
+        <p>{{ calificacion.puntuacion }}</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+<section class="w-100 comentarios-container" *ngIf="listCalificaciones">
+  <h2 class="text-center">Calificaciones</h2>
+  <div class="comentarios-grid">
+    <div
+      *ngFor="let calificacion of listCalificaciones"
+      class="comentario-card"
+    >
+      <div class="calificacion__header">
+        <div class="calificacion__header__user">
+          <img
+            src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+            alt=""
+            class="user-avatar"
+          />
+          <span class="user-email">{{ calificacion.usuario.correo }}</span>
+        </div>
+        <div class="calificacion__header__date">
+          <span>{{ calificacion.fechaCalificacion }}</span>
+        </div>
+      </div>
+      <div class="calificacion__body">
+        <p>{{ calificacion.comentario }}</p>
+      </div>
+      <div class="calificacion__footer">
+        <p class="puntuacion">⭐ {{ calificacion.puntuacion }}/6</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="w-100" *ngIf="listCalificaciones.length == 0">
+  <p class="text-center mt-4">No hay calificaciones para este Libro</p>
 </section>
