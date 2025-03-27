@@ -29,7 +29,7 @@ public class Calificaciones implements Serializable {
 	private String comentario;
 
 	@Column(name="fechaCalificacion")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP)	
 	private Date fechaCalificacion;
 
 	@NotNull(message = "El campo puntuación es obligatorio")
