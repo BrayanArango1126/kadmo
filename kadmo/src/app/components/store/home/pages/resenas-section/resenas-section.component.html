@@ -5,35 +5,43 @@
   </div>
   <div class="row mt-5">
     <div class="container-reviews">
-      <div *ngFor="let review of calificaciones; let i = index;" 
-      class="review row">
+      <div
+        *ngFor="let review of calificaciones; let i = index"
+        class="review row"
+      >
         <div class="col-md-4 mb-3">
-          <img src="img/portada-{{i+1}}.jpg" alt="" class="custom-img-review img-fluid">
+          <img
+            src="img/portada-{{ i + 1 }}.jpg"
+            alt=""
+            class="custom-img-review img-fluid"
+          />
         </div>
         <div class="col-md-8 review-info">
           <div class="container-info-book mb-3">
             <div class="review-info-book">
-              <h3>{{review.libro.nombre}}</h3>
-              <p>{{review.libro.autor}}</p>
-              <span>{{review.libro.categoriasLibro.categoria}}</span>
+              <h3>{{ review.libro.nombre }}</h3>
+              <p>{{ review.libro.autor }}</p>
+              <span>{{ review.libro.categoriasLibro.categoria }}</span>
             </div>
             <div class="custom-rating">
-              <span>{{(review.puntuacion*10)/2}}</span>
+              <!-- <span>{{(review.puntuacion*10)/2}}</span> -->
               <i class="fa-solid fa-star"></i>
             </div>
           </div>
           <div class="review-info-user">
             <div class="container-info-user mb-3">
               <div class="container-image-user">
-                <img src="/img/user.jpg" alt="user" class="img-fluid">
+                <img src="/img/user.jpg" alt="user" class="img-fluid" />
               </div>
               <div *ngFor="let item of datoUsuario" class="user-info">
-                <h4 *ngIf="review.usuario.idUsuario == item.usuario.idUsuario"> {{item.nombres}} {{item.apellidos}}</h4>
-                <p>{{review.fechaCalificacion}}</p>
+                <h4 *ngIf="review.usuario.idUsuario == item.usuario.idUsuario">
+                  {{ item.nombres }} {{ item.apellidos }}
+                </h4>
+                <p>{{ review.fechaCalificacion }}</p>
               </div>
             </div>
             <div class="container-commentary-user">
-              <p>{{review.comentario}}</p>
+              <p>{{ review.comentario }}</p>
             </div>
           </div>
         </div>
