@@ -39,18 +39,19 @@
                   </div>
                 <a class="text-center pt-5 terms-font" [routerLink]="['/login']">¿Ya tiene una cuenta? inicie sesión.</a>
                 </div>          
+                <button type="submit" class="btn btn-login col-12 mb-2" [disabled]="registerForm.invalid">Registrarse</button>
+
+        <!--
+
                 <button type="button" class="btn btn-login col-12 mb-2" data-bs-toggle="modal" data-bs-target="#faceModal">
                     Continuar
                 </button>
+                FORMULARIO -->
 
                 <p class="text-center terms-font">Al continuar aceptas los <b> términos, condiciones</b> y <b>politicas de privacidad</b>.</p>
                 <hr>
                 <p class="text-center mb-0">OR</p>
-                <button
-                (click)="authGoogle()" 
-                type="button" 
-                class="btn btn-google btn-outline-danger "
-                >
+                <button (click)="authGoogle()" type="button" class="btn btn-google btn-outline-danger ">
                 <i class="fa-brands fa-google me-3"></i>
                 Continuar con google
                 </button>
@@ -63,28 +64,25 @@
 </div>
 
 <div class="modal fade" id="faceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <input type="media">
       <div class="modal-body">
         <div class="register-container">
     <h2>Registro de Usuario</h2>
   
     <form (ngSubmit)="captureImage()">
-      <label for="username">Nombre de usuario:</label>
-      <input type="text" id="username" [(ngModel)]="username" name="username" required />
-  
       <div class="camera-section">
-        <video #videoElement autoplay></video>
-        <canvas #canvasElement hidden></canvas>
-        <button type="button" (click)="captureImage()">📸 Capturar Rostro</button>
+        <div class="d-flex justify-content-center">
+            <video #videoElement autoplay></video>
+            <canvas #canvasElement hidden></canvas>
+        </div>
+        <button type="submit" (click)="captureImage()">📸 Capturar Rostro</button>
       </div>
   
-      <button type="submit">Registrar</button>
     </form>
   
     <p *ngIf="responseMessage">{{ responseMessage }}</p>
