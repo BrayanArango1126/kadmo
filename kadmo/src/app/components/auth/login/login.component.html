@@ -1,10 +1,10 @@
 <div class="container-login">
-    <div class="container-login-form row shadow rounded h-auto mb-auto">
-        <!-- IMAGEN DEL LADO -->
-        <div class="container-login-form-img col-4"></div>
-        <!-- FORMULARIO -->
-        <div class="container-login-form-input col-8 p-4 h-auto">
-            <!-- <h1 class="mb-4">Inicio de sesión</h1>
+  <div class="container-login-form row shadow rounded h-auto mb-auto">
+    <!-- IMAGEN DEL LADO -->
+    <div class="container-login-form-img col-4"></div>
+    <!-- FORMULARIO -->
+    <div class="container-login-form-input col-8 p-4 h-auto">
+      <!-- <h1 class="mb-4">Inicio de sesión</h1>
             <label class="form-label" for="mail">Ingresa tu correo para iniciar sesión</label>
             <input class="form-control mb-3" placeholder="Ingresa tu correo" type="mail" #mail>
             <label class="form-label mt-3" for="mail">Ingresa tu contraseña</label>
@@ -15,34 +15,154 @@
             <hr>
             <p class="text-center mb-0">OR</p>
             <button class="btn btn-google btn-outline-danger mb-3"><i class="fa-brands fa-google me-3"></i>Continuar con google</button> -->
-            <form [formGroup]="formLogin" (ngSubmit)="logIn()"> 
-                <h1 class="mb-4">Inicio de sesión</h1>
-                  <label class="form-label" for="email">Ingresa tu correo para iniciar sesión</label>
-                  <input class="form-control mb-3" placeholder="Ingresa tu correo" type="email" formControlName="email">
-                  <div *ngIf="formLogin.get('email')?.errors && formLogin.get('email')?.touched">
-                    <small *ngIf="formLogin.get('email')?.hasError('pattern')" class="text-danger">{{"El correo solo permite @gmail | @outlook | @hotmail "}}</small>    
-                    <small *ngIf="formLogin.get('email')?.hasError('email')" class="text-danger">Ingrese un correo válido</small>    
-                    <small *ngIf="formLogin.get('email')?.hasError('required')" class="text-danger">El correo es requerido</small>    
-                  </div>
-              
-                  <label class="form-label mt-3" for="password">Ingresa tu contraseña</label>
-                  <input class="form-control mb-3" placeholder="Ingresa tu contraseña" type="password" formControlName="password">
-                  <div *ngIf="formLogin.get('password')?.errors && formLogin.get('password')?.touched">
-                    <small *ngIf="formLogin.get('password')?.hasError('pattern')" class="text-danger">{{"Hay un error en la contraseña, recuerda tener al menos una letra
-	                    minúscula, mayúscula y numérica, y la longitud es de mínimo 8 y máximo 15 caracteres"}}
-                    </small>      
-                    <small *ngIf="formLogin.get('password')?.hasError('required')" class="text-danger">La contraseña es requerida</small>    
-                  </div>
-              
-                  <button class="btn btn-login col-12 mb-3" type="submit" [disabled]="formLogin.invalid">Continuar</button> 
-                  <a class="text-center mx-auto w-50 d-block terms-font" [routerLink]="['/register']">¿No tiene cuenta? Creela aquí.</a>
-                  <p class="text-center mt-2 terms-font">Al continuar aceptas los <b> términos, condiciones</b> y <b>politicas de privacidad</b>.</p>
-                  <hr>
-                  <p class="text-center mb-0">OR</p>
-                  <button (click)="authGoogle()" type="button" class="btn btn-google btn-outline-danger mb-3"><i class="fa-brands fa-google me-3"></i>Continuar con google</button>
-            </form> 
-        
+      <form [formGroup]="formLogin" (ngSubmit)="logIn()">
+        <h1 class="mb-4">Inicio de sesión</h1>
+        <label class="form-label" for="email"
+          >Ingresa tu correo para iniciar sesión</label
+        >
+        <input
+          class="form-control mb-3"
+          placeholder="Ingresa tu correo"
+          type="email"
+          formControlName="email"
+        />
+        <div
+          *ngIf="
+            formLogin.get('email')?.errors && formLogin.get('email')?.touched
+          "
+        >
+          <small
+            *ngIf="formLogin.get('email')?.hasError('pattern')"
+            class="text-danger"
+            >{{ "El correo solo permite @gmail | @outlook | @hotmail " }}</small
+          >
+          <small
+            *ngIf="formLogin.get('email')?.hasError('email')"
+            class="text-danger"
+            >Ingrese un correo válido</small
+          >
+          <small
+            *ngIf="formLogin.get('email')?.hasError('required')"
+            class="text-danger"
+            >El correo es requerido</small
+          >
         </div>
-        
+
+        <label class="form-label mt-3" for="password"
+          >Ingresa tu contraseña</label
+        >
+        <input
+          class="form-control mb-3"
+          placeholder="Ingresa tu contraseña"
+          type="password"
+          formControlName="password"
+        />
+        <div
+          *ngIf="
+            formLogin.get('password')?.errors &&
+            formLogin.get('password')?.touched
+          "
+        >
+          <small
+            *ngIf="formLogin.get('password')?.hasError('pattern')"
+            class="text-danger"
+            >{{
+              "Hay un error en la contraseña, recuerda tener al menos una letra
+	                    minúscula, mayúscula y numérica, y la longitud es de mínimo 8 y máximo 15 caracteres"
+            }}
+          </small>
+          <small
+            *ngIf="formLogin.get('password')?.hasError('required')"
+            class="text-danger"
+            >La contraseña es requerida</small
+          >
+        </div>
+
+        <button
+          class="btn btn-login col-12 mb-3"
+          type="submit"
+          [disabled]="formLogin.invalid"
+        >
+          Continuar
+        </button>
+        <a
+          class="text-center mx-auto w-50 d-block terms-font"
+          [routerLink]="['/register']"
+          >¿No tiene cuenta? Creela aquí.</a
+        >
+        <p class="text-center mt-2 terms-font">
+          Al continuar aceptas los <b> términos, condiciones</b> y
+          <b>politicas de privacidad</b>.
+        </p>
+        <hr />
+        <p class="text-center mb-0">OR</p>
+        <button
+          (click)="openModal()"
+          type="button"
+          class="btn btn-google btn-outline-warning mb-3"
+        >
+          <i class="fa fa-camera me-3"></i>Continuar con FaceID
+        </button>
+        <button
+          (click)="authGoogle()"
+          type="button"
+          class="btn btn-google btn-outline-danger mb-3"
+        >
+          <i class="fa-brands fa-google me-3"></i>Continuar con google
+        </button>
+      </form>
     </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="faceModal"
+  #faceModal
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registro Facial</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="register-container text-center">
+          <h2>Login con Reconocimiento Facial</h2>
+
+          <div class="camera-section">
+            <video class="custom-border" #videoElement autoplay muted></video>
+            <canvas class="custom-border" #canvasElement hidden></canvas>
+            <button
+              type="button"
+              class="btn btn-primary my-4"
+              (click)="captureImage()"
+            >
+              Capturar e iniciar sesión
+            </button>
+          </div>
+
+          <p *ngIf="responseMessage">{{ responseMessage }}</p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+          <!-- <button type="button" class="btn btn-primary">Guardar</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,45 +1,99 @@
 <div class="container-login">
-    <div class="container-login-form row shadow rounded h-auto mb-auto">
-       
-        <!-- FORMULARIO -->
-        <div class="container-login-form-input col-8 p-4 h-auto">
-            <h1 class="mb-4 text-center">Registro</h1>
-            <form [formGroup]="registerForm" (ngSubmit)="register()">
-                <div data-mdb-input-init class="form-outline mb-3">
-                    <label class="form-label" for="correo">Correo</label>
-                    <input type="email" id="correo" placeholder="example@gmail.com" class="form-control" formControlName="email" />
-                </div>
-                <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched">
-                    <small *ngIf="registerForm.get('email')?.hasError('pattern')" class="text-danger">{{"El correo solo permite @gmail | @outlook | @hotmail "}}</small>    
-                    <small *ngIf="registerForm.get('email')?.hasError('email')" class="text-danger">Ingrese un correo válido</small>    
-                    <small *ngIf="registerForm.get('email')?.hasError('required')" class="text-danger">El correo es requerido</small>    
-                  </div>
-                <div class="row mb-2">
-                    <div class="col">
-                        <div data-mdb-input-init class="form-outline">
-                            <label class="form-label" for="rol">Tipo de usuario</label>
-                            <select name="rol" id="rol" class="form-control" formControlName="rol">
-                                <option [value]="i.idRol" *ngFor="let i of listAllRoles">
-                                    {{(i.idRol == 1)? '': i.rol}}
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                      <div data-mdb-input-init class="form-outline">
-                      <label class="form-label" for="contrasena">Contraseña:</label>
-                      <input type="password" id="contrasena" class="form-control" formControlName="password"/>
-                    </div>
-                </div>
-                <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched">
-                    <small *ngIf="registerForm.get('password')?.hasError('pattern')" class="text-danger">{{"Hay un error en la contraseña, recuerda tener al menos una letra
-	                    minúscula, mayúscula y numérica, y la longitud es de mínimo 8 y máximo 15 caracteres"}}
-                    </small>      
-                    <small *ngIf="registerForm.get('password')?.hasError('required')" class="text-danger">La contraseña es requerida</small>    
-                  </div>
-                <a class="text-center pt-5 terms-font" [routerLink]="['/login']">¿Ya tiene una cuenta? inicie sesión.</a>
-                </div>          
-                <button type="submit" class="btn btn-login col-12 mb-2" [disabled]="registerForm.invalid">Registrarse</button>
+  <div class="container-login-form row shadow rounded h-auto mb-auto">
+    <!-- FORMULARIO -->
+    <div class="container-login-form-input col-8 p-4 h-auto">
+      <h1 class="mb-4 text-center">Registro</h1>
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <div data-mdb-input-init class="form-outline mb-3">
+          <label class="form-label" for="correo">Correo</label>
+          <input
+            type="email"
+            id="correo"
+            placeholder="example@gmail.com"
+            class="form-control"
+            formControlName="email"
+          />
+        </div>
+        <div
+          *ngIf="
+            registerForm.get('email')?.errors &&
+            registerForm.get('email')?.touched
+          "
+        >
+          <small
+            *ngIf="registerForm.get('email')?.hasError('pattern')"
+            class="text-danger"
+            >{{ "El correo solo permite @gmail | @outlook | @hotmail " }}</small
+          >
+          <small
+            *ngIf="registerForm.get('email')?.hasError('email')"
+            class="text-danger"
+            >Ingrese un correo válido</small
+          >
+          <small
+            *ngIf="registerForm.get('email')?.hasError('required')"
+            class="text-danger"
+            >El correo es requerido</small
+          >
+        </div>
+        <div class="row mb-2">
+          <div class="col">
+            <div data-mdb-input-init class="form-outline">
+              <label class="form-label" for="rol">Tipo de usuario</label>
+              <select
+                name="rol"
+                id="rol"
+                class="form-control"
+                formControlName="rol"
+              >
+                <option [value]="i.idRol" *ngFor="let i of listAllRoles">
+                  {{ i.idRol == 1 ? "" : i.rol }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col">
+            <div data-mdb-input-init class="form-outline">
+              <label class="form-label" for="contrasena">Contraseña:</label>
+              <input
+                type="password"
+                id="contrasena"
+                class="form-control"
+                formControlName="password"
+              />
+            </div>
+          </div>
+          <div
+            *ngIf="
+              registerForm.get('password')?.errors &&
+              registerForm.get('password')?.touched
+            "
+          >
+            <small
+              *ngIf="registerForm.get('password')?.hasError('pattern')"
+              class="text-danger"
+              >{{
+                "Hay un error en la contraseña, recuerda tener al menos una letra
+	                    minúscula, mayúscula y numérica, y la longitud es de mínimo 8 y máximo 15 caracteres"
+              }}
+            </small>
+            <small
+              *ngIf="registerForm.get('password')?.hasError('required')"
+              class="text-danger"
+              >La contraseña es requerida</small
+            >
+          </div>
+          <a class="text-center pt-5 terms-font" [routerLink]="['/login']"
+            >¿Ya tiene una cuenta? inicie sesión.</a
+          >
+        </div>
+        <button
+          type="submit"
+          class="btn btn-login col-12 mb-2"
+          [disabled]="registerForm.invalid"
+        >
+          Registrarse
+        </button>
 
         <!--
 
@@ -48,22 +102,88 @@
                 </button>
                 FORMULARIO -->
 
-                <p class="text-center terms-font">Al continuar aceptas los <b> términos, condiciones</b> y <b>politicas de privacidad</b>.</p>
-                <hr>
-                <p class="text-center mb-0">OR</p>
-                <button (click)="authGoogle()" type="button" class="btn btn-google btn-outline-danger ">
-                <i class="fa-brands fa-google me-3"></i>
-                Continuar con google
-                </button>
-            </form>
-        </div>
-
-         <!-- IMAGEN DEL LADO -->
-         <div class="container-register-form-img col-4"></div>
+        <p class="text-center terms-font">
+          Al continuar aceptas los <b> términos, condiciones</b> y
+          <b>politicas de privacidad</b>.
+        </p>
+        <hr />
+        <p class="text-center mb-0">OR</p>
+        <button
+          (click)="authGoogle()"
+          type="button"
+          class="btn btn-google btn-outline-danger"
+        >
+          <i class="fa-brands fa-google me-3"></i>
+          Continuar con google
+        </button>
+      </form>
     </div>
+
+    <!-- IMAGEN DEL LADO -->
+    <div class="container-register-form-img col-4"></div>
+  </div>
 </div>
 
-<div class="modal fade" id="faceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="faceModal"
+  #faceModal
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registro Facial</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="register-container">
+          <h2>Registro de Usuario</h2>
+
+          <form (ngSubmit)="captureImage()">
+            <div class="camera-section text-center">
+              <div class="d-flex justify-content-center">
+                <video class="custom-border" #videoElement autoplay></video>
+                <canvas class="custom-border" #canvasElement hidden></canvas>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary mx-auto my-4"
+                (click)="captureImage()"
+              >
+                📸 Capturar Rostro
+              </button>
+            </div>
+          </form>
+
+          <p *ngIf="responseMessage">{{ responseMessage }}</p>
+        </div>
+        <!-- <button
+          type="submit"
+          class="btn btn-login col-12 mb-2"
+          [disabled]="registerForm.invalid"
+        >
+          Registrarse
+        </button> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+        <!-- <button type="button" class="btn btn-primary">Guardar</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="modal fade" id="faceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -95,4 +215,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.ue.dto.LoginDTO;
+import co.edu.ue.dto.UsuariosDTO;
+import co.edu.ue.security.AuthorizationJWT;
 import co.edu.ue.service.ILoginService;
 import co.edu.ue.utils.ApiResponse;
 import co.edu.ue.utils.Tools;
@@ -33,31 +35,14 @@ public class AuthController {
 
 	AuthenticationManager authManager;
 
+	@Autowired
+	private AuthorizationJWT jwtTokenProvider;
+
 	public AuthController(AuthenticationManager authManager) {
 		super();
 		this.authManager = authManager;
 
 	}
-
-	// @PostMapping(value = "login", produces = MediaType.TEXT_PLAIN_VALUE)
-	// public ResponseEntity<String> login(@RequestParam("user") String user,
-	// @RequestParam("pwd") String pwd) {
-	// try {
-	// // System.out.println("Controller Usuario autenticado: " + user);
-	// // System.out.println("COntroller Autoridades: " + pwd);
-	// Authentication authentication = authManager.authenticate(
-	// new UsernamePasswordAuthenticationToken(user, pwd));
-	// // System.out.println("COntroller Usuario autenticado: " +
-	// // authentication.getName());
-	// // System.out.println("COntroller Autoridades: " +
-	// // authentication.getAuthorities());
-	// return new ResponseEntity<>(getToken(authentication), HttpStatus.OK);
-	// } catch (AuthenticationException ex) {
-	// ex.printStackTrace();
-	// System.out.println("Error de autenticación: " + ex.getMessage());
-	// return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-	// }
-	// }
 
 	@PostMapping(value = "login", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<ApiResponse<LoginDTO>> login(@RequestBody LoginDTO login) {
@@ -78,6 +63,34 @@ public class AuthController {
 			// System.out.println("COntroller Autoridades: " +
 			// authentication.getAuthorities());
 			logIn.setToken(getToken(authentication));
+			return new ResponseEntity<>(new ApiResponse<>("Usuario logueado correctamente", logIn), HttpStatus.OK);
+		} catch (AuthenticationException ex) {
+			ex.printStackTrace();
+			System.out.println("Error de autenticación: " + ex.getMessage());
+			return new ResponseEntity<>(new ApiResponse<>("Hubo un error en la salida", null), HttpStatus.UNAUTHORIZED);
+		}
+	}
+
+	@PostMapping(value = "login-face", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<ApiResponse<LoginDTO>> loginFace(@RequestBody LoginDTO login) {
+		try {
+			// System.out.println("Controller Usuario autenticado: " + login.getCorreo() + "
+			// " + login.getContraseña());
+
+			String userMail = login.getCorreo();
+
+			// buscar el usuario por correo
+			LoginDTO logIn = this.service.loginFace(login);
+
+			if (logIn.getIdUsuario() == 0) {
+				return new ResponseEntity<>(new ApiResponse<>("Usuario inválidos", null), HttpStatus.UNAUTHORIZED);
+			}
+
+			// Generar un token para el usuario sin necesidad de autenticación con
+			// contraseña
+			String token = jwtTokenProvider.generateToken(userMail);
+
+			logIn.setToken(token);
 			return new ResponseEntity<>(new ApiResponse<>("Usuario logueado correctamente", logIn), HttpStatus.OK);
 		} catch (AuthenticationException ex) {
 			ex.printStackTrace();

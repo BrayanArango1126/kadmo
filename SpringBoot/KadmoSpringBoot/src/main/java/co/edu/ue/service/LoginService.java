@@ -29,4 +29,14 @@ public class LoginService implements ILoginService {
     }
   }
 
+  @Override
+  public LoginDTO loginFace(LoginDTO loginFace) {
+    Usuarios user = this.dao.findByCorreo(loginFace.getCorreo());
+    if (user != null) {
+      return new LoginDTO(user.getIdUsuario(), user.getCorreo(), user.getRole().getIdRol());
+    } else {
+      return new LoginDTO();
+    }
+  }
+
 }
