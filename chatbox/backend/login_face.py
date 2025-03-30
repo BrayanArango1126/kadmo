@@ -5,9 +5,9 @@ import os
 import uuid
 import cv2
 import numpy as np
-from database import DatabaseConnection
+import traceback
 
-api = Blueprint('api', __name__)
+from database import DatabaseConnection
 
 app = Flask(__name__)
 CORS(app)
@@ -76,7 +76,6 @@ def register():
         return jsonify({"message": "User registered", "image_path": path})
 
     except Exception as e:
-        import traceback
         traceback.print_exc()  # Imprime el error en consola
         return jsonify({"error": "Server error", "details": str(e)}), 500
 
@@ -131,4 +130,4 @@ def login():
   
 if __name__ == "__main__":
     print("🚀 FaceID iniciado en http://localhost:5005")
-    app.run(host='0.0.0.0', port=5005, debug=True)
+    app.run(host='0.0.0.0', port=5005, debug=False)
