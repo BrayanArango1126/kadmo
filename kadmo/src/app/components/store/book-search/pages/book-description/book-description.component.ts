@@ -21,6 +21,7 @@ import {
 } from '../../../../../../assets/alerts';
 import * as bootstrap from 'bootstrap';
 import * as cryptoJS from 'crypto-js';
+import * as bcrypt from 'bcryptjs';
 import { EthereumService } from '../../../../../services/ethereum.service';
 
 @Component({
@@ -44,6 +45,7 @@ export class BookDescriptionComponent {
 
   toAddress: string = '';
   amount: number = 0;
+  userKey: string = '';
 
   formCompraLibros!: FormGroup;
   creditCardForm!: FormGroup;
@@ -128,7 +130,7 @@ export class BookDescriptionComponent {
     this.selectedCreditCard = card;
     // console.log(card);
   }
-  public comprarLibro() {
+  public async comprarLibro() {
     if (!this.formCompraLibros.valid) {
       redirectAlert('info', 'Inicie sesión primero', 'login');
       return;
@@ -142,6 +144,11 @@ export class BookDescriptionComponent {
       return;
     }
 
+    const pass1 = this.selectedCreditCard.usuario.contraseña || '';
+    const isPasswordValid = await this.compareCrypt(pass1);
+    if (!isPasswordValid) {
+    return;
+    }
     const request: Transaccion = {
       idTransaccion: 0,
       estadosTransaccione: {
@@ -163,8 +170,8 @@ export class BookDescriptionComponent {
     console.log(request);
 
     this._transaccionService.addTransaccion(request).subscribe({
-      next: (res) => {
-        alert('Compra realizada con éxito');
+      next: async (res) => {
+        await infoAlert('success', 'exito', 'Compra realizada con éxito');
         this.updateEstateBook();
       },
       error: (error) => {
@@ -226,7 +233,7 @@ export class BookDescriptionComponent {
     // console.log(request);
     this._tarjetaCreditoService.createTarjetaCredito(request).subscribe({
       next: (data) => {
-        alert(data.message);
+        infoAlert('success', 'Exito', data.message);
         this.getAllCreditCards();
       },
       error: (error) => {
@@ -258,11 +265,25 @@ export class BookDescriptionComponent {
     console.log(request);
     this._librosService.updateLibro(request).subscribe({
       next: (data) => {
-        alert('Libro a tu disposición para envío');
+        infoAlert('info', '¡En camino!','Libro a tu disposición para envío');
       },
       error: (error) => {
         console.log(error);
       },
     });
+  }
+
+  public async compareCrypt(pass1:string): Promise<boolean> {
+    try {
+      const result = await bcrypt.compare(this.userKey, pass1);
+      if(result==false) await infoAlert('error','Error','La clave es incorrecta');
+      
+      return result;
+    
+    } catch (err) {
+      console.error('Error al comparar la clave:', err);
+      infoAlert('error', 'Error', 'Ocurrió un error al verificar la clave');
+      return false;
+    }
   }
 }

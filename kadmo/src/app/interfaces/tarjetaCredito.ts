@@ -6,5 +6,6 @@ export default interface TarjetaCredito {
   cvs: string;
   usuario: {
     idUsuario: number;
+    contraseña?: string;
   };
 }

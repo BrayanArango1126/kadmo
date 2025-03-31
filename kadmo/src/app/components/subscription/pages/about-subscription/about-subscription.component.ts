@@ -164,6 +164,7 @@ export class AboutSubscriptionComponent {
         infoAlert("error","Operación fallida", 'Error al registrar la membresia');
       }
     });
+    return;
   }
 
   public addCreditCard() {

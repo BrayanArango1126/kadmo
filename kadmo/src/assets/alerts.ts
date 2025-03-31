@@ -1,7 +1,7 @@
 import Swal, { SweetAlertIcon } from 'sweetalert2';
 
-export const redirectAlert = (icon: SweetAlertIcon, title: string, route: string) => {
-  Swal.fire({
+export const redirectAlert = async (icon: SweetAlertIcon, title: string, route: string) => {
+  await Swal.fire({
     icon: icon,
     title: title,
   }).then(() => {
@@ -9,16 +9,16 @@ export const redirectAlert = (icon: SweetAlertIcon, title: string, route: string
   });
 };
 
-export const infoAlert = (icon: SweetAlertIcon, title: string, text:string) => {
-  Swal.fire({
+export const infoAlert = async (icon: SweetAlertIcon, title: string, text:string) => {
+  await Swal.fire({
     icon: icon,
     title: title,
     text: text
   })
 };
 
-export const redirectActivedAlert = (icon: SweetAlertIcon, title: string, route: string, redirect:string) => {
-  Swal.fire({
+export const redirectActivedAlert = async (icon: SweetAlertIcon, title: string, route: string, redirect:string) => {
+  await Swal.fire({
     icon: icon,
     title: title,
   }).then(() => {

@@ -16,15 +16,15 @@
     </div>
 
     <div class="book-info row text-center mt-3">
-      <div class="col-xxl-3 col-12">
+      <div class=" col-12">
         <h4>Categoria:</h4>
         <p>{{ book.categoriasLibro.categoria }}</p>
       </div>
-      <div class="col-xxl-5 col-12">
+      <div class=" col-12">
         <h4>Notas:</h4>
         <p>352 Notas de la comunidad</p>
       </div>
-      <div class="col-xxl-4 col-12">
+      <div class=" col-12">
         <h4>Rating:</h4>
 
         <i class="fa-solid fa-star star-calf"></i>
@@ -192,7 +192,8 @@
             <button
               type="button"
               class="btn btn-info mt-3 w-100"
-              (click)="comprarLibro()"
+              data-bs-target="#publicKeyModal"
+              data-bs-toggle="modal"
             >
               Comprar
             </button>
@@ -276,6 +277,39 @@
           >
             Añadir Tarjeta
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div 
+  class="modal fade"
+  id="publicKeyModal"
+  aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel2"
+  tabindex="-1" 
+  role="dialog"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Insertar clave para transacción</h5>
+        </div>
+        <div class="modal-body">
+          <form action="submit">
+            <p>Inserte su clave pública para verificar su usuario y continuar con la transacción</p>
+            <input
+                  type="password"
+                  class="form-control"
+                  [(ngModel)]="userKey"
+                  #userKeyInput
+                  name="userKey"
+                />
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" 
+          (click)="comprarLibro()">Comprar</button>
         </div>
       </div>
     </div>
